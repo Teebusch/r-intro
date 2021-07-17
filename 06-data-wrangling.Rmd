@@ -1,0 +1,80 @@
+#  R has powerful data wrangling tools
+
+R can connect to all sorts of data sources ([Databases](https://db.rstudio.com/getting-started/connect-to-database/), [SPSS, Stata, SAS](https://haven.tidyverse.org/), [APIs](https://httr.r-lib.org/), [websites](https://rvest.tidyverse.org/), ...), and process many different types of data (tabular data, EEG, fMRI, eye tracking, Geodata, taxonomical data, p;honetic transcriptions...).
+
+The [Tidyverse](https://www.tidyverse.org/) offers many convenience functions for common data manipulation tasks like splitting and merging columns, renaming, counting, sorting, and much more. At its core, are a handful of workhorse functions from the `{dplyr}` package for manipulating data frames: 
+
+- `filter()`  -- select rows (observations)
+- `select()` -- select variables (columns)
+- `mutate()` -- create new variables (columns) or change existing ones 
+- `summarize()` -- aggregate rows, e.g, to calculate a column's mean
+- `group_by()` -- split the data frame
+- `pivot_wider()` and `pivot_longer()` -- reshape the data 
+
+
+## **Hands-on.** Wrangling Data
+
+Let's try a simple data wrangling task using functions from the Tidyverse: 
+
+1. Find all peaks that are higher than 7,000 metres and were climbed before 1980  
+2. Count which countries the climbers came from
+
+### Filter rows
+
+We can use the `filter()` function to select only the rows (observations) we want. Then we can use the `count()` function to count how many rows there are for each kind of `first_ascent_country`:
+
+```r
+before80_7k <- filter(peaks, first_ascent_year < 1980, height_metres > 7000)
+count(before80_7k, first_ascent_country)
+```
+
+### The %>% operator ("pipe")
+
+Above, we stored the result of the first function in an intermediate variables and then gave it to the second. There's another way to chain functions that is often more convenient and readable: Use the **pipe operator `%>%`** to pass data from one function to the next. 
+
+You can read `%>%` as *"...and then..."*. Use the keyboard shortcut <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>M</kbd> to make it.
+
+```r
+peaks %>%
+  filter(first_ascent_year < 1980, height_metres > 7000) %>% 
+  count(first_ascent_country, sort = TRUE) %>% 
+  filter(n > 3) 
+  # ... the pipe can continue. Here, we filter all peaks that 
+  # were climbed more than 3 times
+```
+
+Did you notice that the first argument of all functions (the data frame you want to operate on) has disappeared? The pipe operator fills that one in automatically.
+
+![An image of the character Data from the TV show Star Trek TNG, smoking a pipe](https://i.imgur.com/bIyqtxz.jpg)
+*Indubitably, sir!*
+
+### Create new columns with `mutate()`
+
+```r
+peaks %>% 
+  select(peak_name, climbing_status, first_ascent_year, first_ascent_country) %>% 
+  mutate(climbed_before80 = first_ascent_year < 1980)
+```
+
+### Split-apply-combine with `group_by()` and `summarize()`
+
+Use `group_by()` and `summarize()` together for powerful *split-apply-combine* operations:
+
+```r 
+peaks %>% 
+  filter(first_ascent_year > 201) %>% 
+  group_by(first_ascent_country) %>% 
+  summarize(min_ascent = min(first_ascent_year, na.rm = TRUE)) %>% 
+  arrange(min_ascent)
+```
+
+:::info
+**Dealing with missing values.** In R, there is a special *value* for missing data, `NA`. This is *not* a data type. That is, a value can be, e.g., numeric *and* missing (`NA`) at the same time, and a numeric vector can contain a mix of numbers and `NA`.  
+:::
+
+
+### Other useful data wrangling functions
+
+```r
+# ...
+```

@@ -1,0 +1,84 @@
+# Why you should *not* learn R {-}
+
+![A picture of the evergreen stuck in the suez
+canal](https://i.imgur.com/1RXxM5z.jpg)
+
+*Regardless of what R enthusiasts will tell you, R is not the solution to every
+problem.*
+
+## It is a considerable time investment {-}
+
+Coding needs practice! Depending on your previous experience with programming
+and your ability to *"think like a computer"*, R can have a steep learning
+curve. Even if you are an experienced programmer, R can be weird! For examples,
+see [these](https://youtu.be/6S9r_YbqHy8)
+[videos](https://youtu.be/5033jBHFiHE).
+
+It will take a while before you can work efficiently in R and getting there can
+be a frustrating experience. This frustration may eventually pay off, but if
+you, for example, only do a small anaylsis every once in a while it may not be
+worth it.
+
+In any case: *"Never change a winning team!"* --- If your current setup works
+well for you, don't change it!
+
+## There are good alternatives {-}
+
+### Proprietary Software {-}
+
+Proprietary software like SPSS, SAS, Stata, and MPlus has customer support and
+often one recommended way to solve a certain kind of problem. R often has a
+multitude of ways to achieve the same goal. While this allows you to choose the
+tools that suit your needs, it also can be difficult.
+
+Often, commercial software also does a better job at guiding you on your path
+through the jungle of statistical tests and models. R arguably requires a better
+understanding of what your are trying to achieve.
+
+![A gif of the R console cursor blinking
+expectantly](https://i.imgur.com/WZpavgN.gif)
+
+*Welcome to R! Here's how you quit...*
+
+Furthermore, some commercial tools are the gold standard for certain types of
+analyses and not all methods may be implemented in R. For example, handling
+missing data with Maximum Likelihood in MPlus is not possible in the equivalent
+R package, `{MClust}`.
+
+### Free point-and-click alternatives {-}
+
+There are also good free alternatives to R that don't require any coding, for
+example...
+
+  - Data wrangling with [OpenRefine](https://openrefine.org/) or
+    [DataWrangler](http://vis.stanford.edu/wrangler/)
+  - Stats with [Jamovi](https://www.jamovi.org/) or
+    [JASP](https://jasp-stats.org/)
+  - Data visualisation with [RAWgraphs](https://rawgraphs.io/),
+    [Flourish](https://flourish.studio/),
+    [DataWrapper](https://www.datawrapper.de/), or [Tableau
+    Public](https://public.tableau.com/)
+
+![A screenshot of Jamovi](https://i.imgur.com/bPXrTG4.jpg)
+
+*Jamovi - There are plenty of fish in the open source sea!*
+
+:::spoiler *OK, but...* Once mastered, the
+[*expressiveness*](https://en.wikipedia.org/wiki/Expressive_power_\(computer_science\))
+of programming is unmatched by any point-and-click tool. Moreover, coding is a
+valuable skill that is useful to have 'under your belt', even if you end up not
+using it much. Learning to code can also be a lot of fun.  
+:::
+
+#### Other scientific programming languages {-}
+
+If you want a programming language that is more universally useful, you might
+want to learn [Python](https://www.python.org/) instead. If you need a language
+that is equally focused on interactive scientific computing, but more modern and
+faster, [Julia](https://julialang.org/) might be a better choice.
+ 
+:::spoiler *OK, but...* While R is certainly not as popular overall as Python or
+as fast as Julia, it is quite popular in the data analysis and research world
+and gives you access to a vast amount of amazing third-party tools (packages),
+as we will see later. :::
+

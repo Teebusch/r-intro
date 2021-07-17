@@ -1,0 +1,82 @@
+---
+title: "10 Reasons to Learn R"
+author: "Tobias Busch"
+date: "`r Sys.Date()`"
+site: bookdown::bookdown_site
+documentclass: book
+bibliography: [book.bib, packages.bib]
+biblio-style: apalike
+link-citations: yes
+description: "A short introduction to Contemporary R."
+---
+
+# Introduction {.unnumbered}
+
+This book started as the the companion material for a workshop I first held on April 6th, 2021 at the ISP ComPros Research group lunch meeting at the University of Oslo. It was a 90 minutes long hands-on introduction to R. The idea was to provide enough insight to help the audience decide whether they should or should not learn it. After the workshop I kept working on the material and eventually my notes turned into something book-like, so I decided to publish them. This is a living document.
+
+## Who is this for? {.unnumbered}
+
+You are doing research / data analysis with other tools but you are curious about R. Maybe it's because...
+
+-   FOMO - You want to know what all the fuzz is about?
+-   You feel that your current workflow isn't efficient, robust, or reproducible enough?
+-   There's this *one* R package you would really like to use...?
+-   You tried R before and were overwhelmed, but would like to give it a second chance?
+
+Or, you are using R already, but you feel you lost track of all the recent changes and want an update on the state-of-the-Rt?
+
+I'm assuming ...
+
+-   You have no real programming experience
+-   You are not particularly interested in computers or programming
+-   You want to get things done and you believe that R might help you with that
+
+## Who am I? {.unnumbered}
+
+I have worked with R and other languages (Matlab, Python, ...) professionally in a research context for almost 10 years. I sometimes teach R with [The Carpentries](https://www.ub.uio.no/english/writing-publishing/dsc/carpentry-uio/) (usually half/full day courses) and I have made some humble contributions to the R package ecosystem, [`{mifa}`](https://teebusch.github.io/mifa/) and [`{noah}`](https://teebusch.github.io/noah/), and contributed to a few others (e.g, [`{TextGrid}`](https://github.com/patrickreidy/textgRid), [`{rlena}`](https://github.com/HomeBankCode/rlena))
+
+## What is R? {.unnumbered}
+
+R is a statistical computing and data analysis environment that is [widely used](https://www.tiobe.com/tiobe-index/r/) in (bioinformatics, geoscience, digital humanities, ...) and industry (finance, biosciences, pharmacology, ...). It is a free and open source implementation of the [*S* language](https://en.wikipedia.org/wiki/S_(programming_language)), which was created in the 1970s with *interactive data analysis* in mind. That means:
+
+-   **Interactive** -- R works like a really fancy pocket calculator that lets you make calculations, explore and plot data quickly and "on the fly".
+-   **Focussed on Data Analysis** -- More than in many other programming languages, data and statistics are at the core of R. That is, there are built-in data structures and functions that are meant to make data analysis easy.
+
+Some say R is a [domain specific programming language](https://en.wikipedia.org/wiki/Domain-specific_language). Others say it's [an environment for interactive data analysis that *has* a programming language](https://youtu.be/6S9r_YbqHy8). In any case, R can be a versatile & powerful *one-stop-shop* for the whole data analysis workflow:
+
+![The data science workflow](https://i.imgur.com/sclqeRc.jpg)
+
+-   **Data collection**
+-   **Data cleaning & transformation** -- also known as data wrangling, data munging, or "80% of data science"
+-   **Data Visualisation**
+-   **Modeling** -- using classical statistics as well as machine learning
+-   **Communication** -- e.g., in reports, papers, presentations or dashboards
+
+Data analysis is certainly R's core application. However, some people claim that [you can use R for everything...](https://youtu.be/m6nUdoP6894)
+
+## 10 cool things about R {.unnumbered}
+
+![](./images/reasons.png)
+
+There are a lot of good reasons to learn R! Here are the 10 things that I like most about R:
+
+1.  R is free and open source
+2.  R is easy to get started
+3.  R is a flexible language that grows with you
+4.  R is well-documented
+5.  R is expandable
+6.  R has powerful data wrangling functions
+7.  R has powerful data visualization functions
+8.  R has powerful statistical methods
+9.  R encourages reproducible research
+10. R has a truly awesome community
+
+We will have a closer look at all of these, and along the way we will play around with R and do a little hands-on data analysis, but before we start, let's get something out of the way: There are some very good reasons *not* to learn R!
+
+
+```{r include=FALSE}
+# automatically create a bib database for R packages
+knitr::write_bib(c(
+  .packages(), 'bookdown', 'knitr', 'rmarkdown'
+), 'packages.bib')
+```

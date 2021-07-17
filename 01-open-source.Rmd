@@ -1,0 +1,22 @@
+# R is free and open source
+
+With R, there are no license fees or purchasing cost. This means lower cost and
+less bureaucracy! It also means that you can use R everywhere, and you can use
+any version of it at any time. That's great for collaboration, sharing, and
+reproducibility. Another advantage of R being free and open source is that there
+are tens of thousands of third-party packages, and if anything is missing, you
+can create it yourself.
+
+Make no mistake: Free and open source does not mean unprofessional! The R
+project is very stable with a core team of computer scientists and statisticians
+guiding its development. Financially, the project is supported
+
+  - *directly* by companies such as [RStudio](https://www.rstudio.com/) and
+    [rOpenSci](https://ropensci.org/), who employ developers to improve R
+  - *indirectly* through people who contribute to the R project as part of their
+    jobs (e.g., research software engineers, statisticians, data scientists).
+
+R even has [peer-reviewed](https://www.jstatsoft.org/index)
+[journals](https://journal.r-project.org/archive/2020-2/) which academics use to
+get credited for working on improving R. It's also common to see papers about
+new statistical methods that are accompanied by implementations in R.

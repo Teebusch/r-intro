@@ -1,0 +1,174 @@
+# A flexible programming language that grows with you
+
+R grows with your needs. You need very little [boilerplate code](https://en.wikipedia.org/wiki/Boilerplate_code) to set up a new R project and start working efficiently  -- and sometimes the console is all you need! Right out of the box, R gives you a powerful tool belt for data anlysis. 
+
+Moreover, beginners don't need to worry about many of the programming concepts that are fundamental to working in other languages, such as [control flow](https://en.wikipedia.org/wiki/Control_flow), because R's vector-based approach to data manipulation will go a long way and many convenience functions take care of the nitty-gritty for you. 
+
+Then, as you become better and more cofortable with R, you can start to utilise its full power and flexibility. 
+While R is a [functional language](https://en.wikipedia.org/wiki/Functional_programming) it supports different programming paradigms. It also allows powerful *meta-programming* techniques that are impossible in other languages.
+
+## **Hands-on.** R Programming 101 
+
+### Data Types
+
+The [data type](https://en.wikipedia.org/wiki/Data_type) determines what operations you can perform with a piece of data. The bread and butter of data types in R are *numeric*, *logical*, and *character*.
+
+#### Numeric
+
+Numbers can be integer, decimal, or complex, but usually the difference does not matter. Sometimes, R might unexpectedly hit you with a number in scientific notation, e.g., `1e+23` -- don't worry, it's still just a number and you can [change the formatting if you like!](https://statisticsglobe.com/disable-exponential-scientific-notation-in-r)
+
+```r 
+23 + 0.45 + 1e2 + 6i
+```
+
+#### Logical
+
+Can be either `TRUE` or `FALSE` (or their shorthands, `T` and `F`). These are often used to represent binary categorical variables, as function arguments, or as intermediate steps when selecting and filtering data. 
+
+```r 
+(TRUE || FALSE) != (F == T)
+```
+
+#### Character
+
+Also known as "strings". Almost anything you type becomes a character string if you surround it with `""` or `''`. 
+
+```r 
+"Hello World!"
+```
+
+### Assignment
+
+You can use `<-` to assign values to *variables* (*objects*, in R lingo). Use the keyboard Shortcut <kbd>Alt</kbd>+<kbd>-</kbd> to save yourself some hand gymnastics. 
+You can give your variables almost any name you want as long as the name starts with a letter. For long variable names, [it is recommended to use "snake case"](https://style.tidyverse.org/syntax.html#object-names), which looks like this: `my_firssst_variable` :snake:
+
+```r
+a <- 1
+b <- 9
+a + b
+
+a <- 10 # Quiz: what would a + b return now?
+```
+
+Note how the newly created variables appear in the environment panel in RStudio, and how they get update when you assign a new value.
+
+ 
+:::spoiler *Well, actually ...*
+
+Many other programming languages use `=` to assign values to variables. In R, you can (for the most part) also use `=` for assignment. Just be aware that it will let everyone now that [you are not a true believer](https://en.wikipedia.org/wiki/Shibboleth).
+
+You can also use `->` to assign from left to right: `"I'm feeling freaky!" -> x`. It may not be a good idea to use this in your scripts too much, because it can make your code harder to read, but it sometimes comes in handy when you are messing around in the console.
+
+Finally, there's `<<-`, which allows assignment to variables in an enclosing environment. This can be useful if you need to update *global variables* from within a function. However, this is far beyond the scope of this intro, and chances are you will never encounter a `<<-` in the wild.
+
+You can [read more about R's assignment operators here](https://colinfay.me/r-assignment/) 
+:::
+
+### Comments
+
+As you can see in the example above, you can use `#` to leave comments in your script. [Learn to write good comments and write comments gratuitously](https://www.youtube.com/watch?v=yhF7OmuIILc) -- your collaborators and future self will thank you for it!
+
+### Vectors
+
+When working with data in R, you will encounter two important [data structures](https://en.wikipedia.org/wiki/Data_structure): *vectors* and *data frames*. In computer programming, data structures are a way to organize and process data efficiently. Vectors are made for storing values *of the same data type* (numerical, character, logical, ...) in a particular order. 
+
+To create a vector, you can use the "combine" function, `c()`. There are also the `:` and `seq()` functions, that can help you create a vector that contains a sequence of numbers: 
+    
+```r
+c(1,2,3,4)      # create a vector manually
+0:42            # a vector of all integer numbers from 0 to 42
+42:0            # it also works backwards
+seq(1, 4, 0.1)  # numbers 1.0 to 4.0 in 0.1 increments
+```
+
+R is really good at working with vectors! See how easy it is to multiply all numbers by a scalar, get the mean, or sum all elements --- all without using a loop or a temporary variable:
+
+```r 
+x <- c(1,2,3,4) # Create vector and assign to variable `x`
+x * 10
+mean(x)
+sum(x)
+```
+
+You can access specific positions of a vector using square brackets. You can also use this syntax to replace individual elements:
+
+```r 
+x[1]          # In R, indices start at 1
+x[2:3]        # use `:` to access a range of indices
+x[c(1,3)]     # use a vector to access particular indices
+x[2:3] <- 0   # replace 2nd and 3rd element with 0
+```
+
+Values in a vector can be named. This comes in handy, for example, if you need a simple [key-value store:](https://en.wikipedia.org/wiki/Key%E2%80%93value_database)
+
+```r
+fav_food <- c(
+    Garfield = "Lasagna", 
+    Popeye = "Spinach",
+    Obelix = "Roast Wild Boar"
+)
+
+fav_food["Popeye"]
+```
+
+:::spoiler *Here be dragons ...*
+
+When working with vectors, there are some pitfalls. Consider these examples:
+
+```r 
+c(1, 2, "a")
+c(FALSE, TRUE, 2, 3)
+
+x <- 1:3
+x[1] <- TRUE
+x
+x[3] <- "3"
+x
+
+c( c(1,2), c(3,4) )
+c( 1, c(2,3,4))
+c( c(TRUE, 0), c(TRUE, FALSE), c(TRUE, "0"))
+```
+
+What is happening here? Remember that vectors can only contain a *single* data type. If you are trying to mix data types, R will quietly (without throwing an error) *coerce* all data types to the lowest common denominator: Logical become numerical (0 and 1) and numerical become character. 
+Vectors also can't contain other vectors, so these get unnested.
+
+Character strings that happen to contain only numbers are nevertheless treated as characters. If you want R to treat them as numeric, you will have to explicitely tell it to do so, for example, with the `as.numeric()` function.
+
+If you need to store a sequence of mixed data types, you should instead use a data structure called *list*.
+:::
+
+### Data Frames
+
+Usually, your research data will be more complex than just a single sequence of values. For this, R has data frames. Data frames are two-dimensional like a spreadsheet -- with *rows* usually containing different observations and *columns* usually containing different variables. 
+
+Rows and columns of a data frame can be named, and while row names have fallen out of fashion, it is good practice to give the columns of your data frames names that are easy to remember and easy to type. 
+
+```r
+# You can make your own data frame by hand like this
+cool_numbers <- data.frame(
+    "number" = c(1,13,23,42),
+    "isPrime" = c(FALSE, TRUE, TRUE, FALSE)
+)
+
+# A quick way to access a single column of a data frame is with the `$` operator
+cool_numbers$number
+```
+
+As for vectors, R comes out of the box with many more commands to create and modify data frames, select columns, and filter rows. You will eventually need to get familiar with these. However, in this short introduction we will skip these in favor of the more streamlined and beginner-friendly functions from the Tidyverse -- more about that later.  
+
+:::info
+**Everything is a vector.** Did you notice that columns in a data frame are vectors? This means that everything that can be done with a vector can be done with a data frame column! In fact, all 'atomic' data types in R (numeric, characters, logical) are *always* stored as vectors -- even a single number is actually a numerical vector of length one! This may seem like an uninteresting detail, but it's actually a really powerful idea and the source of much of R's strength!
+:::
+
+:::spoiler *Wait, there's more ...*
+
+R has a couple of other data structures that you will eventually encounter. The details are beyond the scope of this intro, but you can read more [here.](http://adv-r.had.co.nz/). This includes ...
+
+- **Factor** -- Factors are numerical vectors that can take a fixed set of values (levels), whereby each level can be assigned a label. The levels may be ordered or unordered. If this reminds you of categorical and ordinal variables you are absolutely right -- that's where they are used most often. But be warned: While factors can be quite useful they are also a point of confusion for many R novices.
+- **List** -- Lists are similar to vectors, but they can contain a mix of data types and data structures, including other lists.
+- [**Tibble**](https://tibble.tidyverse.org/) -- A 'modern' implementation of data frames, provided by the Tidyverse.
+- **Object** -- Objects can be used to organize functionality more effectively. For instance, the output of a statistical model may be an object that has various attributes and associated functions (methods). R even has three types of objects: R6, S3, and S4. 
+- **Matrix** -- Not to be confused with data frames. If you are implementing statistical methods yourself, you will likely want to make use of R's powerful matrix algebra functions. Otherwise, you likely won't often have to work with matrices directly. 
+- [**Environment**](https://adv-r.hadley.nz/environments.html) -- Environments are a collection of R objects. They are implemented as a hashmap, which makes them a good alternative to named vectors for key-value stores if you care about speed. Understanding environments is central to a deep understanding of R, but as a beginner it's nothing you need to worry about. 
+:::

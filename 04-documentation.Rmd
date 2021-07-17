@@ -1,0 +1,16 @@
+# R has great documentation
+
+Are you wondering how you should ever remember all of the different R commands? Fear not! 
+
+- The Help panels is right there in RStudio and gives you access to all the documentation of all R functions that you have installed. You can search in the search box there, or type `?mysterious_function` in the console. However, my favourite way to assess the help is to put the cursor on the function name and press <kbd>F1</kbd> (similarly, you can use <kbd>F2</kbd> to access the source code for anything -- It is open source, after all!).
+- RStudio has excellent fuzzy auto-complete and will assist you while you type. Use <kbd>↑</kbd>, <kbd>↓</kbd>, and <kbd>↹</kbd> to select one of the choices.
+- There are excellent [cheatsheets](https://www.rstudio.com/resources/cheatsheets/) for popular packages available in the RStudio menu (`Help > Cheatsheets > ...`)
+
+Having documentation easily available right in RStudio helps to learn the basics quickly and stay in the flow while you code. It's also worth mentioning that R's Function documentation, package vignettes and package websites are usually well-written and comprehensive. 
+
+If you ever run into a problem or an error message that you can't figure out yourself, check Google, [StackOverflow](https://stackoverflow.com/questions/tagged/r), [RStudio Community](https://community.rstudio.com/), or the Twitter `#RStats`. There are also lots of blogs with tutorials written by other R users.
+
+## **Hands-on.** Using the R help
+
+- Look at the help file for the `mean()` function, see what other arguments the function accepts
+- Have a look at the cheatsheet for the RStudio IDE

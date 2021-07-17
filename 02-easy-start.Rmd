@@ -1,0 +1,82 @@
+# It's easy to get started
+
+Download and install [R](https://www.r-project.org/) and
+[RStudio](https://www.rstudio.com/products/rstudio/), or give it a spin at
+[rstudio.cloud](https://rstudio.cloud/). That's it! Everything else you need
+can be set up from within RStudio.
+
+:::{.spoiler}
+
+*Well, actually ...*
+
+For some things, e.g., Bayesian statistic, you might also need to install
+[RTools](https://cran.r-project.org/bin/windows/Rtools/). RTools provides
+additional tools that don't come with the standard R installation, such as a
+C/C++ compiler. However, you can always do that later.
+
+For reproducible research, you should also install [Git](https://git-scm.com/).
+RStudio has a Git GUI built in, but personally I prefer [Github
+Desktop](https://desktop.github.com/). We will talk a bit about Git later, but
+it really deserves its own 90 minutes introduction, so we will keep it brief.
+
+For maximum reproducibility you could install Docker so that you can create an
+RStudio [Docker container](https://www.rocker-project.org/) for each project,
+but that is way beyond the scope of this intro.
+
+:::
+
+## Why use RStudio?
+
+[**RStudio**](https://www.rstudio.com/products/rstudio/) is a popular
+*all-in-one* user interface (Integrated Development Environment, *IDE*) for
+**R**. It provides many conveniences that make working with R easier. There are
+alternatives to RStudio, but **R's own GUI** is not one of them:
+
+![A screenshot of RGui](https://i.imgur.com/GVARFyH.jpg)
+
+*R's own GUI --- The 90s called...they want their user interface back.*
+
+
+## **Hands-on.** First steps with RStudio
+
+![A screen capture of creating a script file in
+RStudio](https://i.imgur.com/bHTZyfC.gif)
+
+### Create a new project
+
+Open RStudio and *create a new RStudio project* in an empty folder. This is the
+first thing you should do for every project and the first step towards
+reproducibility: Every new R project gets it's own folder in which all its data
+and files will live. If you ever move this folder to a new location or share it
+with someone else, nothing will break.
+
+Leave *"Use version control"* and *"use renv"* unchecked for now -- we will get
+back to those later.
+
+### Operators
+
+In the *console*, try out some of R's operators. R has all the operators that
+you would expect to find in a pocket calculator:
+
+  - *arithmetic:* `+ - * / ^`
+  - *modular arithmetic:* `%% %/%`
+  - *relational:* `< > <= >= == !=`
+  - *logical:* `&& || ! | &`
+  - *parentheses for modifying precedence:* `(1 + 2) * 10`
+
+Give them a spin and see what happens. For example, what does `1 != 1.0` do? Use
+<kbd>Enter</kbd> to run commands, use <kbd>↑</kbd> and <kbd>↓</kbd> to recall
+previous commands. And don't worry -- you can't hurt R, it has been through this
+before...
+
+![Hello Operator meme](https://i.imgur.com/IZ8gIEv.jpg)
+
+### Create a script
+
+The console is useful to run quick throwaway commands but code that you want to
+keep belongs in a script file. R sripts still allow a very flexible console-like
+workflow, because you can run individual sections or lines as you please.
+
+*Create a script file*, type a few commands and run lines or sections using
+<kbd>Ctrl</kbd> + <kbd>Enter</kbd> or the buttons on the top right of the script
+panel.

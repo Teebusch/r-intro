@@ -1,0 +1,28 @@
+# Powerful statistical methods at your fingertips 
+
+Many simple stats are built into R (`glm()`, `chisq.test()` and many more). No additional packages needed! 
+For more advanced analses there are often multiple packages. Best to ask a domain expert what they use (or Google). Here are just a few examples:
+
+- [GAM](https://noamross.github.io/gams-in-r-course/), [HLM](https://github.com/lme4/lme4/), [Mixture Models](https://mclust-org.github.io/mclust/)...
+- [SEM with `{lavaan}`](https://lavaan.ugent.be/)
+- Robust stats with {WRS2}
+- Time series with [`{forecast}`](https://github.com/robjhyndman/forecast) `{zoo}`, `{xts}`
+- [Bayesian Statistics](https://github.com/rmcelreath/statrethinking_winter2019) with [`{brms}`](https://paul-buerkner.github.io/brms/), [`{rstanarm}`](https://mc-stan.org/rstanarm/), [`{rstan}`](https://mc-stan.org/users/interfaces/rstan)
+- [Text mining with `{tidytext}`](https://www.tidytextmining.com/)
+- [Machine learning with `{tidymodels}`](https://www.tidymodels.org/)
+- [Network analysis](https://kateto.net/network-visualization) with `{tidygraph}` or `{igraph}`
+- [Meta analysis](https://bookdown.org/MathiasHarrer/Doing_Meta_Analysis_in_R/) with `{metafor}` and `{rmeta}`
+
+
+## **Hands-on.** Statistical Modeling 
+
+```r
+t.test()
+lm()
+```
+
+Let's try something more advanced...
+
+```r
+# ...
+```
