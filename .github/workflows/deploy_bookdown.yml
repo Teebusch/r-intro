@@ -37,7 +37,8 @@ jobs:
       - name: Render Book
         run: Rscript -e 'bookdown::render_book("index.Rmd", quiet = TRUE)'
 
-      - uses: actions/upload-artifact@v1
+      - name: Upload
+        uses: actions/upload-artifact@v1
         with:
           name: _book
           path: _book/
@@ -52,15 +53,15 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
+
       - name: Download artifact
         uses: actions/download-artifact@v1.0.0
         with:
           name: _book # optional
           path: _book # optional
-      - name: Deploy to GitHub Pages
-        uses: Cecilapp/GitHub-Pages-deploy@v3
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@4.1.4
         with:
-          email: ${{ secrets.EMAIL }}
-          build_dir: _book
+          branch: gh-pages # The branch the action should deploy to.
+          folder: _book # The folder the action should deploy.
