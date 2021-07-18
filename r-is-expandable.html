@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Reason 5 R is expandable | 10 Reasons to Learn R</title>
+  <meta name="description" content="A short introduction to Contemporary R." />
+  <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Reason 5 R is expandable | 10 Reasons to Learn R" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="A short introduction to Contemporary R." />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Reason 5 R is expandable | 10 Reasons to Learn R" />
+  
+  <meta name="twitter:description" content="A short introduction to Contemporary R." />
+  
+
+<meta name="author" content="Tobias Busch" />
+
+
+<meta name="date" content="2021-07-18" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="r-has-great-documentation.html"/>
+<link rel="next" href="r-has-powerful-data-wrangling-tools.html"/>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+
+
+<style type="text/css">
+code.sourceCode > span { display: inline-block; line-height: 1.25; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">10 Reasons To Learn R</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Introduction</a><ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#who-is-this-for"><i class="fa fa-check"></i>Who is this for?</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#who-am-i"><i class="fa fa-check"></i>Who am I?</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#what-is-r"><i class="fa fa-check"></i>What is R?</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#cool-things-about-r"><i class="fa fa-check"></i>10 cool things about R</a></li>
+</ul></li>
+<li><a href="why-you-should-not-learn-r.html#why-you-should-not-learn-r">Why you should <em>not</em> learn R</a><ul>
+<li class="chapter" data-level="" data-path="why-you-should-not-learn-r.html"><a href="why-you-should-not-learn-r.html"><i class="fa fa-check"></i>It is a considerable time investment</a></li>
+<li class="chapter" data-level="" data-path="why-you-should-not-learn-r.html"><a href="why-you-should-not-learn-r.html#there-are-good-alternatives"><i class="fa fa-check"></i>There are good alternatives</a><ul>
+<li class="chapter" data-level="" data-path="why-you-should-not-learn-r.html"><a href="why-you-should-not-learn-r.html#proprietary-software"><i class="fa fa-check"></i>Proprietary Software</a></li>
+<li class="chapter" data-level="" data-path="why-you-should-not-learn-r.html"><a href="why-you-should-not-learn-r.html#free-point-and-click-alternatives"><i class="fa fa-check"></i>Free point-and-click alternatives</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="1" data-path="r-is-free-and-open-source.html"><a href="r-is-free-and-open-source.html"><i class="fa fa-check"></i><b>1</b> R is free and open source</a></li>
+<li class="chapter" data-level="2" data-path="its-easy-to-get-started.html"><a href="its-easy-to-get-started.html"><i class="fa fa-check"></i><b>2</b> It’s easy to get started</a><ul>
+<li class="chapter" data-level="2.1" data-path="its-easy-to-get-started.html"><a href="its-easy-to-get-started.html#why-use-rstudio"><i class="fa fa-check"></i><b>2.1</b> Why use RStudio?</a></li>
+<li class="chapter" data-level="2.2" data-path="its-easy-to-get-started.html"><a href="its-easy-to-get-started.html#hands-on.-first-steps-with-rstudio"><i class="fa fa-check"></i><b>2.2</b> <strong>Hands-on.</strong> First steps with RStudio</a><ul>
+<li class="chapter" data-level="2.2.1" data-path="its-easy-to-get-started.html"><a href="its-easy-to-get-started.html#create-a-new-project"><i class="fa fa-check"></i><b>2.2.1</b> Create a new project</a></li>
+<li class="chapter" data-level="2.2.2" data-path="its-easy-to-get-started.html"><a href="its-easy-to-get-started.html#operators"><i class="fa fa-check"></i><b>2.2.2</b> Operators</a></li>
+<li class="chapter" data-level="2.2.3" data-path="its-easy-to-get-started.html"><a href="its-easy-to-get-started.html#create-a-script"><i class="fa fa-check"></i><b>2.2.3</b> Create a script</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="a-flexible-programming-language-that-grows-with-you.html"><a href="a-flexible-programming-language-that-grows-with-you.html"><i class="fa fa-check"></i><b>3</b> A flexible programming language that grows with you</a><ul>
+<li class="chapter" data-level="3.1" data-path="a-flexible-programming-language-that-grows-with-you.html"><a href="a-flexible-programming-language-that-grows-with-you.html#hands-on.-r-programming-101"><i class="fa fa-check"></i><b>3.1</b> <strong>Hands-on.</strong> R Programming 101</a><ul>
+<li class="chapter" data-level="3.1.1" data-path="a-flexible-programming-language-that-grows-with-you.html"><a href="a-flexible-programming-language-that-grows-with-you.html#data-types"><i class="fa fa-check"></i><b>3.1.1</b> Data Types</a></li>
+<li class="chapter" data-level="3.1.2" data-path="a-flexible-programming-language-that-grows-with-you.html"><a href="a-flexible-programming-language-that-grows-with-you.html#assignment"><i class="fa fa-check"></i><b>3.1.2</b> Assignment</a></li>
+<li class="chapter" data-level="3.1.3" data-path="a-flexible-programming-language-that-grows-with-you.html"><a href="a-flexible-programming-language-that-grows-with-you.html#comments"><i class="fa fa-check"></i><b>3.1.3</b> Comments</a></li>
+<li class="chapter" data-level="3.1.4" data-path="a-flexible-programming-language-that-grows-with-you.html"><a href="a-flexible-programming-language-that-grows-with-you.html#vectors"><i class="fa fa-check"></i><b>3.1.4</b> Vectors</a></li>
+<li class="chapter" data-level="3.1.5" data-path="a-flexible-programming-language-that-grows-with-you.html"><a href="a-flexible-programming-language-that-grows-with-you.html#data-frames"><i class="fa fa-check"></i><b>3.1.5</b> Data Frames</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="r-has-great-documentation.html"><a href="r-has-great-documentation.html"><i class="fa fa-check"></i><b>4</b> R has great documentation</a><ul>
+<li class="chapter" data-level="4.1" data-path="r-has-great-documentation.html"><a href="r-has-great-documentation.html#hands-on.-using-the-r-help"><i class="fa fa-check"></i><b>4.1</b> <strong>Hands-on.</strong> Using the R help</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="r-is-expandable.html"><a href="r-is-expandable.html"><i class="fa fa-check"></i><b>5</b> R is expandable</a><ul>
+<li class="chapter" data-level="5.1" data-path="r-is-expandable.html"><a href="r-is-expandable.html#what-is-the-tidyverse"><i class="fa fa-check"></i><b>5.1</b> What is the Tidyverse?</a></li>
+<li class="chapter" data-level="5.2" data-path="r-is-expandable.html"><a href="r-is-expandable.html#hands-on.-install-packages-load-data-from-a-file"><i class="fa fa-check"></i><b>5.2</b> <strong>Hands-on.</strong> Install packages, load data from a file</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="r-has-powerful-data-wrangling-tools.html"><a href="r-has-powerful-data-wrangling-tools.html"><i class="fa fa-check"></i><b>6</b> R has powerful data wrangling tools</a><ul>
+<li class="chapter" data-level="6.1" data-path="r-has-powerful-data-wrangling-tools.html"><a href="r-has-powerful-data-wrangling-tools.html#hands-on.-wrangling-data"><i class="fa fa-check"></i><b>6.1</b> <strong>Hands-on.</strong> Wrangling Data</a><ul>
+<li class="chapter" data-level="6.1.1" data-path="r-has-powerful-data-wrangling-tools.html"><a href="r-has-powerful-data-wrangling-tools.html#filter-rows"><i class="fa fa-check"></i><b>6.1.1</b> Filter rows</a></li>
+<li class="chapter" data-level="6.1.2" data-path="r-has-powerful-data-wrangling-tools.html"><a href="r-has-powerful-data-wrangling-tools.html#the-operator-pipe"><i class="fa fa-check"></i><b>6.1.2</b> The %&gt;% operator (“pipe”)</a></li>
+<li class="chapter" data-level="6.1.3" data-path="r-has-powerful-data-wrangling-tools.html"><a href="r-has-powerful-data-wrangling-tools.html#create-new-columns-with-mutate"><i class="fa fa-check"></i><b>6.1.3</b> Create new columns with <code>mutate()</code></a></li>
+<li class="chapter" data-level="6.1.4" data-path="r-has-powerful-data-wrangling-tools.html"><a href="r-has-powerful-data-wrangling-tools.html#split-apply-combine-with-group_by-and-summarize"><i class="fa fa-check"></i><b>6.1.4</b> Split-apply-combine with <code>group_by()</code> and <code>summarize()</code></a></li>
+<li class="chapter" data-level="6.1.5" data-path="r-has-powerful-data-wrangling-tools.html"><a href="r-has-powerful-data-wrangling-tools.html#other-useful-data-wrangling-functions"><i class="fa fa-check"></i><b>6.1.5</b> Other useful data wrangling functions</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="r-has-powerful-data-visualisation-tools.html"><a href="r-has-powerful-data-visualisation-tools.html"><i class="fa fa-check"></i><b>7</b> R has powerful data visualisation tools</a><ul>
+<li class="chapter" data-level="7.1" data-path="r-has-powerful-data-visualisation-tools.html"><a href="r-has-powerful-data-visualisation-tools.html#hands-on.-data-visualization"><i class="fa fa-check"></i><b>7.1</b> <strong>Hands-on.</strong> Data Visualization</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="powerful-statistical-methods-at-your-fingertips.html"><a href="powerful-statistical-methods-at-your-fingertips.html"><i class="fa fa-check"></i><b>8</b> Powerful statistical methods at your fingertips</a><ul>
+<li class="chapter" data-level="8.1" data-path="powerful-statistical-methods-at-your-fingertips.html"><a href="powerful-statistical-methods-at-your-fingertips.html#hands-on.-statistical-modeling"><i class="fa fa-check"></i><b>8.1</b> <strong>Hands-on.</strong> Statistical Modeling</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="r-encourages-reproducible-research.html"><a href="r-encourages-reproducible-research.html"><i class="fa fa-check"></i><b>9</b> R encourages reproducible research</a><ul>
+<li class="chapter" data-level="9.1" data-path="r-encourages-reproducible-research.html"><a href="r-encourages-reproducible-research.html#make-self-contained-projects"><i class="fa fa-check"></i><b>9.1</b> Make Self-contained Projects</a></li>
+<li class="chapter" data-level="9.2" data-path="r-encourages-reproducible-research.html"><a href="r-encourages-reproducible-research.html#snapshot-your-development-environment"><i class="fa fa-check"></i><b>9.2</b> Snapshot your development environment</a></li>
+<li class="chapter" data-level="9.3" data-path="r-encourages-reproducible-research.html"><a href="r-encourages-reproducible-research.html#use-version-control"><i class="fa fa-check"></i><b>9.3</b> Use Version control</a></li>
+<li class="chapter" data-level="9.4" data-path="r-encourages-reproducible-research.html"><a href="r-encourages-reproducible-research.html#make-reports-reproducible"><i class="fa fa-check"></i><b>9.4</b> Make reports reproducible</a></li>
+<li class="chapter" data-level="9.5" data-path="r-encourages-reproducible-research.html"><a href="r-encourages-reproducible-research.html#no-more-copy-and-paste"><i class="fa fa-check"></i><b>9.5</b> No more copy and paste!</a></li>
+<li class="chapter" data-level="9.6" data-path="r-encourages-reproducible-research.html"><a href="r-encourages-reproducible-research.html#more"><i class="fa fa-check"></i><b>9.6</b> More</a></li>
+<li class="chapter" data-level="9.7" data-path="r-encourages-reproducible-research.html"><a href="r-encourages-reproducible-research.html#hands-on.-make-your-research-reproducible"><i class="fa fa-check"></i><b>9.7</b> <strong>Hands-on.</strong> Make your Research Reproducible</a><ul>
+<li class="chapter" data-level="9.7.1" data-path="r-encourages-reproducible-research.html"><a href="r-encourages-reproducible-research.html#use-renv-to-store-a-snapshot-of-your-package-library"><i class="fa fa-check"></i><b>9.7.1</b> Use {renv} to store a snapshot of your package library</a></li>
+<li class="chapter" data-level="9.7.2" data-path="r-encourages-reproducible-research.html"><a href="r-encourages-reproducible-research.html#take-a-snapshot-of-your-code-with-git"><i class="fa fa-check"></i><b>9.7.2</b> Take a snapshot of your code with Git</a></li>
+<li class="chapter" data-level="9.7.3" data-path="r-encourages-reproducible-research.html"><a href="r-encourages-reproducible-research.html#make-a-reproducible-report-with-rmarkdown"><i class="fa fa-check"></i><b>9.7.3</b> Make a reproducible report with RMarkdown</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="the-r-community-is-awesome.html"><a href="the-r-community-is-awesome.html"><i class="fa fa-check"></i><b>10</b> The R community is awesome!</a><ul>
+<li class="chapter" data-level="10.1" data-path="the-r-community-is-awesome.html"><a href="the-r-community-is-awesome.html#great-free-learning-material"><i class="fa fa-check"></i><b>10.1</b> Great free learning material</a><ul>
+<li class="chapter" data-level="10.1.1" data-path="the-r-community-is-awesome.html"><a href="the-r-community-is-awesome.html#blog-posts"><i class="fa fa-check"></i><b>10.1.1</b> Blog Posts</a></li>
+<li class="chapter" data-level="10.1.2" data-path="the-r-community-is-awesome.html"><a href="the-r-community-is-awesome.html#books"><i class="fa fa-check"></i><b>10.1.2</b> Books</a></li>
+<li class="chapter" data-level="10.1.3" data-path="the-r-community-is-awesome.html"><a href="the-r-community-is-awesome.html#courses-and-videos"><i class="fa fa-check"></i><b>10.1.3</b> Courses and Videos</a></li>
+</ul></li>
+<li class="chapter" data-level="10.2" data-path="the-r-community-is-awesome.html"><a href="the-r-community-is-awesome.html#podcasts"><i class="fa fa-check"></i><b>10.2</b> Podcasts</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="wrap-up.html"><a href="wrap-up.html"><i class="fa fa-check"></i>Wrap-Up</a></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with R and bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">10 Reasons to Learn R</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="r-is-expandable" class="section level1">
+<h1><span class="header-section-number">Reason 5</span> R is expandable</h1>
+<p>The full power of R unfolds when you tap into its vast ecosystem of third-party
+packages. There are literally tens of thousands of packages to make your life
+easier! There’s an R package for almost everything! See for yourself at
+<a href="https://rdrr.io/">rdrr.io</a> or <a href="https://www.r-pkg.org/">Metacran</a>.</p>
+<p>Packages in <a href="https://cran.r-project.org/">CRAN</a>,
+<a href="https://www.bioconductor.org/">BioConductor</a>, and
+<a href="https://neuroconductor.org/">Neuroconductor</a>) are peer-reviewed and often
+written by domain experts. Many more packages are available on
+<a href="https://github.com/topics/r?l=r">Github</a>. And if there’s ever anything missing
+you can build it yourself – together with others across the globe. <a href="https://www.rstudio.com/resources/rstudioglobal-2021/make-a-package-make-some-friends/">It’s fun
+and you will learn a
+lot!</a></p>
+<p>By the way: R can also integrate with
+<a href="https://rstudio.github.io/reticulate/">Python</a>, <a href="http://www.rcpp.org/">C</a>, and
+other languages and interface with other software, such as
+<a href="https://mclust-org.github.io/mclust/">MPLUS</a>.</p>
+<div id="what-is-the-tidyverse" class="section level2">
+<h2><span class="header-section-number">5.1</span> What is the Tidyverse?</h2>
+<p><a href="https://www.tidyverse.org/"><strong>The Tidyverse</strong></a> is a set of R packages that
+share a common design philosophy. It aims to provide consistent user-friendly
+verb-based functions for common data-tasks and to iron out many of the
+idiosyncrasies of <em>Base R</em>. The <strong>Tidy Data</strong> that gives the Tidyverse its name
+is a table with</p>
+<ul>
+<li>one observation per row</li>
+<li>one variable per column</li>
+<li>column names that are easy to type and easy to remember</li>
+</ul>
+<p>The core idea is that, once the data is in <em>tidy</em> format, all the Tidyverse
+functions can be used seamlessly. A special operator, the pipe <code>%&gt;%</code> (see
+below), glues all the functions together.</p>
+<p>The Tidyverse is a relatively recent addition to the R package ecosystem but the
+design philosphy has really struck a chord with the R developer community and
+many packages are now following Tidyverse principles. As a result, the overall
+data analysis workflow in R has become much more streamlined and integrated over
+the last few years. Nevertheless, some people prefer base R, and many older
+packages will never change to a “tidy” design. Moreover, there are other popular
+alternatives to the Tidyverse, such as the
+<a href="https://rdatatable.gitlab.io/data.table/"><code>{data.table}</code></a> package. This leads
+to a bit of a schism in the R package ecosystem.</p>
+</div>
+<div id="hands-on.-install-packages-load-data-from-a-file" class="section level2">
+<h2><span class="header-section-number">5.2</span> <strong>Hands-on.</strong> Install packages, load data from a file</h2>
+<p>Often you will read data from external sources. For this example we will use a
+data set about climbing expeditions in the Himalaya that was provided by <a href="https://github.com/rfordatascience/tidytuesday/blob/master/data/2020/2020-09-22/readme.md%60">Tidy
+Tuesday</a>.</p>
+<p>The data is provided as a <em>CSV</em> file (comma separated value), a popular plain
+text format for sharing data across the internet and we will load it straight
+into our computer’s memory from the web.</p>
+<p>:::info <strong>Excel files are bad for sharing data!</strong> <a href="https://www.theverge.com/2020/8/6/21355674/human-genes-rename-microsoft-excel-misreading-dates">Learn from the mistakes of
+others</a>
+and instead use csv, json,
+<a href="https://blog.rstudio.com/2016/03/29/feather/">feather</a>,
+<a href="https://db.rstudio.com/databases/sqlite/">databases</a>, … :::</p>
+<p>To read the CSV file and turn it into a data frame we will use the <code>read_csv()</code>
+function. To use it, we first have to install the <code>{tidyverse}</code> package (if we
+haven’t already) and then load it.</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="r-is-expandable.html#cb11-1"></a><span class="kw">install.packages</span>(<span class="st">&quot;tidyverse&quot;</span>)</span>
+<span id="cb11-2"><a href="r-is-expandable.html#cb11-2"></a><span class="kw">library</span>(tidyverse)</span></code></pre></div>
+<pre><code>peaks &lt;-
+read_csv(&#39;&lt;https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2020/2020-09-22/peaks.csv&gt;&#39;)</code></pre>
+<p>:::info Usually, <strong>packages</strong> are collections of functions. The <code>{tidyverse}</code>
+package is a bit different, as it is actually a collection of packages — a
+<em>meta-package</em>. When you load it, it loads, other packages, including
+<code>{ggplot2}</code>, <code>{readr}</code>, and <code>{dplyr}</code>. For example, the <code>read_csv()</code> function is
+from the <code>{readr}</code> package. :::</p>
+<p>Now that we have loaded the data, we can have a look at the first few rows with
+the <code>glimpse()</code> fnction – another function from the <code>{tidyverse}</code> package.</p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="r-is-expandable.html#cb13-1"></a><span class="kw">glimpse</span>(peaks)</span></code></pre></div>
+<p>You can also get a more traditional spreadsheet-like view of the data frame by
+clicking its name in the Environment panel or running <code>view(peaks)</code>.</p>
+<p>To better understand our data, let’s get some summary statistics. The <code>{skimr}</code>
+package provides a really nice function for this. Let’s install the package and
+then “skim” our data:</p>
+<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="r-is-expandable.html#cb14-1"></a><span class="kw">install.packages</span>(<span class="st">&quot;skimr&quot;</span>)</span>
+<span id="cb14-2"><a href="r-is-expandable.html#cb14-2"></a>skimr<span class="op">::</span><span class="kw">skim</span>(peaks)</span></code></pre></div>
+<p>Neat huh? This summary tells us quite a bit about our data! For example, we can
+see that there some peaks have only been sucessfully climbed resently, or not at
+all. There also appears to be an outlier in the <code>first_ascent_year</code> column – a
+peak that was succesfully climbed in the year 201.</p>
+<p>:::info <strong>The :: operator.</strong> The double colon <code>::</code> between the package name and
+the function name is a way to call a function without first loading the package
+it is in. Thus, <code>skimr::skim(peaks)</code> is equivalent to</p>
+<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="r-is-expandable.html#cb15-1"></a><span class="kw">library</span>(skimr)</span>
+<span id="cb15-2"><a href="r-is-expandable.html#cb15-2"></a><span class="kw">skim</span>(peaks)</span></code></pre></div>
+<p>The <code>::</code> is often used when the package is only needed for a single function
+call or to clarify (to R or the person reading the code) which package a
+function is coming from. This is particularly useful when there are functions
+with the same name in different packages. Another approach to solving this
+problem is the <a href="https://conflicted.r-lib.org/"><code>{conflicted}</code></a> package. :::</p>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="r-has-great-documentation.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="r-has-powerful-data-wrangling-tools.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["r-intro.pdf", "r-intro.epub"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>

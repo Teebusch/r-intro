@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Reason 3 A flexible programming language that grows with you | 10 Reasons to Learn R</title>
+  <meta name="description" content="A short introduction to Contemporary R." />
+  <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Reason 3 A flexible programming language that grows with you | 10 Reasons to Learn R" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="A short introduction to Contemporary R." />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Reason 3 A flexible programming language that grows with you | 10 Reasons to Learn R" />
+  
+  <meta name="twitter:description" content="A short introduction to Contemporary R." />
+  
+
+<meta name="author" content="Tobias Busch" />
+
+
+<meta name="date" content="2021-07-18" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="its-easy-to-get-started.html"/>
+<link rel="next" href="r-has-great-documentation.html"/>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+
+
+<style type="text/css">
+code.sourceCode > span { display: inline-block; line-height: 1.25; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">10 Reasons To Learn R</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Introduction</a><ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#who-is-this-for"><i class="fa fa-check"></i>Who is this for?</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#who-am-i"><i class="fa fa-check"></i>Who am I?</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#what-is-r"><i class="fa fa-check"></i>What is R?</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#cool-things-about-r"><i class="fa fa-check"></i>10 cool things about R</a></li>
+</ul></li>
+<li><a href="why-you-should-not-learn-r.html#why-you-should-not-learn-r">Why you should <em>not</em> learn R</a><ul>
+<li class="chapter" data-level="" data-path="why-you-should-not-learn-r.html"><a href="why-you-should-not-learn-r.html"><i class="fa fa-check"></i>It is a considerable time investment</a></li>
+<li class="chapter" data-level="" data-path="why-you-should-not-learn-r.html"><a href="why-you-should-not-learn-r.html#there-are-good-alternatives"><i class="fa fa-check"></i>There are good alternatives</a><ul>
+<li class="chapter" data-level="" data-path="why-you-should-not-learn-r.html"><a href="why-you-should-not-learn-r.html#proprietary-software"><i class="fa fa-check"></i>Proprietary Software</a></li>
+<li class="chapter" data-level="" data-path="why-you-should-not-learn-r.html"><a href="why-you-should-not-learn-r.html#free-point-and-click-alternatives"><i class="fa fa-check"></i>Free point-and-click alternatives</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="1" data-path="r-is-free-and-open-source.html"><a href="r-is-free-and-open-source.html"><i class="fa fa-check"></i><b>1</b> R is free and open source</a></li>
+<li class="chapter" data-level="2" data-path="its-easy-to-get-started.html"><a href="its-easy-to-get-started.html"><i class="fa fa-check"></i><b>2</b> It’s easy to get started</a><ul>
+<li class="chapter" data-level="2.1" data-path="its-easy-to-get-started.html"><a href="its-easy-to-get-started.html#why-use-rstudio"><i class="fa fa-check"></i><b>2.1</b> Why use RStudio?</a></li>
+<li class="chapter" data-level="2.2" data-path="its-easy-to-get-started.html"><a href="its-easy-to-get-started.html#hands-on.-first-steps-with-rstudio"><i class="fa fa-check"></i><b>2.2</b> <strong>Hands-on.</strong> First steps with RStudio</a><ul>
+<li class="chapter" data-level="2.2.1" data-path="its-easy-to-get-started.html"><a href="its-easy-to-get-started.html#create-a-new-project"><i class="fa fa-check"></i><b>2.2.1</b> Create a new project</a></li>
+<li class="chapter" data-level="2.2.2" data-path="its-easy-to-get-started.html"><a href="its-easy-to-get-started.html#operators"><i class="fa fa-check"></i><b>2.2.2</b> Operators</a></li>
+<li class="chapter" data-level="2.2.3" data-path="its-easy-to-get-started.html"><a href="its-easy-to-get-started.html#create-a-script"><i class="fa fa-check"></i><b>2.2.3</b> Create a script</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="a-flexible-programming-language-that-grows-with-you.html"><a href="a-flexible-programming-language-that-grows-with-you.html"><i class="fa fa-check"></i><b>3</b> A flexible programming language that grows with you</a><ul>
+<li class="chapter" data-level="3.1" data-path="a-flexible-programming-language-that-grows-with-you.html"><a href="a-flexible-programming-language-that-grows-with-you.html#hands-on.-r-programming-101"><i class="fa fa-check"></i><b>3.1</b> <strong>Hands-on.</strong> R Programming 101</a><ul>
+<li class="chapter" data-level="3.1.1" data-path="a-flexible-programming-language-that-grows-with-you.html"><a href="a-flexible-programming-language-that-grows-with-you.html#data-types"><i class="fa fa-check"></i><b>3.1.1</b> Data Types</a></li>
+<li class="chapter" data-level="3.1.2" data-path="a-flexible-programming-language-that-grows-with-you.html"><a href="a-flexible-programming-language-that-grows-with-you.html#assignment"><i class="fa fa-check"></i><b>3.1.2</b> Assignment</a></li>
+<li class="chapter" data-level="3.1.3" data-path="a-flexible-programming-language-that-grows-with-you.html"><a href="a-flexible-programming-language-that-grows-with-you.html#comments"><i class="fa fa-check"></i><b>3.1.3</b> Comments</a></li>
+<li class="chapter" data-level="3.1.4" data-path="a-flexible-programming-language-that-grows-with-you.html"><a href="a-flexible-programming-language-that-grows-with-you.html#vectors"><i class="fa fa-check"></i><b>3.1.4</b> Vectors</a></li>
+<li class="chapter" data-level="3.1.5" data-path="a-flexible-programming-language-that-grows-with-you.html"><a href="a-flexible-programming-language-that-grows-with-you.html#data-frames"><i class="fa fa-check"></i><b>3.1.5</b> Data Frames</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="r-has-great-documentation.html"><a href="r-has-great-documentation.html"><i class="fa fa-check"></i><b>4</b> R has great documentation</a><ul>
+<li class="chapter" data-level="4.1" data-path="r-has-great-documentation.html"><a href="r-has-great-documentation.html#hands-on.-using-the-r-help"><i class="fa fa-check"></i><b>4.1</b> <strong>Hands-on.</strong> Using the R help</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="r-is-expandable.html"><a href="r-is-expandable.html"><i class="fa fa-check"></i><b>5</b> R is expandable</a><ul>
+<li class="chapter" data-level="5.1" data-path="r-is-expandable.html"><a href="r-is-expandable.html#what-is-the-tidyverse"><i class="fa fa-check"></i><b>5.1</b> What is the Tidyverse?</a></li>
+<li class="chapter" data-level="5.2" data-path="r-is-expandable.html"><a href="r-is-expandable.html#hands-on.-install-packages-load-data-from-a-file"><i class="fa fa-check"></i><b>5.2</b> <strong>Hands-on.</strong> Install packages, load data from a file</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="r-has-powerful-data-wrangling-tools.html"><a href="r-has-powerful-data-wrangling-tools.html"><i class="fa fa-check"></i><b>6</b> R has powerful data wrangling tools</a><ul>
+<li class="chapter" data-level="6.1" data-path="r-has-powerful-data-wrangling-tools.html"><a href="r-has-powerful-data-wrangling-tools.html#hands-on.-wrangling-data"><i class="fa fa-check"></i><b>6.1</b> <strong>Hands-on.</strong> Wrangling Data</a><ul>
+<li class="chapter" data-level="6.1.1" data-path="r-has-powerful-data-wrangling-tools.html"><a href="r-has-powerful-data-wrangling-tools.html#filter-rows"><i class="fa fa-check"></i><b>6.1.1</b> Filter rows</a></li>
+<li class="chapter" data-level="6.1.2" data-path="r-has-powerful-data-wrangling-tools.html"><a href="r-has-powerful-data-wrangling-tools.html#the-operator-pipe"><i class="fa fa-check"></i><b>6.1.2</b> The %&gt;% operator (“pipe”)</a></li>
+<li class="chapter" data-level="6.1.3" data-path="r-has-powerful-data-wrangling-tools.html"><a href="r-has-powerful-data-wrangling-tools.html#create-new-columns-with-mutate"><i class="fa fa-check"></i><b>6.1.3</b> Create new columns with <code>mutate()</code></a></li>
+<li class="chapter" data-level="6.1.4" data-path="r-has-powerful-data-wrangling-tools.html"><a href="r-has-powerful-data-wrangling-tools.html#split-apply-combine-with-group_by-and-summarize"><i class="fa fa-check"></i><b>6.1.4</b> Split-apply-combine with <code>group_by()</code> and <code>summarize()</code></a></li>
+<li class="chapter" data-level="6.1.5" data-path="r-has-powerful-data-wrangling-tools.html"><a href="r-has-powerful-data-wrangling-tools.html#other-useful-data-wrangling-functions"><i class="fa fa-check"></i><b>6.1.5</b> Other useful data wrangling functions</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="r-has-powerful-data-visualisation-tools.html"><a href="r-has-powerful-data-visualisation-tools.html"><i class="fa fa-check"></i><b>7</b> R has powerful data visualisation tools</a><ul>
+<li class="chapter" data-level="7.1" data-path="r-has-powerful-data-visualisation-tools.html"><a href="r-has-powerful-data-visualisation-tools.html#hands-on.-data-visualization"><i class="fa fa-check"></i><b>7.1</b> <strong>Hands-on.</strong> Data Visualization</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="powerful-statistical-methods-at-your-fingertips.html"><a href="powerful-statistical-methods-at-your-fingertips.html"><i class="fa fa-check"></i><b>8</b> Powerful statistical methods at your fingertips</a><ul>
+<li class="chapter" data-level="8.1" data-path="powerful-statistical-methods-at-your-fingertips.html"><a href="powerful-statistical-methods-at-your-fingertips.html#hands-on.-statistical-modeling"><i class="fa fa-check"></i><b>8.1</b> <strong>Hands-on.</strong> Statistical Modeling</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="r-encourages-reproducible-research.html"><a href="r-encourages-reproducible-research.html"><i class="fa fa-check"></i><b>9</b> R encourages reproducible research</a><ul>
+<li class="chapter" data-level="9.1" data-path="r-encourages-reproducible-research.html"><a href="r-encourages-reproducible-research.html#make-self-contained-projects"><i class="fa fa-check"></i><b>9.1</b> Make Self-contained Projects</a></li>
+<li class="chapter" data-level="9.2" data-path="r-encourages-reproducible-research.html"><a href="r-encourages-reproducible-research.html#snapshot-your-development-environment"><i class="fa fa-check"></i><b>9.2</b> Snapshot your development environment</a></li>
+<li class="chapter" data-level="9.3" data-path="r-encourages-reproducible-research.html"><a href="r-encourages-reproducible-research.html#use-version-control"><i class="fa fa-check"></i><b>9.3</b> Use Version control</a></li>
+<li class="chapter" data-level="9.4" data-path="r-encourages-reproducible-research.html"><a href="r-encourages-reproducible-research.html#make-reports-reproducible"><i class="fa fa-check"></i><b>9.4</b> Make reports reproducible</a></li>
+<li class="chapter" data-level="9.5" data-path="r-encourages-reproducible-research.html"><a href="r-encourages-reproducible-research.html#no-more-copy-and-paste"><i class="fa fa-check"></i><b>9.5</b> No more copy and paste!</a></li>
+<li class="chapter" data-level="9.6" data-path="r-encourages-reproducible-research.html"><a href="r-encourages-reproducible-research.html#more"><i class="fa fa-check"></i><b>9.6</b> More</a></li>
+<li class="chapter" data-level="9.7" data-path="r-encourages-reproducible-research.html"><a href="r-encourages-reproducible-research.html#hands-on.-make-your-research-reproducible"><i class="fa fa-check"></i><b>9.7</b> <strong>Hands-on.</strong> Make your Research Reproducible</a><ul>
+<li class="chapter" data-level="9.7.1" data-path="r-encourages-reproducible-research.html"><a href="r-encourages-reproducible-research.html#use-renv-to-store-a-snapshot-of-your-package-library"><i class="fa fa-check"></i><b>9.7.1</b> Use {renv} to store a snapshot of your package library</a></li>
+<li class="chapter" data-level="9.7.2" data-path="r-encourages-reproducible-research.html"><a href="r-encourages-reproducible-research.html#take-a-snapshot-of-your-code-with-git"><i class="fa fa-check"></i><b>9.7.2</b> Take a snapshot of your code with Git</a></li>
+<li class="chapter" data-level="9.7.3" data-path="r-encourages-reproducible-research.html"><a href="r-encourages-reproducible-research.html#make-a-reproducible-report-with-rmarkdown"><i class="fa fa-check"></i><b>9.7.3</b> Make a reproducible report with RMarkdown</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="the-r-community-is-awesome.html"><a href="the-r-community-is-awesome.html"><i class="fa fa-check"></i><b>10</b> The R community is awesome!</a><ul>
+<li class="chapter" data-level="10.1" data-path="the-r-community-is-awesome.html"><a href="the-r-community-is-awesome.html#great-free-learning-material"><i class="fa fa-check"></i><b>10.1</b> Great free learning material</a><ul>
+<li class="chapter" data-level="10.1.1" data-path="the-r-community-is-awesome.html"><a href="the-r-community-is-awesome.html#blog-posts"><i class="fa fa-check"></i><b>10.1.1</b> Blog Posts</a></li>
+<li class="chapter" data-level="10.1.2" data-path="the-r-community-is-awesome.html"><a href="the-r-community-is-awesome.html#books"><i class="fa fa-check"></i><b>10.1.2</b> Books</a></li>
+<li class="chapter" data-level="10.1.3" data-path="the-r-community-is-awesome.html"><a href="the-r-community-is-awesome.html#courses-and-videos"><i class="fa fa-check"></i><b>10.1.3</b> Courses and Videos</a></li>
+</ul></li>
+<li class="chapter" data-level="10.2" data-path="the-r-community-is-awesome.html"><a href="the-r-community-is-awesome.html#podcasts"><i class="fa fa-check"></i><b>10.2</b> Podcasts</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="wrap-up.html"><a href="wrap-up.html"><i class="fa fa-check"></i>Wrap-Up</a></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with R and bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">10 Reasons to Learn R</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="a-flexible-programming-language-that-grows-with-you" class="section level1">
+<h1><span class="header-section-number">Reason 3</span> A flexible programming language that grows with you</h1>
+<p>R grows with your needs. You need very little <a href="https://en.wikipedia.org/wiki/Boilerplate_code">boilerplate code</a> to set up a new R project and start working efficiently – and sometimes the console is all you need! Right out of the box, R gives you a powerful tool belt for data anlysis.</p>
+<p>Moreover, beginners don’t need to worry about many of the programming concepts that are fundamental to working in other languages, such as <a href="https://en.wikipedia.org/wiki/Control_flow">control flow</a>, because R’s vector-based approach to data manipulation will go a long way and many convenience functions take care of the nitty-gritty for you.</p>
+<p>Then, as you become better and more cofortable with R, you can start to utilise its full power and flexibility.
+While R is a <a href="https://en.wikipedia.org/wiki/Functional_programming">functional language</a> it supports different programming paradigms. It also allows powerful <em>meta-programming</em> techniques that are impossible in other languages.</p>
+<div id="hands-on.-r-programming-101" class="section level2">
+<h2><span class="header-section-number">3.1</span> <strong>Hands-on.</strong> R Programming 101</h2>
+<div id="data-types" class="section level3">
+<h3><span class="header-section-number">3.1.1</span> Data Types</h3>
+<p>The <a href="https://en.wikipedia.org/wiki/Data_type">data type</a> determines what operations you can perform with a piece of data. The bread and butter of data types in R are <em>numeric</em>, <em>logical</em>, and <em>character</em>.</p>
+<div id="numeric" class="section level4">
+<h4><span class="header-section-number">3.1.1.1</span> Numeric</h4>
+<p>Numbers can be integer, decimal, or complex, but usually the difference does not matter. Sometimes, R might unexpectedly hit you with a number in scientific notation, e.g., <code>1e+23</code> – don’t worry, it’s still just a number and you can <a href="https://statisticsglobe.com/disable-exponential-scientific-notation-in-r">change the formatting if you like!</a></p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="a-flexible-programming-language-that-grows-with-you.html#cb1-1"></a><span class="dv">23</span> <span class="op">+</span><span class="st"> </span><span class="fl">0.45</span> <span class="op">+</span><span class="st"> </span><span class="fl">1e2</span> <span class="op">+</span><span class="st"> </span>6i</span></code></pre></div>
+</div>
+<div id="logical" class="section level4">
+<h4><span class="header-section-number">3.1.1.2</span> Logical</h4>
+<p>Can be either <code>TRUE</code> or <code>FALSE</code> (or their shorthands, <code>T</code> and <code>F</code>). These are often used to represent binary categorical variables, as function arguments, or as intermediate steps when selecting and filtering data.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="a-flexible-programming-language-that-grows-with-you.html#cb2-1"></a>(<span class="ot">TRUE</span> <span class="op">||</span><span class="st"> </span><span class="ot">FALSE</span>) <span class="op">!=</span><span class="st"> </span>(F <span class="op">==</span><span class="st"> </span>T)</span></code></pre></div>
+</div>
+<div id="character" class="section level4">
+<h4><span class="header-section-number">3.1.1.3</span> Character</h4>
+<p>Also known as “strings”. Almost anything you type becomes a character string if you surround it with <code>""</code> or <code>''</code>.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="a-flexible-programming-language-that-grows-with-you.html#cb3-1"></a><span class="st">&quot;Hello World!&quot;</span></span></code></pre></div>
+</div>
+</div>
+<div id="assignment" class="section level3">
+<h3><span class="header-section-number">3.1.2</span> Assignment</h3>
+<p>You can use <code>&lt;-</code> to assign values to <em>variables</em> (<em>objects</em>, in R lingo). Use the keyboard Shortcut <kbd>Alt</kbd>+<kbd>-</kbd> to save yourself some hand gymnastics.
+You can give your variables almost any name you want as long as the name starts with a letter. For long variable names, <a href="https://style.tidyverse.org/syntax.html#object-names">it is recommended to use “snake case”</a>, which looks like this: <code>my_firssst_variable</code> :snake:</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="a-flexible-programming-language-that-grows-with-you.html#cb4-1"></a>a &lt;-<span class="st"> </span><span class="dv">1</span></span>
+<span id="cb4-2"><a href="a-flexible-programming-language-that-grows-with-you.html#cb4-2"></a>b &lt;-<span class="st"> </span><span class="dv">9</span></span>
+<span id="cb4-3"><a href="a-flexible-programming-language-that-grows-with-you.html#cb4-3"></a>a <span class="op">+</span><span class="st"> </span>b</span>
+<span id="cb4-4"><a href="a-flexible-programming-language-that-grows-with-you.html#cb4-4"></a></span>
+<span id="cb4-5"><a href="a-flexible-programming-language-that-grows-with-you.html#cb4-5"></a>a &lt;-<span class="st"> </span><span class="dv">10</span> <span class="co"># Quiz: what would a + b return now?</span></span></code></pre></div>
+<p>Note how the newly created variables appear in the environment panel in RStudio, and how they get update when you assign a new value.</p>
+<p>:::spoiler <em>Well, actually …</em></p>
+<p>Many other programming languages use <code>=</code> to assign values to variables. In R, you can (for the most part) also use <code>=</code> for assignment. Just be aware that it will let everyone now that <a href="https://en.wikipedia.org/wiki/Shibboleth">you are not a true believer</a>.</p>
+<p>You can also use <code>-&gt;</code> to assign from left to right: <code>"I'm feeling freaky!" -&gt; x</code>. It may not be a good idea to use this in your scripts too much, because it can make your code harder to read, but it sometimes comes in handy when you are messing around in the console.</p>
+<p>Finally, there’s <code>&lt;&lt;-</code>, which allows assignment to variables in an enclosing environment. This can be useful if you need to update <em>global variables</em> from within a function. However, this is far beyond the scope of this intro, and chances are you will never encounter a <code>&lt;&lt;-</code> in the wild.</p>
+<p>You can <a href="https://colinfay.me/r-assignment/">read more about R’s assignment operators here</a>
+:::</p>
+</div>
+<div id="comments" class="section level3">
+<h3><span class="header-section-number">3.1.3</span> Comments</h3>
+<p>As you can see in the example above, you can use <code>#</code> to leave comments in your script. <a href="https://www.youtube.com/watch?v=yhF7OmuIILc">Learn to write good comments and write comments gratuitously</a> – your collaborators and future self will thank you for it!</p>
+</div>
+<div id="vectors" class="section level3">
+<h3><span class="header-section-number">3.1.4</span> Vectors</h3>
+<p>When working with data in R, you will encounter two important <a href="https://en.wikipedia.org/wiki/Data_structure">data structures</a>: <em>vectors</em> and <em>data frames</em>. In computer programming, data structures are a way to organize and process data efficiently. Vectors are made for storing values <em>of the same data type</em> (numerical, character, logical, …) in a particular order.</p>
+<p>To create a vector, you can use the “combine” function, <code>c()</code>. There are also the <code>:</code> and <code>seq()</code> functions, that can help you create a vector that contains a sequence of numbers:</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="a-flexible-programming-language-that-grows-with-you.html#cb5-1"></a><span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>)      <span class="co"># create a vector manually</span></span>
+<span id="cb5-2"><a href="a-flexible-programming-language-that-grows-with-you.html#cb5-2"></a><span class="dv">0</span><span class="op">:</span><span class="dv">42</span>            <span class="co"># a vector of all integer numbers from 0 to 42</span></span>
+<span id="cb5-3"><a href="a-flexible-programming-language-that-grows-with-you.html#cb5-3"></a><span class="dv">42</span><span class="op">:</span><span class="dv">0</span>            <span class="co"># it also works backwards</span></span>
+<span id="cb5-4"><a href="a-flexible-programming-language-that-grows-with-you.html#cb5-4"></a><span class="kw">seq</span>(<span class="dv">1</span>, <span class="dv">4</span>, <span class="fl">0.1</span>)  <span class="co"># numbers 1.0 to 4.0 in 0.1 increments</span></span></code></pre></div>
+<p>R is really good at working with vectors! See how easy it is to multiply all numbers by a scalar, get the mean, or sum all elements — all without using a loop or a temporary variable:</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="a-flexible-programming-language-that-grows-with-you.html#cb6-1"></a>x &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>) <span class="co"># Create vector and assign to variable `x`</span></span>
+<span id="cb6-2"><a href="a-flexible-programming-language-that-grows-with-you.html#cb6-2"></a>x <span class="op">*</span><span class="st"> </span><span class="dv">10</span></span>
+<span id="cb6-3"><a href="a-flexible-programming-language-that-grows-with-you.html#cb6-3"></a><span class="kw">mean</span>(x)</span>
+<span id="cb6-4"><a href="a-flexible-programming-language-that-grows-with-you.html#cb6-4"></a><span class="kw">sum</span>(x)</span></code></pre></div>
+<p>You can access specific positions of a vector using square brackets. You can also use this syntax to replace individual elements:</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="a-flexible-programming-language-that-grows-with-you.html#cb7-1"></a>x[<span class="dv">1</span>]          <span class="co"># In R, indices start at 1</span></span>
+<span id="cb7-2"><a href="a-flexible-programming-language-that-grows-with-you.html#cb7-2"></a>x[<span class="dv">2</span><span class="op">:</span><span class="dv">3</span>]        <span class="co"># use `:` to access a range of indices</span></span>
+<span id="cb7-3"><a href="a-flexible-programming-language-that-grows-with-you.html#cb7-3"></a>x[<span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">3</span>)]     <span class="co"># use a vector to access particular indices</span></span>
+<span id="cb7-4"><a href="a-flexible-programming-language-that-grows-with-you.html#cb7-4"></a>x[<span class="dv">2</span><span class="op">:</span><span class="dv">3</span>] &lt;-<span class="st"> </span><span class="dv">0</span>   <span class="co"># replace 2nd and 3rd element with 0</span></span></code></pre></div>
+<p>Values in a vector can be named. This comes in handy, for example, if you need a simple <a href="https://en.wikipedia.org/wiki/Key%E2%80%93value_database">key-value store:</a></p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="a-flexible-programming-language-that-grows-with-you.html#cb8-1"></a>fav_food &lt;-<span class="st"> </span><span class="kw">c</span>(</span>
+<span id="cb8-2"><a href="a-flexible-programming-language-that-grows-with-you.html#cb8-2"></a>    <span class="dt">Garfield =</span> <span class="st">&quot;Lasagna&quot;</span>, </span>
+<span id="cb8-3"><a href="a-flexible-programming-language-that-grows-with-you.html#cb8-3"></a>    <span class="dt">Popeye =</span> <span class="st">&quot;Spinach&quot;</span>,</span>
+<span id="cb8-4"><a href="a-flexible-programming-language-that-grows-with-you.html#cb8-4"></a>    <span class="dt">Obelix =</span> <span class="st">&quot;Roast Wild Boar&quot;</span></span>
+<span id="cb8-5"><a href="a-flexible-programming-language-that-grows-with-you.html#cb8-5"></a>)</span>
+<span id="cb8-6"><a href="a-flexible-programming-language-that-grows-with-you.html#cb8-6"></a></span>
+<span id="cb8-7"><a href="a-flexible-programming-language-that-grows-with-you.html#cb8-7"></a>fav_food[<span class="st">&quot;Popeye&quot;</span>]</span></code></pre></div>
+<p>:::spoiler <em>Here be dragons …</em></p>
+<p>When working with vectors, there are some pitfalls. Consider these examples:</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="a-flexible-programming-language-that-grows-with-you.html#cb9-1"></a><span class="kw">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="st">&quot;a&quot;</span>)</span>
+<span id="cb9-2"><a href="a-flexible-programming-language-that-grows-with-you.html#cb9-2"></a><span class="kw">c</span>(<span class="ot">FALSE</span>, <span class="ot">TRUE</span>, <span class="dv">2</span>, <span class="dv">3</span>)</span>
+<span id="cb9-3"><a href="a-flexible-programming-language-that-grows-with-you.html#cb9-3"></a></span>
+<span id="cb9-4"><a href="a-flexible-programming-language-that-grows-with-you.html#cb9-4"></a>x &lt;-<span class="st"> </span><span class="dv">1</span><span class="op">:</span><span class="dv">3</span></span>
+<span id="cb9-5"><a href="a-flexible-programming-language-that-grows-with-you.html#cb9-5"></a>x[<span class="dv">1</span>] &lt;-<span class="st"> </span><span class="ot">TRUE</span></span>
+<span id="cb9-6"><a href="a-flexible-programming-language-that-grows-with-you.html#cb9-6"></a>x</span>
+<span id="cb9-7"><a href="a-flexible-programming-language-that-grows-with-you.html#cb9-7"></a>x[<span class="dv">3</span>] &lt;-<span class="st"> &quot;3&quot;</span></span>
+<span id="cb9-8"><a href="a-flexible-programming-language-that-grows-with-you.html#cb9-8"></a>x</span>
+<span id="cb9-9"><a href="a-flexible-programming-language-that-grows-with-you.html#cb9-9"></a></span>
+<span id="cb9-10"><a href="a-flexible-programming-language-that-grows-with-you.html#cb9-10"></a><span class="kw">c</span>( <span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">2</span>), <span class="kw">c</span>(<span class="dv">3</span>,<span class="dv">4</span>) )</span>
+<span id="cb9-11"><a href="a-flexible-programming-language-that-grows-with-you.html#cb9-11"></a><span class="kw">c</span>( <span class="dv">1</span>, <span class="kw">c</span>(<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>))</span>
+<span id="cb9-12"><a href="a-flexible-programming-language-that-grows-with-you.html#cb9-12"></a><span class="kw">c</span>( <span class="kw">c</span>(<span class="ot">TRUE</span>, <span class="dv">0</span>), <span class="kw">c</span>(<span class="ot">TRUE</span>, <span class="ot">FALSE</span>), <span class="kw">c</span>(<span class="ot">TRUE</span>, <span class="st">&quot;0&quot;</span>))</span></code></pre></div>
+<p>What is happening here? Remember that vectors can only contain a <em>single</em> data type. If you are trying to mix data types, R will quietly (without throwing an error) <em>coerce</em> all data types to the lowest common denominator: Logical become numerical (0 and 1) and numerical become character.
+Vectors also can’t contain other vectors, so these get unnested.</p>
+<p>Character strings that happen to contain only numbers are nevertheless treated as characters. If you want R to treat them as numeric, you will have to explicitely tell it to do so, for example, with the <code>as.numeric()</code> function.</p>
+<p>If you need to store a sequence of mixed data types, you should instead use a data structure called <em>list</em>.
+:::</p>
+</div>
+<div id="data-frames" class="section level3">
+<h3><span class="header-section-number">3.1.5</span> Data Frames</h3>
+<p>Usually, your research data will be more complex than just a single sequence of values. For this, R has data frames. Data frames are two-dimensional like a spreadsheet – with <em>rows</em> usually containing different observations and <em>columns</em> usually containing different variables.</p>
+<p>Rows and columns of a data frame can be named, and while row names have fallen out of fashion, it is good practice to give the columns of your data frames names that are easy to remember and easy to type.</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="a-flexible-programming-language-that-grows-with-you.html#cb10-1"></a><span class="co"># You can make your own data frame by hand like this</span></span>
+<span id="cb10-2"><a href="a-flexible-programming-language-that-grows-with-you.html#cb10-2"></a>cool_numbers &lt;-<span class="st"> </span><span class="kw">data.frame</span>(</span>
+<span id="cb10-3"><a href="a-flexible-programming-language-that-grows-with-you.html#cb10-3"></a>    <span class="st">&quot;number&quot;</span> =<span class="st"> </span><span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">13</span>,<span class="dv">23</span>,<span class="dv">42</span>),</span>
+<span id="cb10-4"><a href="a-flexible-programming-language-that-grows-with-you.html#cb10-4"></a>    <span class="st">&quot;isPrime&quot;</span> =<span class="st"> </span><span class="kw">c</span>(<span class="ot">FALSE</span>, <span class="ot">TRUE</span>, <span class="ot">TRUE</span>, <span class="ot">FALSE</span>)</span>
+<span id="cb10-5"><a href="a-flexible-programming-language-that-grows-with-you.html#cb10-5"></a>)</span>
+<span id="cb10-6"><a href="a-flexible-programming-language-that-grows-with-you.html#cb10-6"></a></span>
+<span id="cb10-7"><a href="a-flexible-programming-language-that-grows-with-you.html#cb10-7"></a><span class="co"># A quick way to access a single column of a data frame is with the `$` operator</span></span>
+<span id="cb10-8"><a href="a-flexible-programming-language-that-grows-with-you.html#cb10-8"></a>cool_numbers<span class="op">$</span>number</span></code></pre></div>
+<p>As for vectors, R comes out of the box with many more commands to create and modify data frames, select columns, and filter rows. You will eventually need to get familiar with these. However, in this short introduction we will skip these in favor of the more streamlined and beginner-friendly functions from the Tidyverse – more about that later.</p>
+<div class="info">
+<p><strong>Everything is a vector.</strong> Did you notice that columns in a data frame are vectors? This means that everything that can be done with a vector can be done with a data frame column! In fact, all ‘atomic’ data types in R (numeric, characters, logical) are <em>always</em> stored as vectors – even a single number is actually a numerical vector of length one! This may seem like an uninteresting detail, but it’s actually a really powerful idea and the source of much of R’s strength!</p>
+</div>
+<p>:::spoiler <em>Wait, there’s more …</em></p>
+<p>R has a couple of other data structures that you will eventually encounter. The details are beyond the scope of this intro, but you can read more <a href="http://adv-r.had.co.nz/">here.</a>. This includes …</p>
+<ul>
+<li><strong>Factor</strong> – Factors are numerical vectors that can take a fixed set of values (levels), whereby each level can be assigned a label. The levels may be ordered or unordered. If this reminds you of categorical and ordinal variables you are absolutely right – that’s where they are used most often. But be warned: While factors can be quite useful they are also a point of confusion for many R novices.</li>
+<li><strong>List</strong> – Lists are similar to vectors, but they can contain a mix of data types and data structures, including other lists.</li>
+<li><a href="https://tibble.tidyverse.org/"><strong>Tibble</strong></a> – A ‘modern’ implementation of data frames, provided by the Tidyverse.</li>
+<li><strong>Object</strong> – Objects can be used to organize functionality more effectively. For instance, the output of a statistical model may be an object that has various attributes and associated functions (methods). R even has three types of objects: R6, S3, and S4.</li>
+<li><strong>Matrix</strong> – Not to be confused with data frames. If you are implementing statistical methods yourself, you will likely want to make use of R’s powerful matrix algebra functions. Otherwise, you likely won’t often have to work with matrices directly.</li>
+<li><a href="https://adv-r.hadley.nz/environments.html"><strong>Environment</strong></a> – Environments are a collection of R objects. They are implemented as a hashmap, which makes them a good alternative to named vectors for key-value stores if you care about speed. Understanding environments is central to a deep understanding of R, but as a beginner it’s nothing you need to worry about.
+:::</li>
+</ul>
+
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="its-easy-to-get-started.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="r-has-great-documentation.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["r-intro.pdf", "r-intro.epub"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>
