@@ -51,7 +51,7 @@ jobs:
    needs: bookdown
    steps:
      - name: Checkout
-       uses: actions/checkout@master
+       uses: actions/checkout@v2
      - name: Download artifact
        uses: actions/download-artifact@v1.0.0
        with:
@@ -60,10 +60,11 @@ jobs:
          # Destination path
          path: _book # optional
      - name: Deploy to GitHub Pages
-       uses: Cecilapp/GitHub-Pages-deploy@master
+       uses: Cecilapp/GitHub-Pages-deploy@v3
+      with:
+        email: ${{ secrets.EMAIL }}
+        build_dir: _book
        env:
-          EMAIL: ${{ secrets.EMAIL }}               # must be a verified email
           GH_TOKEN: ${{ secrets.GH_PAT }} # https://github.com/settings/tokens
-          BUILD_DIR: _book/                     # "_site/" by default
 
 
