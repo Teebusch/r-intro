@@ -1,6 +1,6 @@
-#  R has powerful data wrangling tools
+#  Powerful data wrangling tools
 
-R can connect to all sorts of data sources ([Databases](https://db.rstudio.com/getting-started/connect-to-database/), [SPSS, Stata, SAS](https://haven.tidyverse.org/), [APIs](https://httr.r-lib.org/), [websites](https://rvest.tidyverse.org/), ...), and process many different types of data (tabular data, EEG, fMRI, eye tracking, Geodata, taxonomical data, p;honetic transcriptions...).
+R can connect to all sorts of data sources ([Databases](https://db.rstudio.com/getting-started/connect-to-database/), [SPSS, Stata, SAS](https://haven.tidyverse.org/), [APIs](https://httr.r-lib.org/), [websites](https://rvest.tidyverse.org/), ...), and process many different types of data (tabular data, EEG, fMRI, eye tracking, Geodata, taxonomical data, p;honetic transcriptions...). The `{rio}` package tries to provide a unified interface for all many of them.
 
 The [Tidyverse](https://www.tidyverse.org/) offers many convenience functions for common data manipulation tasks like splitting and merging columns, renaming, counting, sorting, and much more. At its core, are a handful of workhorse functions from the `{dplyr}` package for manipulating data frames: 
 
@@ -12,29 +12,27 @@ The [Tidyverse](https://www.tidyverse.org/) offers many convenience functions fo
 - `pivot_wider()` and `pivot_longer()` -- reshape the data 
 
 
-## **Hands-on.** Wrangling Data
+## Filtering and counting rows
 
-Let's try a simple data wrangling task using functions from the Tidyverse: 
+Let's do a simple data wrangling task using functions from the Tidyverse: 
 
-1. Find all peaks that are higher than 7,000 metres and were climbed before 1980  
+1. Find all peaks that are higher than 7,000 meters and were climbed before 1980  
 2. Count which countries the climbers came from
-
-### Filter rows
 
 We can use the `filter()` function to select only the rows (observations) we want. Then we can use the `count()` function to count how many rows there are for each kind of `first_ascent_country`:
 
-```r
+```{r}
 before80_7k <- filter(peaks, first_ascent_year < 1980, height_metres > 7000)
 count(before80_7k, first_ascent_country)
 ```
 
-### The %>% operator ("pipe")
+## The pipe operator %>%
 
 Above, we stored the result of the first function in an intermediate variables and then gave it to the second. There's another way to chain functions that is often more convenient and readable: Use the **pipe operator `%>%`** to pass data from one function to the next. 
 
 You can read `%>%` as *"...and then..."*. Use the keyboard shortcut <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>M</kbd> to make it.
 
-```r
+```{r}
 peaks %>%
   filter(first_ascent_year < 1980, height_metres > 7000) %>% 
   count(first_ascent_country, sort = TRUE) %>% 
@@ -48,19 +46,19 @@ Did you notice that the first argument of all functions (the data frame you want
 ![An image of the character Data from the TV show Star Trek TNG, smoking a pipe](https://i.imgur.com/bIyqtxz.jpg)
 *Indubitably, sir!*
 
-### Create new columns with `mutate()`
+## Create new columns with `mutate()`
 
-```r
+```{r}
 peaks %>% 
   select(peak_name, climbing_status, first_ascent_year, first_ascent_country) %>% 
   mutate(climbed_before80 = first_ascent_year < 1980)
 ```
 
-### Split-apply-combine with `group_by()` and `summarize()`
+## Split-apply-combine with `group_by()` and `summarize()`
 
 Use `group_by()` and `summarize()` together for powerful *split-apply-combine* operations:
 
-```r 
+```{r}
 peaks %>% 
   filter(first_ascent_year > 201) %>% 
   group_by(first_ascent_country) %>% 
@@ -69,11 +67,13 @@ peaks %>%
 ```
 
 :::info
-**Dealing with missing values.** In R, there is a special *value* for missing data, `NA`. This is *not* a data type. That is, a value can be, e.g., numeric *and* missing (`NA`) at the same time, and a numeric vector can contain a mix of numbers and `NA`.  
+**Dealing with missing values.** 
+
+In R, there is a special *value* for missing data, `NA`. This is *not* a data type. That is, a value can be, e.g., numeric *and* missing (`NA`) at the same time, and a numeric vector can contain a mix of numbers and `NA`. 
 :::
 
 
-### Other useful data wrangling functions
+## Other useful data wrangling functions
 
 ```r
 # ...

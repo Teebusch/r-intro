@@ -1,5 +1,5 @@
 ---
-title: "10 Reasons to Learn R"
+title: "Ten Reasons to Learn R"
 author: "Tobias Busch"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
@@ -10,69 +10,79 @@ link-citations: yes
 description: "A short introduction to Contemporary R."
 ---
 
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+library(vembedr)
+library(tidyverse)
+library(skimr)
+```
+
 # Introduction {.unnumbered}
 
-This book started as the the companion material for a workshop I first held on April 6th, 2021 at the ISP ComPros Research group lunch meeting at the University of Oslo. It was a 90 minutes long hands-on introduction to R. The idea was to provide enough insight to help the audience decide whether they should or should not learn it. After the workshop I kept working on the material and eventually my notes turned into something book-like, so I decided to publish them. This is a living document.
+This book is a short hands-on introduction to R. We will use modern R that is easy to learn and allows you to focus on your data, rather than worrying about difficult programming concepts. The goal is to provide a quick overview of things that are great about R so that you get enough inside to decide whether diving deeper into R is worth your time.
 
 ## Who is this for? {.unnumbered}
 
-You are doing research / data analysis with other tools but you are curious about R. Maybe it's because...
+I imagine you are doing research or data analysis and you believe that R might help you with that. I assume you are already using other tools for data analysis, but you are curious about R. Maybe it's because...
 
--   FOMO - You want to know what all the fuzz is about?
--   You feel that your current workflow isn't efficient, robust, or reproducible enough?
--   There's this *one* R package you would really like to use...?
--   You tried R before and were overwhelmed, but would like to give it a second chance?
+-   You feel that your current workflow isn't efficient, robust, or reproducible enough
+-   There is a statistical method that you would really like to use, that is not available in your preferred software but it is available in R
+-   You unsuccessfully tried to learn R before, but would like to give it a second chance?
+-   You are using R, but you lost track of all the recent changes and want an update on the state-of-the-Rt
+-   FOMO - you want to know what all the fuzz is about
 
-Or, you are using R already, but you feel you lost track of all the recent changes and want an update on the state-of-the-Rt?
+I'm assuming you have little or no programming experience[^index-1] and you are not particularly interested in computers or programming. You don't want to be bored with technical background knowledge. You are just here because you want to learn the tools that can help you get things done!
 
-I'm assuming ...
-
--   You have no real programming experience
--   You are not particularly interested in computers or programming
--   You want to get things done and you believe that R might help you with that
-
-## Who am I? {.unnumbered}
-
-I have worked with R and other languages (Matlab, Python, ...) professionally in a research context for almost 10 years. I sometimes teach R with [The Carpentries](https://www.ub.uio.no/english/writing-publishing/dsc/carpentry-uio/) (usually half/full day courses) and I have made some humble contributions to the R package ecosystem, [`{mifa}`](https://teebusch.github.io/mifa/) and [`{noah}`](https://teebusch.github.io/noah/), and contributed to a few others (e.g, [`{TextGrid}`](https://github.com/patrickreidy/textgRid), [`{rlena}`](https://github.com/HomeBankCode/rlena))
+[^index-1]: If you are a seasoned programmer, there are more efficient ways to catch up on R. I recommend the books *R for Data Science* and *Advanced R* by Hadley Wickham. Both are freely available online.
 
 ## What is R? {.unnumbered}
 
-R is a statistical computing and data analysis environment that is [widely used](https://www.tiobe.com/tiobe-index/r/) in (bioinformatics, geoscience, digital humanities, ...) and industry (finance, biosciences, pharmacology, ...). It is a free and open source implementation of the [*S* language](https://en.wikipedia.org/wiki/S_(programming_language)), which was created in the 1970s with *interactive data analysis* in mind. That means:
+You wouldn't be here if you didn't already have some idea what R is, but maybe it's still worthwhile to briefly discuss it:
 
--   **Interactive** -- R works like a really fancy pocket calculator that lets you make calculations, explore and plot data quickly and "on the fly".
--   **Focussed on Data Analysis** -- More than in many other programming languages, data and statistics are at the core of R. That is, there are built-in data structures and functions that are meant to make data analysis easy.
+R is a statistical computing and data analysis environment that is [widely used](https://www.tiobe.com/tiobe-index/r/) across academic fields, across industries, and in the public sector. It is a free and open source implementation of the [S programming language](https://en.wikipedia.org/wiki/S_(programming_language)), which was created in the 1970s with interactive data analysis in mind. Here's what that means:
 
-Some say R is a [domain specific programming language](https://en.wikipedia.org/wiki/Domain-specific_language). Others say it's [an environment for interactive data analysis that *has* a programming language](https://youtu.be/6S9r_YbqHy8). In any case, R can be a versatile & powerful *one-stop-shop* for the whole data analysis workflow:
+-   **R is interactive** -- R works like a really fancy pocket calculator that allows you to do calculations, explore data, and analyse data quickly and on the fly.
+-   **R is focused on data analysis** -- Right out of the box, R gives you a powerful tool belt for data analysis. More than in many other programming languages, data and statistics are at the core of R and there are built-in data structures and functions that make data analysis easier.
 
-![The data science workflow](https://i.imgur.com/sclqeRc.jpg)
+Although R is a full-fledged programming language[^index-2], data analysis is undoubtedly its main focus. So much so, that some people call R a [domain specific programming language](https://en.wikipedia.org/wiki/Domain-specific_language). Others say it's [an environment for interactive data analysis that *has* a programming language](https://youtu.be/6S9r_YbqHy8). In any case, R can be powerful *one-stop-shop* for the whole data analysis workflow:
+
+[^index-2]: Some people claim that you can use [R for everything](https://youtu.be/m6nUdoP6894).
+
+```{r, echo=FALSE, fig.cap="The data analysis workflow.", fig.alt="A sketch of the different steps in the data analysis workflow."}
+knitr::include_graphics("images/data-science-workflow.jpeg")
+```
 
 -   **Data collection**
--   **Data cleaning & transformation** -- also known as data wrangling, data munging, or "80% of data science"
--   **Data Visualisation**
--   **Modeling** -- using classical statistics as well as machine learning
--   **Communication** -- e.g., in reports, papers, presentations or dashboards
+-   **Data cleaning & transformation** (also known as data wrangling, data munging, or "80% of data science")
+-   **Data Visualization**
+-   **Modeling**
+-   **Communication**
 
-Data analysis is certainly R's core application. However, some people claim that [you can use R for everything...](https://youtu.be/m6nUdoP6894)
+## Why you should learn R {.unnumbered}
 
-## 10 cool things about R {.unnumbered}
+```{r, echo=FALSE, fig.alt="A hand-written list of 10 reasons to learn R"}
+knitr::include_graphics("images/reasons.png")
+```
 
-![](./images/reasons.png)
+There are a lot of good reasons to learn R! In this book I will present the 10 things that I like most about R --- we will look at all of them in turn and, while doing that, get hands-on with R:
 
-There are a lot of good reasons to learn R! Here are the 10 things that I like most about R:
+1.  free and open source
+2.  easy to get started
+3.  a flexible language that grows with you
+4.  well-documented
+5.  expandable
+6.  powerful data wrangling functions
+7.  powerful data visualization functions
+8.  powerful statistical methods
+9.  encourages reproducible research
+10. a truly awesome community
 
-1.  R is free and open source
-2.  R is easy to get started
-3.  R is a flexible language that grows with you
-4.  R is well-documented
-5.  R is expandable
-6.  R has powerful data wrangling functions
-7.  R has powerful data visualization functions
-8.  R has powerful statistical methods
-9.  R encourages reproducible research
-10. R has a truly awesome community
+## About this book {.unnumbered}
 
-We will have a closer look at all of these, and along the way we will play around with R and do a little hands-on data analysis, but before we start, let's get something out of the way: There are some very good reasons *not* to learn R!
+This book started as my notes for a workshop I held in April 2021 at a research group meeting at the University of Oslo's Department of Special Needs Education. It was a 90 minutes long hands-on introduction to R. The goal was to provide an overview of R that could help the workshop participants decide whether they should learn R or not. After the workshop, I continued to expand on the material and eventually it turned into a more comprehensive introduction to R.
 
+## About the author {.unnumbered}
+
+I have worked with R and other languages (MATLAB and Python) professionally in a research context for almost 10 years and I have made some humble contributions to the R package ecosystem. I sometimes teach R with [The Carpentries](https://www.ub.uio.no/english/writing-publishing/dsc/carpentry-uio/), and I also help maintain the Carpentries lesson material for the lesson *Data Analysis and Visualization in R for Ecologists*. I really enjoy teaching researchers to code and introducing them to the many wonders of R.
 
 ```{r include=FALSE}
 # automatically create a bib database for R packages

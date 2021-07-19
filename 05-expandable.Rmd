@@ -1,6 +1,6 @@
 # R is expandable
 
-The full power of R unfolds when you tap into its vast ecosystem of third-party
+While R is not as popular or as fast as other programming languages, it is quite popular in the data analysis and research domain. As a result, R gives you access to a vast amount of amazing packages written by expert statisticians and programmers around the world. An R package is a collection of R code that has been bundled up so that it can be easily used by others. The full power of R unfolds when you tap into this vast ecosystem of
 packages. There are literally tens of thousands of packages to make your life
 easier! There's an R package for almost everything! See for yourself at
 [rdrr.io](https://rdrr.io/) or [Metacran](https://www.r-pkg.org/).
@@ -19,7 +19,7 @@ By the way: R can also integrate with
 other languages and interface with other software, such as
 [MPLUS](https://mclust-org.github.io/mclust/).
 
-## What is the Tidyverse?
+## Introducing the Tidyverse
 
 [**The Tidyverse**](https://www.tidyverse.org/) is a set of R packages that
 share a common design philosophy. It aims to provide consistent user-friendly
@@ -27,95 +27,90 @@ verb-based functions for common data-tasks and to iron out many of the
 idiosyncrasies of *Base R*. The **Tidy Data** that gives the Tidyverse its name
 is a table with
 
-  - one observation per row
-  - one variable per column
-  - column names that are easy to type and easy to remember
+  * one observation per row
+  * one variable per column
+  * column names that are easy to type and easy to remember
 
 The core idea is that, once the data is in *tidy* format, all the Tidyverse
 functions can be used seamlessly. A special operator, the pipe `%>%` (see
 below), glues all the functions together.
 
 The Tidyverse is a relatively recent addition to the R package ecosystem but the
-design philosphy has really struck a chord with the R developer community and
+design philosophy has struck a chord with the R developer community and
 many packages are now following Tidyverse principles. As a result, the overall
-data analysis workflow in R has become much more streamlined and integrated over
+data analysis workflow in R has become more streamlined and integrated over
 the last few years. Nevertheless, some people prefer base R, and many older
 packages will never change to a "tidy" design. Moreover, there are other popular
 alternatives to the Tidyverse, such as the
 [`{data.table}`](https://rdatatable.gitlab.io/data.table/) package. This leads
 to a bit of a schism in the R package ecosystem.
 
-## **Hands-on.** Install packages, load data from a file
+## Installing packages
 
-Often you will read data from external sources. For this example we will use a
-data set about climbing expeditions in the Himalaya that was provided by [Tidy
-Tuesday](https://github.com/rfordatascience/tidytuesday/blob/master/data/2020/2020-09-22/readme.md\`).
+For the examples in this book we will use a table with information about climbing expeditions in the Himalaya that was provided by [Tidy Tuesday](https://github.com/rfordatascience/tidytuesday/blob/master/data/2020/2020-09-22/readme.md).
 
-The data is provided as a *CSV* file (comma separated value), a popular plain
-text format for sharing data across the internet and we will load it straight
-into our computer's memory from the web.
+Often you will read data from external sources and the first step is to turn it into something that R can work with, usually a data frame. In this case, the data is provided as a *CSV* file. CSV stands for comma separated values and is a popular plain text format for sharing tabular data across the internet.^[Excel files are bad for sharing data! [Learn from the mistakes of others](https://www.theverge.com/2020/8/6/21355674/human-genes-rename-microsoft-excel-misreading-dates) and instead use CSV, JSON, [Feather](https://blog.rstudio.com/2016/03/29/feather/), [databases](https://db.rstudio.com/databases/sqlite/), ...]
 
-:::info **Excel files are bad for sharing data!** [Learn from the mistakes of
-others](https://www.theverge.com/2020/8/6/21355674/human-genes-rename-microsoft-excel-misreading-dates)
-and instead use csv, json,
-[feather](https://blog.rstudio.com/2016/03/29/feather/),
-[databases](https://db.rstudio.com/databases/sqlite/), ... :::
+To read the CSV file and turn it into an R data frame we will use the `read_csv()`
+function. To use this function, we first have to install and load the `{tidyverse}` package.^[ 
+Usually, **packages** are collections of functions. The `{tidyverse}` package is a bit different, as it is actually a collection of other packages --- a *meta-package*. When you load it, it loads the most popular packages from theTidyverse, such as `{ggplot2}`, `{readr}`, and `{dplyr}`. For example, the `read_csv()` function is from the `{readr}` package.]
 
-To read the CSV file and turn it into a data frame we will use the `read_csv()`
-function. To use it, we first have to install the `{tidyverse}` package (if we
-haven't already) and then load it.
-
-``` r
+```{r eval=FALSE}
 install.packages("tidyverse")
 library(tidyverse)
 ```
 
-``` 
-peaks <-
-read_csv('<https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2020/2020-09-22/peaks.csv>')
+## Loading data
+
+Now we can use the `read_csv()` function to load the data straight from the web into an R data frame in our computer's working memory.
+
+```{r}
+peaks <- read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2020/2020-09-22/peaks.csv')
 ```
 
-:::info Usually, **packages** are collections of functions. The `{tidyverse}`
-package is a bit different, as it is actually a collection of packages --- a
-*meta-package*. When you load it, it loads, other packages, including
-`{ggplot2}`, `{readr}`, and `{dplyr}`. For example, the `read_csv()` function is
-from the `{readr}` package. :::
+## Inspecting the data
 
-Now that we have loaded the data, we can have a look at the first few rows with
-the `glimpse()` fnction -- another function from the `{tidyverse}` package.
+When we load the data, R shows us the names of the columns in the data set and the type of each column. We can also have a look at the first few rows with the `head()` function.
 
-```r 
-glimpse(peaks)
+```{r}
+head(peaks)
 ```
 
-You can also get a more traditional spreadsheet-like view of the data frame by
-clicking its name in the Environment panel or running `view(peaks)`.
+You can get a more traditional spreadsheet-like view of the complete data frame by
+clicking its name in the Environment panel or running the command `view(peaks)`.
 
 To better understand our data, let's get some summary statistics. The `{skimr}`
 package provides a really nice function for this. Let's install the package and
 then "skim" our data:
 
-```r 
+```{r eval=FALSE} 
 install.packages("skimr")
 skimr::skim(peaks)
 ```
+```{r echo=FALSE} 
+skimr::skim(peaks)
+```
 
-Neat huh? This summary tells us quite a bit about our data! For example, we can
-see that there some peaks have only been sucessfully climbed resently, or not at
-all. There also appears to be an outlier in the `first_ascent_year` column -- a
-peak that was succesfully climbed in the year 201.
+This summary tells us quite a lot about our data! For example, we can
+see that some peaks have not been successfully climbed until very recently, or not at
+all. There also appears to be an outlier in the `first_ascent_year` column that we'll 
+have to take care of -- a peak that was successfully climbed in the year 201.
 
-:::info **The :: operator.** The double colon `::` between the package name and
-the function name is a way to call a function without first loading the package
+:::{ .more }
+**The :: operator.** 
+
+When we used the `skim()` function, you might have noticed the double colon `::` between the package name and
+the function name. This is a way to call a function without first loading the package
 it is in. Thus, `skimr::skim(peaks)` is equivalent to
 
-```r 
+```{r eval=FALSE} 
 library(skimr)
 skim(peaks)
 ```
 
 The `::` is often used when the package is only needed for a single function
-call or to clarify (to R or the person reading the code) which package a
+call or to clarify (either to R or to the person reading the code) which package a
 function is coming from. This is particularly useful when there are functions
 with the same name in different packages. Another approach to solving this
-problem is the [`{conflicted}`](https://conflicted.r-lib.org/) package. :::
+problem is the [`{conflicted}`](https://conflicted.r-lib.org/) package. 
+:::

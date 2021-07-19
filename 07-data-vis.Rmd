@@ -1,4 +1,4 @@
-# R has powerful data visualisation tools
+# Powerful data visualisation tools
 
 Perhaps the most popular package for data visualization in R is [`{ggplot2}`](https://ggplot2.tidyverse.org/index.html). It comes with the `{tidyverse}` package, but there are many other packages that extend the functionality of `{ggplot2}`, such as `{ggforce}` or `{gganimate}`. 
 
