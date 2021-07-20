@@ -83,11 +83,8 @@ To better understand our data, let's get some summary statistics. The `{skimr}`
 package provides a really nice function for this. Let's install the package and
 then "skim" our data:
 
-```{r eval=FALSE} 
+```{r eval=2, results='markup'} 
 install.packages("skimr")
-skimr::skim(peaks)
-```
-```{r echo=FALSE} 
 skimr::skim(peaks)
 ```
 

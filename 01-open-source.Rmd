@@ -1,3 +1,5 @@
+# (PART\*) Ten Reasons to Learn R {-}
+
 # R is free and open source
 
 A great reason for choosing R over commercial software packages is that it is is *free and open source software (FOSS)*. That means there are no software license fees or purchasing costs, and the license under which R is published guarantees that it will stay like that forever. That is, nobody can ever own any exclusive rights to R, decide to stop the development of R, or force you to pay for R.

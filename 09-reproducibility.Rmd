@@ -51,6 +51,10 @@ In an *RMarkdown* document, you can mix text, R code, and the output of that R c
 - [`{orderly}`](https://www.vaccineimpact.org/orderly/) - makes sure your reproducible reports are reproducible
 - Test-driven development with `{testthat}`
 
+- [RMarkdown - The definitive Guide](https://bookdown.org/yihui/rmarkdown/) -- A deep dive into RMarkdown
+- [RMarkdown for Scientists](https://rmd4sci.njtierney.com/) -- A guide to RMarkdown aimed at researchers
+
+- [Happy Git with R](https://happygitwithr.com/) 
 
 ## **Hands-on.** Make your Research Reproducible 
 

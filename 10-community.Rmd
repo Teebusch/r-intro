@@ -1,48 +1,47 @@
 # The R community is awesome!
 
-We are almost at the end of this short intro to R. We barely scratched the surface of what R has to offer. I hope this helped you figure out whether R is for you. Of course I hope it made you want to learn more!
+We are almost at the end of this short introduction to R. We barely scratched the surface of what R has to offer. I hope this helped you figure out whether R is for you and of course I hope it made you want to learn more!
 
-If you do wnat to learn more, I think the best way is to practice and find other people to learn from. Luckily, R has a friendly, diverse and welcoming community that is very open to beginners. And because it is widespread, there's always an R nerd nearby who's willing to help. Don't be afraid to ask questions, make mistakes, or write bad code! 
+If you do want to learn more, I think the best way is to practice and find other people to learn from.
 
-Here are some ideas how you could engage with the community:
+## Engage with the Community
+
+Luckily, R has a friendly, diverse and welcoming community that is very open to beginners. And because it is widespread, there's always an R nerd nearby who's willing to help. Don't be afraid to ask questions, make mistakes, or write bad code! Here are some ideas how you could engage with the community:
 
 - Twitter `#RStats` can help to keep track of all the new things (if you like Twitter ...)
-- Participate in [Tidy Tuesday](https://github.com/rfordatascience/tidytuesday) or [Makeover Monday](https://www.makeovermonday.co.uk/) to sharpen your data wrangling and data visualisation skills and see how other people are approaching the same tasks.
+- Participate in [Tidy Tuesday](https://github.com/rfordatascience/tidytuesday) or [Makeover Monday](https://www.makeovermonday.co.uk/) to sharpen your data wrangling and data visualization skills and see how other people are approaching the same data
 - Read other people's code on Github and co. [Write your own package or contribute to packages.](https://www.rstudio.com/resources/rstudioglobal-2021/make-a-package-make-some-friends/)
 - [Join Meetups of R User Groups](https://www.meetup.com/Oslo-useR-Group/) or create your own R user group
 
 ## Great free learning material
 
-Because R is mainly used by (and taught to) non-computer scientists, there is a lot of learning material for non-techy people (books, videos, podcasts, blog posts) -- amazingly, much of it is free *and* really good!
+Because R is mainly used by (and taught to) non-computer scientists, there is a lot of learning material for non-techy people. Amazingly, much of it is free *and* really good! The (Awesome R Learning Resources List)[https://github.com/iamericfletcher/awesome-r-learning-resources] provides an extensive list of resources for learning R. Here, I will limit myself to just a few personal recommendations.
 
-### Blog Posts
+I think an excellent place to continue learning would be the [R for Data Science Book](https://r4ds.had.co.nz/), which provides a comprehensive overview of the Tidyverse. If you are working in education, then check out [R for Education](https://rstudio4edu.github.io/rstudio4edu-book/) -- a handbook for teaching and learning with R and RStudio.
 
-[B Bloggers](https://www.r-bloggers.com/) aggregates a number of R blogs.
-Also check out the searchable database of ["R Posts you might have missed"](https://alastairrushworth.github.io/searchable/searchable.html)
+The Carpentries offer beginner R courses for reseachers. The material is available online, e.g., [R for Social Sciences](https://datacarpentry.org/r-socialsci/) and [R for Ecologists](https://datacarpentry.org/R-ecology-lesson/). You can also [take a Carpentries R course at UiO](https://www.ub.uio.no/english/writing-publishing/dsc/carpentry-uio/)
 
-### Books
+- [B Bloggers](https://www.r-bloggers.com/) aggregates a number of R blogs.
+- Also check out the searchable database of ["R Posts you might have missed"](https://alastairrushworth.github.io/searchable/searchable.html)
 
-- [R for Data Science Book](https://r4ds.had.co.nz/) -- An excellent overview of the Tidyverse
-- [ggplot2 -- Elegant graphics for data analysis](https://ggplot2-book.org/) -- A deep dive into `{ggplot2}`
-- [Advanced R](https://adv-r.hadley.nz/index.html) -- A deep dive into the R programming language
-- [Data Science in Education with R](https://datascienceineducation.com/)
+#### Books {-}
+
 - [Introductory Statistics in Psychology using R](https://rpsystats.com/)
-- [Introduction to Statistical Learning](https://www.statlearning.com/) -- A classic introduction to machine learning using R. Make sure to also check out the - - - [`{tidymodels}`](https://www.tidymodels.org/) -- package for a more modern machine learning toolbelt in R
 - [R Packages](https://r-pkgs.org/index.html) -- A deep dive into writing and publishing R packages.
-- [RMarkdown - The definitive Guide](https://bookdown.org/yihui/rmarkdown/) -- A deep dive into RMarkdown
-- [RMarkdown for Scientists](https://rmd4sci.njtierney.com/) -- A guide to RMarkdown aimed at researchers
-- [R for Education](https://rstudio4edu.github.io/rstudio4edu-book/) -- A Handbook for Teaching and Learning with R and RStudio
 
 
-### Courses and Videos
+#### Courses and Videos {-}
 
-- The Carpentries offer beginner R courses for reseachers. The material is available online, e.g., [R for Social Sciences](https://datacarpentry.org/r-socialsci/) and [R for Ecologists](https://datacarpentry.org/R-ecology-lesson/). You can also [take a Carpentries R course at UiO](https://www.ub.uio.no/english/writing-publishing/dsc/carpentry-uio/)
-- [Happy Git with R](https://happygitwithr.com/) 
+
 - [R for the rest of us](https://rfortherestofus.com/courses/getting-started/) offers a free beginners course.
 - [RStudio presentations](https://www.rstudio.com/resources/webinars/)
 - [There are many R Tutorials on YouTube](http://flavioazevedo.com/stats-and-r-blog/2016/9/13/learning-r-on-youtube). Also check Coursera and other MOOCs for free videos about R.
 
-## Podcasts
+#### Podcasts {-}
 
 - [The R podcast](https://r-podcast.org/)
+
+
+That's it. I hope this was useful. We really only scratched the surface.
+If there are any questions, you can contact me!
 

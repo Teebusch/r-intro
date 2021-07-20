@@ -14,16 +14,11 @@ pre code {
 }
 
 
-.digression, .more, .exercise {
-  padding: 1rem 1.5rem 0.5rem 1.5rem;
+.digression, .more, .exercise, .goals {
+  padding: 1.5rem 1.5rem 0.5rem 1.5rem;
   margin: 2rem 0;
   border: none;
   border-radius: 3px 10px 10px 3px;
-}
-
-div.digression {
-  background: #DAE0DE;
-  border-left: 5px solid #80A79B;
 }
 
 div.more {
@@ -34,4 +29,14 @@ div.more {
 div.exercise {
   background: #F0E9D3;
   border-left: 5px solid #F0D26F;
+}
+
+div.digression {
+  background: #EFD1D3;
+  border-left: 5px solid #CD4E56;
+}
+
+div.goals {
+  background: #D3E5E5;
+  border-left: 5px solid #437A7C;
 }

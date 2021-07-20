@@ -12,7 +12,8 @@ For more advanced analses there are often multiple packages. Best to ask a domai
 - [Machine learning with `{tidymodels}`](https://www.tidymodels.org/)
 - [Network analysis](https://kateto.net/network-visualization) with `{tidygraph}` or `{igraph}`
 - [Meta analysis](https://bookdown.org/MathiasHarrer/Doing_Meta_Analysis_in_R/) with `{metafor}` and `{rmeta}`
-
+- [Introduction to Statistical Learning](https://www.statlearning.com/) -- A classic introduction to machine learning using R.
+- [`{tidymodels}`](https://www.tidymodels.org/) -- package for a more modern machine learning toolbelt in R
 
 ## **Hands-on.** Statistical Modeling 
 

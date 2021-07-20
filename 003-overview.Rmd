@@ -1,0 +1,24 @@
+# About this section {.unnumbered}
+
+Now that we know some good alternatives to R, we will have a look at what speaks for
+learning R. There are a lot of good reasons to learn R!
+
+```{r, echo=FALSE, fig.alt="A hand-written list of 10 reasons to learn R"}
+knitr::include_graphics("images/reasons.png")
+```
+
+-   Free and open source --- We will learn about free and open source software and why it
+    is great.
+-   Easy to get started --- We will install R and RStudio and setup a project.
+-   A flexible language that grows with you --- We will get to know the fundamental data
+    types and data structures of R.
+-   Well-documented --- We will learn how to get help in R.
+-   Expandable --- We will learn how to add additional functions to R by installing
+    packages.
+-   Powerful data wrangling functions --- We will see how to transform data.
+-   Powerful data visualization functions --- We will make a complex statistical graph
+    with just one line of code.
+-   Powerful statistical methods --- We will run a statisical model with just one line of
+    code.
+-   Encourages reproducible research --- We will make our analysis reproducible.
+-   An awesome community --- I will talk about where to learn more.

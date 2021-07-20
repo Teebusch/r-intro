@@ -10,79 +10,15 @@ link-citations: yes
 description: "A short introduction to Contemporary R."
 ---
 
-```{r echo=FALSE, warning=FALSE, message=FALSE}
+```{r include=FALSE}
 library(vembedr)
 library(tidyverse)
 library(skimr)
+
+knitr::opts_chunk$set(
+  comment = ""
+)
 ```
-
-# Introduction {.unnumbered}
-
-This book is a short hands-on introduction to R. We will use modern R that is easy to learn and allows you to focus on your data, rather than worrying about difficult programming concepts. The goal is to provide a quick overview of things that are great about R so that you get enough inside to decide whether diving deeper into R is worth your time.
-
-## Who is this for? {.unnumbered}
-
-I imagine you are doing research or data analysis and you believe that R might help you with that. I assume you are already using other tools for data analysis, but you are curious about R. Maybe it's because...
-
--   You feel that your current workflow isn't efficient, robust, or reproducible enough
--   There is a statistical method that you would really like to use, that is not available in your preferred software but it is available in R
--   You unsuccessfully tried to learn R before, but would like to give it a second chance?
--   You are using R, but you lost track of all the recent changes and want an update on the state-of-the-Rt
--   FOMO - you want to know what all the fuzz is about
-
-I'm assuming you have little or no programming experience[^index-1] and you are not particularly interested in computers or programming. You don't want to be bored with technical background knowledge. You are just here because you want to learn the tools that can help you get things done!
-
-[^index-1]: If you are a seasoned programmer, there are more efficient ways to catch up on R. I recommend the books *R for Data Science* and *Advanced R* by Hadley Wickham. Both are freely available online.
-
-## What is R? {.unnumbered}
-
-You wouldn't be here if you didn't already have some idea what R is, but maybe it's still worthwhile to briefly discuss it:
-
-R is a statistical computing and data analysis environment that is [widely used](https://www.tiobe.com/tiobe-index/r/) across academic fields, across industries, and in the public sector. It is a free and open source implementation of the [S programming language](https://en.wikipedia.org/wiki/S_(programming_language)), which was created in the 1970s with interactive data analysis in mind. Here's what that means:
-
--   **R is interactive** -- R works like a really fancy pocket calculator that allows you to do calculations, explore data, and analyse data quickly and on the fly.
--   **R is focused on data analysis** -- Right out of the box, R gives you a powerful tool belt for data analysis. More than in many other programming languages, data and statistics are at the core of R and there are built-in data structures and functions that make data analysis easier.
-
-Although R is a full-fledged programming language[^index-2], data analysis is undoubtedly its main focus. So much so, that some people call R a [domain specific programming language](https://en.wikipedia.org/wiki/Domain-specific_language). Others say it's [an environment for interactive data analysis that *has* a programming language](https://youtu.be/6S9r_YbqHy8). In any case, R can be powerful *one-stop-shop* for the whole data analysis workflow:
-
-[^index-2]: Some people claim that you can use [R for everything](https://youtu.be/m6nUdoP6894).
-
-```{r, echo=FALSE, fig.cap="The data analysis workflow.", fig.alt="A sketch of the different steps in the data analysis workflow."}
-knitr::include_graphics("images/data-science-workflow.jpeg")
-```
-
--   **Data collection**
--   **Data cleaning & transformation** (also known as data wrangling, data munging, or "80% of data science")
--   **Data Visualization**
--   **Modeling**
--   **Communication**
-
-## Why you should learn R {.unnumbered}
-
-```{r, echo=FALSE, fig.alt="A hand-written list of 10 reasons to learn R"}
-knitr::include_graphics("images/reasons.png")
-```
-
-There are a lot of good reasons to learn R! In this book I will present the 10 things that I like most about R --- we will look at all of them in turn and, while doing that, get hands-on with R:
-
-1.  free and open source
-2.  easy to get started
-3.  a flexible language that grows with you
-4.  well-documented
-5.  expandable
-6.  powerful data wrangling functions
-7.  powerful data visualization functions
-8.  powerful statistical methods
-9.  encourages reproducible research
-10. a truly awesome community
-
-## About this book {.unnumbered}
-
-This book started as my notes for a workshop I held in April 2021 at a research group meeting at the University of Oslo's Department of Special Needs Education. It was a 90 minutes long hands-on introduction to R. The goal was to provide an overview of R that could help the workshop participants decide whether they should learn R or not. After the workshop, I continued to expand on the material and eventually it turned into a more comprehensive introduction to R.
-
-## About the author {.unnumbered}
-
-I have worked with R and other languages (MATLAB and Python) professionally in a research context for almost 10 years and I have made some humble contributions to the R package ecosystem. I sometimes teach R with [The Carpentries](https://www.ub.uio.no/english/writing-publishing/dsc/carpentry-uio/), and I also help maintain the Carpentries lesson material for the lesson *Data Analysis and Visualization in R for Ecologists*. I really enjoy teaching researchers to code and introducing them to the many wonders of R.
 
 ```{r include=FALSE}
 # automatically create a bib database for R packages
@@ -90,3 +26,65 @@ knitr::write_bib(c(
   .packages(), 'bookdown', 'knitr', 'rmarkdown'
 ), 'packages.bib')
 ```
+
+# (PART\*) Introduction {.unnumbered}
+
+# Welcome {.unnumbered}
+
+This book is a short hands-on introduction to R. The goal is to provide a quick overview
+of things that are great about R so that you can decide whether diving deeper is worth
+your time.
+
+I start by briefly introducing the history and purpose of R. Then I present a compelling
+reason *not* to learn R and offer some very attractive alternatives. So prepared, we can
+then turn to the things that R has to offer: In the second part of the book, I present 10
+things that I absolutely love about R. Along with each of the ten reasons, I will
+introduce some part of R and will encourage you to get some hands-on experience with R.
+
+We will use modern R that is easy to learn and allows you to focus on your data, rather
+than worrying about difficult programming concepts. I will showcase all that R has to
+offer, and I hope that this helps you to side whether it is for you.
+
+## Who is this for? {.unnumbered}
+
+I'm assuming that you are already doing research or data analysis and that . I assume that
+you are already using other tools for that, but you want to learn more about R. Maybe it's
+because...
+
+-   You believe that R might help you to be more efficient.
+-   You feel that your current workflow isn't reproducible enough
+-   There is a statistical method that you would like to use, that is not available in
+    your preferred software but it is available in R
+-   You unsuccessfully tried to learn R before, but would like to give it a second chance?
+-   You are using R, but you lost track of all the recent changes and want an update on
+    the state-of-the-Rt
+-   FOMO - you want to know what all the fuzz is about
+
+I'm assuming you have little or no programming experience[^index-1] and you are not
+particularly interested in computers or programming. You don't want to be bored with
+technical background knowledge. You are here, because you want to learn the tools that can
+help you get things done!
+
+[^index-1]: If you are a seasoned programmer, there are more efficient ways to catch up on
+    R. I recommend the books *R for Data Science* and [Advanced
+    R](https://adv-r.hadley.nz/index.html)). Both are available for free online.
+
+## The origins of this book {.unnumbered}
+
+This book started as my notes for a workshop I held in April 2021 at a research group
+meeting at the University of Oslo's Department of Special Needs Education. It was a 90
+minutes long hands-on introduction to R. The goal was to provide an overview of R that
+could help the workshop participants decide whether they should learn R or not. After the
+workshop, I continued to expand on the material and eventually, it turned into a more
+comprehensive introduction to R.
+
+## About the author {.unnumbered}
+
+I have worked with R and other languages in a research context for almost 10 years and I
+have made some humble contributions to the R ecosystem. I teach R as a certified
+instructor for [The
+Carpentries](https://www.ub.uio.no/english/writing-publishing/dsc/carpentry-uio/), and I
+help maintain the Carpentries lesson material for the lesson *Data Analysis and
+Visualization in R for Ecologists*. I really enjoy teaching researchers to code and
+introducing them to the many wonders of R. This is book is a result of my passion for
+teaching R.

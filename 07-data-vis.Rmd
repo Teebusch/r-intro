@@ -12,6 +12,7 @@ There are also packages like [`{esquisse}`](https://cran.r-project.org/web/packa
 The `{ggplot2}` package itself is mainly limited to static graphs. However, packages like [`{plotly}`](https://plotly.com/r/), and [`{shiny}`](https://shiny.rstudio.com/gallery/) allow you to make interactive visualisations and dashboards with relative ease. 
 Integration with [JavaScript (e.g., D3.js)](https://book.javascript-for-r.com/) - the sky is the limit!
 
+See [ggplot2 -- Elegant graphics for data analysis](https://ggplot2-book.org/) for a deep dive into `{ggplot2}`
 
 ## **Hands-on.** Data Visualization 
 
