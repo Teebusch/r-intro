@@ -12,8 +12,8 @@ download and install the latest version of [R](https://www.r-project.org/) and
 [RStudio](https://www.rstudio.com/products/rstudio/) for your operating system. If you
 already have either program installed on your computer, there is no need to uninstall the
 old versions beforehand. If you'd rather not install anything on your machine, you can
-make an account at [rstudio.cloud](https://rstudio.cloud/) and use R and RStudio in the
-browser. That's it! Everything else you need can be set up from within RStudio.
+instead make an account at [rstudio.cloud](https://rstudio.cloud/) and use R and RStudio
+in the browser. That's it! Everything else you need can be set up from within RStudio.
 
 ::: {.more}
 For some things, e.g., Bayesian statistic, you might also need to install

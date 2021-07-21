@@ -33,6 +33,8 @@ a domain expert what they use (or Google). Here are just a few examples:
 
 There are too many things to mention. The CRAN task views can be a good start.
 
+Likewise, [Introductory Statistics in Psychology using R](https://rpsystats.com/)
+
 ## Statistical modeling
 
 ``` {.r}

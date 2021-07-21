@@ -1,8 +1,8 @@
 # The R community is awesome!
 
 ::: {.goals}
--   ...
--   ...
+-   How to engage with the R community
+-   Resources for continuing to learn R
 :::
 
 We are almost at the end of this short introduction to R. We barely scratched the surface
@@ -19,27 +19,21 @@ And because it is widespread, there's always an R nerd nearby who's willing to h
 be afraid to ask questions, make mistakes, or write bad code! Here are some ideas how you
 could engage with the community:
 
--   Twitter `#RStats` can help to keep track of all the new things (if you like Twitter
-    ...)
--   Participate in [Tidy Tuesday](https://github.com/rfordatascience/tidytuesday) or
-    [Makeover Monday](https://www.makeovermonday.co.uk/) to sharpen your data wrangling
-    and data visualization skills and see how other people are approaching the same data
--   Read other people's code on Github and co. [Write your own package or contribute to
-    packages.](https://www.rstudio.com/resources/rstudioglobal-2021/make-a-package-make-some-friends/)
+-   Twitter `#RStats` can help to keep track of all the new things and talk shop with other R nerds (if you like Twitter...)
 -   [Join Meetups of R User Groups](https://www.meetup.com/Oslo-useR-Group/) or create
     your own R user group
+-   Conferences such as UseR -- many talks are online. [RStudio
+    presentations](https://www.rstudio.com/resources/webinars/)
 
-## Great free learning material
+## How to keep learning?
 
-Because R is mainly used by (and taught to) non-computer scientists, there is a lot of
-learning material for non-techy people. Amazingly, much of it is free *and* really good!
-The (Awesome R Learning Resources
-List)[<https://github.com/iamericfletcher/awesome-r-learning-resources>] provides an
-extensive list of resources for learning R. Here, I will limit myself to just a few
-personal recommendations.
+Because R is mainly used by (and taught to) people who are not software engineers or
+computer scientists, there is a lot of learning material that is made for people without a
+technical background. Amazingly, much of it is free *and* really good! Here, I will limit
+myself to just a few personal recommendations. The (Awesome R Learning Resources
+List)[<https://github.com/iamericfletcher/awesome-r-learning-resources>] provides a more
+comprehensive list of resources for learning R.
 
-I think an excellent place to continue learning would be the [R for Data Science
-Book](https://r4ds.had.co.nz/), which provides a comprehensive overview of the Tidyverse.
 If you are working in education, then check out [R for
 Education](https://rstudio4edu.github.io/rstudio4edu-book/) -- a handbook for teaching and
 learning with R and RStudio.
@@ -49,28 +43,19 @@ e.g., [R for Social Sciences](https://datacarpentry.org/r-socialsci/) and [R for
 Ecologists](https://datacarpentry.org/R-ecology-lesson/). You can also [take a Carpentries
 R course at UiO](https://www.ub.uio.no/english/writing-publishing/dsc/carpentry-uio/)
 
--   [B Bloggers](https://www.r-bloggers.com/) aggregates a number of R blogs.
--   Also check out the searchable database of ["R Posts you might have
-    missed"](https://alastairrushworth.github.io/searchable/searchable.html)
-
-#### Books {.unnumbered}
-
--   [Introductory Statistics in Psychology using R](https://rpsystats.com/)
--   [R Packages](https://r-pkgs.org/index.html) -- A deep dive into writing and publishing
-    R packages.
-
-#### Courses and videos {.unnumbered}
-
 -   [R for the rest of us](https://rfortherestofus.com/courses/getting-started/) offers a
     free beginners course.
--   [RStudio presentations](https://www.rstudio.com/resources/webinars/)
 -   [There are many R Tutorials on
     YouTube](http://flavioazevedo.com/stats-and-r-blog/2016/9/13/learning-r-on-youtube).
     Also check Coursera and other MOOCs for free videos about R.
 
-#### Podcasts {.unnumbered}
+An excellent place to continue learning R would be the [R for Data Science
+Book](https://r4ds.had.co.nz/). It provides a comprehensive overview of the Tidyverse.
+There is also a learning community rganized around this book and they organize community
+learning events such as Tidy Tuesday -- a weekly data visualization challenge. Participate
+in [Tidy Tuesday](https://github.com/rfordatascience/tidytuesday) or [Makeover
+Monday](https://www.makeovermonday.co.uk/) to sharpen your data wrangling and data
+visualization skills and see how other people are approaching the same data
 
--   [The R podcast](https://r-podcast.org/)
-
-That's it. I hope this was useful. We really only scratched the surface. If there are any
-questions, you can contact me!
+Read other people's code on Github and co. [Write your own package or contribute to
+packages.](https://www.rstudio.com/resources/rstudioglobal-2021/make-a-package-make-some-friends/)

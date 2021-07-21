@@ -27,6 +27,8 @@ By the way: R can also integrate with
 other languages and interface with other software, such as
 [MPLUS](https://mclust-org.github.io/mclust/).
 
+You can also rite your own R package. The R Packages book provides a deep dive into writing and publishing R packages.
+
 ## Introducing the Tidyverse
 
 [**The Tidyverse**](https://www.tidyverse.org/) is a set of R packages that

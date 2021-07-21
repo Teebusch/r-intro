@@ -76,10 +76,10 @@ could help the workshop participants decide whether they should learn R or not. 
 workshop, I continued to expand on the material and eventually, it turned into a more
 comprehensive introduction to R.
 
-This is book is a result of my passion for teaching R and my interest in the paedagogy of
-teaching tech. It is heavily inspired by the Carpentries and Greg Wilson's [*Teaching Tech
-Together*](https://teachtogether.tech/). However, it tries to be a more compact and
-provide a broad overview of R at the expanse of depth of understanding.
+This is book is a result of my passion for teaching R and my interest in the pedagogy of
+teaching tech. The pedagogical style is heavily inspired by the Carpentries and Greg
+Wilson's [*Teaching Tech Together*](https://teachtogether.tech/). However, it tries to be
+a more compact and provide a broad overview of R at the expanse of depth of understanding.
 
 ## About the author {.unnumbered}
 
@@ -90,3 +90,6 @@ Carpentries](https://www.ub.uio.no/english/writing-publishing/dsc/carpentry-uio/
 help maintain the Carpentries lesson material for the lesson *Data Analysis and
 Visualization in R for Ecologists*. I really enjoy teaching researchers to code and
 introducing them to the many wonders of R.
+
+If you have any feedback I'd be happy to hear from you! Contact me on Twitter, Email, or
+raise an Issue on Github.

@@ -55,7 +55,8 @@ code in RStudio.
 
 ## Finding help online
 
-If you ever run into a problem or an error message that you can't figure out yourself,
-check Google, [Stack Overflow](https://stackoverflow.com/questions/tagged/r), [RStudio
-Community](https://community.rstudio.com/), or the Twitter `#RStats`. There are also lots
-of blogs with tutorials written by other R users.
+If you ever run into a problem or an error message that you can't figure out yourself Google your problem. SOmeone else probably ran into a similar thing before.  
+You can find also lots of blogs with tutorials written by other R users. [R Bloggers](https://www.r-bloggers.com/) aggregates many of them. Also check out the searchable database of ["R Posts you might have missed"](https://alastairrushworth.github.io/searchable/searchable.html)
+
+[Stack Overflow](https://stackoverflow.com/questions/tagged/r), [RStudio
+Community](https://community.rstudio.com/), or the R mailing are full of people asking and answering questions about R, and you are welcome to ask your questions there. 

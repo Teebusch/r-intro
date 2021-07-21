@@ -48,8 +48,9 @@ peaks %>%
 
 Did you notice that the first argument of all functions (the data frame you want to operate on) has disappeared? The pipe operator fills that one in automatically.
 
-![An image of the character Data from the TV show Star Trek TNG, smoking a pipe](https://i.imgur.com/bIyqtxz.jpg)
-*Indubitably, sir!*
+```{r, echo=FALSE, fig.cap="Indubitably, sir!", fig.alt="An image of the Star Trek character Data, smoking a pipe"}
+knitr::include_graphics("images/data-with-pipe.jpeg")
+```
 
 ## Create new columns with `mutate()`
 
@@ -71,7 +72,7 @@ peaks %>%
   arrange(min_ascent)
 ```
 
-:::info
+:::{.more}
 **Dealing with missing values.** 
 
 In R, there is a special *value* for missing data, `NA`. This is *not* a data type. That is, a value can be, e.g., numeric *and* missing (`NA`) at the same time, and a numeric vector can contain a mix of numbers and `NA`. 

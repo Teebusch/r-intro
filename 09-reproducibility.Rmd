@@ -31,9 +31,9 @@ container (virtual machine).
 
 ## Use version control
 
-Version control is like a time machine for your analysis. It is to code what the
-:floppy_disk: is to a Word document (but better). A popular version control tool is
-[Git](https://git-scm.com/). Git allows you to...
+Version control is like a time machine for your analysis. It is to code what the 💾is to a
+Word document (but better). A popular version control tool is [Git](https://git-scm.com/).
+Git allows you to...
 
 -   store the state of your project
 -   see changes you or others have made
