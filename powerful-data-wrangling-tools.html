@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Reason 5 R is expandable | Ten Reasons to Learn R</title>
+  <title>Reason 6 Powerful data wrangling tools | Ten Reasons to Learn R</title>
   <meta name="description" content="A short introduction to Contemporary R." />
   <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Reason 5 R is expandable | Ten Reasons to Learn R" />
+  <meta property="og:title" content="Reason 6 Powerful data wrangling tools | Ten Reasons to Learn R" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Reason 5 R is expandable | Ten Reasons to Learn R" />
+  <meta name="twitter:title" content="Reason 6 Powerful data wrangling tools | Ten Reasons to Learn R" />
   
   <meta name="twitter:description" content="A short introduction to Contemporary R." />
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="r-has-great-documentation.html"/>
-<link rel="next" href="powerful-data-wrangling-tools.html"/>
+<link rel="prev" href="r-is-expandable.html"/>
+<link rel="next" href="powerful-data-visualisation-tools.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -234,315 +234,131 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="r-is-expandable" class="section level1">
-<h1><span class="header-section-number">Reason 5</span> R is expandable</h1>
+<div id="powerful-data-wrangling-tools" class="section level1">
+<h1><span class="header-section-number">Reason 6</span> Powerful data wrangling tools</h1>
 <div class="goals">
 <ul>
-<li>What is an R package?</li>
-<li>How to install and load an R package?</li>
-<li>What is the <em>Tidyverse</em>?</li>
-<li>Loading data from a text file into R</li>
-<li>Getting an overview of a data frame</li>
+<li>…</li>
+<li>…</li>
 </ul>
 </div>
-<p>While R is not as popular or as fast as other programming languages, it is quite popular in the data analysis and research domain. As a result, R gives you access to a vast amount of amazing packages written by expert statisticians and programmers around the world. An R package is a collection of R code that has been bundled up so that it can be easily used by others. The full power of R unfolds when you tap into this vast ecosystem of
-packages. There are literally tens of thousands of packages to make your life
-easier! There’s an R package for almost everything! See for yourself at
-<a href="https://rdrr.io/">rdrr.io</a> or <a href="https://www.r-pkg.org/">Metacran</a>.</p>
-<p>Packages in <a href="https://cran.r-project.org/">CRAN</a>,
-<a href="https://www.bioconductor.org/">BioConductor</a>, and
-<a href="https://neuroconductor.org/">Neuroconductor</a>) are peer-reviewed and often
-written by domain experts. Many more packages are available on
-<a href="https://github.com/topics/r?l=r">Github</a>. And if there’s ever anything missing
-you can build it yourself – together with others across the globe. <a href="https://www.rstudio.com/resources/rstudioglobal-2021/make-a-package-make-some-friends/">It’s fun
-and you will learn a
-lot!</a></p>
-<p>By the way: R can also integrate with
-<a href="https://rstudio.github.io/reticulate/">Python</a>, <a href="http://www.rcpp.org/">C</a>, and
-other languages and interface with other software, such as
-<a href="https://mclust-org.github.io/mclust/">MPLUS</a>.</p>
-<div id="introducing-the-tidyverse" class="section level2">
-<h2><span class="header-section-number">5.1</span> Introducing the Tidyverse</h2>
-<p><a href="https://www.tidyverse.org/"><strong>The Tidyverse</strong></a> is a set of R packages that
-share a common design philosophy. It aims to provide consistent user-friendly
-verb-based functions for common data-tasks and to iron out many of the
-idiosyncrasies of <em>Base R</em>. The <strong>Tidy Data</strong> that gives the Tidyverse its name
-is a table with</p>
+<p>R can connect to all sorts of data sources (<a href="https://db.rstudio.com/getting-started/connect-to-database/">Databases</a>, <a href="https://haven.tidyverse.org/">SPSS, Stata, SAS</a>, <a href="https://httr.r-lib.org/">APIs</a>, <a href="https://rvest.tidyverse.org/">websites</a>, …), and process many different types of data (tabular data, EEG, fMRI, eye tracking, Geodata, taxonomical data, p;honetic transcriptions…). The <code>{rio}</code> package tries to provide a unified interface for all many of them.</p>
+<p>The <a href="https://www.tidyverse.org/">Tidyverse</a> offers many convenience functions for common data manipulation tasks like splitting and merging columns, renaming, counting, sorting, and much more. At its core, are a handful of workhorse functions from the <code>{dplyr}</code> package for manipulating data frames:</p>
 <ul>
-<li>one observation per row</li>
-<li>one variable per column</li>
-<li>column names that are easy to type and easy to remember</li>
+<li><code>filter()</code> – select rows (observations)</li>
+<li><code>select()</code> – select variables (columns)</li>
+<li><code>mutate()</code> – create new variables (columns) or change existing ones</li>
+<li><code>summarize()</code> – aggregate rows, e.g, to calculate a column’s mean</li>
+<li><code>group_by()</code> – split the data frame</li>
+<li><code>pivot_wider()</code> and <code>pivot_longer()</code> – reshape the data</li>
 </ul>
-<p>The core idea is that, once the data is in <em>tidy</em> format, all the Tidyverse
-functions can be used seamlessly. A special operator, the pipe <code>%&gt;%</code> (see
-below), glues all the functions together.</p>
-<p>The Tidyverse is a relatively recent addition to the R package ecosystem but the
-design philosophy has struck a chord with the R developer community and
-many packages are now following Tidyverse principles. As a result, the overall
-data analysis workflow in R has become more streamlined and integrated over
-the last few years. Nevertheless, some people prefer base R, and many older
-packages will never change to a “tidy” design. Moreover, there are other popular
-alternatives to the Tidyverse, such as the
-<a href="https://rdatatable.gitlab.io/data.table/"><code>{data.table}</code></a> package. This leads
-to a bit of a schism in the R package ecosystem.</p>
+<div id="filtering-and-counting-rows" class="section level2">
+<h2><span class="header-section-number">6.1</span> Filtering and counting rows</h2>
+<p>Let’s do a simple data wrangling task using functions from the Tidyverse:</p>
+<ol style="list-style-type: decimal">
+<li>Find all peaks that are higher than 7,000 meters and were climbed before 1980<br />
+</li>
+<li>Count which countries the climbers came from</li>
+</ol>
+<p>We can use the <code>filter()</code> function to select only the rows (observations) we want. Then we can use the <code>count()</code> function to count how many rows there are for each kind of <code>first_ascent_country</code>:</p>
+<div class="sourceCode" id="cb52"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb52-1"><a href="powerful-data-wrangling-tools.html#cb52-1"></a>before80_7k &lt;-<span class="st"> </span><span class="kw">filter</span>(peaks, first_ascent_year <span class="op">&lt;</span><span class="st"> </span><span class="dv">1980</span>, height_metres <span class="op">&gt;</span><span class="st"> </span><span class="dv">7000</span>)</span>
+<span id="cb52-2"><a href="powerful-data-wrangling-tools.html#cb52-2"></a><span class="kw">count</span>(before80_7k, first_ascent_country)</span></code></pre></div>
+<pre><code># A tibble: 28 x 2
+   first_ascent_country     n
+   &lt;chr&gt;                &lt;int&gt;
+ 1 Austria                  2
+ 2 Austria, Nepal           1
+ 3 Austria, USA, Nepal      1
+ 4 Austria, W Germany       1
+ 5 France                   3
+ 6 France, Nepal            1
+ 7 Germany, Austria         1
+ 8 Germany, Nepal           1
+ 9 India                    1
+10 Japan                    7
+# … with 18 more rows</code></pre>
 </div>
-<div id="installing-packages" class="section level2">
-<h2><span class="header-section-number">5.2</span> Installing packages</h2>
-<p>For the examples in this book we will use a table with information about climbing expeditions in the Himalaya that was provided by <a href="https://github.com/rfordatascience/tidytuesday/blob/master/data/2020/2020-09-22/readme.md">Tidy Tuesday</a>.</p>
-<p>Often you will read data from external sources and the first step is to turn it into something that R can work with, usually a data frame. In this case, the data is provided as a <em>CSV</em> file. CSV stands for comma separated values and is a popular plain text format for sharing tabular data across the internet.<a href="#fn11" class="footnote-ref" id="fnref11"><sup>11</sup></a></p>
-<p>To read the CSV file and turn it into an R data frame we will use the <code>read_csv()</code>
-function. To use this function, we first have to install and load the <code>{tidyverse}</code> package.<a href="#fn12" class="footnote-ref" id="fnref12"><sup>12</sup></a></p>
-<p>You can install the package from R’s central package repository CRAN. The <code>install.packages()</code> function looks for a package of a given name on CRAN, and if it finds it installs it. The <code>library()</code> function loads a package that you have installed, so that all of its functions become available for you to use in your current R session. The next time you start RStudio, you will not have to reinstall the package (it is now on your computer), but you will have to load it again.</p>
-<div class="sourceCode" id="cb41"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb41-1"><a href="r-is-expandable.html#cb41-1"></a><span class="kw">install.packages</span>(<span class="st">&quot;tidyverse&quot;</span>)</span>
-<span id="cb41-2"><a href="r-is-expandable.html#cb41-2"></a><span class="kw">library</span>(tidyverse)</span></code></pre></div>
-<div class="more">
-<p>The distinction between library and package can be a little confusing. It might help to imagine that you are <em>adding a package to your system’s library of packages</em> with <code>install.packages()</code>, and then you use <code>library()</code> to <em>check out a package from your library</em>, so that you can use it in your current R session.</p>
-<p>Note also that the quotation marks around the package name in <code>intall.packages()</code> are required, because this is essentially a search term. In <code>library()</code> the quotation marks are optional, because the package is an object in your library, from where you can call it by its name like any other variable.</p>
+<div id="the-pipe-operator" class="section level2">
+<h2><span class="header-section-number">6.2</span> The pipe operator %&gt;%</h2>
+<p>Above, we stored the result of the first function in an intermediate variables and then gave it to the second. There’s another way to chain functions that is often more convenient and readable: Use the <strong>pipe operator <code>%&gt;%</code></strong> to pass data from one function to the next.</p>
+<p>You can read <code>%&gt;%</code> as <em>“…and then…”</em>. Use the keyboard shortcut <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>M</kbd> to make it.</p>
+<div class="sourceCode" id="cb54"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb54-1"><a href="powerful-data-wrangling-tools.html#cb54-1"></a>peaks <span class="op">%&gt;%</span></span>
+<span id="cb54-2"><a href="powerful-data-wrangling-tools.html#cb54-2"></a><span class="st">  </span><span class="kw">filter</span>(first_ascent_year <span class="op">&lt;</span><span class="st"> </span><span class="dv">1980</span>, height_metres <span class="op">&gt;</span><span class="st"> </span><span class="dv">7000</span>) <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb54-3"><a href="powerful-data-wrangling-tools.html#cb54-3"></a><span class="st">  </span><span class="kw">count</span>(first_ascent_country, <span class="dt">sort =</span> <span class="ot">TRUE</span>) <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb54-4"><a href="powerful-data-wrangling-tools.html#cb54-4"></a><span class="st">  </span><span class="kw">filter</span>(n <span class="op">&gt;</span><span class="st"> </span><span class="dv">3</span>) </span></code></pre></div>
+<pre><code># A tibble: 4 x 2
+  first_ascent_country     n
+  &lt;chr&gt;                &lt;int&gt;
+1 Japan, Nepal            14
+2 Japan                    7
+3 Poland                   4
+4 UK, Nepal                4</code></pre>
+<div class="sourceCode" id="cb56"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb56-1"><a href="powerful-data-wrangling-tools.html#cb56-1"></a>  <span class="co"># ... the pipe can continue. Here, we filter all peaks that </span></span>
+<span id="cb56-2"><a href="powerful-data-wrangling-tools.html#cb56-2"></a>  <span class="co"># were climbed more than 3 times</span></span></code></pre></div>
+<p>Did you notice that the first argument of all functions (the data frame you want to operate on) has disappeared? The pipe operator fills that one in automatically.</p>
+<p><img src="https://i.imgur.com/bIyqtxz.jpg" alt="An image of the character Data from the TV show Star Trek TNG, smoking a pipe" />
+<em>Indubitably, sir!</em></p>
+</div>
+<div id="create-new-columns-with-mutate" class="section level2">
+<h2><span class="header-section-number">6.3</span> Create new columns with <code>mutate()</code></h2>
+<div class="sourceCode" id="cb57"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb57-1"><a href="powerful-data-wrangling-tools.html#cb57-1"></a>peaks <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb57-2"><a href="powerful-data-wrangling-tools.html#cb57-2"></a><span class="st">  </span><span class="kw">select</span>(peak_name, climbing_status, first_ascent_year, first_ascent_country) <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb57-3"><a href="powerful-data-wrangling-tools.html#cb57-3"></a><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">climbed_before80 =</span> first_ascent_year <span class="op">&lt;</span><span class="st"> </span><span class="dv">1980</span>)</span></code></pre></div>
+<pre><code># A tibble: 468 x 5
+   peak_name  climbing_status first_ascent_ye… first_ascent_co… climbed_before80
+   &lt;chr&gt;      &lt;chr&gt;                      &lt;dbl&gt; &lt;chr&gt;            &lt;lgl&gt;           
+ 1 Ama Dablam Climbed                     1961 New Zealand, US… TRUE            
+ 2 Amphu Gya… Climbed                     1953 UK               TRUE            
+ 3 Annapurna… Climbed                     1950 France           TRUE            
+ 4 Annapurna… Climbed                     1960 UK, Nepal        TRUE            
+ 5 Annapurna… Climbed                     1961 India            TRUE            
+ 6 Annapurna… Climbed                     1955 W Germany        TRUE            
+ 7 Annapurna… Climbed                     1974 Spain            TRUE            
+ 8 Annapurna… Climbed                     1980 W Germany        FALSE           
+ 9 Annapurna… Climbed                     1964 Japan, Nepal     TRUE            
+10 Api Main   Climbed                     1960 Japan, Nepal     TRUE            
+# … with 458 more rows</code></pre>
+</div>
+<div id="split-apply-combine-with-group_by-and-summarize" class="section level2">
+<h2><span class="header-section-number">6.4</span> Split-apply-combine with <code>group_by()</code> and <code>summarize()</code></h2>
+<p>Use <code>group_by()</code> and <code>summarize()</code> together for powerful <em>split-apply-combine</em> operations:</p>
+<div class="sourceCode" id="cb59"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb59-1"><a href="powerful-data-wrangling-tools.html#cb59-1"></a>peaks <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb59-2"><a href="powerful-data-wrangling-tools.html#cb59-2"></a><span class="st">  </span><span class="kw">filter</span>(first_ascent_year <span class="op">&gt;</span><span class="st"> </span><span class="dv">201</span>) <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb59-3"><a href="powerful-data-wrangling-tools.html#cb59-3"></a><span class="st">  </span><span class="kw">group_by</span>(first_ascent_country) <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb59-4"><a href="powerful-data-wrangling-tools.html#cb59-4"></a><span class="st">  </span><span class="kw">summarize</span>(<span class="dt">min_ascent =</span> <span class="kw">min</span>(first_ascent_year, <span class="dt">na.rm =</span> <span class="ot">TRUE</span>)) <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb59-5"><a href="powerful-data-wrangling-tools.html#cb59-5"></a><span class="st">  </span><span class="kw">arrange</span>(min_ascent)</span></code></pre></div>
+<pre><code># A tibble: 77 x 2
+   first_ascent_country min_ascent
+   &lt;chr&gt;                     &lt;dbl&gt;
+ 1 UK                         1909
+ 2 Austria                    1930
+ 3 Austria, UK                1930
+ 4 Germany, Austria           1930
+ 5 Germany, Nepal             1930
+ 6 Switzerland, Germany       1939
+ 7 Switzerland                1949
+ 8 Switzerland, Nepal         1949
+ 9 UK, Nepal                  1949
+10 France                     1950
+# … with 67 more rows</code></pre>
+<div class="info">
+<p><strong>Dealing with missing values.</strong></p>
+<p>In R, there is a special <em>value</em> for missing data, <code>NA</code>. This is <em>not</em> a data type. That is, a value can be, e.g., numeric <em>and</em> missing (<code>NA</code>) at the same time, and a numeric vector can contain a mix of numbers and <code>NA</code>.</p>
 </div>
 </div>
-<div id="loading-data" class="section level2">
-<h2><span class="header-section-number">5.3</span> Loading data</h2>
-<p>Now that we have the <code>{tidyverse}</code> package installed and loaded, we can use the <code>read_csv()</code> function to load the data straight from the web into an R data frame in our computer’s working memory.</p>
-<div class="sourceCode" id="cb42"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb42-1"><a href="r-is-expandable.html#cb42-1"></a>peaks &lt;-<span class="st"> </span><span class="kw">read_csv</span>(<span class="st">&#39;https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2020/2020-09-22/peaks.csv&#39;</span>)</span></code></pre></div>
-<pre><code>Rows: 468 Columns: 8</code></pre>
-<pre><code>── Column specification ────────────────────────────────────────────────────────
-Delimiter: &quot;,&quot;
-chr (6): peak_id, peak_name, peak_alternative_name, climbing_status, first_a...
-dbl (2): height_metres, first_ascent_year</code></pre>
-<pre><code>
-ℹ Use `spec()` to retrieve the full column specification for this data.
-ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
-</div>
-<div id="inspecting-the-data" class="section level2">
-<h2><span class="header-section-number">5.4</span> Inspecting the data</h2>
-<p>When we load the data, R shows us the names of the columns in the data set and the type of each column. We can also have a look at the first few rows with the <code>head()</code> function.</p>
-<div class="sourceCode" id="cb46"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb46-1"><a href="r-is-expandable.html#cb46-1"></a><span class="kw">head</span>(peaks)</span></code></pre></div>
-<pre><code># A tibble: 6 x 8
-  peak_id peak_name     peak_alternative_name height_metres climbing_status
-  &lt;chr&gt;   &lt;chr&gt;         &lt;chr&gt;                         &lt;dbl&gt; &lt;chr&gt;          
-1 AMAD    Ama Dablam    Amai Dablang                   6814 Climbed        
-2 AMPG    Amphu Gyabjen &lt;NA&gt;                           5630 Climbed        
-3 ANN1    Annapurna I   &lt;NA&gt;                           8091 Climbed        
-4 ANN2    Annapurna II  &lt;NA&gt;                           7937 Climbed        
-5 ANN3    Annapurna III &lt;NA&gt;                           7555 Climbed        
-6 ANN4    Annapurna IV  &lt;NA&gt;                           7525 Climbed        
-# … with 3 more variables: first_ascent_year &lt;dbl&gt;, first_ascent_country &lt;chr&gt;,
-#   first_ascent_expedition_id &lt;chr&gt;</code></pre>
-<p>You can get a more traditional spreadsheet-like view of the complete data frame by
-clicking its name in the Environment panel or running the command <code>view(peaks)</code>.</p>
-<p>To better understand our data, let’s get some summary statistics. The <code>{skimr}</code>
-package provides a really nice function for this.</p>
-<div class="exercise">
-<p><span id="exr:unlabeled-div-10" class="exercise"><strong>Exercise 5.1  </strong></span>Install and load the <code>{skimr}</code> package from CRAN.</p>
-<div class="answer">
-<div class="sourceCode" id="cb48"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb48-1"><a href="r-is-expandable.html#cb48-1"></a><span class="kw">install.packages</span>(<span class="st">&quot;skimr&quot;</span>)</span>
-<span id="cb48-2"><a href="r-is-expandable.html#cb48-2"></a><span class="kw">library</span>(skimr)</span></code></pre></div>
-</div>
-</div>
-<p>Now we can “skim” our data:</p>
-<div class="sourceCode" id="cb49"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb49-1"><a href="r-is-expandable.html#cb49-1"></a><span class="kw">skim</span>(peaks)</span></code></pre></div>
-<table>
-<caption><span id="tab:unnamed-chunk-33">Table 5.1: </span>Data summary</caption>
-<tbody>
-<tr class="odd">
-<td align="left">Name</td>
-<td align="left">peaks</td>
-</tr>
-<tr class="even">
-<td align="left">Number of rows</td>
-<td align="left">468</td>
-</tr>
-<tr class="odd">
-<td align="left">Number of columns</td>
-<td align="left">8</td>
-</tr>
-<tr class="even">
-<td align="left">_______________________</td>
-<td align="left"></td>
-</tr>
-<tr class="odd">
-<td align="left">Column type frequency:</td>
-<td align="left"></td>
-</tr>
-<tr class="even">
-<td align="left">character</td>
-<td align="left">6</td>
-</tr>
-<tr class="odd">
-<td align="left">numeric</td>
-<td align="left">2</td>
-</tr>
-<tr class="even">
-<td align="left">________________________</td>
-<td align="left"></td>
-</tr>
-<tr class="odd">
-<td align="left">Group variables</td>
-<td align="left">None</td>
-</tr>
-</tbody>
-</table>
-<p><strong>Variable type: character</strong></p>
-<table>
-<thead>
-<tr class="header">
-<th align="left">skim_variable</th>
-<th align="right">n_missing</th>
-<th align="right">complete_rate</th>
-<th align="right">min</th>
-<th align="right">max</th>
-<th align="right">empty</th>
-<th align="right">n_unique</th>
-<th align="right">whitespace</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left">peak_id</td>
-<td align="right">0</td>
-<td align="right">1.00</td>
-<td align="right">4</td>
-<td align="right">4</td>
-<td align="right">0</td>
-<td align="right">468</td>
-<td align="right">0</td>
-</tr>
-<tr class="even">
-<td align="left">peak_name</td>
-<td align="right">0</td>
-<td align="right">1.00</td>
-<td align="right">4</td>
-<td align="right">25</td>
-<td align="right">0</td>
-<td align="right">468</td>
-<td align="right">0</td>
-</tr>
-<tr class="odd">
-<td align="left">peak_alternative_name</td>
-<td align="right">223</td>
-<td align="right">0.52</td>
-<td align="right">5</td>
-<td align="right">49</td>
-<td align="right">0</td>
-<td align="right">242</td>
-<td align="right">0</td>
-</tr>
-<tr class="even">
-<td align="left">climbing_status</td>
-<td align="right">0</td>
-<td align="right">1.00</td>
-<td align="right">7</td>
-<td align="right">9</td>
-<td align="right">0</td>
-<td align="right">2</td>
-<td align="right">0</td>
-</tr>
-<tr class="odd">
-<td align="left">first_ascent_country</td>
-<td align="right">132</td>
-<td align="right">0.72</td>
-<td align="right">2</td>
-<td align="right">44</td>
-<td align="right">0</td>
-<td align="right">77</td>
-<td align="right">0</td>
-</tr>
-<tr class="even">
-<td align="left">first_ascent_expedition_id</td>
-<td align="right">135</td>
-<td align="right">0.71</td>
-<td align="right">9</td>
-<td align="right">9</td>
-<td align="right">0</td>
-<td align="right">332</td>
-<td align="right">0</td>
-</tr>
-</tbody>
-</table>
-<p><strong>Variable type: numeric</strong></p>
-<table>
-<thead>
-<tr class="header">
-<th align="left">skim_variable</th>
-<th align="right">n_missing</th>
-<th align="right">complete_rate</th>
-<th align="right">mean</th>
-<th align="right">sd</th>
-<th align="right">p0</th>
-<th align="right">p25</th>
-<th align="right">p50</th>
-<th align="right">p75</th>
-<th align="right">p100</th>
-<th align="left">hist</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left">height_metres</td>
-<td align="right">0</td>
-<td align="right">1.00</td>
-<td align="right">6656.64</td>
-<td align="right">571.91</td>
-<td align="right">5407</td>
-<td align="right">6235.75</td>
-<td align="right">6559.5</td>
-<td align="right">6911</td>
-<td align="right">8850</td>
-<td align="left">▂▇▃▁▁</td>
-</tr>
-<tr class="even">
-<td align="left">first_ascent_year</td>
-<td align="right">132</td>
-<td align="right">0.72</td>
-<td align="right">1979.08</td>
-<td align="right">100.21</td>
-<td align="right">201</td>
-<td align="right">1963.00</td>
-<td align="right">1982.0</td>
-<td align="right">2008</td>
-<td align="right">2019</td>
-<td align="left">▁▁▁▁▇</td>
-</tr>
-</tbody>
-</table>
-<p>This summary tells us quite a lot about our data! For example, we can
-see that some peaks have not been successfully climbed until very recently, or not at
-all. There also appears to be an outlier in the <code>first_ascent_year</code> column that we’ll
-have to take care of – a peak that was successfully climbed in the year 201.</p>
-<div class="more">
-<p><strong>The :: operator.</strong></p>
-<p>We only use one function from the <code>{skimr}</code> package, and we only use it this one time.
-In a case like this, it may save you some typing by calling the function directly, without loading the package first.
-<code>::</code> between the package name and
-the function name. This is a way . Thus,</p>
-<div class="sourceCode" id="cb50"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb50-1"><a href="r-is-expandable.html#cb50-1"></a>skimr<span class="op">::</span><span class="kw">skim</span>(peaks)</span></code></pre></div>
-<p>is equivalent to</p>
-<div class="sourceCode" id="cb51"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb51-1"><a href="r-is-expandable.html#cb51-1"></a><span class="kw">library</span>(skimr)</span>
-<span id="cb51-2"><a href="r-is-expandable.html#cb51-2"></a><span class="kw">skim</span>(peaks)</span></code></pre></div>
-<p>The <code>::</code> is often used when the package is only needed for a single function
-call or to clarify (either to R or to the person reading the code) which package a
-function is coming from. This is particularly useful when there are functions
-with the same name in different packages. Another approach to solving this
-problem is the <a href="https://conflicted.r-lib.org/"><code>{conflicted}</code></a> package.</p>
-</div>
+<div id="other-useful-data-wrangling-functions" class="section level2">
+<h2><span class="header-section-number">6.5</span> Other useful data wrangling functions</h2>
+<div class="sourceCode" id="cb61"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb61-1"><a href="powerful-data-wrangling-tools.html#cb61-1"></a><span class="co"># ...</span></span></code></pre></div>
 
 </div>
-</div>
-<div class="footnotes">
-<hr />
-<ol start="11">
-<li id="fn11"><p>Excel files are bad for sharing data! <a href="https://www.theverge.com/2020/8/6/21355674/human-genes-rename-microsoft-excel-misreading-dates">Learn from the mistakes of others</a> and instead use CSV, JSON, <a href="https://blog.rstudio.com/2016/03/29/feather/">Feather</a>, <a href="https://db.rstudio.com/databases/sqlite/">databases</a>, …<a href="r-is-expandable.html#fnref11" class="footnote-back">↩︎</a></p></li>
-<li id="fn12"><p>
-Usually, <strong>packages</strong> are collections of functions. The <code>{tidyverse}</code> package is a bit different, as it is actually a collection of other packages — a <em>meta-package</em>. When you load it, it loads the most popular packages from theTidyverse, such as <code>{ggplot2}</code>, <code>{readr}</code>, and <code>{dplyr}</code>. For example, the <code>read_csv()</code> function is from the <code>{readr}</code> package.<a href="r-is-expandable.html#fnref12" class="footnote-back">↩︎</a></p></li>
-</ol>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="r-has-great-documentation.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="powerful-data-wrangling-tools.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="r-is-expandable.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="powerful-data-visualisation-tools.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

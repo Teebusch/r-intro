@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Reason 5 R is expandable | Ten Reasons to Learn R</title>
+  <title>About this section | Ten Reasons to Learn R</title>
   <meta name="description" content="A short introduction to Contemporary R." />
   <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Reason 5 R is expandable | Ten Reasons to Learn R" />
+  <meta property="og:title" content="About this section | Ten Reasons to Learn R" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Reason 5 R is expandable | Ten Reasons to Learn R" />
+  <meta name="twitter:title" content="About this section | Ten Reasons to Learn R" />
   
   <meta name="twitter:description" content="A short introduction to Contemporary R." />
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="r-has-great-documentation.html"/>
-<link rel="next" href="powerful-data-wrangling-tools.html"/>
+<link rel="prev" href="why-you-should-not-learn-r.html"/>
+<link rel="next" href="r-is-free-and-open-source.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -234,315 +234,63 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="r-is-expandable" class="section level1">
-<h1><span class="header-section-number">Reason 5</span> R is expandable</h1>
+<div id="about-this-section" class="section level1 unnumbered">
+<h1>About this section</h1>
+<p>Now that we know what R is, and we have discussed some good alternatives to R, we will
+have a look at what speaks for learning R. There are a lot of good reasons to learn R! In
+this section of the book I will present ten of them, and with each one of them we will get
+hands-on with R. This is a very superficial introduction and we will skip over some of the
+details for the sake of showing you the whole spectrum of what R has to offer in as little
+time as possible.</p>
+<p>We will use modern R with <em>RStudio</em> and the <em>Tidyverse</em> (more about that later). This will
+help us to focus on data analysis quickly, without worrying to much about some of the more
+technical aspects of programming.</p>
+<p>Here are the 10 things we will look at:</p>
+<p><img src="images/reasons.png" title="A hand-written list of 10 reasons to learn R" alt="A hand-written list of 10 reasons to learn R"  /></p>
+<ol style="list-style-type: decimal">
+<li><strong>Free and open source</strong> — We will learn about free and open source software and why
+it is great.</li>
+<li><strong>Easy to get started</strong> — We will install R and RStudio and setup a project.</li>
+<li>A flexible language that grows with you — We will get to know the fundamental data
+types and data structures of R.</li>
+<li><strong>Well-documented</strong> — We will learn how to get help in R.</li>
+<li><strong>Expandable</strong> — We will learn how to add additional functions to R by installing
+packages and we will learn how to load data into R.</li>
+<li><strong>Powerful data wrangling functions</strong> — We will see how to transform data.</li>
+<li><strong>Powerful data visualization functions</strong> — We will make a complex statistical graph
+with just one line of code.</li>
+<li><strong>Powerful statistical methods</strong> — We will run a statisical model with just one line
+of code.</li>
+<li><strong>Encourages reproducible research</strong> — We will make our analysis reproducible.</li>
+<li><strong>An awesome community</strong> — I will talk about where to learn more.</li>
+</ol>
+<div id="conventions" class="section level2 unnumbered">
+<h2>Conventions</h2>
 <div class="goals">
-<ul>
-<li>What is an R package?</li>
-<li>How to install and load an R package?</li>
-<li>What is the <em>Tidyverse</em>?</li>
-<li>Loading data from a text file into R</li>
-<li>Getting an overview of a data frame</li>
-</ul>
+<p>At the beginning of each chapter, I will list the things we are going to do and learn. You
+can use these to check your prior knowledge and decide to skip chapters that won’t provide
+any new insights for you.</p>
 </div>
-<p>While R is not as popular or as fast as other programming languages, it is quite popular in the data analysis and research domain. As a result, R gives you access to a vast amount of amazing packages written by expert statisticians and programmers around the world. An R package is a collection of R code that has been bundled up so that it can be easily used by others. The full power of R unfolds when you tap into this vast ecosystem of
-packages. There are literally tens of thousands of packages to make your life
-easier! There’s an R package for almost everything! See for yourself at
-<a href="https://rdrr.io/">rdrr.io</a> or <a href="https://www.r-pkg.org/">Metacran</a>.</p>
-<p>Packages in <a href="https://cran.r-project.org/">CRAN</a>,
-<a href="https://www.bioconductor.org/">BioConductor</a>, and
-<a href="https://neuroconductor.org/">Neuroconductor</a>) are peer-reviewed and often
-written by domain experts. Many more packages are available on
-<a href="https://github.com/topics/r?l=r">Github</a>. And if there’s ever anything missing
-you can build it yourself – together with others across the globe. <a href="https://www.rstudio.com/resources/rstudioglobal-2021/make-a-package-make-some-friends/">It’s fun
-and you will learn a
-lot!</a></p>
-<p>By the way: R can also integrate with
-<a href="https://rstudio.github.io/reticulate/">Python</a>, <a href="http://www.rcpp.org/">C</a>, and
-other languages and interface with other software, such as
-<a href="https://mclust-org.github.io/mclust/">MPLUS</a>.</p>
-<div id="introducing-the-tidyverse" class="section level2">
-<h2><span class="header-section-number">5.1</span> Introducing the Tidyverse</h2>
-<p><a href="https://www.tidyverse.org/"><strong>The Tidyverse</strong></a> is a set of R packages that
-share a common design philosophy. It aims to provide consistent user-friendly
-verb-based functions for common data-tasks and to iron out many of the
-idiosyncrasies of <em>Base R</em>. The <strong>Tidy Data</strong> that gives the Tidyverse its name
-is a table with</p>
-<ul>
-<li>one observation per row</li>
-<li>one variable per column</li>
-<li>column names that are easy to type and easy to remember</li>
-</ul>
-<p>The core idea is that, once the data is in <em>tidy</em> format, all the Tidyverse
-functions can be used seamlessly. A special operator, the pipe <code>%&gt;%</code> (see
-below), glues all the functions together.</p>
-<p>The Tidyverse is a relatively recent addition to the R package ecosystem but the
-design philosophy has struck a chord with the R developer community and
-many packages are now following Tidyverse principles. As a result, the overall
-data analysis workflow in R has become more streamlined and integrated over
-the last few years. Nevertheless, some people prefer base R, and many older
-packages will never change to a “tidy” design. Moreover, there are other popular
-alternatives to the Tidyverse, such as the
-<a href="https://rdatatable.gitlab.io/data.table/"><code>{data.table}</code></a> package. This leads
-to a bit of a schism in the R package ecosystem.</p>
-</div>
-<div id="installing-packages" class="section level2">
-<h2><span class="header-section-number">5.2</span> Installing packages</h2>
-<p>For the examples in this book we will use a table with information about climbing expeditions in the Himalaya that was provided by <a href="https://github.com/rfordatascience/tidytuesday/blob/master/data/2020/2020-09-22/readme.md">Tidy Tuesday</a>.</p>
-<p>Often you will read data from external sources and the first step is to turn it into something that R can work with, usually a data frame. In this case, the data is provided as a <em>CSV</em> file. CSV stands for comma separated values and is a popular plain text format for sharing tabular data across the internet.<a href="#fn11" class="footnote-ref" id="fnref11"><sup>11</sup></a></p>
-<p>To read the CSV file and turn it into an R data frame we will use the <code>read_csv()</code>
-function. To use this function, we first have to install and load the <code>{tidyverse}</code> package.<a href="#fn12" class="footnote-ref" id="fnref12"><sup>12</sup></a></p>
-<p>You can install the package from R’s central package repository CRAN. The <code>install.packages()</code> function looks for a package of a given name on CRAN, and if it finds it installs it. The <code>library()</code> function loads a package that you have installed, so that all of its functions become available for you to use in your current R session. The next time you start RStudio, you will not have to reinstall the package (it is now on your computer), but you will have to load it again.</p>
-<div class="sourceCode" id="cb41"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb41-1"><a href="r-is-expandable.html#cb41-1"></a><span class="kw">install.packages</span>(<span class="st">&quot;tidyverse&quot;</span>)</span>
-<span id="cb41-2"><a href="r-is-expandable.html#cb41-2"></a><span class="kw">library</span>(tidyverse)</span></code></pre></div>
 <div class="more">
-<p>The distinction between library and package can be a little confusing. It might help to imagine that you are <em>adding a package to your system’s library of packages</em> with <code>install.packages()</code>, and then you use <code>library()</code> to <em>check out a package from your library</em>, so that you can use it in your current R session.</p>
-<p>Note also that the quotation marks around the package name in <code>intall.packages()</code> are required, because this is essentially a search term. In <code>library()</code> the quotation marks are optional, because the package is an object in your library, from where you can call it by its name like any other variable.</p>
+<p>This is an info box. It expands on a learning point and gives you some information that
+may not be essential but could help you to see the connections between concepts.</p>
 </div>
-</div>
-<div id="loading-data" class="section level2">
-<h2><span class="header-section-number">5.3</span> Loading data</h2>
-<p>Now that we have the <code>{tidyverse}</code> package installed and loaded, we can use the <code>read_csv()</code> function to load the data straight from the web into an R data frame in our computer’s working memory.</p>
-<div class="sourceCode" id="cb42"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb42-1"><a href="r-is-expandable.html#cb42-1"></a>peaks &lt;-<span class="st"> </span><span class="kw">read_csv</span>(<span class="st">&#39;https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2020/2020-09-22/peaks.csv&#39;</span>)</span></code></pre></div>
-<pre><code>Rows: 468 Columns: 8</code></pre>
-<pre><code>── Column specification ────────────────────────────────────────────────────────
-Delimiter: &quot;,&quot;
-chr (6): peak_id, peak_name, peak_alternative_name, climbing_status, first_a...
-dbl (2): height_metres, first_ascent_year</code></pre>
-<pre><code>
-ℹ Use `spec()` to retrieve the full column specification for this data.
-ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
-</div>
-<div id="inspecting-the-data" class="section level2">
-<h2><span class="header-section-number">5.4</span> Inspecting the data</h2>
-<p>When we load the data, R shows us the names of the columns in the data set and the type of each column. We can also have a look at the first few rows with the <code>head()</code> function.</p>
-<div class="sourceCode" id="cb46"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb46-1"><a href="r-is-expandable.html#cb46-1"></a><span class="kw">head</span>(peaks)</span></code></pre></div>
-<pre><code># A tibble: 6 x 8
-  peak_id peak_name     peak_alternative_name height_metres climbing_status
-  &lt;chr&gt;   &lt;chr&gt;         &lt;chr&gt;                         &lt;dbl&gt; &lt;chr&gt;          
-1 AMAD    Ama Dablam    Amai Dablang                   6814 Climbed        
-2 AMPG    Amphu Gyabjen &lt;NA&gt;                           5630 Climbed        
-3 ANN1    Annapurna I   &lt;NA&gt;                           8091 Climbed        
-4 ANN2    Annapurna II  &lt;NA&gt;                           7937 Climbed        
-5 ANN3    Annapurna III &lt;NA&gt;                           7555 Climbed        
-6 ANN4    Annapurna IV  &lt;NA&gt;                           7525 Climbed        
-# … with 3 more variables: first_ascent_year &lt;dbl&gt;, first_ascent_country &lt;chr&gt;,
-#   first_ascent_expedition_id &lt;chr&gt;</code></pre>
-<p>You can get a more traditional spreadsheet-like view of the complete data frame by
-clicking its name in the Environment panel or running the command <code>view(peaks)</code>.</p>
-<p>To better understand our data, let’s get some summary statistics. The <code>{skimr}</code>
-package provides a really nice function for this.</p>
 <div class="exercise">
-<p><span id="exr:unlabeled-div-10" class="exercise"><strong>Exercise 5.1  </strong></span>Install and load the <code>{skimr}</code> package from CRAN.</p>
+<p><span id="exr:unlabeled-div-1" class="exercise"><strong>Exercise 0.1  </strong></span>This is a challenge. Do these to deepen your understanding. Click the answer box to show it.</p>
 <div class="answer">
-<div class="sourceCode" id="cb48"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb48-1"><a href="r-is-expandable.html#cb48-1"></a><span class="kw">install.packages</span>(<span class="st">&quot;skimr&quot;</span>)</span>
-<span id="cb48-2"><a href="r-is-expandable.html#cb48-2"></a><span class="kw">library</span>(skimr)</span></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="about-this-section.html#cb1-1"></a><span class="kw">print</span>(<span class="st">&quot;This is the answer.&quot;</span>)</span></code></pre></div>
 </div>
-</div>
-<p>Now we can “skim” our data:</p>
-<div class="sourceCode" id="cb49"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb49-1"><a href="r-is-expandable.html#cb49-1"></a><span class="kw">skim</span>(peaks)</span></code></pre></div>
-<table>
-<caption><span id="tab:unnamed-chunk-33">Table 5.1: </span>Data summary</caption>
-<tbody>
-<tr class="odd">
-<td align="left">Name</td>
-<td align="left">peaks</td>
-</tr>
-<tr class="even">
-<td align="left">Number of rows</td>
-<td align="left">468</td>
-</tr>
-<tr class="odd">
-<td align="left">Number of columns</td>
-<td align="left">8</td>
-</tr>
-<tr class="even">
-<td align="left">_______________________</td>
-<td align="left"></td>
-</tr>
-<tr class="odd">
-<td align="left">Column type frequency:</td>
-<td align="left"></td>
-</tr>
-<tr class="even">
-<td align="left">character</td>
-<td align="left">6</td>
-</tr>
-<tr class="odd">
-<td align="left">numeric</td>
-<td align="left">2</td>
-</tr>
-<tr class="even">
-<td align="left">________________________</td>
-<td align="left"></td>
-</tr>
-<tr class="odd">
-<td align="left">Group variables</td>
-<td align="left">None</td>
-</tr>
-</tbody>
-</table>
-<p><strong>Variable type: character</strong></p>
-<table>
-<thead>
-<tr class="header">
-<th align="left">skim_variable</th>
-<th align="right">n_missing</th>
-<th align="right">complete_rate</th>
-<th align="right">min</th>
-<th align="right">max</th>
-<th align="right">empty</th>
-<th align="right">n_unique</th>
-<th align="right">whitespace</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left">peak_id</td>
-<td align="right">0</td>
-<td align="right">1.00</td>
-<td align="right">4</td>
-<td align="right">4</td>
-<td align="right">0</td>
-<td align="right">468</td>
-<td align="right">0</td>
-</tr>
-<tr class="even">
-<td align="left">peak_name</td>
-<td align="right">0</td>
-<td align="right">1.00</td>
-<td align="right">4</td>
-<td align="right">25</td>
-<td align="right">0</td>
-<td align="right">468</td>
-<td align="right">0</td>
-</tr>
-<tr class="odd">
-<td align="left">peak_alternative_name</td>
-<td align="right">223</td>
-<td align="right">0.52</td>
-<td align="right">5</td>
-<td align="right">49</td>
-<td align="right">0</td>
-<td align="right">242</td>
-<td align="right">0</td>
-</tr>
-<tr class="even">
-<td align="left">climbing_status</td>
-<td align="right">0</td>
-<td align="right">1.00</td>
-<td align="right">7</td>
-<td align="right">9</td>
-<td align="right">0</td>
-<td align="right">2</td>
-<td align="right">0</td>
-</tr>
-<tr class="odd">
-<td align="left">first_ascent_country</td>
-<td align="right">132</td>
-<td align="right">0.72</td>
-<td align="right">2</td>
-<td align="right">44</td>
-<td align="right">0</td>
-<td align="right">77</td>
-<td align="right">0</td>
-</tr>
-<tr class="even">
-<td align="left">first_ascent_expedition_id</td>
-<td align="right">135</td>
-<td align="right">0.71</td>
-<td align="right">9</td>
-<td align="right">9</td>
-<td align="right">0</td>
-<td align="right">332</td>
-<td align="right">0</td>
-</tr>
-</tbody>
-</table>
-<p><strong>Variable type: numeric</strong></p>
-<table>
-<thead>
-<tr class="header">
-<th align="left">skim_variable</th>
-<th align="right">n_missing</th>
-<th align="right">complete_rate</th>
-<th align="right">mean</th>
-<th align="right">sd</th>
-<th align="right">p0</th>
-<th align="right">p25</th>
-<th align="right">p50</th>
-<th align="right">p75</th>
-<th align="right">p100</th>
-<th align="left">hist</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left">height_metres</td>
-<td align="right">0</td>
-<td align="right">1.00</td>
-<td align="right">6656.64</td>
-<td align="right">571.91</td>
-<td align="right">5407</td>
-<td align="right">6235.75</td>
-<td align="right">6559.5</td>
-<td align="right">6911</td>
-<td align="right">8850</td>
-<td align="left">▂▇▃▁▁</td>
-</tr>
-<tr class="even">
-<td align="left">first_ascent_year</td>
-<td align="right">132</td>
-<td align="right">0.72</td>
-<td align="right">1979.08</td>
-<td align="right">100.21</td>
-<td align="right">201</td>
-<td align="right">1963.00</td>
-<td align="right">1982.0</td>
-<td align="right">2008</td>
-<td align="right">2019</td>
-<td align="left">▁▁▁▁▇</td>
-</tr>
-</tbody>
-</table>
-<p>This summary tells us quite a lot about our data! For example, we can
-see that some peaks have not been successfully climbed until very recently, or not at
-all. There also appears to be an outlier in the <code>first_ascent_year</code> column that we’ll
-have to take care of – a peak that was successfully climbed in the year 201.</p>
-<div class="more">
-<p><strong>The :: operator.</strong></p>
-<p>We only use one function from the <code>{skimr}</code> package, and we only use it this one time.
-In a case like this, it may save you some typing by calling the function directly, without loading the package first.
-<code>::</code> between the package name and
-the function name. This is a way . Thus,</p>
-<div class="sourceCode" id="cb50"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb50-1"><a href="r-is-expandable.html#cb50-1"></a>skimr<span class="op">::</span><span class="kw">skim</span>(peaks)</span></code></pre></div>
-<p>is equivalent to</p>
-<div class="sourceCode" id="cb51"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb51-1"><a href="r-is-expandable.html#cb51-1"></a><span class="kw">library</span>(skimr)</span>
-<span id="cb51-2"><a href="r-is-expandable.html#cb51-2"></a><span class="kw">skim</span>(peaks)</span></code></pre></div>
-<p>The <code>::</code> is often used when the package is only needed for a single function
-call or to clarify (either to R or to the person reading the code) which package a
-function is coming from. This is particularly useful when there are functions
-with the same name in different packages. Another approach to solving this
-problem is the <a href="https://conflicted.r-lib.org/"><code>{conflicted}</code></a> package.</p>
 </div>
 
 </div>
-</div>
-<div class="footnotes">
-<hr />
-<ol start="11">
-<li id="fn11"><p>Excel files are bad for sharing data! <a href="https://www.theverge.com/2020/8/6/21355674/human-genes-rename-microsoft-excel-misreading-dates">Learn from the mistakes of others</a> and instead use CSV, JSON, <a href="https://blog.rstudio.com/2016/03/29/feather/">Feather</a>, <a href="https://db.rstudio.com/databases/sqlite/">databases</a>, …<a href="r-is-expandable.html#fnref11" class="footnote-back">↩︎</a></p></li>
-<li id="fn12"><p>
-Usually, <strong>packages</strong> are collections of functions. The <code>{tidyverse}</code> package is a bit different, as it is actually a collection of other packages — a <em>meta-package</em>. When you load it, it loads the most popular packages from theTidyverse, such as <code>{ggplot2}</code>, <code>{readr}</code>, and <code>{dplyr}</code>. For example, the <code>read_csv()</code> function is from the <code>{readr}</code> package.<a href="r-is-expandable.html#fnref12" class="footnote-back">↩︎</a></p></li>
-</ol>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="r-has-great-documentation.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="powerful-data-wrangling-tools.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="why-you-should-not-learn-r.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="r-is-free-and-open-source.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
