@@ -26,7 +26,7 @@ knitr::include_graphics("images/reasons.png")
     types and data structures of R.
 4.  **Well-documented** --- We will learn how to get help in R.
 5.  **Expandable** --- We will learn how to add additional functions to R by installing
-    packages and we will learn how to load data into R. 
+    packages and we will learn how to load data into R.
 6.  **Powerful data wrangling functions** --- We will see how to transform data.
 7.  **Powerful data visualization functions** --- We will make a complex statistical graph
     with just one line of code.
@@ -48,11 +48,11 @@ This is an info box. It expands on a learning point and gives you some informati
 may not be essential but could help you to see the connections between concepts.
 :::
 
-
 ::: {.exercise}
-This is a challenge. Do these to deepen your understanding. Click the answer box to show it.
+This is a challenge. Do these to deepen your understanding. Click the answer box to show
+it.
 
-:::{ .answer }
+::: {.answer}
 ```{r, eval=FALSE}
 print("This is the answer.")
 ```

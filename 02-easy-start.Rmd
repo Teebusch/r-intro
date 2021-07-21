@@ -7,19 +7,21 @@
 -   R's basic operators
 :::
 
-Getting R to run on your computer is usually a relatively smooth experience: Simply download and
-install the latest version of [R](https://www.r-project.org/) and
+Getting R to run on your computer is usually a relatively smooth experience: Simply
+download and install the latest version of [R](https://www.r-project.org/) and
 [RStudio](https://www.rstudio.com/products/rstudio/) for your operating system. If you
-already have either program installed on your computer, there is no need to uninstall the old versions beforehand. 
-If you'd rather not install anything on your machine, you can make an account
-at [rstudio.cloud](https://rstudio.cloud/) and use R and RStudio in the browser.
-That's it! Everything else you need can be set up from within RStudio.
+already have either program installed on your computer, there is no need to uninstall the
+old versions beforehand. If you'd rather not install anything on your machine, you can
+make an account at [rstudio.cloud](https://rstudio.cloud/) and use R and RStudio in the
+browser. That's it! Everything else you need can be set up from within RStudio.
 
-:::{ .more }
+::: {.more}
 For some things, e.g., Bayesian statistic, you might also need to install
-[RTools](https://cran.r-project.org/bin/windows/Rtools/). RTools provides additional
-tools that don't come with the standard R installation, such as a C/C++ compiler. 
-For reproducible research, you should also install [Git](https://git-scm.com/), which we will briefly talk about later. For now, you do not have to worry about these things, because you can always do them later.
+[RTools](https://cran.r-project.org/bin/windows/Rtools/). RTools provides additional tools
+that don't come with the standard R installation, such as a C/C++ compiler. For
+reproducible research, you should also install [Git](https://git-scm.com/), which we will
+briefly talk about later. For now, you do not have to worry about these things, because
+you can always do them later.
 :::
 
 ::: {.exercise}
@@ -84,7 +86,7 @@ does `1 != 1.0` do? Use <kbd>Enter</kbd> to run commands, use <kbd>↑</kbd> and
 <kbd>↓</kbd> to recall previous commands.
 :::
 
-```{r, echo=FALSE, fig.cap="Don't worry -- you can't hurt R, it has been through this before...", fig.alt="Hello Operator Meme"}
+```{r, echo=FALSE, fig.cap="Don't worry -- you can't hurt R, it has been through this before...", fig.alt="Hello Operator Meme", fig.align = 'center'}
 knitr::include_graphics("images/operator-meme.jpeg")
 ```
 

@@ -166,6 +166,7 @@ return the first element of the vector.
 
 ```{r}
 x[1]
+
 x[2:3]
 ```
 

@@ -1,26 +1,35 @@
 # R has great documentation
 
-:::{ .goals }
-* Accessing the function documentation in RStudio
-* Finding help in cheat sheets and by searching online
-* Utilizing auto completion while writing code
+::: {.goals}
+-   Accessing the function documentation in RStudio
+-   Finding help in cheat sheets and by searching online
+-   Utilizing auto completion while writing code
 :::
 
-Are you wondering how you should ever remember all of the different R commands and how to use them? Fear not! R and RStudio have a number of ways to make your life easier. 
+Are you wondering how you should ever remember all of the different R commands and how to
+use them? Fear not! R and RStudio have a number of ways to make your life easier.
 
 ## Accessing function documentation
 
-The `Help` panel in RStudio gives you direct access to the help files of all R functions that you have installed. You can search in the search box there, or type `?mysterious_function` in the console. However, my favorite way to assess the help is to put the cursor on the function name and press <kbd>F1</kbd> (similarly, you can use <kbd>F2</kbd> to access the source code for anything -- It is open source, after all!).
+The `Help` panel in RStudio gives you direct access to the help files of all R functions
+that you have installed. You can search in the search box there, or type
+`?mysterious_function` in the console. However, my favorite way to assess the help is to
+put the cursor on the function name and press <kbd>F1</kbd> (similarly, you can use
+<kbd>F2</kbd> to access the source code for anything -- It is open source, after all!).
 
-Having documentation easily available right in RStudio helps to learn the basics quickly and stay in the flow while you code. It's also worth mentioning that R's Function documentation, package vignettes and package websites are usually well-written and comprehensive. 
+Having documentation easily available right in RStudio helps to learn the basics quickly
+and stay in the flow while you code. It's also worth mentioning that R's Function
+documentation, package vignettes and package websites are usually well-written and
+comprehensive.
 
-:::{ .exercise }
-Look at the help file for the `mean()` function, see what other arguments the function accepts. How would you calculate a trimmed mean?
+::: {.exercise}
+Look at the help file for the `mean()` function, see what other arguments the function
+accepts. How would you calculate a trimmed mean?
 
-:::{ .answer}
-To get the 10% trimmed mean of a numerical vector x, you can run `mean(x, trim = 0.1)`. 
-This will remove 10% of the lowest observations and 10% of the highest observations before calculating the mean.
-For example:
+::: {.answer}
+To get the 10% trimmed mean of a numerical vector x, you can run `mean(x, trim = 0.1)`.
+This will remove 10% of the lowest observations and 10% of the highest observations before
+calculating the mean. For example:
 
 ```{r}
 mean(c(-1000, 2, 2, 2, 2, 2, 2, 2, 2, 20, 1000), trim = .1)
@@ -28,18 +37,25 @@ mean(c(-1000, 2, 2, 2, 2, 2, 2, 2, 2, 20, 1000), trim = .1)
 :::
 :::
 
-## Auto-completion 
+## Auto-completion
 
-If you can't quite remember the function name, RStudio will try to assist you with its excellent fuzzy auto-completion that suggests functions while you type. Use <kbd>↑</kbd>, <kbd>↓</kbd>, and <kbd>↹</kbd> to select one of the choices.
+If you can't quite remember the function name, RStudio will try to assist you with its
+excellent fuzzy auto-completion that suggests functions while you type. Use <kbd>↑</kbd>,
+<kbd>↓</kbd>, and <kbd>↹</kbd> to select one of the choices.
 
 ## Cheat sheets
 
-There are excellent [cheatsheets](https://www.rstudio.com/resources/cheatsheets/) for popular packages available in the RStudio menu (`Help > Cheatsheets > ...`)
+There are excellent [cheatsheets](https://www.rstudio.com/resources/cheatsheets/) for
+popular packages available in the RStudio menu (`Help > Cheatsheets > ...`)
 
-:::{ .exercise }
-Have a look at the cheat sheet for the RStudio IDE and find out how to search and replace code in RStudio.
+::: {.exercise}
+Have a look at the cheat sheet for the RStudio IDE and find out how to search and replace
+code in RStudio.
 :::
 
 ## Finding help online
 
-If you ever run into a problem or an error message that you can't figure out yourself, check Google, [Stack Overflow](https://stackoverflow.com/questions/tagged/r), [RStudio Community](https://community.rstudio.com/), or the Twitter `#RStats`. There are also lots of blogs with tutorials written by other R users.
+If you ever run into a problem or an error message that you can't figure out yourself,
+check Google, [Stack Overflow](https://stackoverflow.com/questions/tagged/r), [RStudio
+Community](https://community.rstudio.com/), or the Twitter `#RStats`. There are also lots
+of blogs with tutorials written by other R users.

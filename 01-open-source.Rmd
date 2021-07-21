@@ -1,21 +1,38 @@
 # R is free and open source
 
 ::: {.goals}
-* What is free and open source software (FOSS)?
-* Is FOSS software reliable?
+-   What is free and open source software (FOSS)?
+-   Is FOSS software reliable?
 :::
 
-A great reason for choosing R over commercial software packages is that it is is *free and open source software (FOSS)*. That means there are no software license fees or purchasing costs, and the license under which R is published guarantees that it will stay like that forever. That is, nobody can ever own any exclusive rights to R, decide to stop the development of R, or force you to pay for R.
+A great reason for choosing R over commercial software packages is that it is is *free and
+open source software (FOSS)*. That means there are no software license fees or purchasing
+costs, and the license under which R is published guarantees that it will stay like that
+forever. That is, nobody can ever own any exclusive rights to R, decide to stop the
+development of R, or force you to pay for R.
 
-Being **free** means lower cost and less bureaucracy! It means that you can use R everywhere, and you can use any version of it at any time. This is great for collaboration, sharing, and reproducibility.
+Being **free** means lower cost and less bureaucracy! It means that you can use R
+everywhere, and you can use any version of it at any time. This is great for
+collaboration, sharing, and reproducibility.
 
-Being **open source** means that if anything is missing, R users can create it themselves, and --- as we will see later --- they do! There are tens of thousands of for R that were created by the R community and are free for everyone to use.
+Being **open source** means that if anything is missing, R users can create it themselves,
+and --- as we will see later --- they do! There are tens of thousands of for R that were
+created by the R community and are free for everyone to use.
 
-Make no mistake: Free and open source does not mean unprofessional! The R project is very stable, and there is a core team of computer scientists and statisticians guiding its development. Financially, the project is supported
+Make no mistake: Free and open source does not mean unprofessional! The R project is very
+stable, and there is a core team of computer scientists and statisticians guiding its
+development. Financially, the project is supported
 
--   *directly* by companies such as [RStudio](https://www.rstudio.com/) and [rOpenSci](https://ropensci.org/), who employ developers to improve R, and
--   *indirectly* through people who contribute to the R project as part of their jobs (e.g., research software engineers, statisticians, data scientists).
+-   *directly* by companies such as [RStudio](https://www.rstudio.com/) and
+    [rOpenSci](https://ropensci.org/), who employ developers to improve R, and
+-   *indirectly* through people who contribute to the R project as part of their jobs
+    (e.g., research software engineers, statisticians, data scientists).
 
-There are also peer-reviewed journals such as the [*Journal of Statistical Software*](https://www.jstatsoft.org/index) and the R project's own [*R Journal*](https://journal.r-project.org/archive/2020-2/), which academics can use to get credit for working on R-related things. It's also common to see papers in other journals introducing new statistical methods alongside an implementation in R.
+There are also peer-reviewed journals such as the [*Journal of Statistical
+Software*](https://www.jstatsoft.org/index) and the R project's own [*R
+Journal*](https://journal.r-project.org/archive/2020-2/), which academics can use to get
+credit for working on R-related things. It's also common to see papers in other journals
+introducing new statistical methods alongside an implementation in R.
 
-Finally, being free an open source means that you can simply give R a spin and see if it's for you --- no strings attached! So let's do that right now...
+Finally, being free an open source means that you can simply give R a spin and see if it's
+for you --- no strings attached! So let's do that right now...

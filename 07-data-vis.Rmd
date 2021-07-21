@@ -1,28 +1,47 @@
-# Powerful data visualisation tools
+# Powerful data visualization tools
 
-:::{ .goals }
-* ...
-* ...
+::: {.goals}
+-   ...
+-   ...
 :::
 
-Perhaps the most popular package for data visualization in R is [`{ggplot2}`](https://ggplot2.tidyverse.org/index.html). It comes with the `{tidyverse}` package, but there are many other packages that extend the functionality of `{ggplot2}`, such as `{ggforce}` or `{gganimate}`. 
+Perhaps the most popular package for data visualization in R is
+[`{ggplot2}`](https://ggplot2.tidyverse.org/index.html). It comes with the `{tidyverse}`
+package, but there are many other packages that extend the functionality of `{ggplot2}`,
+such as `{ggforce}` or `{gganimate}`.
 
-These packages share a unifying design principle, the *Grammar of Graphics* (hence the "gg"). At its core, the Grammar of Graphics is about mapping attributes of your data (such as the magnitude of a number or the category that an observation belongs to) to aesthetics of geometric objects (such as position and size of a point or the height and color of a bar), potentially after applying statistical transformations like counting or averaging observations. This foundation turns out to be extremely versatile and allows 
+These packages share a unifying design principle, the *Grammar of Graphics* (hence the
+"gg"). At its core, the Grammar of Graphics is about mapping attributes of your data (such
+as the magnitude of a number or the category that an observation belongs to) to aesthetics
+of geometric objects (such as position and size of a point or the height and color of a
+bar), potentially after applying statistical transformations like counting or averaging
+observations. This foundation turns out to be extremely versatile and allows
 
-You can see examples of what is possible with `{ggplot2}` in the submissions for [Tidy Tuesday](https://www.cedricscherer.com/top/dataviz/) -- a weekly exercise for practicing data visualisation. Some people even use `{ggplot2}` to [make generative Art!](https://www.data-imaginist.com/art)
+You can see examples of what is possible with `{ggplot2}` in the submissions for [Tidy
+Tuesday](https://www.cedricscherer.com/top/dataviz/) -- a weekly exercise for practicing
+data visualisation. Some people even use `{ggplot2}` to [make generative
+Art!](https://www.data-imaginist.com/art)
 
-Mastering `{ggplot2}` can take a while. However, there are some websites that provide example code for different types of charts. [The R graph gallery](https://www.r-graph-gallery.com/index.html) is particularly comprehensive. 
-There are also packages like [`{esquisse}`](https://cran.r-project.org/web/packages/esquisse/vignettes/get-started.html) that provide you with an intuitive graphical user interface for using `{ggplot2}`.
+Mastering `{ggplot2}` can take a while. However, there are some websites that provide
+example code for different types of charts. [The R graph
+gallery](https://www.r-graph-gallery.com/index.html) is particularly comprehensive. There
+are also packages like
+[`{esquisse}`](https://cran.r-project.org/web/packages/esquisse/vignettes/get-started.html)
+that provide you with an intuitive graphical user interface for using `{ggplot2}`.
 
-The `{ggplot2}` package itself is mainly limited to static graphs. However, packages like [`{plotly}`](https://plotly.com/r/), and [`{shiny}`](https://shiny.rstudio.com/gallery/) allow you to make interactive visualisations and dashboards with relative ease. 
-Integration with [JavaScript (e.g., D3.js)](https://book.javascript-for-r.com/) - the sky is the limit!
+The `{ggplot2}` package itself is mainly limited to static graphs. However, packages like
+[`{plotly}`](https://plotly.com/r/), and [`{shiny}`](https://shiny.rstudio.com/gallery/)
+allow you to make interactive visualizations and dashboards with relative ease.
+Integration with [JavaScript (e.g., D3.js)](https://book.javascript-for-r.com/) - the sky
+is the limit!
 
-See [ggplot2 -- Elegant graphics for data analysis](https://ggplot2-book.org/) for a deep dive into `{ggplot2}`
+See [ggplot2 -- Elegant graphics for data analysis](https://ggplot2-book.org/) for a deep
+dive into `{ggplot2}`
 
-## **Hands-on.** Data Visualization 
+## **Hands-on.** Data Visualization
 
 In a short intro like this, there is not enough time to dive deeply into `{ggplot2}`.
 
-```r
+``` {.r}
 # ...
 ```

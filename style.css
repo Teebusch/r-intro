@@ -13,6 +13,9 @@ pre code {
   white-space: inherit;
 }
 
+.figure > img {
+    border-radius: 5px;
+}
 
 .more, .exercise, .goals, .answer {
   padding: 1.5rem 1.5rem 0.5rem 1.5rem;

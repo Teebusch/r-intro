@@ -86,7 +86,8 @@ peaks <- read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday
 
 ## Inspecting the data
 
-When we load the data, R shows us the names of the columns in the data set and the type of each column. We can also have a look at the first few rows with the `head()` function.
+When we load the data, R shows us the names of the columns in the data set and the type of each column. 
+We can also have a look at the first few rows with the `head()` function.
 
 ```{r}
 head(peaks)

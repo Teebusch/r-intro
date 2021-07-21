@@ -41,7 +41,7 @@ of costly software like SPSS. [Jamovi](https://www.jamovi.org/) and
 [JASP](https://jasp-stats.org/), for example, are graphical user interfaces built that are
 built on top of R and allow you to utilize much of R's power without writing any R code.
 
-```{r, echo=FALSE, fig.cap="There are plenty of fish in the open source sea and Jamovi is a particularly pretty one.", fig.alt="A screenshot of Jamovi's user interface"}
+```{r, echo=FALSE, fig.cap="There are plenty of fish in the open source sea and Jamovi is a particularly tasty one.", fig.alt="A screenshot of Jamovi's user interface"}
 knitr::include_graphics("images/jamovi.jpeg")
 ```
 
