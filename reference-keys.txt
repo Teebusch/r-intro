@@ -44,10 +44,10 @@ the-pipe-operator
 create-new-columns-with-mutate
 split-apply-combine-with-group_by-and-summarize
 other-useful-data-wrangling-functions
-powerful-data-visualisation-tools
+powerful-data-visualization-tools
 hands-on.-data-visualization
 powerful-statistical-methods-at-your-fingertips
-hands-on.-statistical-modeling
+statistical-modeling
 r-encourages-reproducible-research
 make-self-contained-projects
 snapshot-your-development-environment
@@ -55,7 +55,7 @@ use-version-control
 make-reports-reproducible
 no-more-copy-and-paste
 more
-hands-on.-make-your-research-reproducible
+make-your-research-reproducible
 use-renv-to-store-a-snapshot-of-your-package-library
 take-a-snapshot-of-your-code-with-git
 make-a-reproducible-report-with-rmarkdown
