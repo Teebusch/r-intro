@@ -15,6 +15,7 @@ exr:unlabeled-div-8
 exr:unlabeled-div-9
 exr:unlabeled-div-10
 tab:unnamed-chunk-33
+fig:unnamed-chunk-38
 r-is-free-and-open-source
 its-easy-to-get-started
 why-rstudio
@@ -45,7 +46,7 @@ create-new-columns-with-mutate
 split-apply-combine-with-group_by-and-summarize
 other-useful-data-wrangling-functions
 powerful-data-visualization-tools
-hands-on.-data-visualization
+data-visualization
 powerful-statistical-methods-at-your-fingertips
 statistical-modeling
 r-encourages-reproducible-research
@@ -61,4 +62,4 @@ take-a-snapshot-of-your-code-with-git
 make-a-reproducible-report-with-rmarkdown
 the-r-community-is-awesome
 engage-with-the-community
-great-free-learning-material
+how-to-keep-learning

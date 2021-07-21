@@ -190,7 +190,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="6.5" data-path="powerful-data-wrangling-tools.html"><a href="powerful-data-wrangling-tools.html#other-useful-data-wrangling-functions"><i class="fa fa-check"></i><b>6.5</b> Other useful data wrangling functions</a></li>
 </ul></li>
 <li class="chapter" data-level="7" data-path="powerful-data-visualization-tools.html"><a href="powerful-data-visualization-tools.html"><i class="fa fa-check"></i><b>7</b> Powerful data visualization tools</a><ul>
-<li class="chapter" data-level="7.1" data-path="powerful-data-visualization-tools.html"><a href="powerful-data-visualization-tools.html#hands-on.-data-visualization"><i class="fa fa-check"></i><b>7.1</b> <strong>Hands-on.</strong> Data Visualization</a></li>
+<li class="chapter" data-level="7.1" data-path="powerful-data-visualization-tools.html"><a href="powerful-data-visualization-tools.html#data-visualization"><i class="fa fa-check"></i><b>7.1</b> Data Visualization</a></li>
 </ul></li>
 <li class="chapter" data-level="8" data-path="powerful-statistical-methods-at-your-fingertips.html"><a href="powerful-statistical-methods-at-your-fingertips.html"><i class="fa fa-check"></i><b>8</b> Powerful statistical methods at your fingertips</a><ul>
 <li class="chapter" data-level="8.1" data-path="powerful-statistical-methods-at-your-fingertips.html"><a href="powerful-statistical-methods-at-your-fingertips.html#statistical-modeling"><i class="fa fa-check"></i><b>8.1</b> Statistical modeling</a></li>
@@ -210,7 +210,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="10" data-path="the-r-community-is-awesome.html"><a href="the-r-community-is-awesome.html"><i class="fa fa-check"></i><b>10</b> The R community is awesome!</a><ul>
 <li class="chapter" data-level="10.1" data-path="the-r-community-is-awesome.html"><a href="the-r-community-is-awesome.html#engage-with-the-community"><i class="fa fa-check"></i><b>10.1</b> Engage with the community</a></li>
-<li class="chapter" data-level="10.2" data-path="the-r-community-is-awesome.html"><a href="the-r-community-is-awesome.html#great-free-learning-material"><i class="fa fa-check"></i><b>10.2</b> Great free learning material</a></li>
+<li class="chapter" data-level="10.2" data-path="the-r-community-is-awesome.html"><a href="the-r-community-is-awesome.html#how-to-keep-learning"><i class="fa fa-check"></i><b>10.2</b> How to keep learning?</a></li>
 </ul></li>
 <li class="appendix"><span><b>Appendix</b></span></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
@@ -297,6 +297,19 @@ itself will print the variable’s content.</p>
 <span id="cb5-4"><a href="a-flexible-programming-language.html#cb5-4"></a></span>
 <span id="cb5-5"><a href="a-flexible-programming-language.html#cb5-5"></a>c</span></code></pre></div>
 <pre><code>[1] 10</code></pre>
+<div class="exercise">
+<p><span id="exr:unlabeled-div-6" class="exercise"><strong>Exercise 3.1  </strong></span>What would be the result of running the code below? Think about it first and then run it
+to check your answer.</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="a-flexible-programming-language.html#cb7-1"></a>a &lt;-<span class="st"> </span><span class="dv">10</span></span>
+<span id="cb7-2"><a href="a-flexible-programming-language.html#cb7-2"></a>a <span class="op">+</span><span class="st"> </span>b    <span class="co"># What will be the result of a + b?</span></span>
+<span id="cb7-3"><a href="a-flexible-programming-language.html#cb7-3"></a>c        <span class="co"># What has happened to c?</span></span>
+<span id="cb7-4"><a href="a-flexible-programming-language.html#cb7-4"></a>C        <span class="co"># Why is this not working?</span></span></code></pre></div>
+</div>
+<p>There are some rules for variables names: They must start with a letter and contain only
+the letters of the English alphabet, numbers, underscores <code>_</code>, hyphens <code>-</code>, and dots
+<code>.</code>.<a href="#fn10" class="footnote-ref" id="fnref10"><sup>10</sup></a> For long variable names, <a href="https://style.tidyverse.org/syntax.html#object-names">it is recommended to use “snake
+case”</a>, which looks like this:
+<code>my_firssst_variable</code> 🐍. Also note that R is case-sensitive.</p>
 <div class="more">
 <p>Many other programming languages use <code>=</code> to assign values to variables. You can, for the
 most part, also use <code>=</code> for assignment in R — just be aware that it will let everyone
@@ -304,26 +317,13 @@ now that <a href="https://en.wikipedia.org/wiki/Shibboleth">you are not a true b
 <p>You can also use <code>-&gt;</code> to assign from left to right. This can it come in handy when you are
 messing around in the console, but it may not be a good idea to use it too much in your
 scrips, because it can make your code harder to read:</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="a-flexible-programming-language.html#cb7-1"></a><span class="st">&quot;Never look back!&quot;</span> -&gt;<span class="st"> </span>x</span></code></pre></div>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="a-flexible-programming-language.html#cb8-1"></a><span class="st">&quot;Never look back!&quot;</span> -&gt;<span class="st"> </span>x</span></code></pre></div>
 <p>Finally, there’s <code>&lt;&lt;-</code>, which allows assignment to variables in an enclosing environment.
 This can be useful if you need to update <em>global variables</em> from within a function.
 However, this is far beyond the scope of this intro, and chances are you will never
 encounter a <code>&lt;&lt;-</code> in the wild.</p>
 <p>You can read more about R’s assignment operators
 <a href="https://colinfay.me/r-assignment/">here</a>.</p>
-</div>
-<p>There are some rules for variables names: They must start with a letter and contain only
-the letters of the English alphabet, numbers, underscores <code>_</code>, hyphens <code>-</code>, and dots
-<code>.</code>.<a href="#fn10" class="footnote-ref" id="fnref10"><sup>10</sup></a> For long variable names, <a href="https://style.tidyverse.org/syntax.html#object-names">it is recommended to use “snake
-case”</a>, which looks like this:
-<code>my_firssst_variable</code> 🐍. Also note that R is case-sensitive.</p>
-<div class="exercise">
-<p><span id="exr:unlabeled-div-6" class="exercise"><strong>Exercise 3.1  </strong></span>What would be the result of running the code below? Think about it first and then run it
-to check your answer.</p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="a-flexible-programming-language.html#cb8-1"></a>a &lt;-<span class="st"> </span><span class="dv">10</span></span>
-<span id="cb8-2"><a href="a-flexible-programming-language.html#cb8-2"></a>a <span class="op">+</span><span class="st"> </span>b    <span class="co"># What will be the result of a + b?</span></span>
-<span id="cb8-3"><a href="a-flexible-programming-language.html#cb8-3"></a>c        <span class="co"># What has happened to c?</span></span>
-<span id="cb8-4"><a href="a-flexible-programming-language.html#cb8-4"></a>C        <span class="co"># Why is this not working?</span></span></code></pre></div>
 </div>
 </div>
 <div id="comments" class="section level2">

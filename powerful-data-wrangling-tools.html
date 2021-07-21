@@ -190,7 +190,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="6.5" data-path="powerful-data-wrangling-tools.html"><a href="powerful-data-wrangling-tools.html#other-useful-data-wrangling-functions"><i class="fa fa-check"></i><b>6.5</b> Other useful data wrangling functions</a></li>
 </ul></li>
 <li class="chapter" data-level="7" data-path="powerful-data-visualization-tools.html"><a href="powerful-data-visualization-tools.html"><i class="fa fa-check"></i><b>7</b> Powerful data visualization tools</a><ul>
-<li class="chapter" data-level="7.1" data-path="powerful-data-visualization-tools.html"><a href="powerful-data-visualization-tools.html#hands-on.-data-visualization"><i class="fa fa-check"></i><b>7.1</b> <strong>Hands-on.</strong> Data Visualization</a></li>
+<li class="chapter" data-level="7.1" data-path="powerful-data-visualization-tools.html"><a href="powerful-data-visualization-tools.html#data-visualization"><i class="fa fa-check"></i><b>7.1</b> Data Visualization</a></li>
 </ul></li>
 <li class="chapter" data-level="8" data-path="powerful-statistical-methods-at-your-fingertips.html"><a href="powerful-statistical-methods-at-your-fingertips.html"><i class="fa fa-check"></i><b>8</b> Powerful statistical methods at your fingertips</a><ul>
 <li class="chapter" data-level="8.1" data-path="powerful-statistical-methods-at-your-fingertips.html"><a href="powerful-statistical-methods-at-your-fingertips.html#statistical-modeling"><i class="fa fa-check"></i><b>8.1</b> Statistical modeling</a></li>
@@ -210,7 +210,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="10" data-path="the-r-community-is-awesome.html"><a href="the-r-community-is-awesome.html"><i class="fa fa-check"></i><b>10</b> The R community is awesome!</a><ul>
 <li class="chapter" data-level="10.1" data-path="the-r-community-is-awesome.html"><a href="the-r-community-is-awesome.html#engage-with-the-community"><i class="fa fa-check"></i><b>10.1</b> Engage with the community</a></li>
-<li class="chapter" data-level="10.2" data-path="the-r-community-is-awesome.html"><a href="the-r-community-is-awesome.html#great-free-learning-material"><i class="fa fa-check"></i><b>10.2</b> Great free learning material</a></li>
+<li class="chapter" data-level="10.2" data-path="the-r-community-is-awesome.html"><a href="the-r-community-is-awesome.html#how-to-keep-learning"><i class="fa fa-check"></i><b>10.2</b> How to keep learning?</a></li>
 </ul></li>
 <li class="appendix"><span><b>Appendix</b></span></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
@@ -296,8 +296,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="sourceCode" id="cb56"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb56-1"><a href="powerful-data-wrangling-tools.html#cb56-1"></a>  <span class="co"># ... the pipe can continue. Here, we filter all peaks that </span></span>
 <span id="cb56-2"><a href="powerful-data-wrangling-tools.html#cb56-2"></a>  <span class="co"># were climbed more than 3 times</span></span></code></pre></div>
 <p>Did you notice that the first argument of all functions (the data frame you want to operate on) has disappeared? The pipe operator fills that one in automatically.</p>
-<p><img src="https://i.imgur.com/bIyqtxz.jpg" alt="An image of the character Data from the TV show Star Trek TNG, smoking a pipe" />
-<em>Indubitably, sir!</em></p>
+<div class="figure"><span id="fig:unnamed-chunk-38"></span>
+<img src="images/data-with-pipe.jpeg" alt="An image of the Star Trek character Data, smoking a pipe"  />
+<p class="caption">
+Figure 6.1: Indubitably, sir!
+</p>
+</div>
 </div>
 <div id="create-new-columns-with-mutate" class="section level2">
 <h2><span class="header-section-number">6.3</span> Create new columns with <code>mutate()</code></h2>
@@ -341,7 +345,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
  9 UK, Nepal                  1949
 10 France                     1950
 # … with 67 more rows</code></pre>
-<div class="info">
+<div class="more">
 <p><strong>Dealing with missing values.</strong></p>
 <p>In R, there is a special <em>value</em> for missing data, <code>NA</code>. This is <em>not</em> a data type. That is, a value can be, e.g., numeric <em>and</em> missing (<code>NA</code>) at the same time, and a numeric vector can contain a mix of numbers and <code>NA</code>.</p>
 </div>
