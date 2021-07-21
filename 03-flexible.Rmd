@@ -1,16 +1,23 @@
 # A flexible programming language
 
-:::{ .goals }
-* The core data types are numeric, logical, and character
-* To assign data to variables use `<-` 
-* Vectors store a multitude of the same data type in a particular order
-* Data frames are tables with data
+::: {.goals}
+-   The core data types are numeric, logical, and character
+-   The most important data structures are vectors and data frames
+-   Vectors store a multitude of the same data type in a particular order
+-   Data frames are tables with data organized in rows and columns
+-   To assign data to variables use `<-`
+-   Write comments with `#`
 :::
 
 R is a powerful and complex programming language that supports many different programming
-paradigms as well as powerful *meta-programming* techniques. However, to get started with
-data analysis, its enough to understand R's basic data types (numeric, logical, and
-character) and two data structures: vectors and data frames.
+paradigms. However, to get started with data analysis, its enough to understand R's basic
+data types (numeric, logical, and character) and two data structures: vectors and data
+frames. These are made for data manipulation and analysis, and along with the many
+convenience functions that R provides, they allow you to focus on data analysis without
+worrying about thing that are fundamental in other languages like [control
+flow](https://en.wikipedia.org/wiki/Control_flow) (loops and if-else-statements). As you
+become more familiar with R, you can add those to your repertoire, too, and utilize R's
+full power and flexibility.
 
 ## Data Types
 
@@ -20,12 +27,16 @@ what operations you can perform with it. The bread and butter of data types in R
 
 #### Numeric {.unnumbered}
 
-Numeric data can be integer, decimal, or complex, but usually the difference does not
-matter. Sometimes, R might unexpectedly hit you with a number in scientific notation,
-e.g., `1e+23`. To the uninitiated, these can look cryptic and a bit scary. But don't
-worry! It's just a very large or very small number that is written in a more compact form
-and you can [change disable this if you
+Numeric data can be integer, decimal[^flexible-1], or complex, but usually the difference
+does not matter. Sometimes, R might unexpectedly hit you with a number in scientific
+notation, e.g., `1e+23`. To the uninitiated, these can look cryptic and a bit scary. But
+don't worry! It's just a very large or very small number that is written in a more compact
+form and you can [change disable this if you
 like!](https://statisticsglobe.com/disable-exponential-scientific-notation-in-r)
+
+[^flexible-1]: Decimal numbers are also called floating point numbers or "float" for
+    short. Note that R uses periods `.` to designate the decimal places, not commas `,` as
+    in some countries.
 
 ```{r, eval=FALSE}
 23 + 0.45 + 1e2 + 6i
@@ -52,11 +63,13 @@ surround it with `""` or `''`.
 
 ## Assignment
 
-To assign values to *variables*[^flexible-1], you can use `<-`. Use the keyboard shortcut
+To assign values to *variables*[^flexible-2], you can use `<-`. Use the keyboard shortcut
 <kbd>Alt</kbd>+<kbd>-</kbd> to save yourself some hand gymnastics. Note how the newly
-created variables appear in the environment panel in RStudio. Once assigned, you can use variable's name to represent its content in other operations. Typing a variable name by itself will print the variable's content.
+created variables appear in the environment panel in RStudio. Once assigned, you can use
+variable's name to represent its content in other operations. Typing a variable name by
+itself will print the variable's content.
 
-[^flexible-1]: In official R lingo you are assigning values to *objects*, but people who
+[^flexible-2]: In official R lingo you are assigning values to *objects*, but people who
     have experience with other programming languages sometimes find this term confusing.
     Therefore, I will use the word *variable* in this book.
 
@@ -69,17 +82,16 @@ c
 ```
 
 ::: {.more}
-Many other programming languages use `=` to assign values to variables. You can, for the 
-most part, also use `=`
-for assignment in R --- just be aware that it will let everyone now that [you are not a
-true believer](https://en.wikipedia.org/wiki/Shibboleth).
+Many other programming languages use `=` to assign values to variables. You can, for the
+most part, also use `=` for assignment in R --- just be aware that it will let everyone
+now that [you are not a true believer](https://en.wikipedia.org/wiki/Shibboleth).
 
 You can also use `->` to assign from left to right. This can it come in handy when you are
 messing around in the console, but it may not be a good idea to use it too much in your
 scrips, because it can make your code harder to read:
 
 ```{r eval=FALSE}
-"You're so freaky!" -> x
+"Never look back!" -> x
 ```
 
 Finally, there's `<<-`, which allows assignment to variables in an enclosing environment.
@@ -92,10 +104,13 @@ You can read more about R's assignment operators
 :::
 
 There are some rules for variables names: They must start with a letter and contain only
-the letters of the English alphabet, numbers, underscores `_`, dots `.`, and hyphens `-`.
-For long variable names, [it is recommended to use "snake
+the letters of the English alphabet, numbers, underscores `_`, hyphens `-`, and dots
+`.`.[^flexible-3] For long variable names, [it is recommended to use "snake
 case"](https://style.tidyverse.org/syntax.html#object-names), which looks like this:
 `my_firssst_variable` 🐍. Also note that R is case-sensitive.
+
+[^flexible-3]: Unlike in other programming languages, dots have no special function or
+    meaning and can be used in variable names.
 
 ::: {.exercise}
 What would be the result of running the code below? Think about it first and then run it
@@ -146,19 +161,26 @@ sum(x)
 ```
 
 You can access specific positions of a vector using square brackets. Use `:` within
-brackets to access a range of indices.\
-In R, indices start at 1, that is, index 1 will give you the first element of the vector.
+brackets to access a range of indices. In R, indices start at 1, that is, index 1 will
+return the first element of the vector.
 
 ```{r}
 x[1]
 x[2:3]
-x[c(1,3)]     # use a vector to select specific indices
+```
+
+You can also use a vector of indices to index into another vector in order to select
+specific elements
+
+```{r}
+x[c(1,3)]   
 ```
 
 You can also use the bracket syntax to replace individual elements:
 
 ```{r}
 x[2:3] <- 0   # replace 2nd and 3rd element with 0
+x[2:3] <- c(7,8)   # replace 2nd and 3rd element with 7 and 8, respectively
 ```
 
 Values in a vector can be named. This comes in handy, for example, if you need a simple
@@ -175,42 +197,39 @@ fav_food["Popeye"]
 ```
 
 ::: {.more}
-*Here be dragons ...*
+Vectors can only contain a *single* data type. If you are trying to mix data types, R will
+quietly (without throwing an error) *coerce* all data types to a data type that can
+represent all elements, following a certain hierarchy of coercion:
 
-When working with vectors, there are some pitfalls. Consider these examples:
+-   logical becomes numerical (0 and 1)
+-   numerical becomes character
+
+This coercion only goes in one direction. For example, character strings that happen to
+contain numbers will nevertheless be treated as characters. If you want R to treat a
+character representation of a number as numeric, you have to explicitly tell it to do so,
+for example with the `as.numeric()` function.
+
+Consider these examples:
 
 ```{r}
-c(1, 2, "a")
+c(1, 2, "3")
 c(FALSE, TRUE, 2, 3)
-```
 
-```{r}
 x <- 1:3 
 x[1] <- TRUE 
 x 
-
-x[3] <- "3" 
-x
 ```
+
+Vectors also cannot contain other vectors, so nested vectors automatically get unnested:
 
 ```{r}
 c( c(1,2), c(3,4) ) 
-c( 1, c(2,3,4)) 
-c( c(TRUE, 0), c(TRUE, FALSE), c(TRUE, "0"))
+c( 1, c(2,3,4) ) 
+c( c(TRUE, 0), c(TRUE, FALSE), c(TRUE, "0") )
 ```
 
-What is happening here? Remember that vectors can only contain a *single* data type. If
-you are trying to mix data types, R will quietly (without throwing an error) *coerce* all
-data types to the lowest common denominator: Logical become numerical (0 and 1) and
-numerical become character. Vectors also can't contain other vectors, so these
-automatically get unnested.
-
-Character strings that happen to contain numbers will nevertheless be treated as
-characters. If you want R to treat them as numeric, you have to explicitly tell it to do
-so with the `as.numeric()` function.
-
-If you need to store a sequence of mixed data types, you should not use a vector but a
-data structure called *list*.
+If you need to store a sequence of mixed data types, you will have to use another data
+structure called *list*.
 :::
 
 ## Data Frames
@@ -220,45 +239,69 @@ For this, R has data frames. Data frames are two-dimensional like a spreadsheet 
 *rows* usually containing different observations and *columns* usually containing
 different variables.
 
-Rows and columns of a data frame can be named, and while row names have fallen out of
-fashion, it is good practice to give the columns of your data frames names that are easy
-to remember and easy to type.
+Rows and columns of a data frame can be named, and while row names seem to have fallen out
+of fashion, it is good practice to give the columns of your data frames names that are
+easy to remember and easy to type.
+
+You can make your own data frame by hand, by putting together vectors like this:
 
 ```{r}
-# You can make your own data frame by hand like this
 cool_numbers <- data.frame(
     "number" = c(1,13,23,42),
     "isPrime" = c(FALSE, TRUE, TRUE, FALSE)
 )
 ```
 
-A quick way to access a single column of a data frame is with the `$` operator
+A quick way to access a single column of a data frame is with the `$` operator.
 
 ```{r}
 cool_numbers$number
 ```
+
+Did you notice that columns in a data frame are vectors? This means that everything that
+can be done with a vector can be done with a data frame column!
+
+::: {.more}
+In fact, all "atomic" data types in R (numeric, characters, logical) are *always* stored
+as vectors -- even a single number is actually a numerical vector of length one! This is a
+really powerful idea and the source of much of R's strength!
+:::
+
+::: {.exercise}
+Make a new data frame `my_cool_numbers` with a column `a` that contains all numbers from 1
+to 100 and column `b` that contains your favorite number 100 times.
+
+::: {.answer}
+``` {.r}
+my_cool_numbers <- data.frame(
+    "a" = 1:100,
+    "b" = 42
+)
+```
+:::
+
+Since data frame columns are vectors, we can use the same operations on them. calculate
+the standard deviation of all numbers in column `a` in our `my_cool_numbers` data frame!
+Use the RStudio help to find the right function for it.
+
+::: {.answer}
+``` {.r}
+sd(my_cool_numbers$a)
+```
+:::
+:::
 
 As for vectors, R comes out of the box with many more commands to create and modify data
 frames, select columns, and filter rows. You will eventually need to get familiar with
 these. However, in this short introduction we will skip these in favor of the more
 streamlined and beginner-friendly functions from the Tidyverse -- more about that later.
 
-::: {.more}
-**Everything is a vector.**
-
-Did you notice that columns in a data frame are vectors? This means that everything that
-can be done with a vector can be done with a data frame column! In fact, all 'atomic' data
-types in R (numeric, characters, logical) are *always* stored as vectors -- even a single
-number is actually a numerical vector of length one! This may seem like an uninteresting
-detail, but it's actually a really powerful idea and the source of much of R's strength!
-:::
-
 ## Other Data Structures
 
 R has a couple of other data structures that you will eventually encounter. I don't want
-to dwell on them for to long, because none of them will play a role in the rest this book.
-If you are interested you can read more [here](http://adv-r.had.co.nz/). Additional R data
-structures include ...
+to dwell on them for too long, because none of them will play a role in the rest this
+book. If you are interested you can read more [here](http://adv-r.had.co.nz/). Additional
+R data structures include ...
 
 -   **Factor** -- Factors are numerical vectors that can take a fixed set of values
     (levels), whereby each level can be assigned a label. The levels may be ordered or
@@ -279,13 +322,3 @@ structures include ...
     similar to a names list, in that it contains a bunch of named R data structures
     Understanding environments is central to a deep understanding of R, but as a beginner
     it's nothing you need to worry about.
-
-## R grows with your needs
-
-Understanding R's basic data types and data structures will go a long way. R's vector and
-data frames are made for data manipulation and analysis, and along with the many
-convenience functions that R provides, they allow you to focus on data analysis right from
-the start. As a beginner, you don't need to worry about things like [control
-flow](https://en.wikipedia.org/wiki/Control_flow) (loops and if-else-statements) that are
-fundamental in other languages. Then, as you become more familiar with R, you can add
-these to your repertoire and utilize R's full power and flexibility.

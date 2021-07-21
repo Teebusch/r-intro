@@ -25,13 +25,15 @@ for the whole data analysis workflow:
 [^what-is-r-1]: Some people claim that you can use [R for
     everything](https://youtu.be/m6nUdoP6894).
 
-```{r, echo=FALSE, fig.cap="The data analysis workflow.", fig.alt="A sketch of the different steps in the data analysis workflow."}
+```{r, echo=FALSE, fig.alt="A sketch of the different steps in the data analysis workflow."}
 knitr::include_graphics("images/data-science-workflow.jpeg")
 ```
 
 -   **Data collection**
--   **Data cleaning & transformation** (also known as data wrangling, data munging, or
-    "80% of data science")
+-   **Data cleaning & transformation**[^what-is-r-2]
 -   **Data Visualization**
 -   **Modeling**
 -   **Communication**
+
+[^what-is-r-2]: This part of the data analysis workflow is also known as data wrangling,
+    data munging, or "80% of data science"

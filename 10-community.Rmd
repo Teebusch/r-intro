@@ -1,5 +1,10 @@
 # The R community is awesome!
 
+:::{ .goals }
+* ...
+* ...
+:::
+
 We are almost at the end of this short introduction to R. We barely scratched the surface of what R has to offer. I hope this helped you figure out whether R is for you and of course I hope it made you want to learn more!
 
 If you do want to learn more, I think the best way is to practice and find other people to learn from.

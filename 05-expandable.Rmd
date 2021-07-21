@@ -1,5 +1,13 @@
 # R is expandable
 
+:::{ .goals }
+* What is an R package?
+* How to install and load an R package?
+* What is the *Tidyverse*?
+* Loading data from a text file into R
+* Getting an overview of a data frame
+:::
+
 While R is not as popular or as fast as other programming languages, it is quite popular in the data analysis and research domain. As a result, R gives you access to a vast amount of amazing packages written by expert statisticians and programmers around the world. An R package is a collection of R code that has been bundled up so that it can be easily used by others. The full power of R unfolds when you tap into this vast ecosystem of
 packages. There are literally tens of thousands of packages to make your life
 easier! There's an R package for almost everything! See for yourself at
@@ -55,14 +63,22 @@ To read the CSV file and turn it into an R data frame we will use the `read_csv(
 function. To use this function, we first have to install and load the `{tidyverse}` package.^[ 
 Usually, **packages** are collections of functions. The `{tidyverse}` package is a bit different, as it is actually a collection of other packages --- a *meta-package*. When you load it, it loads the most popular packages from theTidyverse, such as `{ggplot2}`, `{readr}`, and `{dplyr}`. For example, the `read_csv()` function is from the `{readr}` package.]
 
+You can install the package from R's central package repository CRAN. The `install.packages()` function looks for a package of a given name on CRAN, and if it finds it installs it. The `library()` function loads a package that you have installed, so that all of its functions become available for you to use in your current R session. The next time you start RStudio, you will not have to reinstall the package (it is now on your computer), but you will have to load it again.
+
 ```{r eval=FALSE}
 install.packages("tidyverse")
 library(tidyverse)
 ```
 
+:::{.more}
+The distinction between library and package can be a little confusing. It might help to imagine that you are *adding a package to your system's library of packages* with `install.packages()`, and then you use `library()` to *check out a package from your library*, so that you can use it in your current R session.
+
+Note also that the quotation marks around the package name in `intall.packages()` are required, because this is essentially a search term. In `library()` the quotation marks are optional, because the package is an object in your library, from where you can call it by its name like any other variable.
+:::
+
 ## Loading data
 
-Now we can use the `read_csv()` function to load the data straight from the web into an R data frame in our computer's working memory.
+Now that we have the `{tidyverse}` package installed and loaded, we can use the `read_csv()` function to load the data straight from the web into an R data frame in our computer's working memory.
 
 ```{r}
 peaks <- read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2020/2020-09-22/peaks.csv')
@@ -80,12 +96,23 @@ You can get a more traditional spreadsheet-like view of the complete data frame 
 clicking its name in the Environment panel or running the command `view(peaks)`.
 
 To better understand our data, let's get some summary statistics. The `{skimr}`
-package provides a really nice function for this. Let's install the package and
-then "skim" our data:
+package provides a really nice function for this. 
 
-```{r eval=2, results='markup'} 
+:::{ .exercise }
+Install and load the `{skimr}` package from CRAN.
+
+:::{ .answer}
+```{r eval = FALSE}
 install.packages("skimr")
-skimr::skim(peaks)
+library(skimr)
+```
+:::
+:::
+
+Now we can "skim" our data:
+
+```{r} 
+skim(peaks)
 ```
 
 This summary tells us quite a lot about our data! For example, we can
@@ -96,9 +123,16 @@ have to take care of -- a peak that was successfully climbed in the year 201.
 :::{ .more }
 **The :: operator.** 
 
-When we used the `skim()` function, you might have noticed the double colon `::` between the package name and
-the function name. This is a way to call a function without first loading the package
-it is in. Thus, `skimr::skim(peaks)` is equivalent to
+We only use one function from the `{skimr}` package, and we only use it this one time. 
+In a case like this, it may save you some typing by calling the function directly, without loading the package first. 
+`::` between the package name and
+the function name. This is a way . Thus, 
+
+```{r eval = FALSE}
+skimr::skim(peaks)
+```
+
+is equivalent to
 
 ```{r eval=FALSE} 
 library(skimr)

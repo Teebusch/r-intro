@@ -1,5 +1,10 @@
 # Powerful statistical methods at your fingertips 
 
+:::{ .goals }
+* ...
+* ...
+:::
+
 Many simple stats are built into R (`glm()`, `chisq.test()` and many more). No additional packages needed! 
 For more advanced analses there are often multiple packages. Best to ask a domain expert what they use (or Google). Here are just a few examples:
 

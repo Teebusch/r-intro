@@ -1,24 +1,60 @@
+# (PART\*) Ten Reasons to Learn R {.unnumbered}
+
 # About this section {.unnumbered}
 
-Now that we know some good alternatives to R, we will have a look at what speaks for
-learning R. There are a lot of good reasons to learn R!
+Now that we know what R is, and we have discussed some good alternatives to R, we will
+have a look at what speaks for learning R. There are a lot of good reasons to learn R! In
+this section of the book I will present ten of them, and with each one of them we will get
+hands-on with R. This is a very superficial introduction and we will skip over some of the
+details for the sake of showing you the whole spectrum of what R has to offer in as little
+time as possible.
+
+We will use modern R with *RStudio* and the *Tidyverse* (more about that later). This will
+help us to focus on data analysis quickly, without worrying to much about some of the more
+technical aspects of programming.
+
+Here are the 10 things we will look at:
 
 ```{r, echo=FALSE, fig.alt="A hand-written list of 10 reasons to learn R"}
 knitr::include_graphics("images/reasons.png")
 ```
 
--   Free and open source --- We will learn about free and open source software and why it
-    is great.
--   Easy to get started --- We will install R and RStudio and setup a project.
--   A flexible language that grows with you --- We will get to know the fundamental data
+1.  **Free and open source** --- We will learn about free and open source software and why
+    it is great.
+2.  **Easy to get started** --- We will install R and RStudio and setup a project.
+3.  A flexible language that grows with you --- We will get to know the fundamental data
     types and data structures of R.
--   Well-documented --- We will learn how to get help in R.
--   Expandable --- We will learn how to add additional functions to R by installing
-    packages.
--   Powerful data wrangling functions --- We will see how to transform data.
--   Powerful data visualization functions --- We will make a complex statistical graph
+4.  **Well-documented** --- We will learn how to get help in R.
+5.  **Expandable** --- We will learn how to add additional functions to R by installing
+    packages and we will learn how to load data into R. 
+6.  **Powerful data wrangling functions** --- We will see how to transform data.
+7.  **Powerful data visualization functions** --- We will make a complex statistical graph
     with just one line of code.
--   Powerful statistical methods --- We will run a statisical model with just one line of
-    code.
--   Encourages reproducible research --- We will make our analysis reproducible.
--   An awesome community --- I will talk about where to learn more.
+8.  **Powerful statistical methods** --- We will run a statisical model with just one line
+    of code.
+9.  **Encourages reproducible research** --- We will make our analysis reproducible.
+10. **An awesome community** --- I will talk about where to learn more.
+
+## Conventions {.unnumbered}
+
+::: {.goals}
+At the beginning of each chapter, I will list the things we are going to do and learn. You
+can use these to check your prior knowledge and decide to skip chapters that won't provide
+any new insights for you.
+:::
+
+::: {.more}
+This is an info box. It expands on a learning point and gives you some information that
+may not be essential but could help you to see the connections between concepts.
+:::
+
+
+::: {.exercise}
+This is a challenge. Do these to deepen your understanding. Click the answer box to show it.
+
+:::{ .answer }
+```{r, eval=FALSE}
+print("This is the answer.")
+```
+:::
+:::
