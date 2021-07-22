@@ -11,26 +11,26 @@
   <meta property="og:title" content="Reason 6 Powerful data wrangling tools | Ten Reasons to Learn R" />
   <meta property="og:type" content="book" />
   
-  
+  <meta property="og:image" content="/images/reasons.png" />
   <meta property="og:description" content="A short introduction to Contemporary R." />
-  
+  <meta name="github-repo" content="Teebusch/r-introduction" />
 
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content="Reason 6 Powerful data wrangling tools | Ten Reasons to Learn R" />
   
   <meta name="twitter:description" content="A short introduction to Contemporary R." />
-  
+  <meta name="twitter:image" content="/images/reasons.png" />
 
 <meta name="author" content="Tobias Busch" />
 
 
-<meta name="date" content="2021-07-21" />
+<meta name="date" content="2021-07-22" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
-  
+  <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon" />
 <link rel="prev" href="r-is-expandable.html"/>
 <link rel="next" href="powerful-data-visualization-tools.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
@@ -121,7 +121,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </style>
 
 
-<link rel="stylesheet" href="style.css" type="text/css" />
+<link rel="stylesheet" href="assets/webfonts/junction.css" type="text/css" />
+<link rel="stylesheet" href="assets/style.css" type="text/css" />
 </head>
 
 <body>
@@ -158,7 +159,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="2" data-path="its-easy-to-get-started.html"><a href="its-easy-to-get-started.html"><i class="fa fa-check"></i><b>2</b> It’s easy to get started</a><ul>
 <li class="chapter" data-level="2.1" data-path="its-easy-to-get-started.html"><a href="its-easy-to-get-started.html#why-rstudio"><i class="fa fa-check"></i><b>2.1</b> Why RStudio?</a></li>
 <li class="chapter" data-level="2.2" data-path="its-easy-to-get-started.html"><a href="its-easy-to-get-started.html#create-a-new-rstudio-project"><i class="fa fa-check"></i><b>2.2</b> Create a new RStudio project</a><ul>
-<li class="chapter" data-level="2.2.1" data-path="its-easy-to-get-started.html"><a href="its-easy-to-get-started.html#operators"><i class="fa fa-check"></i><b>2.2.1</b> Operators</a></li>
+<li class="chapter" data-level="2.2.1" data-path="its-easy-to-get-started.html"><a href="its-easy-to-get-started.html#using-r-as-a-calculator"><i class="fa fa-check"></i><b>2.2.1</b> Using R as a calculator</a></li>
 <li class="chapter" data-level="2.2.2" data-path="its-easy-to-get-started.html"><a href="its-easy-to-get-started.html#create-a-script"><i class="fa fa-check"></i><b>2.2.2</b> Create a script</a></li>
 </ul></li>
 </ul></li>
@@ -190,7 +191,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="6.5" data-path="powerful-data-wrangling-tools.html"><a href="powerful-data-wrangling-tools.html#other-useful-data-wrangling-functions"><i class="fa fa-check"></i><b>6.5</b> Other useful data wrangling functions</a></li>
 </ul></li>
 <li class="chapter" data-level="7" data-path="powerful-data-visualization-tools.html"><a href="powerful-data-visualization-tools.html"><i class="fa fa-check"></i><b>7</b> Powerful data visualization tools</a><ul>
-<li class="chapter" data-level="7.1" data-path="powerful-data-visualization-tools.html"><a href="powerful-data-visualization-tools.html#data-visualization"><i class="fa fa-check"></i><b>7.1</b> Data Visualization</a></li>
+<li class="chapter" data-level="7.1" data-path="powerful-data-visualization-tools.html"><a href="powerful-data-visualization-tools.html#the-fastest-way-to-make-a-plot"><i class="fa fa-check"></i><b>7.1</b> The fastest way to make a plot</a></li>
 </ul></li>
 <li class="chapter" data-level="8" data-path="powerful-statistical-methods-at-your-fingertips.html"><a href="powerful-statistical-methods-at-your-fingertips.html"><i class="fa fa-check"></i><b>8</b> Powerful statistical methods at your fingertips</a><ul>
 <li class="chapter" data-level="8.1" data-path="powerful-statistical-methods-at-your-fingertips.html"><a href="powerful-statistical-methods-at-your-fingertips.html#statistical-modeling"><i class="fa fa-check"></i><b>8.1</b> Statistical modeling</a></li>
@@ -214,9 +215,6 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="appendix"><span><b>Appendix</b></span></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
-<li class="divider"></li>
-<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with R and bookdown</a></li>
-
 </ul>
 
       </nav>
@@ -261,8 +259,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li>Count which countries the climbers came from</li>
 </ol>
 <p>We can use the <code>filter()</code> function to select only the rows (observations) we want. Then we can use the <code>count()</code> function to count how many rows there are for each kind of <code>first_ascent_country</code>:</p>
-<div class="sourceCode" id="cb52"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb52-1"><a href="powerful-data-wrangling-tools.html#cb52-1"></a>before80_7k &lt;-<span class="st"> </span><span class="kw">filter</span>(peaks, first_ascent_year <span class="op">&lt;</span><span class="st"> </span><span class="dv">1980</span>, height_metres <span class="op">&gt;</span><span class="st"> </span><span class="dv">7000</span>)</span>
-<span id="cb52-2"><a href="powerful-data-wrangling-tools.html#cb52-2"></a><span class="kw">count</span>(before80_7k, first_ascent_country)</span></code></pre></div>
+<div class="sourceCode" id="cb53"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb53-1"><a href="powerful-data-wrangling-tools.html#cb53-1"></a>before80_7k &lt;-<span class="st"> </span><span class="kw">filter</span>(peaks, first_ascent_year <span class="op">&lt;</span><span class="st"> </span><span class="dv">1980</span>, height_metres <span class="op">&gt;</span><span class="st"> </span><span class="dv">7000</span>)</span>
+<span id="cb53-2"><a href="powerful-data-wrangling-tools.html#cb53-2"></a><span class="kw">count</span>(before80_7k, first_ascent_country)</span></code></pre></div>
 <pre><code># A tibble: 28 x 2
    first_ascent_country     n
    &lt;chr&gt;                &lt;int&gt;
@@ -282,10 +280,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h2><span class="header-section-number">6.2</span> The pipe operator %&gt;%</h2>
 <p>Above, we stored the result of the first function in an intermediate variables and then gave it to the second. There’s another way to chain functions that is often more convenient and readable: Use the <strong>pipe operator <code>%&gt;%</code></strong> to pass data from one function to the next.</p>
 <p>You can read <code>%&gt;%</code> as <em>“…and then…”</em>. Use the keyboard shortcut <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>M</kbd> to make it.</p>
-<div class="sourceCode" id="cb54"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb54-1"><a href="powerful-data-wrangling-tools.html#cb54-1"></a>peaks <span class="op">%&gt;%</span></span>
-<span id="cb54-2"><a href="powerful-data-wrangling-tools.html#cb54-2"></a><span class="st">  </span><span class="kw">filter</span>(first_ascent_year <span class="op">&lt;</span><span class="st"> </span><span class="dv">1980</span>, height_metres <span class="op">&gt;</span><span class="st"> </span><span class="dv">7000</span>) <span class="op">%&gt;%</span><span class="st"> </span></span>
-<span id="cb54-3"><a href="powerful-data-wrangling-tools.html#cb54-3"></a><span class="st">  </span><span class="kw">count</span>(first_ascent_country, <span class="dt">sort =</span> <span class="ot">TRUE</span>) <span class="op">%&gt;%</span><span class="st"> </span></span>
-<span id="cb54-4"><a href="powerful-data-wrangling-tools.html#cb54-4"></a><span class="st">  </span><span class="kw">filter</span>(n <span class="op">&gt;</span><span class="st"> </span><span class="dv">3</span>) </span></code></pre></div>
+<div class="sourceCode" id="cb55"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb55-1"><a href="powerful-data-wrangling-tools.html#cb55-1"></a>peaks <span class="op">%&gt;%</span></span>
+<span id="cb55-2"><a href="powerful-data-wrangling-tools.html#cb55-2"></a><span class="st">  </span><span class="kw">filter</span>(first_ascent_year <span class="op">&lt;</span><span class="st"> </span><span class="dv">1980</span>, height_metres <span class="op">&gt;</span><span class="st"> </span><span class="dv">7000</span>) <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb55-3"><a href="powerful-data-wrangling-tools.html#cb55-3"></a><span class="st">  </span><span class="kw">count</span>(first_ascent_country, <span class="dt">sort =</span> <span class="ot">TRUE</span>) <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb55-4"><a href="powerful-data-wrangling-tools.html#cb55-4"></a><span class="st">  </span><span class="kw">filter</span>(n <span class="op">&gt;</span><span class="st"> </span><span class="dv">3</span>) </span></code></pre></div>
 <pre><code># A tibble: 4 x 2
   first_ascent_country     n
   &lt;chr&gt;                &lt;int&gt;
@@ -293,10 +291,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 2 Japan                    7
 3 Poland                   4
 4 UK, Nepal                4</code></pre>
-<div class="sourceCode" id="cb56"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb56-1"><a href="powerful-data-wrangling-tools.html#cb56-1"></a>  <span class="co"># ... the pipe can continue. Here, we filter all peaks that </span></span>
-<span id="cb56-2"><a href="powerful-data-wrangling-tools.html#cb56-2"></a>  <span class="co"># were climbed more than 3 times</span></span></code></pre></div>
+<div class="sourceCode" id="cb57"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb57-1"><a href="powerful-data-wrangling-tools.html#cb57-1"></a>  <span class="co"># ... the pipe can continue. Here, we filter all peaks that </span></span>
+<span id="cb57-2"><a href="powerful-data-wrangling-tools.html#cb57-2"></a>  <span class="co"># were climbed more than 3 times</span></span></code></pre></div>
 <p>Did you notice that the first argument of all functions (the data frame you want to operate on) has disappeared? The pipe operator fills that one in automatically.</p>
-<div class="figure"><span id="fig:unnamed-chunk-38"></span>
+<div class="figure"><span id="fig:unnamed-chunk-40"></span>
 <img src="images/data-with-pipe.jpeg" alt="An image of the Star Trek character Data, smoking a pipe"  />
 <p class="caption">
 Figure 6.1: Indubitably, sir!
@@ -305,9 +303,9 @@ Figure 6.1: Indubitably, sir!
 </div>
 <div id="create-new-columns-with-mutate" class="section level2">
 <h2><span class="header-section-number">6.3</span> Create new columns with <code>mutate()</code></h2>
-<div class="sourceCode" id="cb57"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb57-1"><a href="powerful-data-wrangling-tools.html#cb57-1"></a>peaks <span class="op">%&gt;%</span><span class="st"> </span></span>
-<span id="cb57-2"><a href="powerful-data-wrangling-tools.html#cb57-2"></a><span class="st">  </span><span class="kw">select</span>(peak_name, climbing_status, first_ascent_year, first_ascent_country) <span class="op">%&gt;%</span><span class="st"> </span></span>
-<span id="cb57-3"><a href="powerful-data-wrangling-tools.html#cb57-3"></a><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">climbed_before80 =</span> first_ascent_year <span class="op">&lt;</span><span class="st"> </span><span class="dv">1980</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb58"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb58-1"><a href="powerful-data-wrangling-tools.html#cb58-1"></a>peaks <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb58-2"><a href="powerful-data-wrangling-tools.html#cb58-2"></a><span class="st">  </span><span class="kw">select</span>(peak_name, climbing_status, first_ascent_year, first_ascent_country) <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb58-3"><a href="powerful-data-wrangling-tools.html#cb58-3"></a><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">climbed_before80 =</span> first_ascent_year <span class="op">&lt;</span><span class="st"> </span><span class="dv">1980</span>)</span></code></pre></div>
 <pre><code># A tibble: 468 x 5
    peak_name  climbing_status first_ascent_ye… first_ascent_co… climbed_before80
    &lt;chr&gt;      &lt;chr&gt;                      &lt;dbl&gt; &lt;chr&gt;            &lt;lgl&gt;           
@@ -326,11 +324,11 @@ Figure 6.1: Indubitably, sir!
 <div id="split-apply-combine-with-group_by-and-summarize" class="section level2">
 <h2><span class="header-section-number">6.4</span> Split-apply-combine with <code>group_by()</code> and <code>summarize()</code></h2>
 <p>Use <code>group_by()</code> and <code>summarize()</code> together for powerful <em>split-apply-combine</em> operations:</p>
-<div class="sourceCode" id="cb59"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb59-1"><a href="powerful-data-wrangling-tools.html#cb59-1"></a>peaks <span class="op">%&gt;%</span><span class="st"> </span></span>
-<span id="cb59-2"><a href="powerful-data-wrangling-tools.html#cb59-2"></a><span class="st">  </span><span class="kw">filter</span>(first_ascent_year <span class="op">&gt;</span><span class="st"> </span><span class="dv">201</span>) <span class="op">%&gt;%</span><span class="st"> </span></span>
-<span id="cb59-3"><a href="powerful-data-wrangling-tools.html#cb59-3"></a><span class="st">  </span><span class="kw">group_by</span>(first_ascent_country) <span class="op">%&gt;%</span><span class="st"> </span></span>
-<span id="cb59-4"><a href="powerful-data-wrangling-tools.html#cb59-4"></a><span class="st">  </span><span class="kw">summarize</span>(<span class="dt">min_ascent =</span> <span class="kw">min</span>(first_ascent_year, <span class="dt">na.rm =</span> <span class="ot">TRUE</span>)) <span class="op">%&gt;%</span><span class="st"> </span></span>
-<span id="cb59-5"><a href="powerful-data-wrangling-tools.html#cb59-5"></a><span class="st">  </span><span class="kw">arrange</span>(min_ascent)</span></code></pre></div>
+<div class="sourceCode" id="cb60"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb60-1"><a href="powerful-data-wrangling-tools.html#cb60-1"></a>peaks <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb60-2"><a href="powerful-data-wrangling-tools.html#cb60-2"></a><span class="st">  </span><span class="kw">filter</span>(first_ascent_year <span class="op">&gt;</span><span class="st"> </span><span class="dv">201</span>) <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb60-3"><a href="powerful-data-wrangling-tools.html#cb60-3"></a><span class="st">  </span><span class="kw">group_by</span>(first_ascent_country) <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb60-4"><a href="powerful-data-wrangling-tools.html#cb60-4"></a><span class="st">  </span><span class="kw">summarize</span>(<span class="dt">min_ascent =</span> <span class="kw">min</span>(first_ascent_year, <span class="dt">na.rm =</span> <span class="ot">TRUE</span>)) <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb60-5"><a href="powerful-data-wrangling-tools.html#cb60-5"></a><span class="st">  </span><span class="kw">arrange</span>(min_ascent)</span></code></pre></div>
 <pre><code># A tibble: 77 x 2
    first_ascent_country min_ascent
    &lt;chr&gt;                     &lt;dbl&gt;
@@ -352,7 +350,7 @@ Figure 6.1: Indubitably, sir!
 </div>
 <div id="other-useful-data-wrangling-functions" class="section level2">
 <h2><span class="header-section-number">6.5</span> Other useful data wrangling functions</h2>
-<div class="sourceCode" id="cb61"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb61-1"><a href="powerful-data-wrangling-tools.html#cb61-1"></a><span class="co"># ...</span></span></code></pre></div>
+<div class="sourceCode" id="cb62"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb62-1"><a href="powerful-data-wrangling-tools.html#cb62-1"></a><span class="co"># ...</span></span></code></pre></div>
 
 </div>
 </div>
@@ -378,15 +376,15 @@ Figure 6.1: Indubitably, sir!
 gitbook.require(["gitbook"], function(gitbook) {
 gitbook.start({
 "sharing": {
-"github": false,
-"facebook": true,
+"github": true,
+"facebook": false,
 "twitter": true,
 "linkedin": false,
 "weibo": false,
 "instapaper": false,
 "vk": false,
 "whatsapp": false,
-"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+"all": false
 },
 "fontsettings": {
 "theme": "white",
@@ -394,8 +392,8 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": null,
-"text": null
+"link": "https://github.com/Teebusch/r-introduction/edit/master/06-data-wrangling.Rmd",
+"text": "Edit this page"
 },
 "history": {
 "link": null,
@@ -405,9 +403,9 @@ gitbook.start({
 "link": null,
 "text": null
 },
-"download": ["r-intro.pdf", "r-intro.epub"],
+"download": ["https://github.com/Teebusch/r-introduction/raw/master/06-data-wrangling.Rmd", "r-intro.epub"],
 "toc": {
-"collapse": "subsection"
+"collapse": "section"
 }
 });
 });

@@ -11,26 +11,26 @@
   <meta property="og:title" content="Reason 9 R encourages reproducible research | Ten Reasons to Learn R" />
   <meta property="og:type" content="book" />
   
-  
+  <meta property="og:image" content="/images/reasons.png" />
   <meta property="og:description" content="A short introduction to Contemporary R." />
-  
+  <meta name="github-repo" content="Teebusch/r-introduction" />
 
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content="Reason 9 R encourages reproducible research | Ten Reasons to Learn R" />
   
   <meta name="twitter:description" content="A short introduction to Contemporary R." />
-  
+  <meta name="twitter:image" content="/images/reasons.png" />
 
 <meta name="author" content="Tobias Busch" />
 
 
-<meta name="date" content="2021-07-21" />
+<meta name="date" content="2021-07-22" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
-  
+  <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon" />
 <link rel="prev" href="powerful-statistical-methods-at-your-fingertips.html"/>
 <link rel="next" href="the-r-community-is-awesome.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
@@ -121,7 +121,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </style>
 
 
-<link rel="stylesheet" href="style.css" type="text/css" />
+<link rel="stylesheet" href="assets/webfonts/junction.css" type="text/css" />
+<link rel="stylesheet" href="assets/style.css" type="text/css" />
 </head>
 
 <body>
@@ -158,7 +159,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="2" data-path="its-easy-to-get-started.html"><a href="its-easy-to-get-started.html"><i class="fa fa-check"></i><b>2</b> It’s easy to get started</a><ul>
 <li class="chapter" data-level="2.1" data-path="its-easy-to-get-started.html"><a href="its-easy-to-get-started.html#why-rstudio"><i class="fa fa-check"></i><b>2.1</b> Why RStudio?</a></li>
 <li class="chapter" data-level="2.2" data-path="its-easy-to-get-started.html"><a href="its-easy-to-get-started.html#create-a-new-rstudio-project"><i class="fa fa-check"></i><b>2.2</b> Create a new RStudio project</a><ul>
-<li class="chapter" data-level="2.2.1" data-path="its-easy-to-get-started.html"><a href="its-easy-to-get-started.html#operators"><i class="fa fa-check"></i><b>2.2.1</b> Operators</a></li>
+<li class="chapter" data-level="2.2.1" data-path="its-easy-to-get-started.html"><a href="its-easy-to-get-started.html#using-r-as-a-calculator"><i class="fa fa-check"></i><b>2.2.1</b> Using R as a calculator</a></li>
 <li class="chapter" data-level="2.2.2" data-path="its-easy-to-get-started.html"><a href="its-easy-to-get-started.html#create-a-script"><i class="fa fa-check"></i><b>2.2.2</b> Create a script</a></li>
 </ul></li>
 </ul></li>
@@ -190,7 +191,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="6.5" data-path="powerful-data-wrangling-tools.html"><a href="powerful-data-wrangling-tools.html#other-useful-data-wrangling-functions"><i class="fa fa-check"></i><b>6.5</b> Other useful data wrangling functions</a></li>
 </ul></li>
 <li class="chapter" data-level="7" data-path="powerful-data-visualization-tools.html"><a href="powerful-data-visualization-tools.html"><i class="fa fa-check"></i><b>7</b> Powerful data visualization tools</a><ul>
-<li class="chapter" data-level="7.1" data-path="powerful-data-visualization-tools.html"><a href="powerful-data-visualization-tools.html#data-visualization"><i class="fa fa-check"></i><b>7.1</b> Data Visualization</a></li>
+<li class="chapter" data-level="7.1" data-path="powerful-data-visualization-tools.html"><a href="powerful-data-visualization-tools.html#the-fastest-way-to-make-a-plot"><i class="fa fa-check"></i><b>7.1</b> The fastest way to make a plot</a></li>
 </ul></li>
 <li class="chapter" data-level="8" data-path="powerful-statistical-methods-at-your-fingertips.html"><a href="powerful-statistical-methods-at-your-fingertips.html"><i class="fa fa-check"></i><b>8</b> Powerful statistical methods at your fingertips</a><ul>
 <li class="chapter" data-level="8.1" data-path="powerful-statistical-methods-at-your-fingertips.html"><a href="powerful-statistical-methods-at-your-fingertips.html#statistical-modeling"><i class="fa fa-check"></i><b>8.1</b> Statistical modeling</a></li>
@@ -214,9 +215,6 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="appendix"><span><b>Appendix</b></span></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
-<li class="divider"></li>
-<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with R and bookdown</a></li>
-
 </ul>
 
       </nav>
@@ -344,9 +342,9 @@ aimed at researchers</p></li>
 <h3><span class="header-section-number">9.7.1</span> Use {renv} to store a snapshot of your package library</h3>
 <p>Install the <code>{renv}</code> package, then – in your project initialize <code>{renv}</code> for your project
 and take a snapshot of the packages you use in your project:</p>
-<div class="sourceCode" id="cb65"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb65-1"><a href="r-encourages-reproducible-research.html#cb65-1"></a><span class="kw">install.packages</span>(<span class="st">&quot;renv&quot;</span>)</span>
-<span id="cb65-2"><a href="r-encourages-reproducible-research.html#cb65-2"></a>renv<span class="op">::</span><span class="kw">init</span>()</span>
-<span id="cb65-3"><a href="r-encourages-reproducible-research.html#cb65-3"></a>renv<span class="op">::</span><span class="kw">snapshot</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb66"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb66-1"><a href="r-encourages-reproducible-research.html#cb66-1"></a><span class="kw">install.packages</span>(<span class="st">&quot;renv&quot;</span>)</span>
+<span id="cb66-2"><a href="r-encourages-reproducible-research.html#cb66-2"></a>renv<span class="op">::</span><span class="kw">init</span>()</span>
+<span id="cb66-3"><a href="r-encourages-reproducible-research.html#cb66-3"></a>renv<span class="op">::</span><span class="kw">snapshot</span>()</span></code></pre></div>
 <p>This creates a private, per-project library, in which new packages will be installed. This
 library is isolated from other R libraries on your system. Later, you or your
 collaborators can recreate this library, with the exact package versions you used by
@@ -354,14 +352,14 @@ running <code>renv::restore()</code>.</p>
 </div>
 <div id="take-a-snapshot-of-your-code-with-git" class="section level3">
 <h3><span class="header-section-number">9.7.2</span> Take a snapshot of your code with Git</h3>
-<div class="sourceCode" id="cb66"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb66-1"><a href="r-encourages-reproducible-research.html#cb66-1"></a><span class="co"># ...</span></span></code></pre></div>
+<div class="sourceCode" id="cb67"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb67-1"><a href="r-encourages-reproducible-research.html#cb67-1"></a><span class="co"># ...</span></span></code></pre></div>
 <p>To utilize the full power of Git, you will have to learn a couple more things. However,
 you can already rest assured, that you can alway go back and see the changes you have
 made, and where things broke. Isn’t that a comforting feeling?</p>
 </div>
 <div id="make-a-reproducible-report-with-rmarkdown" class="section level3">
 <h3><span class="header-section-number">9.7.3</span> Make a reproducible report with RMarkdown</h3>
-<div class="sourceCode" id="cb67"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb67-1"><a href="r-encourages-reproducible-research.html#cb67-1"></a><span class="co"># ...</span></span></code></pre></div>
+<div class="sourceCode" id="cb68"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb68-1"><a href="r-encourages-reproducible-research.html#cb68-1"></a><span class="co"># ...</span></span></code></pre></div>
 
 </div>
 </div>
@@ -388,15 +386,15 @@ made, and where things broke. Isn’t that a comforting feeling?</p>
 gitbook.require(["gitbook"], function(gitbook) {
 gitbook.start({
 "sharing": {
-"github": false,
-"facebook": true,
+"github": true,
+"facebook": false,
 "twitter": true,
 "linkedin": false,
 "weibo": false,
 "instapaper": false,
 "vk": false,
 "whatsapp": false,
-"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+"all": false
 },
 "fontsettings": {
 "theme": "white",
@@ -404,8 +402,8 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": null,
-"text": null
+"link": "https://github.com/Teebusch/r-introduction/edit/master/09-reproducibility.Rmd",
+"text": "Edit this page"
 },
 "history": {
 "link": null,
@@ -415,9 +413,9 @@ gitbook.start({
 "link": null,
 "text": null
 },
-"download": ["r-intro.pdf", "r-intro.epub"],
+"download": ["https://github.com/Teebusch/r-introduction/raw/master/09-reproducibility.Rmd", "r-intro.epub"],
 "toc": {
-"collapse": "subsection"
+"collapse": "section"
 }
 });
 });

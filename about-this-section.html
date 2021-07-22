@@ -11,26 +11,26 @@
   <meta property="og:title" content="About this section | Ten Reasons to Learn R" />
   <meta property="og:type" content="book" />
   
-  
+  <meta property="og:image" content="/images/reasons.png" />
   <meta property="og:description" content="A short introduction to Contemporary R." />
-  
+  <meta name="github-repo" content="Teebusch/r-introduction" />
 
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content="About this section | Ten Reasons to Learn R" />
   
   <meta name="twitter:description" content="A short introduction to Contemporary R." />
-  
+  <meta name="twitter:image" content="/images/reasons.png" />
 
 <meta name="author" content="Tobias Busch" />
 
 
-<meta name="date" content="2021-07-21" />
+<meta name="date" content="2021-07-22" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
-  
+  <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon" />
 <link rel="prev" href="why-you-should-not-learn-r.html"/>
 <link rel="next" href="r-is-free-and-open-source.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
@@ -121,7 +121,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </style>
 
 
-<link rel="stylesheet" href="style.css" type="text/css" />
+<link rel="stylesheet" href="assets/webfonts/junction.css" type="text/css" />
+<link rel="stylesheet" href="assets/style.css" type="text/css" />
 </head>
 
 <body>
@@ -158,7 +159,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="2" data-path="its-easy-to-get-started.html"><a href="its-easy-to-get-started.html"><i class="fa fa-check"></i><b>2</b> It’s easy to get started</a><ul>
 <li class="chapter" data-level="2.1" data-path="its-easy-to-get-started.html"><a href="its-easy-to-get-started.html#why-rstudio"><i class="fa fa-check"></i><b>2.1</b> Why RStudio?</a></li>
 <li class="chapter" data-level="2.2" data-path="its-easy-to-get-started.html"><a href="its-easy-to-get-started.html#create-a-new-rstudio-project"><i class="fa fa-check"></i><b>2.2</b> Create a new RStudio project</a><ul>
-<li class="chapter" data-level="2.2.1" data-path="its-easy-to-get-started.html"><a href="its-easy-to-get-started.html#operators"><i class="fa fa-check"></i><b>2.2.1</b> Operators</a></li>
+<li class="chapter" data-level="2.2.1" data-path="its-easy-to-get-started.html"><a href="its-easy-to-get-started.html#using-r-as-a-calculator"><i class="fa fa-check"></i><b>2.2.1</b> Using R as a calculator</a></li>
 <li class="chapter" data-level="2.2.2" data-path="its-easy-to-get-started.html"><a href="its-easy-to-get-started.html#create-a-script"><i class="fa fa-check"></i><b>2.2.2</b> Create a script</a></li>
 </ul></li>
 </ul></li>
@@ -190,7 +191,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="6.5" data-path="powerful-data-wrangling-tools.html"><a href="powerful-data-wrangling-tools.html#other-useful-data-wrangling-functions"><i class="fa fa-check"></i><b>6.5</b> Other useful data wrangling functions</a></li>
 </ul></li>
 <li class="chapter" data-level="7" data-path="powerful-data-visualization-tools.html"><a href="powerful-data-visualization-tools.html"><i class="fa fa-check"></i><b>7</b> Powerful data visualization tools</a><ul>
-<li class="chapter" data-level="7.1" data-path="powerful-data-visualization-tools.html"><a href="powerful-data-visualization-tools.html#data-visualization"><i class="fa fa-check"></i><b>7.1</b> Data Visualization</a></li>
+<li class="chapter" data-level="7.1" data-path="powerful-data-visualization-tools.html"><a href="powerful-data-visualization-tools.html#the-fastest-way-to-make-a-plot"><i class="fa fa-check"></i><b>7.1</b> The fastest way to make a plot</a></li>
 </ul></li>
 <li class="chapter" data-level="8" data-path="powerful-statistical-methods-at-your-fingertips.html"><a href="powerful-statistical-methods-at-your-fingertips.html"><i class="fa fa-check"></i><b>8</b> Powerful statistical methods at your fingertips</a><ul>
 <li class="chapter" data-level="8.1" data-path="powerful-statistical-methods-at-your-fingertips.html"><a href="powerful-statistical-methods-at-your-fingertips.html#statistical-modeling"><i class="fa fa-check"></i><b>8.1</b> Statistical modeling</a></li>
@@ -214,9 +215,6 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="appendix"><span><b>Appendix</b></span></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
-<li class="divider"></li>
-<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with R and bookdown</a></li>
-
 </ul>
 
       </nav>
@@ -237,11 +235,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="about-this-section" class="section level1 unnumbered">
 <h1>About this section</h1>
 <p>Now that we know what R is, and we have discussed some good alternatives to R, we will
-have a look at what speaks for learning R. There are a lot of good reasons to learn R! In
-this section of the book I will present ten of them, and with each one of them we will get
-hands-on with R. This is a very superficial introduction and we will skip over some of the
-details for the sake of showing you the whole spectrum of what R has to offer in as little
-time as possible.</p>
+have a look at what speaks for learning R. There are many good reasons to learn R! In this
+section of the book I will present ten of them, and we will also get hands-on with R. This
+is a very superficial introduction and we will skip over some of the details for the sake
+of showing you the whole spectrum of what R has to offer and providing you with knowledge
+that is practically usefuls in as little time as possible.</p>
 <p>We will use modern R with <em>RStudio</em> and the <em>Tidyverse</em> (more about that later). This will
 help us to focus on data analysis quickly, without worrying to much about some of the more
 technical aspects of programming.</p>
@@ -250,7 +248,8 @@ technical aspects of programming.</p>
 <ol style="list-style-type: decimal">
 <li><strong>Free and open source</strong> — We will learn about free and open source software and why
 it is great.</li>
-<li><strong>Easy to get started</strong> — We will install R and RStudio and setup a project.</li>
+<li><strong>Easy to get started</strong> — We will install R and RStudio, setup a project, and start
+interacting with R in the console and by writing our first script.</li>
 <li>A flexible language that grows with you — We will get to know the fundamental data
 types and data structures of R.</li>
 <li><strong>Well-documented</strong> — We will learn how to get help in R.</li>
@@ -307,15 +306,15 @@ it.</p>
 gitbook.require(["gitbook"], function(gitbook) {
 gitbook.start({
 "sharing": {
-"github": false,
-"facebook": true,
+"github": true,
+"facebook": false,
 "twitter": true,
 "linkedin": false,
 "weibo": false,
 "instapaper": false,
 "vk": false,
 "whatsapp": false,
-"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+"all": false
 },
 "fontsettings": {
 "theme": "white",
@@ -323,8 +322,8 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": null,
-"text": null
+"link": "https://github.com/Teebusch/r-introduction/edit/master/00.3-overview.Rmd",
+"text": "Edit this page"
 },
 "history": {
 "link": null,
@@ -334,9 +333,9 @@ gitbook.start({
 "link": null,
 "text": null
 },
-"download": ["r-intro.pdf", "r-intro.epub"],
+"download": ["https://github.com/Teebusch/r-introduction/raw/master/00.3-overview.Rmd", "r-intro.epub"],
 "toc": {
-"collapse": "subsection"
+"collapse": "section"
 }
 });
 });

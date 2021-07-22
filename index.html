@@ -11,26 +11,26 @@
   <meta property="og:title" content="Ten Reasons to Learn R" />
   <meta property="og:type" content="book" />
   
-  
+  <meta property="og:image" content="/images/reasons.png" />
   <meta property="og:description" content="A short introduction to Contemporary R." />
-  
+  <meta name="github-repo" content="Teebusch/r-introduction" />
 
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content="Ten Reasons to Learn R" />
   
   <meta name="twitter:description" content="A short introduction to Contemporary R." />
-  
+  <meta name="twitter:image" content="/images/reasons.png" />
 
 <meta name="author" content="Tobias Busch" />
 
 
-<meta name="date" content="2021-07-21" />
+<meta name="date" content="2021-07-22" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
-  
+  <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon" />
 
 <link rel="next" href="what-is-r.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
@@ -121,7 +121,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </style>
 
 
-<link rel="stylesheet" href="style.css" type="text/css" />
+<link rel="stylesheet" href="assets/webfonts/junction.css" type="text/css" />
+<link rel="stylesheet" href="assets/style.css" type="text/css" />
 </head>
 
 <body>
@@ -158,7 +159,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="2" data-path="its-easy-to-get-started.html"><a href="its-easy-to-get-started.html"><i class="fa fa-check"></i><b>2</b> It’s easy to get started</a><ul>
 <li class="chapter" data-level="2.1" data-path="its-easy-to-get-started.html"><a href="its-easy-to-get-started.html#why-rstudio"><i class="fa fa-check"></i><b>2.1</b> Why RStudio?</a></li>
 <li class="chapter" data-level="2.2" data-path="its-easy-to-get-started.html"><a href="its-easy-to-get-started.html#create-a-new-rstudio-project"><i class="fa fa-check"></i><b>2.2</b> Create a new RStudio project</a><ul>
-<li class="chapter" data-level="2.2.1" data-path="its-easy-to-get-started.html"><a href="its-easy-to-get-started.html#operators"><i class="fa fa-check"></i><b>2.2.1</b> Operators</a></li>
+<li class="chapter" data-level="2.2.1" data-path="its-easy-to-get-started.html"><a href="its-easy-to-get-started.html#using-r-as-a-calculator"><i class="fa fa-check"></i><b>2.2.1</b> Using R as a calculator</a></li>
 <li class="chapter" data-level="2.2.2" data-path="its-easy-to-get-started.html"><a href="its-easy-to-get-started.html#create-a-script"><i class="fa fa-check"></i><b>2.2.2</b> Create a script</a></li>
 </ul></li>
 </ul></li>
@@ -190,7 +191,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="6.5" data-path="powerful-data-wrangling-tools.html"><a href="powerful-data-wrangling-tools.html#other-useful-data-wrangling-functions"><i class="fa fa-check"></i><b>6.5</b> Other useful data wrangling functions</a></li>
 </ul></li>
 <li class="chapter" data-level="7" data-path="powerful-data-visualization-tools.html"><a href="powerful-data-visualization-tools.html"><i class="fa fa-check"></i><b>7</b> Powerful data visualization tools</a><ul>
-<li class="chapter" data-level="7.1" data-path="powerful-data-visualization-tools.html"><a href="powerful-data-visualization-tools.html#data-visualization"><i class="fa fa-check"></i><b>7.1</b> Data Visualization</a></li>
+<li class="chapter" data-level="7.1" data-path="powerful-data-visualization-tools.html"><a href="powerful-data-visualization-tools.html#the-fastest-way-to-make-a-plot"><i class="fa fa-check"></i><b>7.1</b> The fastest way to make a plot</a></li>
 </ul></li>
 <li class="chapter" data-level="8" data-path="powerful-statistical-methods-at-your-fingertips.html"><a href="powerful-statistical-methods-at-your-fingertips.html"><i class="fa fa-check"></i><b>8</b> Powerful statistical methods at your fingertips</a><ul>
 <li class="chapter" data-level="8.1" data-path="powerful-statistical-methods-at-your-fingertips.html"><a href="powerful-statistical-methods-at-your-fingertips.html#statistical-modeling"><i class="fa fa-check"></i><b>8.1</b> Statistical modeling</a></li>
@@ -214,9 +215,6 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="appendix"><span><b>Appendix</b></span></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
-<li class="divider"></li>
-<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with R and bookdown</a></li>
-
 </ul>
 
       </nav>
@@ -237,38 +235,37 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="header">
 <h1 class="title">Ten Reasons to Learn R</h1>
 <p class="author"><em>Tobias Busch</em></p>
-<p class="date" style="margin-top: 1.5em;"><em>2021-07-21</em></p>
+<p class="date" style="margin-top: 1.5em;"><em>2021-07-22</em></p>
 </div>
 <div id="welcome" class="section level1 unnumbered">
 <h1>Welcome</h1>
 <p>This book is a short hands-on introduction to R. The goal is to provide a quick overview
 of things that are great about R so that you can decide whether diving deeper is worth
 your time.</p>
-<p>I start by briefly introducing the history and purpose of R. Then I present a compelling
-reason <em>not</em> to learn R and offer some very attractive alternatives. So prepared, we can
-then turn to the things that R has to offer: In the second part of the book, I present 10
-things that I absolutely love about R. Along with each of the ten reasons, I will
-introduce some part of R and will encourage you to get some hands-on experience with R.</p>
-<p>We will use modern R that is easy to learn and allows you to focus on your data, rather
-than worrying about difficult programming concepts. I will showcase all that R has to
-offer, and I hope that this helps you to side whether it is for you.</p>
+<p>We start by briefly introducing the history and purpose of R. Then we discuss compelling
+reason <em>not</em> to learn R and offer some attractive alternatives. So prepared, we will turn
+to the things that R has to offer: the second part of the book presents 10 things that I
+absolutely love about R and along with that, you will get some hands-on experience with R.</p>
+<p>We will use modern R with <em>RStudio</em> and the <em>Tidyverse</em>, and we will focus on the parts of
+R that are most essential for data analysis. This allows us to focus how to fork with
+data, rather than worrying about difficult programming concepts. I will showcase all that
+R has to offer, and I hope that this helps you to decide whether it is for you.</p>
 <div id="who-is-this-book-for" class="section level2 unnumbered">
 <h2>Who is this book for?</h2>
-<p>I’m assuming that you are already doing research or data analysis . I assume that you are
-already using other tools for that, but you want to learn more about R. Maybe it’s
-because…</p>
+<p>This book is written for someone who already has some experience with doing research or
+data analysis using other tools. I’m assuming you want to learn more about R because…</p>
 <ul>
-<li>You are afraid of missing out and want to know what all the fuzz is about</li>
-<li>You believe that R might help you to be more efficient</li>
-<li>You feel that your current workflow isn’t reproducible enough</li>
-<li>There is a statistical method that you would like to use, that is not available in
-your preferred software but it is available in R</li>
-<li>You unsuccessfully tried to learn R before, but would like to try again</li>
+<li><p>you are afraid of missing out and want to know what all the fuzz is about,</p></li>
+<li><p>you believe that R might help you to be more efficient,</p></li>
+<li><p>you feel that your current workflow isn’t reproducible enough,</p></li>
+<li><p>there is a statistical method that you would like to use, that is not available in
+your preferred software but it is available in R, or</p></li>
+<li><p>or you unsuccessfully tried to learn R before, but would like to try again</p></li>
 </ul>
-<p>I’m assuming you have little or no programming experience<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a> and you are not
-particularly interested in computers programming. You don’t want to be bored with
-technical background knowledge. You are here, because you want to learn the tools that can
-help you get things done!</p>
+<p>I’m assuming you have no or very little programming experience<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a> and you are not
+particularly interested in computer programming. You don’t want to be bored with technical
+background knowledge. You are here, because you want to learn tools that can help you get
+things done, and you wonder if R might be one of them.</p>
 </div>
 <div id="the-origins-of-this-book" class="section level2 unnumbered">
 <h2>The origins of this book</h2>
@@ -279,21 +276,23 @@ could help the workshop participants decide whether they should learn R or not. 
 workshop, I continued to expand on the material and eventually, it turned into a more
 comprehensive introduction to R.</p>
 <p>This is book is a result of my passion for teaching R and my interest in the pedagogy of
-teaching tech. The pedagogical style is heavily inspired by the Carpentries and Greg
-Wilson’s <a href="https://teachtogether.tech/"><em>Teaching Tech Together</em></a>. However, it tries to be
-a more compact and provide a broad overview of R at the expanse of depth of understanding.</p>
+teaching tech. The pedagogical style is heavily inspired by that of the Carpentries lesson
+material, which is presented excellently in Greg Wilson’s <a href="https://teachtogether.tech/"><em>Teaching Tech
+Together</em></a>. However, in contrast to the Carpentries lessons,
+this book tries to be a more compact and provide a broad overview of R at the expanse of
+depth of understanding.</p>
 </div>
 <div id="about-the-author" class="section level2 unnumbered">
 <h2>About the author</h2>
-<p>I have worked with R and other languages in a research context for almost 10 years and I
-have made some humble contributions to the R ecosystem. I teach R as a certified
-instructor for <a href="https://www.ub.uio.no/english/writing-publishing/dsc/carpentry-uio/">The
+<p>I have worked with R and other languages in a research context for almost 10 years during
+which I have also made some humble contributions to the R ecosystem. I teach R as a
+certified instructor for <a href="https://www.ub.uio.no/english/writing-publishing/dsc/carpentry-uio/">The
 Carpentries</a>, and I
 help maintain the Carpentries lesson material for the lesson <em>Data Analysis and
 Visualization in R for Ecologists</em>. I really enjoy teaching researchers to code and
 introducing them to the many wonders of R.</p>
-<p>If you have any feedback I’d be happy to hear from you! Contact me on Twitter, Email, or
-raise an Issue on Github.</p>
+<p>If you have any feedback or suggestions I’d be happy to hear from you! Contact me on
+Twitter, Email, or raise an Issue on Github.</p>
 
 </div>
 </div>
@@ -327,15 +326,15 @@ R</em></a>. Both are available for free online.<a href="index.html#fnref1" class
 gitbook.require(["gitbook"], function(gitbook) {
 gitbook.start({
 "sharing": {
-"github": false,
-"facebook": true,
+"github": true,
+"facebook": false,
 "twitter": true,
 "linkedin": false,
 "weibo": false,
 "instapaper": false,
 "vk": false,
 "whatsapp": false,
-"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+"all": false
 },
 "fontsettings": {
 "theme": "white",
@@ -343,8 +342,8 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": null,
-"text": null
+"link": "https://github.com/Teebusch/r-introduction/edit/master/index.Rmd",
+"text": "Edit this page"
 },
 "history": {
 "link": null,
@@ -354,9 +353,9 @@ gitbook.start({
 "link": null,
 "text": null
 },
-"download": ["r-intro.pdf", "r-intro.epub"],
+"download": ["https://github.com/Teebusch/r-introduction/raw/master/index.Rmd", "r-intro.epub"],
 "toc": {
-"collapse": "subsection"
+"collapse": "section"
 }
 });
 });

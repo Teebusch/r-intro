@@ -11,26 +11,26 @@
   <meta property="og:title" content="Reason 5 R is expandable | Ten Reasons to Learn R" />
   <meta property="og:type" content="book" />
   
-  
+  <meta property="og:image" content="/images/reasons.png" />
   <meta property="og:description" content="A short introduction to Contemporary R." />
-  
+  <meta name="github-repo" content="Teebusch/r-introduction" />
 
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content="Reason 5 R is expandable | Ten Reasons to Learn R" />
   
   <meta name="twitter:description" content="A short introduction to Contemporary R." />
-  
+  <meta name="twitter:image" content="/images/reasons.png" />
 
 <meta name="author" content="Tobias Busch" />
 
 
-<meta name="date" content="2021-07-21" />
+<meta name="date" content="2021-07-22" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
-  
+  <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon" />
 <link rel="prev" href="r-has-great-documentation.html"/>
 <link rel="next" href="powerful-data-wrangling-tools.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
@@ -121,7 +121,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </style>
 
 
-<link rel="stylesheet" href="style.css" type="text/css" />
+<link rel="stylesheet" href="assets/webfonts/junction.css" type="text/css" />
+<link rel="stylesheet" href="assets/style.css" type="text/css" />
 </head>
 
 <body>
@@ -158,7 +159,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="2" data-path="its-easy-to-get-started.html"><a href="its-easy-to-get-started.html"><i class="fa fa-check"></i><b>2</b> It’s easy to get started</a><ul>
 <li class="chapter" data-level="2.1" data-path="its-easy-to-get-started.html"><a href="its-easy-to-get-started.html#why-rstudio"><i class="fa fa-check"></i><b>2.1</b> Why RStudio?</a></li>
 <li class="chapter" data-level="2.2" data-path="its-easy-to-get-started.html"><a href="its-easy-to-get-started.html#create-a-new-rstudio-project"><i class="fa fa-check"></i><b>2.2</b> Create a new RStudio project</a><ul>
-<li class="chapter" data-level="2.2.1" data-path="its-easy-to-get-started.html"><a href="its-easy-to-get-started.html#operators"><i class="fa fa-check"></i><b>2.2.1</b> Operators</a></li>
+<li class="chapter" data-level="2.2.1" data-path="its-easy-to-get-started.html"><a href="its-easy-to-get-started.html#using-r-as-a-calculator"><i class="fa fa-check"></i><b>2.2.1</b> Using R as a calculator</a></li>
 <li class="chapter" data-level="2.2.2" data-path="its-easy-to-get-started.html"><a href="its-easy-to-get-started.html#create-a-script"><i class="fa fa-check"></i><b>2.2.2</b> Create a script</a></li>
 </ul></li>
 </ul></li>
@@ -190,7 +191,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="6.5" data-path="powerful-data-wrangling-tools.html"><a href="powerful-data-wrangling-tools.html#other-useful-data-wrangling-functions"><i class="fa fa-check"></i><b>6.5</b> Other useful data wrangling functions</a></li>
 </ul></li>
 <li class="chapter" data-level="7" data-path="powerful-data-visualization-tools.html"><a href="powerful-data-visualization-tools.html"><i class="fa fa-check"></i><b>7</b> Powerful data visualization tools</a><ul>
-<li class="chapter" data-level="7.1" data-path="powerful-data-visualization-tools.html"><a href="powerful-data-visualization-tools.html#data-visualization"><i class="fa fa-check"></i><b>7.1</b> Data Visualization</a></li>
+<li class="chapter" data-level="7.1" data-path="powerful-data-visualization-tools.html"><a href="powerful-data-visualization-tools.html#the-fastest-way-to-make-a-plot"><i class="fa fa-check"></i><b>7.1</b> The fastest way to make a plot</a></li>
 </ul></li>
 <li class="chapter" data-level="8" data-path="powerful-statistical-methods-at-your-fingertips.html"><a href="powerful-statistical-methods-at-your-fingertips.html"><i class="fa fa-check"></i><b>8</b> Powerful statistical methods at your fingertips</a><ul>
 <li class="chapter" data-level="8.1" data-path="powerful-statistical-methods-at-your-fingertips.html"><a href="powerful-statistical-methods-at-your-fingertips.html#statistical-modeling"><i class="fa fa-check"></i><b>8.1</b> Statistical modeling</a></li>
@@ -214,9 +215,6 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="appendix"><span><b>Appendix</b></span></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
-<li class="divider"></li>
-<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with R and bookdown</a></li>
-
 </ul>
 
       </nav>
@@ -294,8 +292,8 @@ to a bit of a schism in the R package ecosystem.</p>
 <p>To read the CSV file and turn it into an R data frame we will use the <code>read_csv()</code>
 function. To use this function, we first have to install and load the <code>{tidyverse}</code> package.<a href="#fn12" class="footnote-ref" id="fnref12"><sup>12</sup></a></p>
 <p>You can install the package from R’s central package repository CRAN. The <code>install.packages()</code> function looks for a package of a given name on CRAN, and if it finds it installs it. The <code>library()</code> function loads a package that you have installed, so that all of its functions become available for you to use in your current R session. The next time you start RStudio, you will not have to reinstall the package (it is now on your computer), but you will have to load it again.</p>
-<div class="sourceCode" id="cb41"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb41-1"><a href="r-is-expandable.html#cb41-1"></a><span class="kw">install.packages</span>(<span class="st">&quot;tidyverse&quot;</span>)</span>
-<span id="cb41-2"><a href="r-is-expandable.html#cb41-2"></a><span class="kw">library</span>(tidyverse)</span></code></pre></div>
+<div class="sourceCode" id="cb42"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb42-1"><a href="r-is-expandable.html#cb42-1"></a><span class="kw">install.packages</span>(<span class="st">&quot;tidyverse&quot;</span>)</span>
+<span id="cb42-2"><a href="r-is-expandable.html#cb42-2"></a><span class="kw">library</span>(tidyverse)</span></code></pre></div>
 <div class="more">
 <p>The distinction between library and package can be a little confusing. It might help to imagine that you are <em>adding a package to your system’s library of packages</em> with <code>install.packages()</code>, and then you use <code>library()</code> to <em>check out a package from your library</em>, so that you can use it in your current R session.</p>
 <p>Note also that the quotation marks around the package name in <code>intall.packages()</code> are required, because this is essentially a search term. In <code>library()</code> the quotation marks are optional, because the package is an object in your library, from where you can call it by its name like any other variable.</p>
@@ -304,7 +302,7 @@ function. To use this function, we first have to install and load the <code>{tid
 <div id="loading-data" class="section level2">
 <h2><span class="header-section-number">5.3</span> Loading data</h2>
 <p>Now that we have the <code>{tidyverse}</code> package installed and loaded, we can use the <code>read_csv()</code> function to load the data straight from the web into an R data frame in our computer’s working memory.</p>
-<div class="sourceCode" id="cb42"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb42-1"><a href="r-is-expandable.html#cb42-1"></a>peaks &lt;-<span class="st"> </span><span class="kw">read_csv</span>(<span class="st">&#39;https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2020/2020-09-22/peaks.csv&#39;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb43"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb43-1"><a href="r-is-expandable.html#cb43-1"></a>peaks &lt;-<span class="st"> </span><span class="kw">read_csv</span>(<span class="st">&quot;https://raw.githubusercontent.com/teebusch/r-introduction/master/data/peaks.csv&quot;</span>)</span></code></pre></div>
 <pre><code>Rows: 468 Columns: 8</code></pre>
 <pre><code>── Column specification ────────────────────────────────────────────────────────
 Delimiter: &quot;,&quot;
@@ -318,7 +316,7 @@ dbl (2): height_metres, first_ascent_year</code></pre>
 <h2><span class="header-section-number">5.4</span> Inspecting the data</h2>
 <p>When we load the data, R shows us the names of the columns in the data set and the type of each column.
 We can also have a look at the first few rows with the <code>head()</code> function.</p>
-<div class="sourceCode" id="cb46"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb46-1"><a href="r-is-expandable.html#cb46-1"></a><span class="kw">head</span>(peaks)</span></code></pre></div>
+<div class="sourceCode" id="cb47"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb47-1"><a href="r-is-expandable.html#cb47-1"></a><span class="kw">head</span>(peaks)</span></code></pre></div>
 <pre><code># A tibble: 6 x 8
   peak_id peak_name     peak_alternative_name height_metres climbing_status
   &lt;chr&gt;   &lt;chr&gt;         &lt;chr&gt;                         &lt;dbl&gt; &lt;chr&gt;          
@@ -337,14 +335,14 @@ package provides a really nice function for this.</p>
 <div class="exercise">
 <p><span id="exr:unlabeled-div-10" class="exercise"><strong>Exercise 5.1  </strong></span>Install and load the <code>{skimr}</code> package from CRAN.</p>
 <div class="answer">
-<div class="sourceCode" id="cb48"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb48-1"><a href="r-is-expandable.html#cb48-1"></a><span class="kw">install.packages</span>(<span class="st">&quot;skimr&quot;</span>)</span>
-<span id="cb48-2"><a href="r-is-expandable.html#cb48-2"></a><span class="kw">library</span>(skimr)</span></code></pre></div>
+<div class="sourceCode" id="cb49"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb49-1"><a href="r-is-expandable.html#cb49-1"></a><span class="kw">install.packages</span>(<span class="st">&quot;skimr&quot;</span>)</span>
+<span id="cb49-2"><a href="r-is-expandable.html#cb49-2"></a><span class="kw">library</span>(skimr)</span></code></pre></div>
 </div>
 </div>
 <p>Now we can “skim” our data:</p>
-<div class="sourceCode" id="cb49"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb49-1"><a href="r-is-expandable.html#cb49-1"></a><span class="kw">skim</span>(peaks)</span></code></pre></div>
+<div class="sourceCode" id="cb50"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb50-1"><a href="r-is-expandable.html#cb50-1"></a><span class="kw">skim</span>(peaks)</span></code></pre></div>
 <table>
-<caption><span id="tab:unnamed-chunk-33">Table 5.1: </span>Data summary</caption>
+<caption><span id="tab:unnamed-chunk-35">Table 5.1: </span>Data summary</caption>
 <tbody>
 <tr class="odd">
 <td align="left">Name</td>
@@ -517,10 +515,10 @@ have to take care of – a peak that was successfully climbed in the year 201.</
 In a case like this, it may save you some typing by calling the function directly, without loading the package first.
 <code>::</code> between the package name and
 the function name. This is a way . Thus,</p>
-<div class="sourceCode" id="cb50"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb50-1"><a href="r-is-expandable.html#cb50-1"></a>skimr<span class="op">::</span><span class="kw">skim</span>(peaks)</span></code></pre></div>
+<div class="sourceCode" id="cb51"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb51-1"><a href="r-is-expandable.html#cb51-1"></a>skimr<span class="op">::</span><span class="kw">skim</span>(peaks)</span></code></pre></div>
 <p>is equivalent to</p>
-<div class="sourceCode" id="cb51"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb51-1"><a href="r-is-expandable.html#cb51-1"></a><span class="kw">library</span>(skimr)</span>
-<span id="cb51-2"><a href="r-is-expandable.html#cb51-2"></a><span class="kw">skim</span>(peaks)</span></code></pre></div>
+<div class="sourceCode" id="cb52"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb52-1"><a href="r-is-expandable.html#cb52-1"></a><span class="kw">library</span>(skimr)</span>
+<span id="cb52-2"><a href="r-is-expandable.html#cb52-2"></a><span class="kw">skim</span>(peaks)</span></code></pre></div>
 <p>The <code>::</code> is often used when the package is only needed for a single function
 call or to clarify (either to R or to the person reading the code) which package a
 function is coming from. This is particularly useful when there are functions
@@ -560,15 +558,15 @@ Usually, <strong>packages</strong> are collections of functions. The <code>{tidy
 gitbook.require(["gitbook"], function(gitbook) {
 gitbook.start({
 "sharing": {
-"github": false,
-"facebook": true,
+"github": true,
+"facebook": false,
 "twitter": true,
 "linkedin": false,
 "weibo": false,
 "instapaper": false,
 "vk": false,
 "whatsapp": false,
-"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+"all": false
 },
 "fontsettings": {
 "theme": "white",
@@ -576,8 +574,8 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": null,
-"text": null
+"link": "https://github.com/Teebusch/r-introduction/edit/master/05-expandable.Rmd",
+"text": "Edit this page"
 },
 "history": {
 "link": null,
@@ -587,9 +585,9 @@ gitbook.start({
 "link": null,
 "text": null
 },
-"download": ["r-intro.pdf", "r-intro.epub"],
+"download": ["https://github.com/Teebusch/r-introduction/raw/master/05-expandable.Rmd", "r-intro.epub"],
 "toc": {
-"collapse": "subsection"
+"collapse": "section"
 }
 });
 });

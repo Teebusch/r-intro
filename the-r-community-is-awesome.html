@@ -11,26 +11,26 @@
   <meta property="og:title" content="Reason 10 The R community is awesome! | Ten Reasons to Learn R" />
   <meta property="og:type" content="book" />
   
-  
+  <meta property="og:image" content="/images/reasons.png" />
   <meta property="og:description" content="A short introduction to Contemporary R." />
-  
+  <meta name="github-repo" content="Teebusch/r-introduction" />
 
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content="Reason 10 The R community is awesome! | Ten Reasons to Learn R" />
   
   <meta name="twitter:description" content="A short introduction to Contemporary R." />
-  
+  <meta name="twitter:image" content="/images/reasons.png" />
 
 <meta name="author" content="Tobias Busch" />
 
 
-<meta name="date" content="2021-07-21" />
+<meta name="date" content="2021-07-22" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
-  
+  <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon" />
 <link rel="prev" href="r-encourages-reproducible-research.html"/>
 <link rel="next" href="references.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
@@ -121,7 +121,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </style>
 
 
-<link rel="stylesheet" href="style.css" type="text/css" />
+<link rel="stylesheet" href="assets/webfonts/junction.css" type="text/css" />
+<link rel="stylesheet" href="assets/style.css" type="text/css" />
 </head>
 
 <body>
@@ -158,7 +159,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="2" data-path="its-easy-to-get-started.html"><a href="its-easy-to-get-started.html"><i class="fa fa-check"></i><b>2</b> It’s easy to get started</a><ul>
 <li class="chapter" data-level="2.1" data-path="its-easy-to-get-started.html"><a href="its-easy-to-get-started.html#why-rstudio"><i class="fa fa-check"></i><b>2.1</b> Why RStudio?</a></li>
 <li class="chapter" data-level="2.2" data-path="its-easy-to-get-started.html"><a href="its-easy-to-get-started.html#create-a-new-rstudio-project"><i class="fa fa-check"></i><b>2.2</b> Create a new RStudio project</a><ul>
-<li class="chapter" data-level="2.2.1" data-path="its-easy-to-get-started.html"><a href="its-easy-to-get-started.html#operators"><i class="fa fa-check"></i><b>2.2.1</b> Operators</a></li>
+<li class="chapter" data-level="2.2.1" data-path="its-easy-to-get-started.html"><a href="its-easy-to-get-started.html#using-r-as-a-calculator"><i class="fa fa-check"></i><b>2.2.1</b> Using R as a calculator</a></li>
 <li class="chapter" data-level="2.2.2" data-path="its-easy-to-get-started.html"><a href="its-easy-to-get-started.html#create-a-script"><i class="fa fa-check"></i><b>2.2.2</b> Create a script</a></li>
 </ul></li>
 </ul></li>
@@ -190,7 +191,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="6.5" data-path="powerful-data-wrangling-tools.html"><a href="powerful-data-wrangling-tools.html#other-useful-data-wrangling-functions"><i class="fa fa-check"></i><b>6.5</b> Other useful data wrangling functions</a></li>
 </ul></li>
 <li class="chapter" data-level="7" data-path="powerful-data-visualization-tools.html"><a href="powerful-data-visualization-tools.html"><i class="fa fa-check"></i><b>7</b> Powerful data visualization tools</a><ul>
-<li class="chapter" data-level="7.1" data-path="powerful-data-visualization-tools.html"><a href="powerful-data-visualization-tools.html#data-visualization"><i class="fa fa-check"></i><b>7.1</b> Data Visualization</a></li>
+<li class="chapter" data-level="7.1" data-path="powerful-data-visualization-tools.html"><a href="powerful-data-visualization-tools.html#the-fastest-way-to-make-a-plot"><i class="fa fa-check"></i><b>7.1</b> The fastest way to make a plot</a></li>
 </ul></li>
 <li class="chapter" data-level="8" data-path="powerful-statistical-methods-at-your-fingertips.html"><a href="powerful-statistical-methods-at-your-fingertips.html"><i class="fa fa-check"></i><b>8</b> Powerful statistical methods at your fingertips</a><ul>
 <li class="chapter" data-level="8.1" data-path="powerful-statistical-methods-at-your-fingertips.html"><a href="powerful-statistical-methods-at-your-fingertips.html#statistical-modeling"><i class="fa fa-check"></i><b>8.1</b> Statistical modeling</a></li>
@@ -214,9 +215,6 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="appendix"><span><b>Appendix</b></span></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
-<li class="divider"></li>
-<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with R and bookdown</a></li>
-
 </ul>
 
       </nav>
@@ -242,56 +240,51 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li>Resources for continuing to learn R</li>
 </ul>
 </div>
-<p>We are almost at the end of this short introduction to R. We barely scratched the surface
-of what R has to offer. I hope this helped you figure out whether R is for you and of
-course I hope it made you want to learn more!</p>
-<p>If you do want to learn more, I think the best way is to practice and find other people to
-learn from.</p>
+<p>We are almost at the end of this short introduction to R. We have barely scratched the
+surface of what R has to offer, but I hope, this has helped you figure out whether R is
+for you and whether you should learn more. If you do want to learn more, I think the best
+way is to practice and find other people to learn from.</p>
 <div id="engage-with-the-community" class="section level2">
 <h2><span class="header-section-number">10.1</span> Engage with the community</h2>
 <p>Luckily, R has a friendly, diverse and welcoming community that is very open to beginners.
 And because it is widespread, there’s always an R nerd nearby who’s willing to help. Don’t
-be afraid to ask questions, make mistakes, or write bad code! Here are some ideas how you
-could engage with the community:</p>
+be afraid to ask questions, make mistakes, or write bad code!</p>
+<p>Here are some ideas how you could engage with the community:</p>
 <ul>
-<li>Twitter <code>#RStats</code> can help to keep track of all the new things and talk shop with other R nerds (if you like Twitter…)</li>
-<li><a href="https://www.meetup.com/Oslo-useR-Group/">Join Meetups of R User Groups</a> or create
-your own R user group</li>
-<li>Conferences such as UseR – many talks are online. <a href="https://www.rstudio.com/resources/webinars/">RStudio
-presentations</a></li>
+<li><p>The Twitter hashtag <code>#RStats</code> is a good way keep track of all the new things in the R
+world and talk shop with other R nerds.</p></li>
+<li><p><a href="https://www.meetup.com/Oslo-useR-Group/">Join Meetups of R User Groups</a> or create
+your own R user group</p></li>
+<li><p>Conferences such as UseR or RStudio::conf. Often they put their talks online. <a href="https://www.rstudio.com/resources/webinars/">RStudio
+presentations</a></p></li>
+<li><p><a href="https://www.rstudio.com/resources/rstudioglobal-2021/make-a-package-make-some-friends/">Write your own package or contribute to
+packages.</a></p></li>
 </ul>
 </div>
 <div id="how-to-keep-learning" class="section level2">
 <h2><span class="header-section-number">10.2</span> How to keep learning?</h2>
 <p>Because R is mainly used by (and taught to) people who are not software engineers or
 computer scientists, there is a lot of learning material that is made for people without a
-technical background. Amazingly, much of it is free <em>and</em> really good! Here, I will limit
-myself to just a few personal recommendations. The (Awesome R Learning Resources
-List)[<a href="https://github.com/iamericfletcher/awesome-r-learning-resources" class="uri">https://github.com/iamericfletcher/awesome-r-learning-resources</a>] provides a more
-comprehensive list of resources for learning R.</p>
-<p>If you are working in education, then check out <a href="https://rstudio4edu.github.io/rstudio4edu-book/">R for
-Education</a> – a handbook for teaching and
-learning with R and RStudio.</p>
-<p>The Carpentries offer beginner R courses for reseachers. The material is available online,
-e.g., <a href="https://datacarpentry.org/r-socialsci/">R for Social Sciences</a> and <a href="https://datacarpentry.org/R-ecology-lesson/">R for
-Ecologists</a>. You can also <a href="https://www.ub.uio.no/english/writing-publishing/dsc/carpentry-uio/">take a Carpentries
-R course at UiO</a></p>
-<ul>
-<li><a href="https://rfortherestofus.com/courses/getting-started/">R for the rest of us</a> offers a
-free beginners course.</li>
-<li><a href="http://flavioazevedo.com/stats-and-r-blog/2016/9/13/learning-r-on-youtube">There are many R Tutorials on
-YouTube</a>.
-Also check Coursera and other MOOCs for free videos about R.</li>
-</ul>
+technical background. Amazingly, much of it is free <em>and</em> really good! I will present just
+a few personal recommendations. The <a href="https://github.com/iamericfletcher/awesome-r-learning-resources">Awesome R Learning Resources
+List</a> provides a more
+comprehensive list of resources for learning R. <a href="http://flavioazevedo.com/stats-and-r-blog/2016/9/13/learning-r-on-youtube">There is also a list of R Tutorials on
+YouTube</a>.</p>
 <p>An excellent place to continue learning R would be the <a href="https://r4ds.had.co.nz/">R for Data Science
 Book</a>. It provides a comprehensive overview of the Tidyverse.
-There is also a learning community rganized around this book and they organize community
-learning events such as Tidy Tuesday – a weekly data visualization challenge. Participate
-in <a href="https://github.com/rfordatascience/tidytuesday">Tidy Tuesday</a> or <a href="https://www.makeovermonday.co.uk/">Makeover
+There is also a learning community organized around this book and they organize community
+learning events such as <em>Tidy Tuesday</em> – a weekly data visualization challenge.
+Participate in <a href="https://github.com/rfordatascience/tidytuesday">Tidy Tuesday</a> or <a href="https://www.makeovermonday.co.uk/">Makeover
 Monday</a> to sharpen your data wrangling and data
 visualization skills and see how other people are approaching the same data</p>
-<p>Read other people’s code on Github and co. <a href="https://www.rstudio.com/resources/rstudioglobal-2021/make-a-package-make-some-friends/">Write your own package or contribute to
-packages.</a></p>
+<p>If you are working in education, then also check out <a href="https://rstudio4edu.github.io/rstudio4edu-book/">R for
+Education</a> – a handbook for teaching and
+learning with R and RStudio.</p>
+<p>The Carpentries are an organisation that teaches scientific computing skills to
+researchers. They offer beginner R courses, too. The material is available online, e.g.,
+<a href="https://datacarpentry.org/r-socialsci/">R for Social Sciences</a> and <a href="https://datacarpentry.org/R-ecology-lesson/">R for
+Ecologists</a>. Many universities and research
+institutes also offer Carpentries courses for free to their students and employees.</p>
 
 </div>
 </div>
@@ -320,15 +313,15 @@ packages.</a></p>
 gitbook.require(["gitbook"], function(gitbook) {
 gitbook.start({
 "sharing": {
-"github": false,
-"facebook": true,
+"github": true,
+"facebook": false,
 "twitter": true,
 "linkedin": false,
 "weibo": false,
 "instapaper": false,
 "vk": false,
 "whatsapp": false,
-"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+"all": false
 },
 "fontsettings": {
 "theme": "white",
@@ -336,8 +329,8 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": null,
-"text": null
+"link": "https://github.com/Teebusch/r-introduction/edit/master/10-community.Rmd",
+"text": "Edit this page"
 },
 "history": {
 "link": null,
@@ -347,9 +340,9 @@ gitbook.start({
 "link": null,
 "text": null
 },
-"download": ["r-intro.pdf", "r-intro.epub"],
+"download": ["https://github.com/Teebusch/r-introduction/raw/master/10-community.Rmd", "r-intro.epub"],
 "toc": {
-"collapse": "subsection"
+"collapse": "section"
 }
 });
 });
