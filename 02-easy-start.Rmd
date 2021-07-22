@@ -50,6 +50,10 @@ first step towards reproducibility: All of your project's data and files will be
 this folder. If you ever move this folder to a new location or share it with someone else,
 all of the files will move along with it and nothing will break.
 
+Another benefit of using projects is that it helps you keep your work organized. It will
+be much easier for you to switch between projects, or get back to a project you haven't
+touched in a while.
+
 ::: {.exercise}
 Open RStudio, go to `File ▸ New Project...` and create a new RStudio project in an empty
 folder. Leave *Use version control* and *Use renv* unchecked for now --- we will get back
@@ -65,12 +69,15 @@ knitr::include_graphics("images/rstudio-layout.gif")
 The many panels and tabs in RStudio may be overwhelming at first, but I promise this gets
 better over time, and most of them are actually really helpful. The console, for example,
 allows you to directly interact with R. You can type commands in there and when you press
-<kbd>Enter</kbd>, R will try to interpret them.
+<kbd>Enter</kbd>, R will try to interpret them.\
+You can use <kbd>↑</kbd> and <kbd>↓</kbd> to cycle through previous commands and
+<kbd>Ctrl</kbd>+<kbd>↑</kbd> on Windows or <kbd>Command</kbd>+<kbd>↑</kbd> on Mac to
+search through previous commands.
 
-### Operators
+### Using R as a calculator
 
-Let's get familiar with R's operators by trying them in the console. R has all the
-operators that you would expect to find in a pocket calculator:
+Let's get familiar with the console by trying some of R's mathematical operators. R has
+all the operators that you would expect to find in a pocket calculator:
 
 |                                      |                   |
 |--------------------------------------|-------------------|
@@ -80,10 +87,29 @@ operators that you would expect to find in a pocket calculator:
 | Logical                              | `&& || ! | &`     |
 | Parentheses for modifying precedence | `(1 + 2) * 10`    |
 
+It also has all *functions* you would find in a calculator. Functions are written as the
+function name followed by the function's argument in parentheses. For example, for
+calculating the square root of 2, use `sqrt(2)`.
+
 ::: {.exercise}
-In the *console*, try out some of R's operators and see what happens. For example, what
-does `1 != 1.0` do? Use <kbd>Enter</kbd> to run commands, use <kbd>↑</kbd> and
-<kbd>↓</kbd> to recall previous commands.
+In the *console*, try out some of R's operators and see what happens. For example,
+
+1.  What does `1 != 1.0` do?
+
+2.  What happens if you run an incomplete command like `1 *`
+
+3.  What happens if you run a command that does not make sense, like `1*/ 3`
+
+::: {.answer}
+1.  R checks whether the argument on the left side (`1`) is *not equal* to the argument on
+    the right (`1.0`). It returns `FALSE` because to R these two numbers are identical.
+
+2.  R waits for you to finish the command. Press <kbd>Esc</kbd> to terminate the
+    incomplete command.
+
+3.  R throws an error message and tries to tell you what went wrong. If you are working
+    with R, you will have to get used to getting lots of error messages.
+:::
 :::
 
 ```{r, echo=FALSE, fig.cap="Don't worry -- you can't hurt R, it has been through this before...", fig.alt="Hello Operator Meme", fig.align = 'center'}
@@ -99,7 +125,17 @@ a script in any order by using <kbd>Ctrl</kbd> + <kbd>Enter</kbd> or the buttons
 top right of the script panel.
 
 ::: {.exercise}
-Create a script file and save it in your project's working directory. Note how the file
-has appeared in RStudio's `Files` tab, which shows you all the files in your project
-folder. Now type and run a few commands. What happens if you run `list.files()`?
+Create a script file and save it in your project's working directory as `script.R`. Note
+how the file has appeared in RStudio's `Files` tab, which shows you all the files in your
+project folder. Modify your script so that it calculates the square of `2021` as well as
+the square root of `1764` and run it.
+
+::: {.answer}
+```{r eval=FALSE}
+# script.R
+
+2021^2
+sqrt(1764)
+```
+:::
 :::

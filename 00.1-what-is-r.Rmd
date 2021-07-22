@@ -1,7 +1,7 @@
 # What is R? {.unnumbered}
 
-I'm sure you wouldn't be here if you didn't already have some idea what R is, but I think
-it's still worthwhile to briefly discuss it. R is a *statistical computing and data
+You wouldn't be reading this if you didn't already have some idea what R is, but I think
+it's worthwhile to briefly discuss it anyways. R is a *statistical computing and data
 analysis environment* that is [widely used](https://www.tiobe.com/tiobe-index/r/) in
 academia, industry, and the public sector. It is a free and open source implementation of
 the [S programming language](https://en.wikipedia.org/wiki/S_(programming_language)),
@@ -10,6 +10,7 @@ means:
 
 -   **R is interactive** -- R works like a really fancy pocket calculator that allows you
     to do calculations, explore data, and analyse data quickly and on the fly.
+
 -   **R is focused on data analysis** -- Right out of the box, R gives you a powerful tool
     belt for data analysis. More than in many other programming languages, data and
     statistics are at the core of R and there are built-in data structures and functions
@@ -29,11 +30,15 @@ for the whole data analysis workflow:
 knitr::include_graphics("images/data-science-workflow.jpeg")
 ```
 
--   **Data collection**
--   **Data cleaning & transformation**[^what-is-r-2]
--   **Data Visualization**
--   **Modeling**
--   **Communication**
+-   Data collection
+
+-   Data cleaning & transformation[^what-is-r-2]
+
+-   Data Visualization
+
+-   Modeling
+
+-   Communication
 
 [^what-is-r-2]: This part of the data analysis workflow is also known as data wrangling,
     data munging, or "80% of data science"

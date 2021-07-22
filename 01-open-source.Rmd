@@ -25,6 +25,7 @@ development. Financially, the project is supported
 
 -   *directly* by companies such as [RStudio](https://www.rstudio.com/) and
     [rOpenSci](https://ropensci.org/), who employ developers to improve R, and
+
 -   *indirectly* through people who contribute to the R project as part of their jobs
     (e.g., research software engineers, statisticians, data scientists).
 

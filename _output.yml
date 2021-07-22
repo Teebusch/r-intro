@@ -1,9 +1,18 @@
 bookdown::gitbook:
-  css: style.css
+  css:
+   - assets/webfonts/junction.css
+   - assets/style.css
   config:
+    edit:
+      link: https://github.com/Teebusch/r-introduction/edit/master/%s
+      text: "Edit this page"
     toc:
+      collapse: section
       before: |
         <li><a href="./">10 Reasons To Learn R</a></li>
-      after: |
-        <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with R and bookdown</a></li>
-    download: ["pdf", "epub"]
+    download: ["rmd", "epub"]
+    sharing:
+      github: yes
+      facebook: no
+      twitter: yes
+      all: no

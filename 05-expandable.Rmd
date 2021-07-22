@@ -82,8 +82,11 @@ Note also that the quotation marks around the package name in `intall.packages()
 
 Now that we have the `{tidyverse}` package installed and loaded, we can use the `read_csv()` function to load the data straight from the web into an R data frame in our computer's working memory.
 
-```{r}
-peaks <- read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2020/2020-09-22/peaks.csv')
+```{r eval=FALSE}
+peaks <- read_csv("https://raw.githubusercontent.com/teebusch/r-introduction/master/data/peaks.csv")
+```
+```{r, echo=FALSE}
+peaks <- read_csv("data/peaks.csv")  # not shown
 ```
 
 ## Inspecting the data

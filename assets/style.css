@@ -1,0 +1,131 @@
+.body {
+  letter-spacing: unset;
+}
+
+.book .book-body .page-wrapper .page-inner section.normal {
+  line-height: 1.8;
+}
+
+.book.font-size-2 .book-body .page-inner section {
+    font-size: 1.9rem;
+}
+
+.book.font-family-1 {
+  font-family: 'Junction', sans-serif;
+  font-feature-settings: "aalt", "kern", "liga", "clig";
+}
+
+.title {
+  font-size: 6em !important;
+  line-height: normal;
+  color: #176777;
+  font-variant-caps: all-small-caps;
+ }
+
+.subtitle {
+  color: #3E9FB3;
+}
+
+h1 {
+  font-size: 3em !important;
+  color: #3E9FB3;
+}
+
+h2, h3, h4 {
+  color: #E3AC5A;
+}
+
+.book .book-body .page-wrapper .page-inner section.normal a {
+  color: #086b8a;
+  transition: all 200ms;
+}
+
+.book .book-body .page-wrapper .page-inner section.normal a:hover {
+  color: #CD4E56;
+  text-decoration: none;
+}
+
+
+.book .book-summary {
+  background: white;
+  border-right: none;
+}
+
+.summary{
+font-family: 'Junction', sans-serif;
+}
+
+.summary > li:first-child {
+    height: 50px;
+    padding-top: 10px;
+    border-bottom: 1px solid rgba(0,0,0,.07);
+}
+
+.book .book-summary ul.summary li.divider {
+    height: 0px;
+}
+
+
+.book .book-summary ul.summary li a,
+.book .book-summary ul.summary li span {
+  color: #242424;
+}
+
+.summary a:hover {
+  color: #086b8a !important;
+}
+
+
+.footnotes {
+    font-size: 0.85em;
+}
+
+
+
+
+p.caption {
+  color: #777;
+  margin-top: 10px;
+}
+p code {
+  white-space: inherit;
+}
+pre {
+  word-break: normal;
+  word-wrap: normal;
+}
+pre code {
+  white-space: inherit;
+}
+
+.figure > img {
+    border-radius: 5px;
+}
+
+.more, .exercise, .goals, .answer {
+  padding: 1.5rem 1.5rem 0.5rem 1.5rem;
+  margin: 2rem 0;
+  border: none;
+  border-radius: 3px 10px 10px 3px;
+}
+
+div.goals {
+  background: #D3E5E5;
+  border-left: 5px solid #437A7C;
+}
+
+div.more {
+  background: #DEF0D3;
+  border-left: 5px solid #7E9D6A;
+}
+
+div.exercise {
+  background: #F0E9D3;
+  border-left: 5px solid #F0D26F;
+}
+
+div.answer {
+  border-left: 5px solid #E3AC5A;
+  background: #F7F6F5;
+  box-shadow: -5px 6px 4px #29210921;
+}

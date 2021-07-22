@@ -12,12 +12,12 @@ knitr::include_graphics("images/have-you-tried-using-R.jpeg")
 
 ## Learning R is a considerable time investment {.unnumbered}
 
-First of all, R can be challenging to learn.[^why-not-1] Learning to program requires
-continuous practice, and depending on your previous experience and your ability to think
-like a computer, it will take months or years before you can work efficiently in R.
-Getting there can---at times---be frustrating. This investment of time and cognitive
+First of all, R can be challenging to learn.[^why-not-1] Learning any programming language
+requires continuous practice, and depending on your previous experience and your ability
+to think like a computer, it will take months or years before you can work efficiently in
+R. Getting there can---at times---be frustrating. This investment of time and cognitive
 energy may never pay off if you only do a small analysis every once in a while or if your
-current workflow already works well for you.
+current workflow is already very efficient.
 
 [^why-not-1]: Even if you already know another programming language, R can be a little
     weird. For examples of R's weirdness, I recommend John Cook's talk [*The R Language
@@ -36,10 +36,10 @@ particular part of the data analysis workflow, for example,
     [DataWrapper](https://www.datawrapper.de/), and [Tableau
     Public](https://public.tableau.com/) for data visualization.
 
-Others are comprehensive user interfaces for data analysis who's functionality rivals that
-of costly software like SPSS. [Jamovi](https://www.jamovi.org/) and
-[JASP](https://jasp-stats.org/), for example, are graphical user interfaces built that are
-built on top of R and allow you to utilize much of R's power without writing any R code.
+Others offer comprehensive functionality which rivals that of costly software like SPSS.
+[Jamovi](https://www.jamovi.org/) and [JASP](https://jasp-stats.org/), for example, are
+graphical user interfaces that are built on top of R and allow you to utilize much of R's
+power without writing any code.
 
 ```{r, echo=FALSE, fig.cap="There are plenty of fish in the open source sea and Jamovi is a particularly tasty one.", fig.alt="A screenshot of Jamovi's user interface"}
 knitr::include_graphics("images/jamovi.jpeg")
@@ -56,11 +56,11 @@ exact same methods may not be available in R.[^why-not-2]
     possible in the equivalent R package, `{MClust}`.
 
 Commercial software often does a better job than R at guiding you through the jungle of
-statistical tests and models, they provide excellent customer support and a single,
-well-documented way to solve a certain type of problem. In contrast, R usually offers a
-multitude of ways to reach the same goal. While this allows you to choose the tools that
-suit your needs, this choice can be difficult. Consequently, R requires a more thorough
-understanding of what your are trying to achieve.
+statistical tests and models, they provide customer support and there is normally a
+single, well-documented way to solve a certain type of problem. In contrast, R often
+offers a multitude of ways to reach the same goal. While this allows you to choose the
+tools that suit your needs, this choice can be difficult. Consequently, R requires a more
+thorough understanding of what your are trying to achieve.
 
 ```{r, echo=FALSE, fig.cap="Welcome to R! Here's how you quit...", fig.alt="A gif of the R console cursor blinking expectantly"}
 knitr::include_graphics("images/blinking-console.gif")
@@ -68,7 +68,7 @@ knitr::include_graphics("images/blinking-console.gif")
 
 ## Other programming languages {.unnumbered}
 
-Point-and-click user interface like that of SPSS or Jamovi only work well if you stay
+Point-and-click graphical user interface such as SPSS or Jamovi only work well if you stay
 within the limits that the developers of these tools had in mind. Programming gives you
 much more versatility and flexibility,[^why-not-3] and it is certainly a useful skill to
 have under your belt, even if you end up not using it much. However, R is by no means the
