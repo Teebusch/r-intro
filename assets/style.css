@@ -1,3 +1,9 @@
+:root {
+  --main-color: #507b9c;
+  --link-color: #E79D2E;
+  --link-color-active: #F69B6A;
+}
+
 .body {
   letter-spacing: unset;
 }
@@ -7,7 +13,7 @@
 }
 
 .book.font-size-2 .book-body .page-inner section {
-    font-size: 1.9rem;
+    font-size: 1.8rem;
 }
 
 .book.font-family-1 {
@@ -16,10 +22,13 @@
 }
 
 .title {
-  font-size: 6em !important;
+  font-family: 'Prociono', sans-serif;
+  font-size: 7em !important;
+  margin-top: 0.2em !important;
   line-height: normal;
-  color: #176777;
-  font-variant-caps: all-small-caps;
+  color: #355269;
+  font-weight: normal;
+  font-feature-settings: "ss01";
  }
 
 .subtitle {
@@ -28,7 +37,7 @@
 
 h1 {
   font-size: 3em !important;
-  color: #3E9FB3;
+  color: var(--main-color);
 }
 
 h2, h3, h4 {
@@ -36,18 +45,30 @@ h2, h3, h4 {
 }
 
 .book .book-body .page-wrapper .page-inner section.normal a {
-  color: #086b8a;
-  transition: all 200ms;
+  color: var(--link-color);
+  transition: color 200ms;
 }
 
 .book .book-body .page-wrapper .page-inner section.normal a:hover {
-  color: #CD4E56;
+  color: var(--link-color-active);
+  text-decoration: underline;
+}
+
+.summary a:hover {
+  color: var(--link-color-active) !important;
   text-decoration: none;
 }
 
+.book .book-summary ul.summary li.active>a {
+    color: var(--link-color);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+
 
 .book .book-summary {
-  background: white;
+  background: none;
   border-right: none;
 }
 
@@ -61,27 +82,9 @@ font-family: 'Junction', sans-serif;
     border-bottom: 1px solid rgba(0,0,0,.07);
 }
 
-.book .book-summary ul.summary li.divider {
-    height: 0px;
-}
-
-
-.book .book-summary ul.summary li a,
-.book .book-summary ul.summary li span {
-  color: #242424;
-}
-
-.summary a:hover {
-  color: #086b8a !important;
-}
-
-
 .footnotes {
     font-size: 0.85em;
 }
-
-
-
 
 p.caption {
   color: #777;
@@ -128,4 +131,13 @@ div.answer {
   border-left: 5px solid #E3AC5A;
   background: #F7F6F5;
   box-shadow: -5px 6px 4px #29210921;
+}
+
+div.answer > * {
+    filter: blur(4px) saturate(0);
+    overflow: hidden;
+}
+
+div.answer:hover > * {
+    filter: none;
 }

@@ -255,13 +255,13 @@ and stay in the flow while you code. It’s also worth mentioning that R’s Fun
 documentation, package vignettes and package websites are usually well-written and
 comprehensive.</p>
 <div class="exercise">
-<p><span id="exr:unlabeled-div-8" class="exercise"><strong>Exercise 4.1  </strong></span>Look at the help file for the <code>mean()</code> function, see what other arguments the function
+<p><span id="exr:unlabeled-div-9" class="exercise"><strong>Exercise 4.1  </strong></span>Look at the help file for the <code>mean()</code> function, see what other arguments the function
 accepts. How would you calculate a trimmed mean?</p>
 <div class="answer">
 <p>To get the 10% trimmed mean of a numerical vector x, you can run <code>mean(x, trim = 0.1)</code>.
 This will remove 10% of the lowest observations and 10% of the highest observations before
 calculating the mean. For example:</p>
-<div class="sourceCode" id="cb40"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb40-1"><a href="r-has-great-documentation.html#cb40-1"></a><span class="kw">mean</span>(<span class="kw">c</span>(<span class="op">-</span><span class="dv">1000</span>, <span class="dv">2</span>, <span class="dv">2</span>, <span class="dv">2</span>, <span class="dv">2</span>, <span class="dv">2</span>, <span class="dv">2</span>, <span class="dv">2</span>, <span class="dv">2</span>, <span class="dv">20</span>, <span class="dv">1000</span>), <span class="dt">trim =</span> <span class="fl">.1</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb41"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb41-1"><a href="r-has-great-documentation.html#cb41-1"></a><span class="kw">mean</span>(<span class="kw">c</span>(<span class="op">-</span><span class="dv">1000</span>, <span class="dv">2</span>, <span class="dv">2</span>, <span class="dv">2</span>, <span class="dv">2</span>, <span class="dv">2</span>, <span class="dv">2</span>, <span class="dv">2</span>, <span class="dv">2</span>, <span class="dv">20</span>, <span class="dv">1000</span>), <span class="dt">trim =</span> <span class="fl">.1</span>)</span></code></pre></div>
 <pre><code>[1] 4</code></pre>
 </div>
 </div>
@@ -277,7 +277,7 @@ excellent fuzzy auto-completion that suggests functions while you type. Use <kbd
 <p>There are excellent <a href="https://www.rstudio.com/resources/cheatsheets/">cheatsheets</a> for
 popular packages available in the RStudio menu (<code>Help &gt; Cheatsheets &gt; ...</code>)</p>
 <div class="exercise">
-<p><span id="exr:unlabeled-div-9" class="exercise"><strong>Exercise 4.2  </strong></span>Have a look at the cheat sheet for the RStudio IDE and find out how to search and replace
+<p><span id="exr:unlabeled-div-10" class="exercise"><strong>Exercise 4.2  </strong></span>Have a look at the cheat sheet for the RStudio IDE and find out how to search and replace
 code in RStudio.</p>
 </div>
 </div>
@@ -341,7 +341,7 @@ gitbook.start({
 },
 "download": ["https://github.com/Teebusch/r-introduction/raw/master/04-documentation.Rmd", "r-intro.epub"],
 "toc": {
-"collapse": "section"
+"collapse": "subsection"
 }
 });
 });

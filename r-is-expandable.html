@@ -288,12 +288,12 @@ to a bit of a schism in the R package ecosystem.</p>
 <div id="installing-packages" class="section level2">
 <h2><span class="header-section-number">5.2</span> Installing packages</h2>
 <p>For the examples in this book we will use a table with information about climbing expeditions in the Himalaya that was provided by <a href="https://github.com/rfordatascience/tidytuesday/blob/master/data/2020/2020-09-22/readme.md">Tidy Tuesday</a>.</p>
-<p>Often you will read data from external sources and the first step is to turn it into something that R can work with, usually a data frame. In this case, the data is provided as a <em>CSV</em> file. CSV stands for comma separated values and is a popular plain text format for sharing tabular data across the internet.<a href="#fn11" class="footnote-ref" id="fnref11"><sup>11</sup></a></p>
+<p>Often you will read data from external sources and the first step is to turn it into something that R can work with, usually a data frame. In this case, the data is provided as a <em>CSV</em> file. CSV stands for comma separated values and is a popular plain text format for sharing tabular data across the internet.<a href="#fn12" class="footnote-ref" id="fnref12"><sup>12</sup></a></p>
 <p>To read the CSV file and turn it into an R data frame we will use the <code>read_csv()</code>
-function. To use this function, we first have to install and load the <code>{tidyverse}</code> package.<a href="#fn12" class="footnote-ref" id="fnref12"><sup>12</sup></a></p>
+function. To use this function, we first have to install and load the <code>{tidyverse}</code> package.<a href="#fn13" class="footnote-ref" id="fnref13"><sup>13</sup></a></p>
 <p>You can install the package from R’s central package repository CRAN. The <code>install.packages()</code> function looks for a package of a given name on CRAN, and if it finds it installs it. The <code>library()</code> function loads a package that you have installed, so that all of its functions become available for you to use in your current R session. The next time you start RStudio, you will not have to reinstall the package (it is now on your computer), but you will have to load it again.</p>
-<div class="sourceCode" id="cb42"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb42-1"><a href="r-is-expandable.html#cb42-1"></a><span class="kw">install.packages</span>(<span class="st">&quot;tidyverse&quot;</span>)</span>
-<span id="cb42-2"><a href="r-is-expandable.html#cb42-2"></a><span class="kw">library</span>(tidyverse)</span></code></pre></div>
+<div class="sourceCode" id="cb43"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb43-1"><a href="r-is-expandable.html#cb43-1"></a><span class="kw">install.packages</span>(<span class="st">&quot;tidyverse&quot;</span>)</span>
+<span id="cb43-2"><a href="r-is-expandable.html#cb43-2"></a><span class="kw">library</span>(tidyverse)</span></code></pre></div>
 <div class="more">
 <p>The distinction between library and package can be a little confusing. It might help to imagine that you are <em>adding a package to your system’s library of packages</em> with <code>install.packages()</code>, and then you use <code>library()</code> to <em>check out a package from your library</em>, so that you can use it in your current R session.</p>
 <p>Note also that the quotation marks around the package name in <code>intall.packages()</code> are required, because this is essentially a search term. In <code>library()</code> the quotation marks are optional, because the package is an object in your library, from where you can call it by its name like any other variable.</p>
@@ -302,7 +302,7 @@ function. To use this function, we first have to install and load the <code>{tid
 <div id="loading-data" class="section level2">
 <h2><span class="header-section-number">5.3</span> Loading data</h2>
 <p>Now that we have the <code>{tidyverse}</code> package installed and loaded, we can use the <code>read_csv()</code> function to load the data straight from the web into an R data frame in our computer’s working memory.</p>
-<div class="sourceCode" id="cb43"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb43-1"><a href="r-is-expandable.html#cb43-1"></a>peaks &lt;-<span class="st"> </span><span class="kw">read_csv</span>(<span class="st">&quot;https://raw.githubusercontent.com/teebusch/r-introduction/master/data/peaks.csv&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb44"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb44-1"><a href="r-is-expandable.html#cb44-1"></a>peaks &lt;-<span class="st"> </span><span class="kw">read_csv</span>(<span class="st">&quot;https://raw.githubusercontent.com/teebusch/r-introduction/master/data/peaks.csv&quot;</span>)</span></code></pre></div>
 <pre><code>Rows: 468 Columns: 8</code></pre>
 <pre><code>── Column specification ────────────────────────────────────────────────────────
 Delimiter: &quot;,&quot;
@@ -316,7 +316,7 @@ dbl (2): height_metres, first_ascent_year</code></pre>
 <h2><span class="header-section-number">5.4</span> Inspecting the data</h2>
 <p>When we load the data, R shows us the names of the columns in the data set and the type of each column.
 We can also have a look at the first few rows with the <code>head()</code> function.</p>
-<div class="sourceCode" id="cb47"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb47-1"><a href="r-is-expandable.html#cb47-1"></a><span class="kw">head</span>(peaks)</span></code></pre></div>
+<div class="sourceCode" id="cb48"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb48-1"><a href="r-is-expandable.html#cb48-1"></a><span class="kw">head</span>(peaks)</span></code></pre></div>
 <pre><code># A tibble: 6 x 8
   peak_id peak_name     peak_alternative_name height_metres climbing_status
   &lt;chr&gt;   &lt;chr&gt;         &lt;chr&gt;                         &lt;dbl&gt; &lt;chr&gt;          
@@ -333,14 +333,14 @@ clicking its name in the Environment panel or running the command <code>view(pea
 <p>To better understand our data, let’s get some summary statistics. The <code>{skimr}</code>
 package provides a really nice function for this.</p>
 <div class="exercise">
-<p><span id="exr:unlabeled-div-10" class="exercise"><strong>Exercise 5.1  </strong></span>Install and load the <code>{skimr}</code> package from CRAN.</p>
+<p><span id="exr:unlabeled-div-11" class="exercise"><strong>Exercise 5.1  </strong></span>Install and load the <code>{skimr}</code> package from CRAN.</p>
 <div class="answer">
-<div class="sourceCode" id="cb49"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb49-1"><a href="r-is-expandable.html#cb49-1"></a><span class="kw">install.packages</span>(<span class="st">&quot;skimr&quot;</span>)</span>
-<span id="cb49-2"><a href="r-is-expandable.html#cb49-2"></a><span class="kw">library</span>(skimr)</span></code></pre></div>
+<div class="sourceCode" id="cb50"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb50-1"><a href="r-is-expandable.html#cb50-1"></a><span class="kw">install.packages</span>(<span class="st">&quot;skimr&quot;</span>)</span>
+<span id="cb50-2"><a href="r-is-expandable.html#cb50-2"></a><span class="kw">library</span>(skimr)</span></code></pre></div>
 </div>
 </div>
 <p>Now we can “skim” our data:</p>
-<div class="sourceCode" id="cb50"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb50-1"><a href="r-is-expandable.html#cb50-1"></a><span class="kw">skim</span>(peaks)</span></code></pre></div>
+<div class="sourceCode" id="cb51"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb51-1"><a href="r-is-expandable.html#cb51-1"></a><span class="kw">skim</span>(peaks)</span></code></pre></div>
 <table>
 <caption><span id="tab:unnamed-chunk-35">Table 5.1: </span>Data summary</caption>
 <tbody>
@@ -515,10 +515,10 @@ have to take care of – a peak that was successfully climbed in the year 201.</
 In a case like this, it may save you some typing by calling the function directly, without loading the package first.
 <code>::</code> between the package name and
 the function name. This is a way . Thus,</p>
-<div class="sourceCode" id="cb51"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb51-1"><a href="r-is-expandable.html#cb51-1"></a>skimr<span class="op">::</span><span class="kw">skim</span>(peaks)</span></code></pre></div>
+<div class="sourceCode" id="cb52"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb52-1"><a href="r-is-expandable.html#cb52-1"></a>skimr<span class="op">::</span><span class="kw">skim</span>(peaks)</span></code></pre></div>
 <p>is equivalent to</p>
-<div class="sourceCode" id="cb52"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb52-1"><a href="r-is-expandable.html#cb52-1"></a><span class="kw">library</span>(skimr)</span>
-<span id="cb52-2"><a href="r-is-expandable.html#cb52-2"></a><span class="kw">skim</span>(peaks)</span></code></pre></div>
+<div class="sourceCode" id="cb53"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb53-1"><a href="r-is-expandable.html#cb53-1"></a><span class="kw">library</span>(skimr)</span>
+<span id="cb53-2"><a href="r-is-expandable.html#cb53-2"></a><span class="kw">skim</span>(peaks)</span></code></pre></div>
 <p>The <code>::</code> is often used when the package is only needed for a single function
 call or to clarify (either to R or to the person reading the code) which package a
 function is coming from. This is particularly useful when there are functions
@@ -530,10 +530,10 @@ problem is the <a href="https://conflicted.r-lib.org/"><code>{conflicted}</code>
 </div>
 <div class="footnotes">
 <hr />
-<ol start="11">
-<li id="fn11"><p>Excel files are bad for sharing data! <a href="https://www.theverge.com/2020/8/6/21355674/human-genes-rename-microsoft-excel-misreading-dates">Learn from the mistakes of others</a> and instead use CSV, JSON, <a href="https://blog.rstudio.com/2016/03/29/feather/">Feather</a>, <a href="https://db.rstudio.com/databases/sqlite/">databases</a>, …<a href="r-is-expandable.html#fnref11" class="footnote-back">↩︎</a></p></li>
-<li id="fn12"><p>
-Usually, <strong>packages</strong> are collections of functions. The <code>{tidyverse}</code> package is a bit different, as it is actually a collection of other packages — a <em>meta-package</em>. When you load it, it loads the most popular packages from theTidyverse, such as <code>{ggplot2}</code>, <code>{readr}</code>, and <code>{dplyr}</code>. For example, the <code>read_csv()</code> function is from the <code>{readr}</code> package.<a href="r-is-expandable.html#fnref12" class="footnote-back">↩︎</a></p></li>
+<ol start="12">
+<li id="fn12"><p>Excel files are bad for sharing data! <a href="https://www.theverge.com/2020/8/6/21355674/human-genes-rename-microsoft-excel-misreading-dates">Learn from the mistakes of others</a> and instead use CSV, JSON, <a href="https://blog.rstudio.com/2016/03/29/feather/">Feather</a>, <a href="https://db.rstudio.com/databases/sqlite/">databases</a>, …<a href="r-is-expandable.html#fnref12" class="footnote-back">↩︎</a></p></li>
+<li id="fn13"><p>
+Usually, <strong>packages</strong> are collections of functions. The <code>{tidyverse}</code> package is a bit different, as it is actually a collection of other packages — a <em>meta-package</em>. When you load it, it loads the most popular packages from theTidyverse, such as <code>{ggplot2}</code>, <code>{readr}</code>, and <code>{dplyr}</code>. For example, the <code>read_csv()</code> function is from the <code>{readr}</code> package.<a href="r-is-expandable.html#fnref13" class="footnote-back">↩︎</a></p></li>
 </ol>
 </div>
             </section>
@@ -587,7 +587,7 @@ gitbook.start({
 },
 "download": ["https://github.com/Teebusch/r-introduction/raw/master/05-expandable.Rmd", "r-intro.epub"],
 "toc": {
-"collapse": "section"
+"collapse": "subsection"
 }
 });
 });

@@ -284,7 +284,7 @@ first step towards reproducibility: All of your project’s data and files will 
 this folder. If you ever move this folder to a new location or share it with someone else,
 all of the files will move along with it and nothing will break.</p>
 <p>Another benefit of using projects is that it helps you keep your work organized. It will
-be much easier for you to switch between projects, or get back to a project you haven’t
+be much easier for you to switch between projects or get back to a project you haven’t
 touched in a while.</p>
 <div class="exercise">
 <p><span id="exr:unlabeled-div-3" class="exercise"><strong>Exercise 2.2  </strong></span>Open RStudio, go to <code>File ▸ New Project...</code> and create a new RStudio project in an empty
@@ -303,8 +303,7 @@ better over time, and most of them are actually really helpful. The console, for
 allows you to directly interact with R. You can type commands in there and when you press
 <kbd>Enter</kbd>, R will try to interpret them.<br />
 You can use <kbd>↑</kbd> and <kbd>↓</kbd> to cycle through previous commands and
-<kbd>Ctrl</kbd>+<kbd>↑</kbd> on Windows or <kbd>Command</kbd>+<kbd>↑</kbd> on Mac to
-search through previous commands.</p>
+<kbd>Ctrl</kbd>/<kbd>Cmd</kbd> + <kbd>↑</kbd> to search through previous commands.</p>
 <div id="using-r-as-a-calculator" class="section level3">
 <h3><span class="header-section-number">2.2.1</span> Using R as a calculator</h3>
 <p>Let’s get familiar with the console by trying some of R’s mathematical operators. R has
@@ -365,24 +364,48 @@ Figure 2.3: Don’t worry – you can’t hurt R, it has been through this befor
 <h3><span class="header-section-number">2.2.2</span> Create a script</h3>
 <p>The console is useful for running quick throw-away commands, and sometimes that’s all you
 need. However, code that you want to keep should be stored in a script file. R scripts
-still allow a flexible console-like workflow: You can run individual sections or lines in
-a script in any order by using <kbd>Ctrl</kbd> + <kbd>Enter</kbd> or the buttons on the
-top right of the script panel.</p>
+allow a flexible console-like workflow because you can run individual sections or lines of
+code in any order.</p>
+<p>We will use a special type of script, called an <em>RMarkdown Notebook</em>. RMarkdown is a
+format that allows you to mix code and the output it generates with plain text. This
+allows you to keep your notes and your code together and is great for writing reproducible
+documents.<a href="#fn8" class="footnote-ref" id="fnref8"><sup>8</sup></a></p>
 <div class="exercise">
-<p><span id="exr:unlabeled-div-5" class="exercise"><strong>Exercise 2.4  </strong></span>Create a script file and save it in your project’s working directory as <code>script.R</code>. Note
-how the file has appeared in RStudio’s <code>Files</code> tab, which shows you all the files in your
-project folder. Modify your script so that it calculates the square of <code>2021</code> as well as
-the square root of <code>1764</code> and run it.</p>
+<p><span id="exr:unlabeled-div-5" class="exercise"><strong>Exercise 2.4  </strong></span>Go to <code>File ▸ New File ▸ R Notebook</code> to create a new R notebook and save it in your
+project’s working directory as <code>analysis.Rmd</code>. Note that the file has appeared in
+RStudio’s <code>Files</code> tab, which shows you all the files in your project folder.</p>
+</div>
+<p>The new notebook already contains some example content. You can see that the R code is
+written inside special blocks, called <em>code chunks</em>. You can create new code chunks with
+the green button on the top right of the script panel or with the keyboard shortcut
+<kbd>Ctrl</kbd>/<kbd>Cmd</kbd> + <kbd>Option</kbd>/<kbd>Alt</kbd> + <kbd>I</kbd></p>
+<p>You can run an entire code chunk by clicking the green arrow on the right of the chunk.
+You can also run individual by using <kbd>Ctrl</kbd>/<kbd>Cmd</kbd> + <kbd>Enter</kbd> or
+the buttons on the top right of the script panel.</p>
+<div class="exercise">
+<p><span id="exr:unlabeled-div-6" class="exercise"><strong>Exercise 2.5  </strong></span>Replace the example code in the first <em>code chunk</em> so that it calculates the square of
+<code>2021</code> as well as the square root of <code>1764</code> and run the chunk.</p>
 <div class="answer">
-<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="its-easy-to-get-started.html#cb2-1"></a><span class="co"># script.R</span></span>
-<span id="cb2-2"><a href="its-easy-to-get-started.html#cb2-2"></a></span>
-<span id="cb2-3"><a href="its-easy-to-get-started.html#cb2-3"></a><span class="dv">2021</span><span class="op">^</span><span class="dv">2</span></span>
-<span id="cb2-4"><a href="its-easy-to-get-started.html#cb2-4"></a><span class="kw">sqrt</span>(<span class="dv">1764</span>)</span></code></pre></div>
+<p>The code chunk in <code>analysis.Rmd</code> should look like this.</p>
+<pre><code>```{r}
+2021^2
+sqrt(1764)
+```</code></pre>
+<p>When you run the chunk, the output should be</p>
+<pre><code>[1] 4084441
+[1] 42</code></pre>
 </div>
 </div>
 
 </div>
 </div>
+</div>
+<div class="footnotes">
+<hr />
+<ol start="8">
+<li id="fn8"><p>This entire book was written with <em>{bookdown},</em> which also uses
+RMarkdown.<a href="its-easy-to-get-started.html#fnref8" class="footnote-back">↩︎</a></p></li>
+</ol>
 </div>
             </section>
 
@@ -435,7 +458,7 @@ gitbook.start({
 },
 "download": ["https://github.com/Teebusch/r-introduction/raw/master/02-easy-start.Rmd", "r-intro.epub"],
 "toc": {
-"collapse": "section"
+"collapse": "subsection"
 }
 });
 });

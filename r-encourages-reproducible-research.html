@@ -342,9 +342,9 @@ aimed at researchers</p></li>
 <h3><span class="header-section-number">9.7.1</span> Use {renv} to store a snapshot of your package library</h3>
 <p>Install the <code>{renv}</code> package, then – in your project initialize <code>{renv}</code> for your project
 and take a snapshot of the packages you use in your project:</p>
-<div class="sourceCode" id="cb66"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb66-1"><a href="r-encourages-reproducible-research.html#cb66-1"></a><span class="kw">install.packages</span>(<span class="st">&quot;renv&quot;</span>)</span>
-<span id="cb66-2"><a href="r-encourages-reproducible-research.html#cb66-2"></a>renv<span class="op">::</span><span class="kw">init</span>()</span>
-<span id="cb66-3"><a href="r-encourages-reproducible-research.html#cb66-3"></a>renv<span class="op">::</span><span class="kw">snapshot</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb67"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb67-1"><a href="r-encourages-reproducible-research.html#cb67-1"></a><span class="kw">install.packages</span>(<span class="st">&quot;renv&quot;</span>)</span>
+<span id="cb67-2"><a href="r-encourages-reproducible-research.html#cb67-2"></a>renv<span class="op">::</span><span class="kw">init</span>()</span>
+<span id="cb67-3"><a href="r-encourages-reproducible-research.html#cb67-3"></a>renv<span class="op">::</span><span class="kw">snapshot</span>()</span></code></pre></div>
 <p>This creates a private, per-project library, in which new packages will be installed. This
 library is isolated from other R libraries on your system. Later, you or your
 collaborators can recreate this library, with the exact package versions you used by
@@ -352,14 +352,14 @@ running <code>renv::restore()</code>.</p>
 </div>
 <div id="take-a-snapshot-of-your-code-with-git" class="section level3">
 <h3><span class="header-section-number">9.7.2</span> Take a snapshot of your code with Git</h3>
-<div class="sourceCode" id="cb67"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb67-1"><a href="r-encourages-reproducible-research.html#cb67-1"></a><span class="co"># ...</span></span></code></pre></div>
+<div class="sourceCode" id="cb68"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb68-1"><a href="r-encourages-reproducible-research.html#cb68-1"></a><span class="co"># ...</span></span></code></pre></div>
 <p>To utilize the full power of Git, you will have to learn a couple more things. However,
 you can already rest assured, that you can alway go back and see the changes you have
 made, and where things broke. Isn’t that a comforting feeling?</p>
 </div>
 <div id="make-a-reproducible-report-with-rmarkdown" class="section level3">
 <h3><span class="header-section-number">9.7.3</span> Make a reproducible report with RMarkdown</h3>
-<div class="sourceCode" id="cb68"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb68-1"><a href="r-encourages-reproducible-research.html#cb68-1"></a><span class="co"># ...</span></span></code></pre></div>
+<div class="sourceCode" id="cb69"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb69-1"><a href="r-encourages-reproducible-research.html#cb69-1"></a><span class="co"># ...</span></span></code></pre></div>
 
 </div>
 </div>
@@ -415,7 +415,7 @@ gitbook.start({
 },
 "download": ["https://github.com/Teebusch/r-introduction/raw/master/09-reproducibility.Rmd", "r-intro.epub"],
 "toc": {
-"collapse": "section"
+"collapse": "subsection"
 }
 });
 });

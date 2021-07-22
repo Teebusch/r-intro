@@ -14,6 +14,7 @@ exr:unlabeled-div-7
 exr:unlabeled-div-8
 exr:unlabeled-div-9
 exr:unlabeled-div-10
+exr:unlabeled-div-11
 tab:unnamed-chunk-35
 fig:unnamed-chunk-40
 r-is-free-and-open-source
