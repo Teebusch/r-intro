@@ -51,7 +51,7 @@ this folder. If you ever move this folder to a new location or share it with som
 all of the files will move along with it and nothing will break.
 
 Another benefit of using projects is that it helps you keep your work organized. It will
-be much easier for you to switch between projects, or get back to a project you haven't
+be much easier for you to switch between projects or get back to a project you haven't
 touched in a while.
 
 ::: {.exercise}
@@ -71,8 +71,7 @@ better over time, and most of them are actually really helpful. The console, for
 allows you to directly interact with R. You can type commands in there and when you press
 <kbd>Enter</kbd>, R will try to interpret them.\
 You can use <kbd>↑</kbd> and <kbd>↓</kbd> to cycle through previous commands and
-<kbd>Ctrl</kbd>+<kbd>↑</kbd> on Windows or <kbd>Command</kbd>+<kbd>↑</kbd> on Mac to
-search through previous commands.
+<kbd>Ctrl</kbd>/<kbd>Cmd</kbd> + <kbd>↑</kbd> to search through previous commands.
 
 ### Using R as a calculator
 
@@ -120,20 +119,47 @@ knitr::include_graphics("images/operator-meme.jpeg")
 
 The console is useful for running quick throw-away commands, and sometimes that's all you
 need. However, code that you want to keep should be stored in a script file. R scripts
-still allow a flexible console-like workflow: You can run individual sections or lines in
-a script in any order by using <kbd>Ctrl</kbd> + <kbd>Enter</kbd> or the buttons on the
-top right of the script panel.
+allow a flexible console-like workflow because you can run individual sections or lines of
+code in any order.
+
+We will use a special type of script, called an *RMarkdown Notebook*. RMarkdown is a
+format that allows you to mix code and the output it generates with plain text. This
+allows you to keep your notes and your code together and is great for writing reproducible
+documents.[^easy-start-1]
+
+[^easy-start-1]: This entire book was written with *{bookdown},* which also uses
+    RMarkdown.
 
 ::: {.exercise}
-Create a script file and save it in your project's working directory as `script.R`. Note
-how the file has appeared in RStudio's `Files` tab, which shows you all the files in your
-project folder. Modify your script so that it calculates the square of `2021` as well as
-the square root of `1764` and run it.
+Go to `File ▸ New File ▸ R Notebook` to create a new R notebook and save it in your
+project's working directory as `analysis.Rmd`. Note that the file has appeared in
+RStudio's `Files` tab, which shows you all the files in your project folder.
+:::
+
+The new notebook already contains some example content. You can see that the R code is
+written inside special blocks, called *code chunks*. You can create new code chunks with
+the green button on the top right of the script panel or with the keyboard shortcut
+<kbd>Ctrl</kbd>/<kbd>Cmd</kbd> + <kbd>Option</kbd>/<kbd>Alt</kbd> + <kbd>I</kbd>
+
+You can run an entire code chunk by clicking the green arrow on the right of the chunk.
+You can also run individual by using <kbd>Ctrl</kbd>/<kbd>Cmd</kbd> + <kbd>Enter</kbd> or
+the buttons on the top right of the script panel.
+
+::: {.exercise}
+Replace the example code in the first *code chunk* so that it calculates the square of
+`2021` as well as the square root of `1764` and run the chunk.
 
 ::: {.answer}
-```{r eval=FALSE}
-# script.R
+The code chunk in `analysis.Rmd` should look like this.
 
+    ```{r}`r ''`
+    2021^2
+    sqrt(1764)
+    ```
+
+When you run the chunk, the output should be
+
+```{r, echo=FALSE, results='hold'}
 2021^2
 sqrt(1764)
 ```

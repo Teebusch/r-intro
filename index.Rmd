@@ -39,14 +39,14 @@ of things that are great about R so that you can decide whether diving deeper is
 your time.
 
 We start by briefly introducing the history and purpose of R. Then we discuss compelling
-reason *not* to learn R and offer some attractive alternatives. So prepared, we will turn
-to the things that R has to offer: the second part of the book presents 10 things that I
-absolutely love about R and along with that, you will get some hands-on experience with R.
+reason *not* to learn R as well as some alternatives. So prepared, we will turn to the
+things that R has to offer: the second part of the book presents ten things that I love
+about R and along with that, you will get some hands-on experience with R.
 
-We will use modern R with *RStudio* and the *Tidyverse*, and we will focus on the parts of
-R that are most essential for data analysis. This allows us to focus how to fork with
-data, rather than worrying about difficult programming concepts. I will showcase all that
-R has to offer, and I hope that this helps you to decide whether it is for you.
+We will use modern R with *RStudio, RMarkdown*, and the *Tidyverse*. We will keep the
+technical details of R to a minimum and focus on the parts that are most essential for
+reproducible data analysis. At the end of the book you will have a basic understanding of
+data analysis in R and should be able to decide whether you want to continue learning.
 
 ## Who is this book for? {.unnumbered}
 
@@ -55,9 +55,8 @@ data analysis using other tools. I'm assuming you want to learn more about R bec
 
 -   you are afraid of missing out and want to know what all the fuzz is about,
 
--   you believe that R might help you to be more efficient,
-
--   you feel that your current workflow isn't reproducible enough,
+-   you feel that your current workflow isn't reproducible or efficient enough, and you
+    believe that R might help you with that,
 
 -   there is a statistical method that you would like to use, that is not available in
     your preferred software but it is available in R, or
@@ -77,27 +76,26 @@ things done, and you wonder if R might be one of them.
 
 This book started as my notes for a workshop I gave in April 2021 at a research group
 meeting at the University of Oslo's Department of Special Needs Education. It was a 90
-minutes long hands-on introduction to R. The goal was to provide an overview of R that
-could help the workshop participants decide whether they should learn R or not. After the
-workshop, I continued to expand on the material and eventually, it turned into a more
+minutes long hands-on introduction to R with the goal to provide an overview of R. After
+the workshop, I continued to expand on the material and eventually, it turned into a more
 comprehensive introduction to R.
 
 This is book is a result of my passion for teaching R and my interest in the pedagogy of
 teaching tech. The pedagogical style is heavily inspired by that of the Carpentries lesson
 material, which is presented excellently in Greg Wilson's [*Teaching Tech
 Together*](https://teachtogether.tech/). However, in contrast to the Carpentries lessons,
-this book tries to be a more compact and provide a broad overview of R at the expanse of
-depth of understanding.
+this book progresses faster and its treatment of R is more superficial. It provides a
+broader overview of R at the expense of depth.
 
 ## About the author {.unnumbered}
 
-I have worked with R and other languages in a research context for almost 10 years during
-which I have also made some humble contributions to the R ecosystem. I teach R as a
-certified instructor for [The
+I have worked with R and other languages in a research context for almost 10 years and I
+have made some humble contributions to the R ecosystem. I teach R as a certified
+instructor for [The
 Carpentries](https://www.ub.uio.no/english/writing-publishing/dsc/carpentry-uio/), and I
 help maintain the Carpentries lesson material for the lesson *Data Analysis and
-Visualization in R for Ecologists*. I really enjoy teaching researchers to code and
-introducing them to the many wonders of R.
+Visualization in R for Ecologists*. I really enjoy teaching researchers to code and I
+especially like showing them the marvelous world of R.
 
 If you have any feedback or suggestions I'd be happy to hear from you! Contact me on
-Twitter, Email, or raise an Issue on Github.
+Twitter, Email, or by raising an issue on Github.

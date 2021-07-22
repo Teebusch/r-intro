@@ -50,12 +50,11 @@ may not be essential but could help you to see the connections between concepts.
 :::
 
 ::: {.exercise}
-This is a challenge. Do these to deepen your understanding. Click the answer box to show
-it.
+This is a challenge. Do these to deepen your understanding. Click the box below to reveal the solution
 
 ::: {.answer}
 ```{r, eval=FALSE}
-print("This is the answer.")
+print("This is the solution")
 ```
 :::
 :::

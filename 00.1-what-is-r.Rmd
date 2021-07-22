@@ -32,7 +32,7 @@ knitr::include_graphics("images/data-science-workflow.jpeg")
 
 -   Data collection
 
--   Data cleaning & transformation[^what-is-r-2]
+-   Data wrangling[^what-is-r-2]
 
 -   Data Visualization
 
@@ -40,5 +40,5 @@ knitr::include_graphics("images/data-science-workflow.jpeg")
 
 -   Communication
 
-[^what-is-r-2]: This part of the data analysis workflow is also known as data wrangling,
-    data munging, or "80% of data science"
+[^what-is-r-2]: This part of the data analysis workflow involves data cleaning and
+    transformation and is also known as data munging, or *"80% of data science"*

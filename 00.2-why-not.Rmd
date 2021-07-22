@@ -12,17 +12,18 @@ knitr::include_graphics("images/have-you-tried-using-R.jpeg")
 
 ## Learning R is a considerable time investment {.unnumbered}
 
-First of all, R can be challenging to learn.[^why-not-1] Learning any programming language
+First of all, R can be challenging to learn. Learning any programming language
 requires continuous practice, and depending on your previous experience and your ability
 to think like a computer, it will take months or years before you can work efficiently in
-R. Getting there can---at times---be frustrating. This investment of time and cognitive
+R.[^why-not-1] Getting there can---at times---be frustrating. This investment of time and cognitive
 energy may never pay off if you only do a small analysis every once in a while or if your
 current workflow is already very efficient.
 
-[^why-not-1]: Even if you already know another programming language, R can be a little
-    weird. For examples of R's weirdness, I recommend John Cook's talk [*The R Language
-    The Good The Bad & The Ugly*](https://youtu.be/6S9r_YbqHy8) and Roger Peng's talk
-    [*Teaching R to New Users: From tapply to Tidyverse*](https://youtu.be/5033jBHFiHE)*.*
+[^why-not-1]: Even if you already know another programming language, R may be difficult to
+    learn, because it can be a little weird. For examples of R's weirdness, I recommend
+    John Cook's talk [*The R Language The Good The Bad & The
+    Ugly*](https://youtu.be/6S9r_YbqHy8) and Roger Peng's talk [*Teaching R to New Users:
+    From tapply to Tidyverse*](https://youtu.be/5033jBHFiHE)*.*
 
 ## Free point and click alternatives {.unnumbered}
 
