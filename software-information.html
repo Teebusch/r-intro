@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Reason 2 It’s easy to get started | Ten Reasons to Learn R</title>
+  <title>Software Information | Ten Reasons to Learn R</title>
   <meta name="description" content="A short introduction to Contemporary R." />
   <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Reason 2 It’s easy to get started | Ten Reasons to Learn R" />
+  <meta property="og:title" content="Software Information | Ten Reasons to Learn R" />
   <meta property="og:type" content="book" />
   
   <meta property="og:image" content="/images/reasons.png" />
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="Teebusch/r-introduction" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Reason 2 It’s easy to get started | Ten Reasons to Learn R" />
+  <meta name="twitter:title" content="Software Information | Ten Reasons to Learn R" />
   
   <meta name="twitter:description" content="A short introduction to Contemporary R." />
   <meta name="twitter:image" content="/images/reasons.png" />
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon" />
-<link rel="prev" href="r-is-free-and-open-source.html"/>
-<link rel="next" href="a-flexible-programming-language.html"/>
+<link rel="prev" href="the-r-community-is-awesome.html"/>
+<link rel="next" href="references.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -234,202 +234,53 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="its-easy-to-get-started" class="section level1">
-<h1><span class="header-section-number">Reason 2</span> It’s easy to get started</h1>
-<div class="goals">
-<ul>
-<li>How to install R an RStudio</li>
-<li>Creating a project in RStudio</li>
-<li>Running commands in the R console and from a script file</li>
-<li>R’s basic operators</li>
-</ul>
-</div>
-<p>Getting R to run on your computer is usually a relatively smooth
-experience<a href="#fn10" class="footnote-ref" id="fnref10"><sup>10</sup></a>:</p>
-<ul>
-<li><p>Download and install the latest version of R
-(<a href="https://www.r-project.org/">https://r-project.org/</a>) and <em>RStudio</em>
-(<a href="https://www.rstudio.com/products/rstudio/">https://rstudio.com/products/rstudio</a>)
-for your operating system. If you already have either program installed on your
-computer, there is no need to uninstall the old versions beforehand.</p></li>
-<li><p>If you cannot or do not want to install anything on your machine, you can instead make
-an account at <em>RStudio Cloud</em> (<a href="https://rstudio.cloud/" class="uri">https://rstudio.cloud/</a>) and use R and RStudio in the
-browser. The free tier of RStudio Cloud only allows you to use it for a few hours per
-month, but for the purpose of working through this book that should be fine.</p></li>
-</ul>
-<p>That’s it! Everything else you need can be set up from within RStudio.</p>
-<div class="more">
-<p><strong>Well, actually…</strong></p>
-<p>If you are using Windows, you might eventually also have to install <em>RTools</em>
-(<a href="https://cran.r-project.org/bin/windows/Rtools/" class="uri">https://cran.r-project.org/bin/windows/Rtools/</a>). RTools provides additional tools, such
-as a C/C++ compiler, that you will need for things like Bayesian statistics.</p>
-<p>For reproducible research, you should also install <em>Git</em> (<a href="https://git-scm.com/" class="uri">https://git-scm.com/</a>), a
-version control system which we will briefly talk about later. For now, you do not have to
-worry about these things, because you can always do them later.</p>
-</div>
-<div class="exercise">
-<p><span id="exr:unlabeled-div-2" class="exercise"><strong>Exercise 2.1  </strong></span>Use one of the methods suggested above to get access to R and RStudio so you can follow
-along for the rest of the book.</p>
-</div>
-<div id="why-rstudio" class="section level2">
-<h2><span class="header-section-number">2.1</span> Why RStudio?</h2>
-<p>You might be wondering what RStudio is and why we need it. RStudio is a popular
-<em>all-in-one</em> user interface (Integrated Development Environment, <em>IDE</em>) for R. It provides
-many conveniences that make working with R a lot easier. To use an analogy: If R were a
-horse, RStudio would be a saddle to sit in. You don’t need it, but it makes things more
-comfortable. There are some alternatives to RStudio, but R’s own GUI is not really one of
-them:</p>
-<div class="figure"><span id="fig:unnamed-chunk-10"></span>
-<img src="images/r-gui.jpeg" alt="A screenshot of RGui"  />
-<p class="caption">
-Figure 2.1: R’s own GUI — The 90s called, they want their user interface back.
-</p>
-</div>
-</div>
-<div id="create-a-new-rstudio-project" class="section level2">
-<h2><span class="header-section-number">2.2</span> Create a new RStudio project</h2>
-<p>Alright cowboy, let’s saddle that horse! The first step you should do whenever you start a
-new data analysis project with RStudio is to create a new project folder. This is the
-first step towards reproducibility: All of your project’s data and files will be stored in
-this folder. If you ever move this folder to a new location or share it with someone else,
-all of the files will move along with it and nothing will break.</p>
-<p>Another benefit of using projects is that it helps you keep your work organized. It will
-be much easier for you to switch between projects or get back to a project you haven’t
-touched in a while.</p>
-<div class="exercise">
-<p><span id="exr:unlabeled-div-3" class="exercise"><strong>Exercise 2.2  </strong></span>Open RStudio, go to <code>File ▸ New Project...</code> and create a new RStudio project in an empty
-folder. Leave <em>Use version control</em> and <em>Use renv</em> unchecked for now — we will get back
-to those later.</p>
-</div>
-<p>Now that we have our project set up, let’s have a look around RStudio. The many panels and
-tabs in RStudio may be overwhelming at first, but I promise this gets better over time,
-and most of them are actually really helpful. The console, for example, allows you to
-directly interact with R.</p>
-<div class="figure"><span id="fig:unnamed-chunk-11"></span>
-<img src="images/rstudio-layout.gif" alt="A screen capture of the RStudio user interface"  />
-<p class="caption">
-Figure 2.2: RStudio’s user interface with the four panels
-</p>
-</div>
-</div>
-<div id="using-r-as-a-calculator" class="section level2">
-<h2><span class="header-section-number">2.3</span> Using R as a calculator</h2>
-<p>In the console you can type commands and when you press <kbd>Enter</kbd>, R will try to
-interpret them. You can use <kbd>↑</kbd> and <kbd>↓</kbd> to cycle through previous
-commands and <kbd>Ctrl</kbd>/<kbd>Cmd</kbd> + <kbd>↑</kbd> to search through previous
-commands.</p>
-<p>Let’s get familiar with the console by trying some of R’s mathematical operators. R has
-all the operators that you would expect to find in a pocket calculator:</p>
-<table>
-<tbody>
-<tr class="odd">
-<td>Arithmetic</td>
-<td><code>+ - * / ^</code></td>
-</tr>
-<tr class="even">
-<td>Modular arithmetic</td>
-<td><code>%% %/%</code></td>
-</tr>
-<tr class="odd">
-<td>Relational</td>
-<td><code>&lt; &gt; &lt;= &gt;= == !=</code></td>
-</tr>
-<tr class="even">
-<td>Logical</td>
-<td><code>&amp;&amp; || ! | &amp;</code></td>
-</tr>
-<tr class="odd">
-<td>Parentheses for modifying precedence</td>
-<td><code>(1 + 2) * 10</code></td>
-</tr>
-</tbody>
-</table>
-<p>It also has all the <em>functions</em> you would find in a calculator. Functions are written as
-the function name followed by the function’s argument in parentheses. For example, for
-calculating the square root of 2, use <code>sqrt(2)</code>.</p>
-<div class="exercise">
-<p><span id="exr:unlabeled-div-4" class="exercise"><strong>Exercise 2.3  </strong></span>In the <em>console</em>, try out some of R’s operators and see what happens. For example,</p>
-<ol style="list-style-type: decimal">
-<li><p>What does <code>1 != 1.0</code> do?</p></li>
-<li><p>What happens if you run an incomplete command like <code>1 *</code></p></li>
-<li><p>What happens if you run a command that does not make sense, like <code>1*/ 3</code></p></li>
-</ol>
-<div class="answer">
-<ol style="list-style-type: decimal">
-<li><p>R checks whether the argument on the left side (<code>1</code>) is <em>not equal</em> to the argument on
-the right (<code>1.0</code>). It returns <code>FALSE</code> because to R these two numbers are identical.</p></li>
-<li><p>R waits for you to finish the command. Press <kbd>Esc</kbd> to terminate the
-incomplete command.</p></li>
-<li><p>R throws an error message and tries to tell you what went wrong. If you are working
-with R, you will have to get used to getting lots of error messages.</p></li>
-</ol>
-</div>
-</div>
-<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-12"></span>
-<img src="images/operator-meme.jpeg" alt="Hello Operator Meme"  />
-<p class="caption">
-Figure 2.3: Don’t worry – you can’t hurt R, it has been through this before…
-</p>
-</div>
-</div>
-<div id="create-a-script" class="section level2">
-<h2><span class="header-section-number">2.4</span> Create a script</h2>
-<p>The console is useful for running quick throw-away commands, and sometimes that’s all you
-need. However, code that you want to keep should be stored in a script file. R scripts
-allow a flexible console-like workflow because you can run individual sections or lines of
-code in any order.</p>
-<p>We will use a special type of script, called an <em>RMarkdown Notebook</em>. <em>RMarkdown</em> is a
-format that allows you to mix code and the output it generates with text. The text can be
-formatted with a special syntax to create headers, footnotes, links, and more. This allows
-you to keep your notes and your code together and is great for writing reproducible
-documents.<a href="#fn11" class="footnote-ref" id="fnref11"><sup>11</sup></a></p>
-<div class="exercise">
-<p><span id="exr:unlabeled-div-5" class="exercise"><strong>Exercise 2.4  </strong></span>Go to <code>File ▸ New File ▸ R Notebook</code> to create a new RMarkdown Notebook and save it in
-your project’s working directory as <code>analysis.Rmd</code>. Note that the file has appeared in
-RStudio’s <code>Files</code> tab, which shows you all the files in your project folder.</p>
-</div>
-<p>The new notebook already contains some example content. You can see that there is R code
-that is written inside special blocks, called <em>code chunks</em>. You can create new code
-chunks with the green button on the top right of the script panel or with the keyboard
-shortcut <kbd>Ctrl</kbd>/<kbd>Cmd</kbd> + <kbd>Option</kbd>/<kbd>Alt</kbd> + <kbd>I</kbd></p>
-<p>You can run an entire code chunk by clicking the green arrow on the right of the chunk.
-You can also run individual lines or sections of code by using
-<kbd>Ctrl</kbd>/<kbd>Cmd</kbd> + <kbd>Enter</kbd> or the buttons on the top right of the
-script panel.</p>
-<div class="exercise">
-<p><span id="exr:unlabeled-div-6" class="exercise"><strong>Exercise 2.5  </strong></span>Replace the example code in the first <em>code chunk</em> so that it calculates the square of
-<code>2021</code> as well as the square root of <code>1764</code> and run the chunk.</p>
-<div class="answer">
-<p>The code chunk in <code>analysis.Rmd</code> should look like this.</p>
-<pre><code>```{r}
-2021^2
-sqrt(1764)
-```</code></pre>
-<p>When you run the chunk, the output should be</p>
-<pre><code>[1] 4084441
-[1] 42</code></pre>
-</div>
-</div>
+<div id="software-information" class="section level1 unnumbered">
+<h1>Software Information</h1>
+<div class="sourceCode" id="cb74"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb74-1"><a href="software-information.html#cb74-1"></a><span class="kw">sessionInfo</span>()</span></code></pre></div>
+<pre><code>R version 4.1.0 (2021-05-18)
+Platform: x86_64-apple-darwin17.0 (64-bit)
+Running under: macOS Catalina 10.15.7
 
-</div>
-</div>
-<div class="footnotes">
-<hr />
-<ol start="10">
-<li id="fn10"><p>It can get a little hairy if you are working on a machine with restricted
-permissions, for example a computer issued to you by your employer. If you are in a
-situation like this, I will ask you to kindly contact your IT department to sort it
-out.<a href="its-easy-to-get-started.html#fnref10" class="footnote-back">↩︎</a></p></li>
-<li id="fn11"><p>This entire book was written with <em>RMarkdown</em>.<a href="its-easy-to-get-started.html#fnref11" class="footnote-back">↩︎</a></p></li>
-</ol>
+Matrix products: default
+BLAS:   /Library/Frameworks/R.framework/Versions/4.1/Resources/lib/libRblas.dylib
+LAPACK: /Library/Frameworks/R.framework/Versions/4.1/Resources/lib/libRlapack.dylib
+
+locale:
+[1] en_US.UTF-8/en_US.UTF-8/en_US.UTF-8/C/en_US.UTF-8/en_US.UTF-8
+
+attached base packages:
+[1] stats     graphics  grDevices utils     datasets  methods   base     
+
+other attached packages:
+ [1] skimr_2.1.3     forcats_0.5.1   stringr_1.4.0   dplyr_1.0.7    
+ [5] purrr_0.3.4     readr_2.0.0     tidyr_1.1.3     tibble_3.1.2   
+ [9] ggplot2_3.3.5   tidyverse_1.3.1 vembedr_0.1.4  
+
+loaded via a namespace (and not attached):
+ [1] Rcpp_1.0.7        lubridate_1.7.10  assertthat_0.2.1  digest_0.6.27    
+ [5] utf8_1.2.1        R6_2.5.0          cellranger_1.1.0  repr_1.1.3       
+ [9] backports_1.2.1   reprex_2.0.0      evaluate_0.14     httr_1.4.2       
+[13] highr_0.9         pillar_1.6.1      rlang_0.4.11      readxl_1.3.1     
+[17] rstudioapi_0.13   rmarkdown_2.9     bit_4.0.4         munsell_0.5.0    
+[21] broom_0.7.8       compiler_4.1.0    modelr_0.1.8      xfun_0.24        
+[25] pkgconfig_2.0.3   base64enc_0.1-3   htmltools_0.5.1.1 tidyselect_1.1.1 
+[29] bookdown_0.22     fansi_0.5.0       crayon_1.4.1      tzdb_0.1.2       
+[33] dbplyr_2.1.1      withr_2.4.2       grid_4.1.0        jsonlite_1.7.2   
+[37] gtable_0.3.0      lifecycle_1.0.0   DBI_1.1.1         magrittr_2.0.1   
+[41] scales_1.1.1      cli_3.0.1         stringi_1.7.3     vroom_1.5.3      
+[45] fs_1.5.0          xml2_1.3.2        ellipsis_0.3.2    generics_0.1.0   
+[49] vctrs_0.3.8       tools_4.1.0       bit64_4.0.5       glue_1.4.2       
+[53] hms_1.1.0         parallel_4.1.0    yaml_2.2.1        colorspace_2.0-2 
+[57] rvest_1.0.0       knitr_1.33        haven_2.4.1      </code></pre>
+
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="r-is-free-and-open-source.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="a-flexible-programming-language.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="the-r-community-is-awesome.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="references.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -461,7 +312,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/Teebusch/r-introduction/edit/master/02-easy-start.Rmd",
+"link": "https://github.com/Teebusch/r-introduction/edit/master/98-info.Rmd",
 "text": "Edit this page"
 },
 "history": {
@@ -472,7 +323,7 @@ gitbook.start({
 "link": null,
 "text": null
 },
-"download": ["https://github.com/Teebusch/r-introduction/raw/master/02-easy-start.Rmd", "r-intro.epub"],
+"download": ["https://github.com/Teebusch/r-introduction/raw/master/98-info.Rmd", "r-intro.epub"],
 "toc": {
 "collapse": "subsection"
 }
