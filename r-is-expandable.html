@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Reason 5 R is expandable | Ten Reasons to Learn R</title>
+  <title>Reason 5 R is expandable | 10 Reasons to Learn R</title>
   <meta name="description" content="A short introduction to Contemporary R." />
   <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Reason 5 R is expandable | Ten Reasons to Learn R" />
+  <meta property="og:title" content="Reason 5 R is expandable | 10 Reasons to Learn R" />
   <meta property="og:type" content="book" />
   
   <meta property="og:image" content="/images/reasons.png" />
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="Teebusch/r-introduction" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Reason 5 R is expandable | Ten Reasons to Learn R" />
+  <meta name="twitter:title" content="Reason 5 R is expandable | 10 Reasons to Learn R" />
   
   <meta name="twitter:description" content="A short introduction to Contemporary R." />
   <meta name="twitter:image" content="/images/reasons.png" />
@@ -31,7 +31,7 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon" />
-<link rel="prev" href="r-has-great-documentation.html"/>
+<link rel="prev" href="fantastic-documentation.html"/>
 <link rel="next" href="powerful-data-wrangling-tools.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -173,11 +173,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="3.5" data-path="a-flexible-programming-language.html"><a href="a-flexible-programming-language.html#data-frames"><i class="fa fa-check"></i><b>3.5</b> Data Frames</a></li>
 <li class="chapter" data-level="3.6" data-path="a-flexible-programming-language.html"><a href="a-flexible-programming-language.html#other-data-structures"><i class="fa fa-check"></i><b>3.6</b> Other Data Structures</a></li>
 </ul></li>
-<li class="chapter" data-level="4" data-path="r-has-great-documentation.html"><a href="r-has-great-documentation.html"><i class="fa fa-check"></i><b>4</b> R has great documentation</a><ul>
-<li class="chapter" data-level="4.1" data-path="r-has-great-documentation.html"><a href="r-has-great-documentation.html#accessing-function-documentation"><i class="fa fa-check"></i><b>4.1</b> Accessing function documentation</a></li>
-<li class="chapter" data-level="4.2" data-path="r-has-great-documentation.html"><a href="r-has-great-documentation.html#auto-completion"><i class="fa fa-check"></i><b>4.2</b> Auto-completion</a></li>
-<li class="chapter" data-level="4.3" data-path="r-has-great-documentation.html"><a href="r-has-great-documentation.html#cheat-sheets"><i class="fa fa-check"></i><b>4.3</b> Cheat sheets</a></li>
-<li class="chapter" data-level="4.4" data-path="r-has-great-documentation.html"><a href="r-has-great-documentation.html#finding-help-online"><i class="fa fa-check"></i><b>4.4</b> Finding help online</a></li>
+<li class="chapter" data-level="4" data-path="fantastic-documentation.html"><a href="fantastic-documentation.html"><i class="fa fa-check"></i><b>4</b> Fantastic documentation</a><ul>
+<li class="chapter" data-level="4.1" data-path="fantastic-documentation.html"><a href="fantastic-documentation.html#accessing-function-documentation"><i class="fa fa-check"></i><b>4.1</b> Accessing function documentation</a></li>
+<li class="chapter" data-level="4.2" data-path="fantastic-documentation.html"><a href="fantastic-documentation.html#auto-completion"><i class="fa fa-check"></i><b>4.2</b> Auto-completion</a></li>
+<li class="chapter" data-level="4.3" data-path="fantastic-documentation.html"><a href="fantastic-documentation.html#cheat-sheets"><i class="fa fa-check"></i><b>4.3</b> Cheat sheets</a></li>
+<li class="chapter" data-level="4.4" data-path="fantastic-documentation.html"><a href="fantastic-documentation.html#finding-help-online"><i class="fa fa-check"></i><b>4.4</b> Finding help online</a></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="r-is-expandable.html"><a href="r-is-expandable.html"><i class="fa fa-check"></i><b>5</b> R is expandable</a><ul>
 <li class="chapter" data-level="5.1" data-path="r-is-expandable.html"><a href="r-is-expandable.html#introducing-the-tidyverse"><i class="fa fa-check"></i><b>5.1</b> Introducing the Tidyverse</a></li>
@@ -226,7 +226,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <div class="body-inner">
         <div class="book-header" role="navigation">
           <h1>
-            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Ten Reasons to Learn R</a>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">10 Reasons to Learn R</a>
           </h1>
         </div>
 
@@ -564,7 +564,7 @@ on the hard drive, we can use the <code>write_csv()</code> function. It takes th
 name.</p>
 <p>In more complex projects you should put your data files into a subfolder. Here, we will
 keep it simple and put everything in the top-level project folder.</p>
-<div class="sourceCode" id="cb57"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb57-1"><a href="r-is-expandable.html#cb57-1"></a><span class="kw">write.csv</span>(peaks, <span class="st">&quot;peaks.csv&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb57"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb57-1"><a href="r-is-expandable.html#cb57-1"></a><span class="kw">write_csv</span>(peaks, <span class="st">&quot;peaks.csv&quot;</span>)</span></code></pre></div>
 <div class="more">
 <p>R can connect to many different sorts of data sources, such as <a href="https://db.rstudio.com/getting-started/connect-to-database/">databases</a>,
 <a href="https://httr.r-lib.org/">APIs</a>, and <a href="https://rvest.tidyverse.org/">websites</a>).<br />
@@ -590,7 +590,7 @@ theTidyverse, such as <code>{ggplot2}</code>, <code>{readr}</code>, and <code>{d
           </div>
         </div>
       </div>
-<a href="r-has-great-documentation.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="fantastic-documentation.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
 <a href="powerful-data-wrangling-tools.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
