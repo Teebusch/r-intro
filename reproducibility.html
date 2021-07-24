@@ -211,13 +211,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="10" data-path="an-awesome-community-1.html"><a href="an-awesome-community-1.html"><i class="fa fa-check"></i><b>10</b> An awesome community</a><ul>
-<li class="chapter" data-level="10.1" data-path="an-awesome-community-1.html"><a href="an-awesome-community-1.html#engage-with-the-community"><i class="fa fa-check"></i><b>10.1</b> Engage with the community</a></li>
-<li class="chapter" data-level="10.2" data-path="an-awesome-community-1.html"><a href="an-awesome-community-1.html#how-to-keep-learning"><i class="fa fa-check"></i><b>10.2</b> How to keep learning?</a></li>
+<li class="chapter" data-level="10.1" data-path="an-awesome-community-1.html"><a href="an-awesome-community-1.html#how-to-continue-learning"><i class="fa fa-check"></i><b>10.1</b> How to continue learning?</a></li>
 </ul></li>
 <li class="part"><span><b>Wrapping Up</b></span></li>
-<li class="chapter" data-level="" data-path="conclusions.html"><a href="conclusions.html"><i class="fa fa-check"></i>Conclusions</a><ul>
-<li class="chapter" data-level="" data-path="conclusions.html"><a href="conclusions.html#acknowledgements"><i class="fa fa-check"></i>Acknowledgements</a></li>
-</ul></li>
+<li class="chapter" data-level="" data-path="conclusions.html"><a href="conclusions.html"><i class="fa fa-check"></i>Conclusions</a></li>
+<li class="chapter" data-level="" data-path="acknowledgements.html"><a href="acknowledgements.html"><i class="fa fa-check"></i>Acknowledgements</a></li>
 <li class="appendix"><span><b>Appendix</b></span></li>
 <li class="chapter" data-level="" data-path="software-information.html"><a href="software-information.html"><i class="fa fa-check"></i>Software Information</a></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
@@ -242,8 +240,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h1><span class="header-section-number">Reason 9</span> Reproducibility</h1>
 <div class="goals">
 <ul>
-<li>…</li>
-<li>…</li>
+<li>Turning an RMarkdown notebook into a shareable document.</li>
+<li>Using Git to track changes.</li>
+<li>Using <code>{renv}</code> snapshots to manage package versions.</li>
 </ul>
 </div>
 <p>R encourages reproducible research. All the steps in your analysis are visible in your
@@ -350,6 +349,7 @@ scope of this book.</p>
 </div>
 <div id="pipelines" class="section level3">
 <h3><span class="header-section-number">9.5.2</span> Pipelines</h3>
+<p>Once your analysis becomes more complex it often contains many different outputs (models, figures, intermediate datasets). SOme of them can take long to compute and it can be difficult to stay on top of the different steps of your analysis. There are packages that try to solve that.</p>
 <ul>
 <li><a href="https://books.ropensci.org/targets/"><code>{targets}</code></a> - smart make-files for your
 analysis</li>
@@ -416,7 +416,7 @@ gitbook.start({
 },
 "download": ["https://github.com/Teebusch/r-introduction/raw/master/09-reproducibility.Rmd", "r-intro.epub"],
 "toc": {
-"collapse": "section"
+"collapse": "subsection"
 }
 });
 });

@@ -62,5 +62,4 @@ docker
 pipelines
 test-driven-development
 an-awesome-community-1
-engage-with-the-community
-how-to-keep-learning
+how-to-continue-learning
