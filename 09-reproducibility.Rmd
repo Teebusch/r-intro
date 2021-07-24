@@ -1,8 +1,9 @@
 # Reproducibility
 
 ::: {.goals}
--   ...
--   ...
+-   Turning an RMarkdown notebook into a shareable document.
+-   Using Git to track changes.
+-   Using `{renv}` snapshots to manage package versions.
 :::
 
 R encourages reproducible research. All the steps in your analysis are visible in your
@@ -122,6 +123,8 @@ then track, store, and share that entire virtual computer. However, this is beyo
 scope of this book.
 
 ### Pipelines
+
+Once your analysis becomes more complex it often contains many different outputs (models, figures, intermediate datasets). SOme of them can take long to compute and it can be difficult to stay on top of the different steps of your analysis. There are packages that try to solve that. 
 
 -   [`{targets}`](https://books.ropensci.org/targets/) - smart make-files for your
     analysis

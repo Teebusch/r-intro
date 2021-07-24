@@ -1,11 +1,6 @@
-# (PART\*) Wrapping Up {.unnumbered}
+# Acknowledgements {-}
 
-# Conclusions {-}
-
-That's it! Bye! 
-
-## Acknowledgements {-}
-
-The beautiful font used throughout most of this book is *Junction* by *The League of Movable Type*.  <https://www.theleagueofmoveabletype.com/junction>
+The beautiful font used throughout most of this book is *Junction* by *The League of
+Movable Type* (https://www.theleagueofmoveabletype.com/junction).
 
 This book is made possible by the power of R and the amazing `{bookdown}` package.

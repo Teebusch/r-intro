@@ -2,7 +2,7 @@
 
 ::: {.goals}
 -   How to engage with the R community
--   Resources for continuing to learn R
+-   Great free learning resources
 :::
 
 We are almost at the end of this short introduction to R. We have barely scratched the
@@ -10,12 +10,10 @@ surface of what R has to offer, but I hope, this has helped you figure out wheth
 for you and whether you want to learn more about R. If you do, I think the best way is to
 find other people to learn from.
 
-## Engage with the community
-
 R has an incredibly friendly, diverse, and welcoming community that is very open to
-beginners. And because it is widespread, there's always an R nerd nearby who's willing to
-help. Don't be afraid to ask questions! Here are some ideas how you could engage with the
-community:
+beginners and loves to share knowledge, and because R is so widespread, there's always an
+R nerd nearby who's willing to help. Don't be afraid to ask questions! Here are some ideas
+how you could engage with the community:
 
 -   The Twitter hashtag `#RStats` is a good way keep track of all the new things in the R
     world and "talk shop" with other R nerds.
@@ -24,15 +22,20 @@ community:
     is maintaining a list. (<https://jumpingrivers.github.io/meetingsR/index.html>). If
     there is non in your area, why not create your own?
 
+-   There is also a *R for Data Science* learning community that organizes community
+    learning events such as *Tidy Tuesday* -- a weekly data visualization challenge.
+    Participate in [Tidy Tuesday](https://github.com/rfordatascience/tidytuesday) to
+    sharpen your data wrangling and data visualization skills and see how other people are
+    approaching the same data.
+
 -   [Write your own package or contribute to
     packages.](https://www.rstudio.com/resources/rstudioglobal-2021/make-a-package-make-some-friends/)
+    This is an excellent way to become a better R programmer.
 
-## How to keep learning?
-
-Because R is mainly used by (and taught to) people who are not software engineers or
-computer scientists, there is a lot of learning material that is made for people without a
-technical background. Amazingly, much of it is free *and* really good! I will present just
-a few personal recommendations. The [Awesome R Learning Resources
+## How to continue learning?
+    
+Another thing that is unique about the R community is that R is mainly used by (and taught to) people who are not software engineers or computer scientists. As a result there is a lot of learning material that is made for people without a
+technical background. Amazingly, much of it is generously made available for free *and* really good! I will present just a few personal recommendations. The [Awesome R Learning Resources
 List](https://github.com/iamericfletcher/awesome-r-learning-resources) provides a more
 comprehensive list of resources for learning R, and Flavio Azevedo has compiled [a list of
 R Tutorials on
@@ -45,12 +48,6 @@ Science*](https://r4ds.had.co.nz/). It provides a comprehensive overview of the 
 If you are working in education, then also check out [*R for
 Education*](https://rstudio4edu.github.io/rstudio4edu-book/) --- a handbook for teaching
 and learning with R and RStudio.
-
-There is also a *R for Data Science* learning community that organizes community learning
-events such as *Tidy Tuesday* -- a weekly data visualization challenge. Participate in
-[Tidy Tuesday](https://github.com/rfordatascience/tidytuesday) to sharpen your data
-wrangling and data visualization skills and see how other people are approaching the same
-data.
 
 Finally, the Carpentries are an organisation that teaches scientific computing skills to
 researchers, including R courses for beginners. Many universities and research institutes
