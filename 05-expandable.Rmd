@@ -199,7 +199,7 @@ In more complex projects you should put your data files into a subfolder. Here, 
 keep it simple and put everything in the top-level project folder.
 
 ```{r, eval=FALSE}
-write.csv(peaks, "peaks.csv")
+write_csv(peaks, "peaks.csv")
 ```
 
 ::: {.more}

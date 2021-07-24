@@ -1,5 +1,5 @@
 ---
-title: "Ten Reasons to Learn R"
+title: "10 Reasons to Learn R"
 author: "Tobias Busch"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
@@ -46,7 +46,7 @@ parts that are most essential for reproducible data analysis and keeps the techn
 details to a minimum. After reading it, you will have a basic understanding of data
 analysis in R and should be able to decide whether you want to continue learning.
 
-:::{ .warning }
+:::{ .draftinfo }
 **This is a draft!** This book is a work in progress and nobody knows if and when it will ever be finished. 
 :::
 

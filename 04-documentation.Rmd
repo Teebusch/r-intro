@@ -1,4 +1,4 @@
-# R has great documentation
+# Fantastic documentation
 
 ::: {.goals}
 -   Accessing the function documentation in RStudio
