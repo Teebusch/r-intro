@@ -1,4 +1,4 @@
-# R is expandable
+# Expandability
 
 ::: {.goals}
 -   R packages are collections of R code written by others

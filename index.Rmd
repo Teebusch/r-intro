@@ -30,7 +30,7 @@ knitr::write_bib(c(
 ), 'packages.bib')
 ```
 
-# (PART\*) Introduction {.unnumbered}
+# (PART\*) Introduction {#welcome .unnumbered}
 
 # Welcome {.unnumbered}
 
@@ -46,8 +46,9 @@ parts that are most essential for reproducible data analysis and keeps the techn
 details to a minimum. After reading it, you will have a basic understanding of data
 analysis in R and should be able to decide whether you want to continue learning.
 
-:::{ .draftinfo }
-**This is a draft!** This book is a work in progress and nobody knows if and when it will ever be finished. 
+::: {.draftinfo}
+**This is a draft!** This book is a work in progress and nobody knows if and when it will
+ever be finished.
 :::
 
 ## Who is this book for? {.unnumbered}

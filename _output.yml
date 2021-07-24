@@ -8,6 +8,7 @@ bookdown::gitbook:
       link: https://github.com/Teebusch/r-introduction/edit/master/%s
       text: "Edit this page"
     toc:
+      collapse: section
       before: |
         <li><a href="./">10 Reasons To Learn R</a></li>
     download: ["rmd", "epub"]

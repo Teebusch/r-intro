@@ -1,4 +1,4 @@
-# What is R? {.unnumbered}
+# What is R? {#what-is-r .unnumbered}
 
 You wouldn't be reading this if you didn't already have some idea what R is, but I think
 it will be useful to briefly discuss this anyways. R is a *statistical computing and data

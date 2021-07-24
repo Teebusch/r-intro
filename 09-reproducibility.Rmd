@@ -1,14 +1,14 @@
-# R encourages reproducible research
+# Reproducibility
 
 ::: {.goals}
 -   ...
 -   ...
 :::
 
-All the steps in your analysis are visible in your script files. While GUI-based workflows
-are not reproducible, well-written code provides documentation and data provenance.
-However, you have to make sure your code keeps doing what it does today! R can help you
-with that in a number of ways!
+R encourages reproducible research. All the steps in your analysis are visible in your
+script files. While GUI-based workflows are not reproducible, well-written code provides
+documentation and data provenance. However, you have to make sure your code keeps doing
+what it does today! R can help you with that in a number of ways!
 
 ## Self-contained projects with RStudio
 

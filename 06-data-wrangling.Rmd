@@ -1,4 +1,4 @@
-#  Powerful data wrangling tools
+# Data wrangling superpowers
 
 :::{ .goals }
 * ...

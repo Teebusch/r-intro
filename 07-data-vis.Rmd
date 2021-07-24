@@ -1,4 +1,4 @@
-# Powerful data visualization tools
+# Powerful data visualization
 
 ::: {.goals}
 -   ...

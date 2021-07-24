@@ -1,4 +1,4 @@
-# Why you should *not* learn R {.unnumbered}
+# Why you should *not* learn R {#why-not-r .unnumbered}
 
 Before we look at ten good reasons to learn R, we have to get something out of the way:
 there are very good reasons *not* to learn R! I do not want to discourage you from
