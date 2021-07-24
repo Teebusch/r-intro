@@ -1,29 +1,41 @@
 # What is R? {.unnumbered}
 
 You wouldn't be reading this if you didn't already have some idea what R is, but I think
-it's worthwhile to briefly discuss it anyways. R is a *statistical computing and data
-analysis environment* that is [widely used](https://www.tiobe.com/tiobe-index/r/) in
-academia, industry, and the public sector. It is a free and open source implementation of
-the [S programming language](https://en.wikipedia.org/wiki/S_(programming_language)),
-which was created in the 1970s with interactive data analysis in mind. Here's what that
-means:
+it will be useful to briefly discuss this anyways. R is a *statistical computing and data
+analysis environment* that is widely used in academia, industry, and the public
+sector.[^what-is-r-1] It is a free and open source implementation of the [programming
+language S](https://en.wikipedia.org/wiki/S_(programming_language)), which was created in
+the 1970s with interactive data analysis in mind. Here's what that means:
 
--   **R is interactive** -- R works like a really fancy pocket calculator that allows you
-    to do calculations, explore data, and analyse data quickly and on the fly.
+[^what-is-r-1]: In 2020, R even briefly climbed to the 8th place of the TIOBE index of
+    *in-demand* programming languages (<https://www.tiobe.com/tiobe-index/r/>).
+
+-   **R is free and open source** -- R is owned and developed by the community of its
+    users. This has led to a rich and continually evolving ecosystem of freely available
+    extensions (*packages*) for R that cover many fields and applications.
+
+-   **R is interactive** -- R works like a fancy pocket calculator that allows you to do
+    calculations, explore data, and analyse data quickly and on the fly. You can execute
+    short snippets of code individually and in any order and store and retrieve data in
+    R's memory as you go. This allows for a very flexible, interactive workflow that is
+    especially well suited for data exploration and analysis.[^what-is-r-2]
 
 -   **R is focused on data analysis** -- Right out of the box, R gives you a powerful tool
     belt for data analysis. More than in many other programming languages, data and
     statistics are at the core of R and there are built-in data structures and functions
     that make data analysis easier.
 
-Although R is a proper programming language[^what-is-r-1], data analysis is undoubtedly
-its main focus. So much so, that some people call R a [domain specific programming
-language](https://en.wikipedia.org/wiki/Domain-specific_language). Others say it's [an
-environment for interactive data analysis that *has* a programming
-language](https://youtu.be/6S9r_YbqHy8). In any case, R can be powerful *one-stop-shop*
-for the whole data analysis workflow:
+[^what-is-r-2]: This workflow is not unique to R. Python, for example, offers similar
+    functionality via the *iPython* (interactive Python) project.
 
-[^what-is-r-1]: Some people claim that you can use [R for
+Although R is a proper programming language[^what-is-r-3], its main focus is undoubtedly
+data analysis. So much so, that some people call R a [domain specific programming
+language](https://en.wikipedia.org/wiki/Domain-specific_language). Others say that R is
+[an environment for interactive data analysis that *has* a programming
+language](https://youtu.be/6S9r_YbqHy8). In any case, R is a powerful *one-stop-shop* for
+the whole data analysis workflow:
+
+[^what-is-r-3]: Some people claim that you can use [R for
     everything](https://youtu.be/m6nUdoP6894).
 
 ```{r, echo=FALSE, fig.alt="A sketch of the different steps in the data analysis workflow."}
@@ -32,7 +44,7 @@ knitr::include_graphics("images/data-science-workflow.jpeg")
 
 -   Data collection
 
--   Data wrangling[^what-is-r-2]
+-   Data wrangling[^what-is-r-4]
 
 -   Data Visualization
 
@@ -40,5 +52,5 @@ knitr::include_graphics("images/data-science-workflow.jpeg")
 
 -   Communication
 
-[^what-is-r-2]: This part of the data analysis workflow involves data cleaning and
-    transformation and is also known as data munging, or *"80% of data science"*
+[^what-is-r-4]: This part of the data analysis workflow involves data cleaning and
+    transformation and is also known as *data munging*, or *80% of data science.*

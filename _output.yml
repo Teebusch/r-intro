@@ -1,7 +1,7 @@
 bookdown::gitbook:
   highlight: pygments
   css:
-   - assets/webfonts/junction.css
+   - assets/webfonts/webfonts.css
    - assets/style.css
   config:
     edit:

@@ -5,8 +5,6 @@
 * ...
 :::
 
-R can connect to all sorts of data sources ([Databases](https://db.rstudio.com/getting-started/connect-to-database/), [SPSS, Stata, SAS](https://haven.tidyverse.org/), [APIs](https://httr.r-lib.org/), [websites](https://rvest.tidyverse.org/), ...), and process many different types of data (tabular data, EEG, fMRI, eye tracking, Geodata, taxonomical data, p;honetic transcriptions...). The `{rio}` package tries to provide a unified interface for all many of them.
-
 The [Tidyverse](https://www.tidyverse.org/) offers many convenience functions for common data manipulation tasks like splitting and merging columns, renaming, counting, sorting, and much more. At its core, are a handful of workhorse functions from the `{dplyr}` package for manipulating data frames: 
 
 - `filter()`  -- select rows (observations)

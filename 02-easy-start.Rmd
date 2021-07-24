@@ -7,21 +7,37 @@
 -   R's basic operators
 :::
 
-Getting R to run on your computer is usually a relatively smooth experience: Simply
-download and install the latest version of [R](https://www.r-project.org/) and
-[RStudio](https://www.rstudio.com/products/rstudio/) for your operating system. If you
-already have either program installed on your computer, there is no need to uninstall the
-old versions beforehand. If you'd rather not install anything on your machine, you can
-instead make an account at [rstudio.cloud](https://rstudio.cloud/) and use R and RStudio
-in the browser. That's it! Everything else you need can be set up from within RStudio.
+Getting R to run on your computer is usually a relatively smooth
+experience[^easy-start-1]:
+
+[^easy-start-1]: It can get a little hairy if you are working on a machine with restricted
+    permissions, for example a computer issued to you by your employer. If you are in a
+    situation like this, I will ask you to kindly contact your IT department to sort it
+    out.
+
+-   Download and install the latest version of R
+    ([https://r-project.org/](https://www.r-project.org/)) and *RStudio*
+    ([https://rstudio.com/products/rstudio](https://www.rstudio.com/products/rstudio/))
+    for your operating system. If you already have either program installed on your
+    computer, there is no need to uninstall the old versions beforehand.
+
+-   If you cannot or do not want to install anything on your machine, you can instead make
+    an account at *RStudio Cloud* (<https://rstudio.cloud/>) and use R and RStudio in the
+    browser. The free tier of RStudio Cloud only allows you to use it for a few hours per
+    month, but for the purpose of working through this book that should be fine.
+
+That's it! Everything else you need can be set up from within RStudio.
 
 ::: {.more}
-For some things, e.g., Bayesian statistic, you might also need to install
-[RTools](https://cran.r-project.org/bin/windows/Rtools/). RTools provides additional tools
-that don't come with the standard R installation, such as a C/C++ compiler. For
-reproducible research, you should also install [Git](https://git-scm.com/), which we will
-briefly talk about later. For now, you do not have to worry about these things, because
-you can always do them later.
+**Well, actually...**
+
+If you are using Windows, you might eventually also have to install *RTools*
+(<https://cran.r-project.org/bin/windows/Rtools/>). RTools provides additional tools, such
+as a C/C++ compiler, that you will need for things like Bayesian statistics.
+
+For reproducible research, you should also install *Git* (<https://git-scm.com/>), a
+version control system which we will briefly talk about later. For now, you do not have to
+worry about these things, because you can always do them later.
 :::
 
 ::: {.exercise}
@@ -38,7 +54,7 @@ horse, RStudio would be a saddle to sit in. You don't need it, but it makes thin
 comfortable. There are some alternatives to RStudio, but R's own GUI is not really one of
 them:
 
-```{r, echo=FALSE, fig.cap="R's own GUI --- The 90s called...they want their user interface back.", fig.alt="A screenshot of RGui"}
+```{r, echo=FALSE, fig.cap="R's own GUI --- The 90s called, they want their user interface back.", fig.alt="A screenshot of RGui"}
 knitr::include_graphics("images/r-gui.jpeg")
 ```
 
@@ -60,20 +76,21 @@ folder. Leave *Use version control* and *Use renv* unchecked for now --- we will
 to those later.
 :::
 
-Now that we have our project set up, let's have a look around RStudio.
+Now that we have our project set up, let's have a look around RStudio. The many panels and
+tabs in RStudio may be overwhelming at first, but I promise this gets better over time,
+and most of them are actually really helpful. The console, for example, allows you to
+directly interact with R.
 
-```{r, echo=FALSE, fig.cap="RStudio's user interface", fig.alt="A screen capture of the RStudio user interface"}
+```{r, echo=FALSE, fig.cap="RStudio's user interface with the four panels", fig.alt="A screen capture of the RStudio user interface"}
 knitr::include_graphics("images/rstudio-layout.gif")
 ```
 
-The many panels and tabs in RStudio may be overwhelming at first, but I promise this gets
-better over time, and most of them are actually really helpful. The console, for example,
-allows you to directly interact with R. You can type commands in there and when you press
-<kbd>Enter</kbd>, R will try to interpret them.\
-You can use <kbd>↑</kbd> and <kbd>↓</kbd> to cycle through previous commands and
-<kbd>Ctrl</kbd>/<kbd>Cmd</kbd> + <kbd>↑</kbd> to search through previous commands.
+## Using R as a calculator
 
-### Using R as a calculator
+In the console you can type commands and when you press <kbd>Enter</kbd>, R will try to
+interpret them. You can use <kbd>↑</kbd> and <kbd>↓</kbd> to cycle through previous
+commands and <kbd>Ctrl</kbd>/<kbd>Cmd</kbd> + <kbd>↑</kbd> to search through previous
+commands.
 
 Let's get familiar with the console by trying some of R's mathematical operators. R has
 all the operators that you would expect to find in a pocket calculator:
@@ -86,8 +103,8 @@ all the operators that you would expect to find in a pocket calculator:
 | Logical                              | `&& || ! | &`     |
 | Parentheses for modifying precedence | `(1 + 2) * 10`    |
 
-It also has all *functions* you would find in a calculator. Functions are written as the
-function name followed by the function's argument in parentheses. For example, for
+It also has all the *functions* you would find in a calculator. Functions are written as
+the function name followed by the function's argument in parentheses. For example, for
 calculating the square root of 2, use `sqrt(2)`.
 
 ::: {.exercise}
@@ -115,35 +132,36 @@ In the *console*, try out some of R's operators and see what happens. For exampl
 knitr::include_graphics("images/operator-meme.jpeg")
 ```
 
-### Create a script
+## Create a script
 
 The console is useful for running quick throw-away commands, and sometimes that's all you
 need. However, code that you want to keep should be stored in a script file. R scripts
 allow a flexible console-like workflow because you can run individual sections or lines of
 code in any order.
 
-We will use a special type of script, called an *RMarkdown Notebook*. RMarkdown is a
-format that allows you to mix code and the output it generates with plain text. This
-allows you to keep your notes and your code together and is great for writing reproducible
-documents.[^easy-start-1]
+We will use a special type of script, called an *RMarkdown Notebook*. *RMarkdown* is a
+format that allows you to mix code and the output it generates with text. The text can be
+formatted with a special syntax to create headers, footnotes, links, and more. This allows
+you to keep your notes and your code together and is great for writing reproducible
+documents.[^easy-start-2]
 
-[^easy-start-1]: This entire book was written with *{bookdown},* which also uses
-    RMarkdown.
+[^easy-start-2]: This entire book was written with *RMarkdown*.
 
 ::: {.exercise}
-Go to `File ▸ New File ▸ R Notebook` to create a new R notebook and save it in your
-project's working directory as `analysis.Rmd`. Note that the file has appeared in
+Go to `File ▸ New File ▸ R Notebook` to create a new RMarkdown Notebook and save it in
+your project's working directory as `analysis.Rmd`. Note that the file has appeared in
 RStudio's `Files` tab, which shows you all the files in your project folder.
 :::
 
-The new notebook already contains some example content. You can see that the R code is
-written inside special blocks, called *code chunks*. You can create new code chunks with
-the green button on the top right of the script panel or with the keyboard shortcut
-<kbd>Ctrl</kbd>/<kbd>Cmd</kbd> + <kbd>Option</kbd>/<kbd>Alt</kbd> + <kbd>I</kbd>
+The new notebook already contains some example content. You can see that there is R code
+that is written inside special blocks, called *code chunks*. You can create new code
+chunks with the green button on the top right of the script panel or with the keyboard
+shortcut <kbd>Ctrl</kbd>/<kbd>Cmd</kbd> + <kbd>Option</kbd>/<kbd>Alt</kbd> + <kbd>I</kbd>
 
 You can run an entire code chunk by clicking the green arrow on the right of the chunk.
-You can also run individual by using <kbd>Ctrl</kbd>/<kbd>Cmd</kbd> + <kbd>Enter</kbd> or
-the buttons on the top right of the script panel.
+You can also run individual lines or sections of code by using
+<kbd>Ctrl</kbd>/<kbd>Cmd</kbd> + <kbd>Enter</kbd> or the buttons on the top right of the
+script panel.
 
 ::: {.exercise}
 Replace the example code in the first *code chunk* so that it calculates the square of

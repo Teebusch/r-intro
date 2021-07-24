@@ -36,32 +36,34 @@ knitr::write_bib(c(
 
 This book is a short hands-on introduction to R. The goal is to provide a quick overview
 of things that are great about R so that you can decide whether diving deeper is worth
-your time.
+your time. We will start with a brief introducing to R, followed by a discussion of good
+reasons *not* to learn R and some worthwile alternatives. Then we turn to the things that
+R has to offer: I will present ten things that I love about R and along with that, you
+will get some hands-on experience.
 
-We start by briefly introducing the history and purpose of R. Then we discuss compelling
-reason *not* to learn R as well as some alternatives. So prepared, we will turn to the
-things that R has to offer: the second part of the book presents ten things that I love
-about R and along with that, you will get some hands-on experience with R.
+The book uses modern R, with *RStudio, RMarkdown*, and the *Tidyverse*. It focuses on the
+parts that are most essential for reproducible data analysis and keeps the technical
+details to a minimum. After reading it, you will have a basic understanding of data
+analysis in R and should be able to decide whether you want to continue learning.
 
-We will use modern R with *RStudio, RMarkdown*, and the *Tidyverse*. We will keep the
-technical details of R to a minimum and focus on the parts that are most essential for
-reproducible data analysis. At the end of the book you will have a basic understanding of
-data analysis in R and should be able to decide whether you want to continue learning.
+:::{ .warning }
+**This is a draft!** This book is a work in progress and nobody knows if and when it will ever be finished. 
+:::
 
 ## Who is this book for? {.unnumbered}
 
-This book is written for someone who already has some experience with doing research or
-data analysis using other tools. I'm assuming you want to learn more about R because...
+This book is written for someone who already has some experience with doing data analysis
+using other tools but now wants to learn more about R. Your motivation might be that...
 
--   you are afraid of missing out and want to know what all the fuzz is about,
+-   You are afraid of missing out and want to know what all the fuzz is about
 
--   you feel that your current workflow isn't reproducible or efficient enough, and you
-    believe that R might help you with that,
+-   You feel that your current workflow isn't reproducible or efficient enough, and you
+    believe that R might help you with that
 
--   there is a statistical method that you would like to use, that is not available in
-    your preferred software but it is available in R, or
+-   There is a statistical method that you would like to use, that is not available in
+    your preferred software but it is available in R
 
--   or you unsuccessfully tried to learn R before, but would like to try again
+-   You unsuccessfully tried to learn R before, but would like to try again
 
 I'm assuming you have no or very little programming experience[^index-1] and you are not
 particularly interested in computer programming. You don't want to be bored with technical
@@ -98,4 +100,5 @@ Visualization in R for Ecologists*. I really enjoy teaching researchers to code 
 especially like showing them the marvelous world of R.
 
 If you have any feedback or suggestions I'd be happy to hear from you! Contact me on
-Twitter, Email, or by raising an issue on Github.
+[Twitter](https://twitter.com/@tobilottii), via email, or by raising an issue on [the
+book's Github repository](https://github.com/Teebusch/r-introduction).

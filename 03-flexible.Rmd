@@ -1,12 +1,12 @@
 # A flexible programming language
 
 ::: {.goals}
--   The core data types are numeric, logical, and character
+-   The core data types are numerical, logical, and character
+-   To assign data to variables use `<-`
+-   Write comments with `#`
 -   The most important data structures are vectors and data frames
 -   Vectors store a multitude of the same data type in a particular order
 -   Data frames are tables with data organized in rows and columns
--   To assign data to variables use `<-`
--   Write comments with `#`
 :::
 
 R is a powerful and complex programming language that supports many different programming
@@ -25,13 +25,13 @@ The [data type](https://en.wikipedia.org/wiki/Data_type) of a piece of data dete
 what operations you can perform with it. The bread and butter of data types in R are
 *numeric*, *logical*, and *character*.
 
-#### Numeric {.unnumbered}
+#### Numerical {.unnumbered}
 
-Numeric data can be integer, decimal[^flexible-1], or complex, but usually the difference
-does not matter. Sometimes, R might unexpectedly hit you with a number in scientific
-notation, e.g., `1e+23`. To the uninitiated, these can look cryptic and a bit scary. But
-don't worry! It's just a very large or very small number that is written in a more compact
-form and you can [change disable this if you
+Numerical data can be integer, decimal[^flexible-1], or complex, but usually the
+difference does not matter. Sometimes, R might unexpectedly hit you with a number in
+scientific notation, e.g., `1e+23`. To the uninitiated, these can look cryptic and a bit
+scary. But don't worry! It's just a very large or very small number that is written in a
+more compact form and you can [change disable this if you
 like!](https://statisticsglobe.com/disable-exponential-scientific-notation-in-r)
 
 [^flexible-1]: Decimal numbers are also called floating point numbers or "float" for
@@ -64,10 +64,9 @@ surround it with `""` or `''`.
 ## Assignment
 
 To assign values to *variables*[^flexible-2], you can use `<-`. Use the keyboard shortcut
-<kbd>Alt</kbd>+<kbd>-</kbd> to save yourself some hand gymnastics. Note how the newly
-created variables appear in the environment panel in RStudio. Once assigned, you can use
-variable's name to represent its content in other operations. Typing a variable name by
-itself will print the variable's content.
+<kbd>Alt</kbd>+<kbd>-</kbd> to save yourself some hand gymnastics. Once assigned, you can
+use a variable's name to represent its content in other operations. Typing a variable name
+by itself will print the variable's content.
 
 [^flexible-2]: In official R lingo you are assigning values to *objects*, but people who
     have experience with other programming languages sometimes find this term confusing.
@@ -81,6 +80,21 @@ c <- a + b
 c
 ```
 
+Note how newly created variables appear in the environment panel in RStudio. When you are
+working with R, you are working in a *session.* The session provides an *environment* in
+which data is stored, and the variable name allows you to retrieve the data again. Unless
+you explicitly delete the variable or end the session, the data will be around for you to
+use it.
+
+There are some rules for variables names: They must start with a letter and contain only
+the letters of the English alphabet, numbers, underscores `_`, hyphens `-`, and dots
+`.`.[^flexible-3] For long variable names, [it is recommended to use "snake
+case"](https://style.tidyverse.org/syntax.html#object-names), which looks like this:
+`my_firssst_variable` 🐍. Also note that R is case-sensitive.
+
+[^flexible-3]: Unlike in other programming languages, dots have no special function or
+    meaning and can be used in variable names.
+
 ::: {.exercise}
 What would be the result of running the code below? Think about it first and then run it
 to check your answer.
@@ -92,15 +106,6 @@ c        # What has happened to c?
 C        # Why is this not working?
 ```
 :::
-
-There are some rules for variables names: They must start with a letter and contain only
-the letters of the English alphabet, numbers, underscores `_`, hyphens `-`, and dots
-`.`.[^flexible-3] For long variable names, [it is recommended to use "snake
-case"](https://style.tidyverse.org/syntax.html#object-names), which looks like this:
-`my_firssst_variable` 🐍. Also note that R is case-sensitive.
-
-[^flexible-3]: Unlike in other programming languages, dots have no special function or
-    meaning and can be used in variable names.
 
 ::: {.more}
 Many other programming languages use `=` to assign values to variables. You can, for the
@@ -249,9 +254,16 @@ You can make your own data frame by hand, by putting together vectors like this:
 ```{r}
 cool_numbers <- data.frame(
     "number" = c(1,13,23,42),
-    "isPrime" = c(FALSE, TRUE, TRUE, FALSE)
+    "isPrime" = c(FALSE, TRUE, TRUE, FALSE),
+    "oneTwo" = c(1, 2)
 )
+
+cool_numbers
 ```
+
+Note how the vector `c(1,2)` in the `oneTwo` column will get *recycled* to match the
+length of the other two columns. This works, as long as the total length is a multiple of
+the shorter vector's length.
 
 A quick way to access a single column of a data frame is with the `$` operator.
 
@@ -300,26 +312,35 @@ streamlined and beginner-friendly functions from the Tidyverse -- more about tha
 ## Other Data Structures
 
 R has a couple of other data structures that you will eventually encounter. I don't want
-to dwell on them for too long, because none of them will play a role in the rest this
-book. If you are interested you can read more [here](http://adv-r.had.co.nz/). Additional
-R data structures include ...
+to dwell on them for too long, because they will not play a role in the rest this book. If
+you are interested you can read more [here](http://adv-r.had.co.nz/). Additional R data
+structures include ...
+
+-   [**Tibble**](https://tibble.tidyverse.org/) -- You may see the word *Tibble* pop up
+    occasionally in the examples in this book. A Tibble is a data structure is a modern
+    implementation of data frames. Tibbles are backwards-compatible with data frames and
+    for the purpose of this book you can think of them as interchangeable.
 
 -   **Factor** -- Factors are numerical vectors that can take a fixed set of values
     (levels), whereby each level can be assigned a label. The levels may be ordered or
     unordered. If this reminds you of categorical and ordinal variables you are absolutely
     right -- that's where they are used most often. While factors can be quite useful,
     they are also a point of confusion for many R novices.
+
 -   **List** -- Lists are similar to vectors, but they can contain a mix of data types and
     data structures, including other lists.
--   [**Tibble**](https://tibble.tidyverse.org/) -- A 'modern' implementation of data
-    frames.
+
 -   **Object** -- Objects can be used to organize functionality. For instance, a
     statistical model may be an object that has various attributes and associated
     functions. R even has three types of objects: R6, S3, and S4.
+
 -   **Matrix** -- Not to be confused with data frames. If you are implementing statistical
     methods yourself, you may want to make use of R's matrix algebra functions. Otherwise,
     you likely won't often have to work with matrices directly.
--   [**Environment**](https://adv-r.hadley.nz/environments.html) -- An environment is
-    similar to a names list, in that it contains a bunch of named R data structures
-    Understanding environments is central to a deep understanding of R, but as a beginner
-    it's nothing you need to worry about.
+
+-   [**Environment**](https://adv-r.hadley.nz/environments.html) -- Do you remember when I
+    said that your R session provides an environment in which data is stored? It turns out
+    that environments are yet another data structure in R. An environment is a data
+    structure that contains other named R data structures. Understanding environments is
+    central to a deep understanding of R, but as a beginner it's nothing you need to worry
+    about.

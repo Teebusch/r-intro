@@ -10,51 +10,22 @@ are not reproducible, well-written code provides documentation and data provenan
 However, you have to make sure your code keeps doing what it does today! R can help you
 with that in a number of ways!
 
-## Make Self-contained projects
+## Self-contained projects with RStudio
 
 Organising your project as a self-contained RStudio project was the first step to
 reproducibility. RStudio Projects are portable, reproducible, self-contained, organized.
 All the files are where you expect them, and all filenames and paths are relative to the
 project directory.
 
-## Snapshot your development environment
-
-R changes quickly, packages get updated frequently, and function interfaces change. It can
-be really frustrating to find that your analysis from a few months ago suddenly does not
-run anymore, or that it fails to run on your collaborators computer. You can save yourself
-the trouble by storing a snapshot of your package library using the
-[`{renv}`](https://rstudio.github.io/renv/) package.
-
-You can take this idea a step further by using [Docker with
-Rocker](https://www.rocker-project.org/) - fully reproducible data analysis in a Docker
-container (virtual machine).
-
-## Use version control
-
-Version control is like a time machine for your analysis. It is to code what the 💾is to a
-Word document (but better). A popular version control tool is [Git](https://git-scm.com/).
-Git allows you to...
-
--   store the state of your project
--   see changes you or others have made
--   create parallel versions (branches) of your code and merge them back together
--   restore a previous version of your project
--   Safely collaborate with others on the same code
--   and more
-
-RStudio has a Git GUI built in, but personally I prefer [Github
-Desktop](https://desktop.github.com/). Git deserves its own 90 minute intro. [Learn to use
-Git](https://happygitwithr.com/), and use it often!
-
-For maximum reproducibility you could install Docker, so that you can create an RStudio
-[Docker container](https://www.rocker-project.org/) for each project, but that is beyond
-the scope of this intro.
-
-## Make reports reproducible
+## Reproducible reports with RMarkdown
 
 In an *RMarkdown* document, you can mix text, R code, and the output of that R code. With
 the click of a button, you can turn this into a self-contained document (an HTML page, a
-PDF, a Word file) that you can share with others.
+PDF, a Word file) that you can share with others. No more copy and paste!
+
+``` {.r}
+# ...
+```
 
 [You can use this to make websites, slides, or even write
 papers](https://rmarkdown.rstudio.com/lesson-1.html). And if a reviewer asks you to
@@ -74,10 +45,14 @@ and stats update! Without ever leaving RStudio,
 -   [teaching with
     {learnR}](https://tinystats.github.io/teacups-giraffes-and-statistics/02_bellCurve.html)
 -   [RMarkdown with parameters](https://rmarkdown.rstudio.com/lesson-6.html) for simple
-    tools, recurring tasks/reports, ...
+    tools, recurring tasks/reports, ..
 
-## No more copy and paste!
+Resources:
 
+-   [RMarkdown - The definitive Guide](https://bookdown.org/yihui/rmarkdown/) -- A deep
+    dive into RMarkdown
+-   [RMarkdown for Scientists](https://rmd4sci.njtierney.com/) -- A guide to RMarkdown
+    aimed at researchers
 -   Packages to make pretty APA [tables for
     models](http://www.danieldsjoberg.com/gtsummary/index.html),
     [summary](https://cran.r-project.org/web/packages/table1/vignettes/table1-examples.html)
@@ -86,34 +61,43 @@ and stats update! Without ever leaving RStudio,
 -   Interface with Microsoft Office - Excel, Word, PowerPoint with
     [`{officeR}`](https://davidgohel.github.io/officer/)
 
-## More
+## Version control with Git
 
--   [`{targets}`](https://books.ropensci.org/targets/) - smart make-files for your
-    analysis
+Version control is like a time machine for your analysis. A git commit is to code what the
+💾is to a Word document (but better). A popular version control tool is
+[Git](https://git-scm.com/). Among other things, Git allows you to...
 
--   [`{orderly}`](https://www.vaccineimpact.org/orderly/) - makes sure your reproducible
-    reports are reproducible
+-   store the state of your project
+-   create parallel versions (branches) of your code, switch between them and merge them
+    back together
+-   restore previous versions of your project
+-   Safely collaborate with others on the same code
+-   see changes you or others have made
 
--   {rrtols}
+RStudio has a Git GUI built in, but personally I prefer [Github
+Desktop](https://desktop.github.com/). Git deserves its own 90 minute intro. [Learn to use
+Git](https://happygitwithr.com/), and use it often!
 
--   Test-driven development with `{testthat}, {tinytest}. {testrmd}`
+``` {.r}
+# ...
+```
 
--   [RMarkdown - The definitive Guide](https://bookdown.org/yihui/rmarkdown/) -- A deep
-    dive into RMarkdown
+To utilize the full power of Git, you will have to learn a couple more things. However,
+you can already rest assured, that you can always go back and see the changes you have
+made, and where things broke. Isn't that a comforting feeling?
 
--   [RMarkdown for Scientists](https://rmd4sci.njtierney.com/) -- A guide to RMarkdown
-    aimed at researchers
+## Snapshot your packages with {renv}
 
--   [Happy Git with R](https://happygitwithr.com/)
-
-## Make your research reproducible
-
-### Use {renv} to store a snapshot of your package library
+R changes quickly, packages get updated frequently, and function interfaces change. It can
+be really frustrating to find that your analysis from a few months ago suddenly does not
+run anymore, or that it fails to run on your collaborators computer. You can save yourself
+the trouble by storing a snapshot of your package library using the
+[`{renv}`](https://rstudio.github.io/renv/) package.
 
 Install the `{renv}` package, then -- in your project initialize `{renv}` for your project
 and take a snapshot of the packages you use in your project:
 
-``` {.r}
+```{r, eval=FALSE}
 install.packages("renv")
 renv::init()
 renv::snapshot()
@@ -124,18 +108,27 @@ library is isolated from other R libraries on your system. Later, you or your
 collaborators can recreate this library, with the exact package versions you used by
 running `renv::restore()`.
 
-### Take a snapshot of your code with Git
+## More
 
-``` {.r}
-# ...
-```
+R has many more tools for improving reproducibility, and as always there's more than one
+option.
 
-To utilize the full power of Git, you will have to learn a couple more things. However,
-you can already rest assured, that you can alway go back and see the changes you have
-made, and where things broke. Isn't that a comforting feeling?
+### Docker
 
-### Make a reproducible report with RMarkdown
+For example, you can take the idea of snapshotting your environment a step further by
+using [Docker Containers](https://www.rocker-project.org/). This is akin to creating an
+entire virtual computer just for your analysis. Instead of just your analysis files, you
+then track, store, and share that entire virtual computer. However, this is beyond the
+scope of this book.
 
-``` {.r}
-# ...
-```
+### Pipelines
+
+-   [`{targets}`](https://books.ropensci.org/targets/) - smart make-files for your
+    analysis
+-   [`{orderly}`](https://www.vaccineimpact.org/orderly/) - makes sure your reproducible
+    reports are reproducible
+-   `{rrtols}`
+
+### Test-driven development
+
+with `{testthat}, {tinytest}. {testrmd}`

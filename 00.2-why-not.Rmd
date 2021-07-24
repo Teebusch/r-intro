@@ -12,12 +12,12 @@ knitr::include_graphics("images/have-you-tried-using-R.jpeg")
 
 ## Learning R is a considerable time investment {.unnumbered}
 
-First of all, R can be challenging to learn. Learning any programming language
-requires continuous practice, and depending on your previous experience and your ability
-to think like a computer, it will take months or years before you can work efficiently in
-R.[^why-not-1] Getting there can---at times---be frustrating. This investment of time and cognitive
-energy may never pay off if you only do a small analysis every once in a while or if your
-current workflow is already very efficient.
+First of all, R can be challenging to learn. Learning any programming language requires
+continuous practice, and depending on your previous experience and your ability to think
+like a computer, it will take months or years before you can work efficiently in
+R.[^why-not-1] Getting there can---at times---be frustrating. This investment of time and
+cognitive energy may never pay off if you only do a small analysis every once in a while
+or if your current workflow is already very efficient.
 
 [^why-not-1]: Even if you already know another programming language, R may be difficult to
     learn, because it can be a little weird. For examples of R's weirdness, I recommend
@@ -70,10 +70,10 @@ knitr::include_graphics("images/blinking-console.gif")
 ## Other programming languages {.unnumbered}
 
 Point-and-click graphical user interface such as SPSS or Jamovi only work well if you stay
-within the limits that the developers of these tools had in mind. Programming gives you
-much more versatility and flexibility,[^why-not-3] and it is certainly a useful skill to
-have under your belt, even if you end up not using it much. However, R is by no means the
-only programming language you could choose to learn. For example,
+within the limits that their developers had in mind. Programming gives you much more
+versatility and flexibility,[^why-not-3] which makes it a useful skill to have under your
+belt, even if you end up not using it much. However, R is by no means the only programming
+language you could choose to learn. For example,
 
 [^why-not-3]: In computer science this is referred to as the [*expressive
     power*](https://en.wikipedia.org/wiki/Expressive_power_(computer_science)) of a
