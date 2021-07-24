@@ -1,4 +1,4 @@
-# An awesome community!
+# An awesome community
 
 ::: {.goals}
 -   How to engage with the R community
