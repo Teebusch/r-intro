@@ -26,7 +26,7 @@ knitr::opts_chunk$set(
 ```{r include=FALSE}
 # automatically create a bib database for R packages
 knitr::write_bib(c(
-  .packages(), 'bookdown', 'knitr', 'rmarkdown'
+  .packages(), 'bookdown', 'knitr', 'rmarkdown', 'rio', 'skimr', 'conflicted', 'renv'
 ), 'packages.bib')
 ```
 
@@ -51,7 +51,7 @@ analysis in R and should be able to decide whether you want to continue learning
 ever be finished.
 :::
 
-## Who is this book for? {.unnumbered}
+## Who is this for? {.unnumbered}
 
 This book is written for someone who already has some experience with doing data analysis
 using other tools but now wants to learn more about R. Your motivation might be that...

@@ -7,8 +7,10 @@
 
 We are almost at the end of this short introduction to R. We have barely scratched the
 surface of what R has to offer, but I hope, this has helped you figure out whether R is
-for you and whether you want to learn more about R. If you do, I think the best way is to
+for you and whether you want to learn more about it. If you do, I think the best way is to
 find other people to learn from.
+
+## Engage with the community
 
 R has an incredibly friendly, diverse, and welcoming community that is very open to
 beginners and loves to share knowledge, and because R is so widespread, there's always an
@@ -33,9 +35,12 @@ how you could engage with the community:
     This is an excellent way to become a better R programmer.
 
 ## How to continue learning?
-    
-Another thing that is unique about the R community is that R is mainly used by (and taught to) people who are not software engineers or computer scientists. As a result there is a lot of learning material that is made for people without a
-technical background. Amazingly, much of it is generously made available for free *and* really good! I will present just a few personal recommendations. The [Awesome R Learning Resources
+
+Another thing that is unique about the R community is that R is mainly used by (and taught
+to) people who are not software engineers or computer scientists. As a result there is a
+lot of learning material that is made for people without a technical background.
+Amazingly, much of it is generously made available for free *and* really good! I will
+present just a few personal recommendations. The [Awesome R Learning Resources
 List](https://github.com/iamericfletcher/awesome-r-learning-resources) provides a more
 comprehensive list of resources for learning R, and Flavio Azevedo has compiled [a list of
 R Tutorials on

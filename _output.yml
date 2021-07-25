@@ -1,8 +1,10 @@
+bookdown::epub_book: default
 bookdown::gitbook:
   highlight: pygments
   css:
    - assets/webfonts/webfonts.css
-   - assets/style.css
+   - assets/style.scss
+  split_bib: no
   config:
     edit:
       link: https://github.com/Teebusch/r-introduction/edit/master/%s
@@ -10,7 +12,7 @@ bookdown::gitbook:
     toc:
       before: |
         <li><a href="./">10 Reasons To Learn R</a></li>
-    download: ["rmd", "epub"]
+    download: ["rmd", "epub", "pdf"]
     sharing:
       github: yes
       facebook: no

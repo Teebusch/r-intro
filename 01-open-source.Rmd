@@ -8,12 +8,19 @@
 :::
 
 A great reason for choosing R over commercial software packages is that it is is *free and
-open source software (FOSS)*. This means that nobody can ever own any exclusive rights to R. Anyone can obtain a copy of R for free and modify it however they like. The license under which R is published guarantees that it will stay like that forever. 
+open source software (FOSS)*. This means that nobody can ever own any exclusive rights to
+R. Anyone can obtain a copy of R for free and modify it however they like. The license
+under which R is published guarantees that it will stay like that forever.
 
-Being **free** means that there are no software license fees or purchasing costs. This means lower cost and less bureaucracy! It means that you can use R everywhere, and you can use any version of it at any time. This is great for collaboration, sharing, and reproducibility.
+Being **free** means that there are no software license fees or purchasing costs. This
+means lower cost and less bureaucracy! It means that you can use R everywhere, and you can
+use any version of it at any time. This is great for collaboration, sharing, and
+reproducibility.
 
-Being **open source** means that nobody can decide to stop the development of R. Moreover, if anything is missing, R users can create it themselves, and --- as we will see later --- they do! There are tens of thousands of extensions (*packages*) for R that were
-created by the R community and are free for everyone to use.
+Being **open source** means that nobody can decide to stop the development of R. Moreover,
+if anything is missing, R users can create it themselves, and --- as we will see later ---
+they do! There are tens of thousands of extensions (*packages*) for R that were created by
+the R community and are free for everyone to use.
 
 Finally, being free an open source means that you can simply give R a spin and see if it's
 for you --- no strings attached!
@@ -22,7 +29,8 @@ for you --- no strings attached!
 
 Make no mistake: Free and open source does not mean unprofessional! The R project is very
 stable, and there is a core team of computer scientists and statisticians guiding its
-development. While a lot of the improvements to R are contributed by volunteers, the project does receive financial support
+development. While a lot of the improvements to R are contributed by volunteers, the
+project does receive financial support
 
 -   *directly* from companies such as [RStudio](https://www.rstudio.com/) and
     [rOpenSci](https://ropensci.org/), who employ developers to improve R, and

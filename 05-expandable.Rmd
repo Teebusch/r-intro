@@ -2,7 +2,8 @@
 
 ::: {.goals}
 -   R packages are collections of R code written by others
--   The *Tidyverse* is a collection of packages that share a common user-centric design philosophy
+-   The *Tidyverse* is a collection of packages that share a common user-centric design
+    philosophy
 -   How to install and load an R package?
 -   Loading data from a text file with `read_csv()`
 -   Saving a data frame to the disk with `write_csv()`
@@ -34,11 +35,11 @@ writing and publishing R packages.
 
 ## Introducing the Tidyverse
 
-[**The Tidyverse**](https://www.tidyverse.org/) is a set of R packages that share a common
-design philosophy. It aims to provide user-friendly functions for common data-tasks and
-tries to iron out some of the idiosyncrasies of *Base R*. The functions in the Tidyverse
-have a consistent interface and easy-to-remember names. The **Tidy Data** that gives the
-Tidyverse its name has tabular shape, with
+[**The Tidyverse**](https://www.tidyverse.org/) [@tidyverse2019] is a set of R packages
+that share a common design philosophy. It aims to provide user-friendly functions for
+common data-tasks and tries to iron out some of the idiosyncrasies of *Base R*. The
+functions in the Tidyverse have a consistent interface and easy-to-remember names. The
+**Tidy Data** that gives the Tidyverse its name has tabular shape, with
 
 -   one observation per row
 -   one variable per column
@@ -77,9 +78,9 @@ function. To use this function, we first have to install and load the `{tidyvers
 package.[^expandable-1]
 
 [^expandable-1]: Usually, **packages** are collections of functions. The `{tidyverse}`
-    package is a bit different, as it is actually a collection of other packages --- a
-    *meta-package*. When you load it, it loads the most popular packages from
-    theTidyverse, such as `{ggplot2}`, `{readr}`, and `{dplyr}`. For example, the
+    package [@R-tidyverse] is a bit different, as it is actually a collection of other
+    packages --- a *meta-package*. When you load it, it loads the most popular packages
+    from theTidyverse, such as `{ggplot2}`, `{readr}`, and `{dplyr}`. For example, the
     `read_csv()` function is from the `{readr}` package.
 
 You can install the package from R's central package repository CRAN. The
@@ -140,7 +141,7 @@ You can get a more traditional spreadsheet-like view of the complete data frame 
 clicking its name in the Environment panel or running the command `view(peaks)`.
 
 To better understand our data, let's get some summary statistics. The `{skimr}` package
-provides a really nice function for this.
+[@R-skimr] provides a really nice function for this.
 
 ::: {.exercise}
 Install and load the `{skimr}` package from CRAN.
@@ -185,7 +186,7 @@ skim(peaks)
 The `::` is also often used to clarify (either to R or to the person reading the code)
 which package a function is coming from. This is particularly useful when there are
 functions with the same name in different packages. Another approach to solving this
-problem is the [`{conflicted}`](https://conflicted.r-lib.org/) package.
+problem is the [`{conflicted}`](https://conflicted.r-lib.org/) package [@R-conflicted].
 :::
 
 ## Saving data to disk
@@ -203,14 +204,17 @@ write_csv(peaks, "peaks.csv")
 ```
 
 ::: {.more}
-R can connect to many different sorts of data sources, such as  [databases](https://db.rstudio.com/getting-started/connect-to-database/),
-[APIs](https://httr.r-lib.org/), and [websites](https://rvest.tidyverse.org/)).  
-It can also read and write many different data formats -- including data from software like SPSS, Stata, and SAS. The `{rio}` package provides a unified interface for a whole range of data formats.
+R can connect to many different sorts of data sources, such as
+[databases](https://db.rstudio.com/getting-started/connect-to-database/),
+[APIs](https://httr.r-lib.org/), and [websites](https://rvest.tidyverse.org/)).\
+It can also read and write many different data formats -- including data from software
+like SPSS, Stata, and SAS. The `{rio}` package [@R-rio] provides a unified interface for a
+whole range of data formats.
 
-Be careful when using Excel to store and share your data! Excel silently converts certain data. This can [cause problems](https://www.theverge.com/2020/8/6/21355674/human-genes-rename-microsoft-excel-misreading-dates). In many cases it may be better to use CSV, JSON, [Feather](https://blog.rstudio.com/2016/03/29/feather/), or a
+Be careful when using Excel to store and share your data! Excel silently converts certain
+data. This can [cause
+problems](https://www.theverge.com/2020/8/6/21355674/human-genes-rename-microsoft-excel-misreading-dates).
+In many cases it may be better to use CSV, JSON,
+[Feather](https://blog.rstudio.com/2016/03/29/feather/), or a
 [database](https://db.rstudio.com/databases/sqlite/) to store your data.
-
-
-
-
 :::

@@ -82,8 +82,6 @@ h2, h3 {
   text-decoration: none;
 }
 
-
-
 .book .book-summary {
   background: none;
   border-right: none;
@@ -91,12 +89,6 @@ h2, h3 {
 
 .summary{
 font-family: 'Junction', sans-serif;
-}
-
-.summary > li:first-child {
-  height: 50px;
-  padding-top: 10px;
-  border-bottom: 1px solid rgba(0,0,0,.07);
 }
 
 .footnotes {
@@ -180,4 +172,8 @@ div.answer > * {
 
 div.answer:hover > * {
   filter: none;
+}
+
+.csl-entry {
+  margin-bottom: 2em;
 }

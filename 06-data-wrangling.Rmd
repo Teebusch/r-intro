@@ -71,13 +71,23 @@ peaks %>%
 ```
 
 :::{.more}
-**Dealing with missing values.** 
+**Dealing with `NA` (missing values)** 
 
 In R, there is a special *value* for missing data, `NA`. This is *not* a data type. That is, a value can be, e.g., numeric *and* missing (`NA`) at the same time, and a numeric vector can contain a mix of numbers and `NA`. 
+
+Functions that operate on vectors, like `mean()` or `min()` do not like to make assumptions about missing values, so when the input contains an `NA`, the result will automatically also be `NA`. This makes sense, because the unknown number may well be a value would totally change the mean or the minimum. It is possible (and often necessary) to circumvent this "safety measure" by setting the function argument `na.rm = TRUE`. This will treat the vector as if the missing values did not exist.
 :::
+
+## Joining data frames with `left_join()`
+
+```{r}
+#...
+```
 
 
 ## Other useful data wrangling functions
+
+There are many other useful functions in the Tidyverse.
 
 ```r
 # ...
