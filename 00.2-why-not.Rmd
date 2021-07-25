@@ -1,6 +1,6 @@
 # Why you should *not* learn R {#why-not-r .unnumbered}
 
-Before we look at ten good reasons to learn R, we have to get something out of the way:
+Before we continue, we have to get something out of the way:
 there are very good reasons *not* to learn R! I do not want to discourage you from
 learning R --- personally, I think R is one of the greatest tool a researcher or data
 analyst can have --- but I also understand that it's not for everyone and it is important
