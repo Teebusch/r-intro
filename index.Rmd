@@ -27,13 +27,18 @@ knitr::opts_chunk$set(
 ```{r include=FALSE}
 # automatically create a bib database for R packages
 knitr::write_bib(c(
-  .packages(), 'bookdown', 'knitr', 'rmarkdown', 'rio', 'skimr', 'conflicted', 'renv'
+  .packages(), 'bookdown', 'knitr', 'rmarkdown', 'rio', 'skimr',
+  'conflicted', 'renv'
 ), 'packages.bib')
 ```
 
 # (PART\*) Introduction {#welcome .unnumbered}
 
 # Welcome {.unnumbered}
+
+```{r echo=FALSE, out.width='45%', out.extra='style="float:right; padding:10px"'}
+knitr::include_graphics("images/reasons.png")
+```
 
 This book is a short hands-on introduction to R. The goal is to provide a quick overview
 of things that are great about R so that you can decide whether diving deeper is worth
@@ -67,13 +72,13 @@ using other tools but now wants to learn more about R. Your motivation might be 
 
 -   You unsuccessfully tried to learn R before, but would like to try again
 
-I'm assuming you have no or very little programming experience[^index-1] and you are not
-particularly interested in computer programming. You don't want to be bored with technical
-background knowledge. You are here, because you want to learn tools that can help you get
-things done, and you wonder if R might be one of them.
+I'm assuming you have no or very little programming experience and you are not
+particularly interested in computer programming.[^index-1] You don't want to be bored with
+technical background knowledge. You are here, because you want to learn tools that can
+help you get things done, and you wonder if R might be one of them.
 
-[^index-1]: If you are a seasoned programmer, there are more efficient ways to catch up on
-    R. I recommend the books *R for Data Science* and [*Advanced
+[^index-1]: If you are a seasoned programmer, there may be more efficient ways to catch up
+    on R than this book. I recommend the books *R for Data Science* and [*Advanced
     R*](https://adv-r.hadley.nz/index.html). Both are available for free online.
 
 ## The origins of this book {.unnumbered}
@@ -85,11 +90,11 @@ the workshop, I continued to expand on the material and eventually, it turned in
 comprehensive introduction to R.
 
 The book is a result of my passion for teaching R and my interest in the pedagogy of
-teaching tprogramming. The pedagogical style is heavily inspired by that of the
-Carpentries lesson material, which is presented excellently in Greg Wilson's [*Teaching
-Tech Together*](https://teachtogether.tech/). However, in contrast to a typical
-Carpentries lessons, this book progresses faster and its treatment of R is more
-superficial. It provides a broader overview of R at the expense of depth.
+teaching programming. The pedagogical style is heavily inspired by that of the Carpentries
+lesson material, which is presented excellently in Greg Wilson's [*Teaching Tech
+Together*](https://teachtogether.tech/). However, in contrast to a typical Carpentries
+lessons, this book progresses faster and its treatment of R is more superficial. It
+provides a broader overview of R at the expense of depth.
 
 ## About the author {.unnumbered}
 

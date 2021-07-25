@@ -1,10 +1,10 @@
 # Why you should *not* learn R {#why-not-r .unnumbered}
 
-Before we continue, we have to get something out of the way:
-there are very good reasons *not* to learn R! I do not want to discourage you from
-learning R --- personally, I think R is one of the greatest tool a researcher or data
-analyst can have --- but I also understand that it's not for everyone and it is important
-to consider the cost of learning R and the possible alternatives.
+Before we continue, we have to get something out of the way: there are very good reasons
+*not* to learn R! I do not want to discourage you from learning R --- personally, I think
+R is one of the greatest tool a researcher or data analyst can have --- but I also
+understand that it's not for everyone and it is important to consider the cost of learning
+R and the possible alternatives.
 
 ```{r, echo=FALSE, fig.cap="Regardless of what R enthusiasts like me will tell you, R is not the solution to every problem.", fig.alt="A picture of the Evergreen container ship stuck sideways in the Suez Canal"}
 knitr::include_graphics("images/have-you-tried-using-R.jpeg")
