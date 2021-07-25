@@ -1,9 +1,11 @@
 # Reproducibility
 
 ::: {.goals}
+-   How to organize your project directory
 -   Turning an RMarkdown notebook into a shareable document.
 -   Using Git to track changes.
 -   Using `{renv}` snapshots to manage package versions.
+-   Other ways to improve reproducibility
 :::
 
 Workflows that are based on graphical user interfaces are difficult to reproduce! In
@@ -36,49 +38,78 @@ Scientific Computing* [@wilsonGoodEnoughPractices2017]. A few of the key points 
 
 ## Reproducible reports with RMarkdown
 
-Another tool for reproducible analyses that we have already introduced is *RMarkdown*. In
-an *RMarkdown* document, you can mix text, R code, and the output of that R code.
+Another tool for reproducible analyses that we have already introduced is *RMarkdown*. As
+you know, an *RMarkdown* document lets you can mix text, R code, and the output of that R
+code.
 
-With the click of a button, you can turn this into a self-contained document (an HTML
-page, a PDF, a Word file) that you can share with others. No more copy and paste!
+Now here is something amazing about RMarkdown: With the click of a button, you can turn an
+RMarkdown document into something that you can share with others, even if they do not have
+R! You can use this to make:
+
+-   reports
+
+-   papers with [`{papaja}`](https://github.com/crsh/papaja),
+    [`{rticles}`](https://github.com/rstudio/rticles)
+
+-   books with [`{bookdown}`](https://bookdown.org/) (such as this one)
+
+-   websites, blogs with [`{blogdown}`](https://github.com/rstudio/blogdown),
+    [`{hugodown}`](https://hugodown.r-lib.org/),
+    [`{distill}`](https://rstudio.github.io/distill/)
+
+-   slides with [`{xaringan}`](https://github.com/yihui/xaringan), (also check out
+    [`{xaringanthemer}`](https://github.com/gadenbuie/xaringanthemer)`)`
+
+-   [teaching with
+    {learnR}](https://tinystats.github.io/teacups-giraffes-and-statistics/02_bellCurve.html)
+
+-   Interface with Microsoft Office - Excel, Word, PowerPoint with
+    [`{officeR}`](https://davidgohel.github.io/officer/)
+
+::: {.more}
+HTML is probably the most convenient and easy to use output format. If you wnat to use PDF
+or Word, you will have to worry about page sizes and page breaks. It's best to avoid this
+until later in the process. For PDF in particular, wou will also have to install a
+$\LaTeX$ distribution. I recommend `{tinytex}`.
+:::
+
+And if the data changes or a journal reviewer asks you to exclude a subject? Update the
+code and click the button again --- all the figures and stats update! No more copy and
+paste!
+
+So how do we do it?
 
 ``` {.r}
 # ...
 ```
 
-[You can use this to make websites, slides, or even write
-papers](https://rmarkdown.rstudio.com/lesson-1.html). And if a reviewer asks you to
-exclude a subject? Remove the data point and click the button again --- all the figures
-and stats update! Without ever leaving RStudio,
-[RMarkdown](https://bookdown.org/yihui/rmarkdown/) allows you to make
+OK, but it still looks rather .... computerish. How do I make something that a normal
+person would wnat to read, or a journal would be willing to accept?
 
--   reports
--   papers with [`{papaja}`](https://github.com/crsh/papaja),
-    [`{rticles}`](https://github.com/rstudio/rticles)
--   books with [`{bookdown}`](https://bookdown.org/)
--   websites, blogs with [`{blogdown}`](https://github.com/rstudio/blogdown),
-    [`{hugodown}`](https://hugodown.r-lib.org/),
-    [`{distill}`](https://rstudio.github.io/distill/)
--   slides with [`{xaringan}`](https://github.com/yihui/xaringan),
-    [`{xaringanthemer}`](https://github.com/gadenbuie/xaringanthemer)
--   [teaching with
-    {learnR}](https://tinystats.github.io/teacups-giraffes-and-statistics/02_bellCurve.html)
--   [RMarkdown with parameters](https://rmarkdown.rstudio.com/lesson-6.html) for simple
-    tools, recurring tasks/reports, ..
+As so often n R, there are packages that can help you with that. Packages to make pretty
+APA [tables for models](http://www.danieldsjoberg.com/gtsummary/index.html),
+[summary](https://cran.r-project.org/web/packages/table1/vignettes/table1-examples.html)
+[stats](https://cran.r-project.org/web/packages/sjPlot/vignettes/tab_model_estimates.html),
+...
 
-Resources:
+Note that RStudio has a visual markdown editor that makes authoring longer documents more
+convenient.
 
--   [RMarkdown - The definitive Guide](https://bookdown.org/yihui/rmarkdown/) -- A deep
-    dive into RMarkdown
--   [RMarkdown for Scientists](https://rmd4sci.njtierney.com/) -- A guide to RMarkdown
-    aimed at researchers
--   Packages to make pretty APA [tables for
-    models](http://www.danieldsjoberg.com/gtsummary/index.html),
-    [summary](https://cran.r-project.org/web/packages/table1/vignettes/table1-examples.html)
-    [stats](https://cran.r-project.org/web/packages/sjPlot/vignettes/tab_model_estimates.html),
-    ...
--   Interface with Microsoft Office - Excel, Word, PowerPoint with
-    [`{officeR}`](https://davidgohel.github.io/officer/)
+We will leave it at this short teaser for RMarkdown. There's much more that RMarkdown can
+do, for example:
+
+-   insert references and bibliographies
+
+-   embed videos and interactive graphics
+
+-   [parameterized reports](https://rmarkdown.rstudio.com/lesson-6.html) for recurring
+    reports.
+
+To learn more, check out one of the two big books of RMarkdown [@rmarkdown2018;
+@rmarkdown2020], or RStudios tutorial on RMarkdown
+(<https://rmarkdown.rstudio.com/lesson-1.html>). If you are a researcher, you might like
+[RMarkdown for Scientists](https://rmd4sci.njtierney.com/) -- A guide to RMarkdown aimed
+at researchers
 
 ## Version control with Git
 

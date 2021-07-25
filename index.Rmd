@@ -17,6 +17,7 @@ cover-image: images/reasons.png
 library(vembedr)
 library(tidyverse)
 library(skimr)
+library(sass)
 
 knitr::opts_chunk$set(
   comment = ""
@@ -83,12 +84,12 @@ minutes long hands-on introduction to R with the goal to provide an overview of 
 the workshop, I continued to expand on the material and eventually, it turned into a more
 comprehensive introduction to R.
 
-This is book is a result of my passion for teaching R and my interest in the pedagogy of
-teaching tech. The pedagogical style is heavily inspired by that of the Carpentries lesson
-material, which is presented excellently in Greg Wilson's [*Teaching Tech
-Together*](https://teachtogether.tech/). However, in contrast to the Carpentries lessons,
-this book progresses faster and its treatment of R is more superficial. It provides a
-broader overview of R at the expense of depth.
+The book is a result of my passion for teaching R and my interest in the pedagogy of
+teaching tprogramming. The pedagogical style is heavily inspired by that of the
+Carpentries lesson material, which is presented excellently in Greg Wilson's [*Teaching
+Tech Together*](https://teachtogether.tech/). However, in contrast to a typical
+Carpentries lessons, this book progresses faster and its treatment of R is more
+superficial. It provides a broader overview of R at the expense of depth.
 
 ## About the author {.unnumbered}
 

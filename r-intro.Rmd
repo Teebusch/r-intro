@@ -1,0 +1,235 @@
+---
+title: "10 Reasons to Learn R"
+author: "Tobias Busch"
+date: "`r Sys.Date()`"
+site: bookdown::bookdown_site
+documentclass: book
+bibliography: [book.bib, packages.bib]
+biblio-style: apalike
+link-citations: yes
+description: "A short introduction to Contemporary R."
+github-repo: Teebusch/r-introduction
+favicon: assets/favicon.ico
+cover-image: images/reasons.png
+---
+
+# (PART\*) Introduction {#welcome .unnumbered}
+
+Placeholder
+
+
+## Who is this for? {.unnumbered}
+## The origins of this book {.unnumbered}
+## About the author {.unnumbered}
+
+<!--chapter:end:index.Rmd-->
+
+
+# What is R? {#what-is-r .unnumbered}
+
+Placeholder
+
+
+
+<!--chapter:end:00.1-what-is-r.Rmd-->
+
+
+# Why you should *not* learn R {#why-not-r .unnumbered}
+
+Placeholder
+
+
+## Learning R is a considerable time investment {.unnumbered}
+## Free point and click alternatives {.unnumbered}
+## Commercial software {.unnumbered}
+## Other programming languages {.unnumbered}
+
+<!--chapter:end:00.2-why-not.Rmd-->
+
+
+# The road ahead {.unnumbered}
+
+Placeholder
+
+
+## Overview {-}
+#### 1.  Free and open source {-}
+#### 2.  Easy to get started {-}
+#### 3.  A flexible language that grows with you {-} 
+#### 4.  Well-documented {-}
+#### 5.  Expandable {-}
+#### 6.  Powerful data wrangling functions {-}
+#### 7.  Powerful data visualization functions {-}
+#### 8.  Powerful statistical methods {-}
+#### 9.  Encourages reproducible research {-}
+#### 10. An awesome community {-}
+## Conventions {.unnumbered}
+
+<!--chapter:end:00.3-overview.Rmd-->
+
+
+# (PART\*) Ten Reasons to Learn R {.unnumbered}
+
+Placeholder
+
+
+## Is R reliable?
+
+<!--chapter:end:01-open-source.Rmd-->
+
+
+# It's easy to get started
+
+Placeholder
+
+
+## Why RStudio?
+## Create a new RStudio project
+## Using R as a calculator
+## Create a script
+
+<!--chapter:end:02-easy-start.Rmd-->
+
+
+# A flexible programming language
+
+Placeholder
+
+
+## Data Types
+#### Numerical {.unnumbered}
+#### Logical {.unnumbered}
+#### Character {.unnumbered}
+## Assignment
+## Comments
+## Vectors
+## Data Frames
+## Other Data Structures
+
+<!--chapter:end:03-flexible.Rmd-->
+
+
+# Fantastic documentation
+
+Placeholder
+
+
+## Accessing function documentation
+## Auto-completion
+## Cheat sheets
+## Finding help online
+
+<!--chapter:end:04-documentation.Rmd-->
+
+
+# Expandability
+
+Placeholder
+
+
+## Introducing the Tidyverse
+## Installing packages
+## Loading data
+## Inspecting the data
+## Saving data to disk
+
+<!--chapter:end:05-expandable.Rmd-->
+
+
+# Data wrangling superpowers
+
+Placeholder
+
+
+## Filtering and counting rows
+## The pipe operator %>%
+## Create new columns with `mutate()`
+## Split-apply-combine with `group_by()` and `summarize()`
+## Joining data frames with `left_join()`
+## Other useful data wrangling functions
+
+<!--chapter:end:06-data-wrangling.Rmd-->
+
+
+# Powerful data visualization
+
+Placeholder
+
+
+## The fastest way to make a plot
+
+<!--chapter:end:07-data-vis.Rmd-->
+
+
+# Powerful statistical methods at your fingertips
+
+Placeholder
+
+
+## Statistical modeling
+
+<!--chapter:end:08-statistics.Rmd-->
+
+
+# Reproducibility
+
+Placeholder
+
+
+## Self-contained projects with RStudio
+## Reproducible reports with RMarkdown
+## Version control with Git
+## Snapshot your packages with {renv}
+## Snapshot everything with Docker
+## More
+### Pipelines
+### Test-driven development
+
+<!--chapter:end:09-reproducibility.Rmd-->
+
+
+# An awesome community
+
+Placeholder
+
+
+## Engage with the community
+## How to continue learning?
+
+<!--chapter:end:10-community.Rmd-->
+
+# (PART\*) Wrapping Up {.unnumbered}
+
+# Conclusions {-}
+
+I hope you enjoyed this book and it has helped you in some way. If it did, why not share it with other people that you think might like it. I would also be happy to get some feedback. 
+
+<!--chapter:end:96-conclusions.Rmd-->
+
+# Acknowledgements {.unnumbered}
+
+The beautiful font used throughout most of this book is *Junction* by *The League of
+Movable Type* (<https://www.theleagueofmoveabletype.com/junction>).
+
+This book is made possible by the power of R [@R-base] and the amazing `{bookdown}`
+package [@bookdown2016].
+
+<!--chapter:end:97-wrap-up.Rmd-->
+
+# (APPENDIX) Appendix {-}
+
+# Software Information {-}
+
+```{r}
+sessionInfo()
+```
+
+
+<!--chapter:end:98-info.Rmd-->
+
+`r if (knitr::is_html_output()) '
+# References {-}
+'`
+
+<!--chapter:end:99-references.Rmd-->
+
