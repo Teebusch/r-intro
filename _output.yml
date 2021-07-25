@@ -1,4 +1,3 @@
-bookdown::epub_book: default
 bookdown::gitbook:
   highlight: pygments
   css:
@@ -18,3 +17,4 @@ bookdown::gitbook:
       facebook: no
       twitter: yes
       all: no
+bookdown::epub_book: default
