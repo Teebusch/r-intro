@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>10 Reasons to Learn R</title>
+  <meta name="description" content="A short introduction to Contemporary R." />
+  <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="10 Reasons to Learn R" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:image" content="/images/reasons.png" />
+  <meta property="og:description" content="A short introduction to Contemporary R." />
+  <meta name="github-repo" content="Teebusch/r-introduction" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="10 Reasons to Learn R" />
+  
+  <meta name="twitter:description" content="A short introduction to Contemporary R." />
+  <meta name="twitter:image" content="/images/reasons.png" />
+
+<meta name="author" content="Tobias Busch" />
+
+
+<meta name="date" content="2021-07-25" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon" />
+
+<link rel="next" href="what-is-r.html"/>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+
+
+<style type="text/css">
+code.sourceCode > span { display: inline-block; line-height: 1.25; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+<link rel="stylesheet" href="assets/webfonts/webfonts.css" type="text/css" />
+<link rel="stylesheet" href="libs/sassc5af083135dab182e974360333bf37a3/style.min.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">10 Reasons To Learn R</a></li>
+
+<li class="divider"></li>
+<li class="part"><span><b>Introduction</b></span></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Welcome</a><ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#who-is-this-for"><i class="fa fa-check"></i>Who is this for?</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#the-origins-of-this-book"><i class="fa fa-check"></i>The origins of this book</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#about-the-author"><i class="fa fa-check"></i>About the author</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="what-is-r.html"><a href="what-is-r.html"><i class="fa fa-check"></i>What is R?</a></li>
+<li><a href="why-not-r.html#why-not-r">Why you should <em>not</em> learn R</a><ul>
+<li class="chapter" data-level="" data-path="why-not-r.html"><a href="why-not-r.html"><i class="fa fa-check"></i>Learning R is a considerable time investment</a></li>
+<li class="chapter" data-level="" data-path="why-not-r.html"><a href="why-not-r.html#free-point-and-click-alternatives"><i class="fa fa-check"></i>Free point and click alternatives</a></li>
+<li class="chapter" data-level="" data-path="why-not-r.html"><a href="why-not-r.html#commercial-software"><i class="fa fa-check"></i>Commercial software</a></li>
+<li class="chapter" data-level="" data-path="why-not-r.html"><a href="why-not-r.html#other-programming-languages"><i class="fa fa-check"></i>Other programming languages</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="the-road-ahead.html"><a href="the-road-ahead.html"><i class="fa fa-check"></i>The road ahead</a><ul>
+<li class="chapter" data-level="" data-path="the-road-ahead.html"><a href="the-road-ahead.html#overview"><i class="fa fa-check"></i>Overview</a></li>
+<li class="chapter" data-level="" data-path="the-road-ahead.html"><a href="the-road-ahead.html#conventions"><i class="fa fa-check"></i>Conventions</a></li>
+</ul></li>
+<li class="part"><span><b>Ten Reasons to Learn R</b></span></li>
+<li class="chapter" data-level="1" data-path="r-is-free-and-open-source.html"><a href="r-is-free-and-open-source.html"><i class="fa fa-check"></i><b>1</b> R is free and open source</a><ul>
+<li class="chapter" data-level="1.1" data-path="r-is-free-and-open-source.html"><a href="r-is-free-and-open-source.html#is-r-reliable"><i class="fa fa-check"></i><b>1.1</b> Is R reliable?</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="its-easy-to-get-started.html"><a href="its-easy-to-get-started.html"><i class="fa fa-check"></i><b>2</b> It’s easy to get started</a><ul>
+<li class="chapter" data-level="2.1" data-path="its-easy-to-get-started.html"><a href="its-easy-to-get-started.html#why-rstudio"><i class="fa fa-check"></i><b>2.1</b> Why RStudio?</a></li>
+<li class="chapter" data-level="2.2" data-path="its-easy-to-get-started.html"><a href="its-easy-to-get-started.html#create-a-new-rstudio-project"><i class="fa fa-check"></i><b>2.2</b> Create a new RStudio project</a></li>
+<li class="chapter" data-level="2.3" data-path="its-easy-to-get-started.html"><a href="its-easy-to-get-started.html#using-r-as-a-calculator"><i class="fa fa-check"></i><b>2.3</b> Using R as a calculator</a></li>
+<li class="chapter" data-level="2.4" data-path="its-easy-to-get-started.html"><a href="its-easy-to-get-started.html#create-a-script"><i class="fa fa-check"></i><b>2.4</b> Create a script</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="a-flexible-programming-language.html"><a href="a-flexible-programming-language.html"><i class="fa fa-check"></i><b>3</b> A flexible programming language</a><ul>
+<li class="chapter" data-level="3.1" data-path="a-flexible-programming-language.html"><a href="a-flexible-programming-language.html#data-types"><i class="fa fa-check"></i><b>3.1</b> Data Types</a></li>
+<li class="chapter" data-level="3.2" data-path="a-flexible-programming-language.html"><a href="a-flexible-programming-language.html#assignment"><i class="fa fa-check"></i><b>3.2</b> Assignment</a></li>
+<li class="chapter" data-level="3.3" data-path="a-flexible-programming-language.html"><a href="a-flexible-programming-language.html#comments"><i class="fa fa-check"></i><b>3.3</b> Comments</a></li>
+<li class="chapter" data-level="3.4" data-path="a-flexible-programming-language.html"><a href="a-flexible-programming-language.html#vectors"><i class="fa fa-check"></i><b>3.4</b> Vectors</a></li>
+<li class="chapter" data-level="3.5" data-path="a-flexible-programming-language.html"><a href="a-flexible-programming-language.html#data-frames"><i class="fa fa-check"></i><b>3.5</b> Data Frames</a></li>
+<li class="chapter" data-level="3.6" data-path="a-flexible-programming-language.html"><a href="a-flexible-programming-language.html#other-data-structures"><i class="fa fa-check"></i><b>3.6</b> Other Data Structures</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="fantastic-documentation.html"><a href="fantastic-documentation.html"><i class="fa fa-check"></i><b>4</b> Fantastic documentation</a><ul>
+<li class="chapter" data-level="4.1" data-path="fantastic-documentation.html"><a href="fantastic-documentation.html#accessing-function-documentation"><i class="fa fa-check"></i><b>4.1</b> Accessing function documentation</a></li>
+<li class="chapter" data-level="4.2" data-path="fantastic-documentation.html"><a href="fantastic-documentation.html#auto-completion"><i class="fa fa-check"></i><b>4.2</b> Auto-completion</a></li>
+<li class="chapter" data-level="4.3" data-path="fantastic-documentation.html"><a href="fantastic-documentation.html#cheat-sheets"><i class="fa fa-check"></i><b>4.3</b> Cheat sheets</a></li>
+<li class="chapter" data-level="4.4" data-path="fantastic-documentation.html"><a href="fantastic-documentation.html#finding-help-online"><i class="fa fa-check"></i><b>4.4</b> Finding help online</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="expandability.html"><a href="expandability.html"><i class="fa fa-check"></i><b>5</b> Expandability</a><ul>
+<li class="chapter" data-level="5.1" data-path="expandability.html"><a href="expandability.html#introducing-the-tidyverse"><i class="fa fa-check"></i><b>5.1</b> Introducing the Tidyverse</a></li>
+<li class="chapter" data-level="5.2" data-path="expandability.html"><a href="expandability.html#installing-packages"><i class="fa fa-check"></i><b>5.2</b> Installing packages</a></li>
+<li class="chapter" data-level="5.3" data-path="expandability.html"><a href="expandability.html#loading-data"><i class="fa fa-check"></i><b>5.3</b> Loading data</a></li>
+<li class="chapter" data-level="5.4" data-path="expandability.html"><a href="expandability.html#inspecting-the-data"><i class="fa fa-check"></i><b>5.4</b> Inspecting the data</a></li>
+<li class="chapter" data-level="5.5" data-path="expandability.html"><a href="expandability.html#saving-data-to-disk"><i class="fa fa-check"></i><b>5.5</b> Saving data to disk</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="data-wrangling-superpowers.html"><a href="data-wrangling-superpowers.html"><i class="fa fa-check"></i><b>6</b> Data wrangling superpowers</a><ul>
+<li class="chapter" data-level="6.1" data-path="data-wrangling-superpowers.html"><a href="data-wrangling-superpowers.html#filtering-and-counting-rows"><i class="fa fa-check"></i><b>6.1</b> Filtering and counting rows</a></li>
+<li class="chapter" data-level="6.2" data-path="data-wrangling-superpowers.html"><a href="data-wrangling-superpowers.html#the-pipe-operator"><i class="fa fa-check"></i><b>6.2</b> The pipe operator %&gt;%</a></li>
+<li class="chapter" data-level="6.3" data-path="data-wrangling-superpowers.html"><a href="data-wrangling-superpowers.html#create-new-columns-with-mutate"><i class="fa fa-check"></i><b>6.3</b> Create new columns with <code>mutate()</code></a></li>
+<li class="chapter" data-level="6.4" data-path="data-wrangling-superpowers.html"><a href="data-wrangling-superpowers.html#split-apply-combine-with-group_by-and-summarize"><i class="fa fa-check"></i><b>6.4</b> Split-apply-combine with <code>group_by()</code> and <code>summarize()</code></a></li>
+<li class="chapter" data-level="6.5" data-path="data-wrangling-superpowers.html"><a href="data-wrangling-superpowers.html#joining-data-frames-with-left_join"><i class="fa fa-check"></i><b>6.5</b> Joining data frames with <code>left_join()</code></a></li>
+<li class="chapter" data-level="6.6" data-path="data-wrangling-superpowers.html"><a href="data-wrangling-superpowers.html#other-useful-data-wrangling-functions"><i class="fa fa-check"></i><b>6.6</b> Other useful data wrangling functions</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="powerful-data-visualization.html"><a href="powerful-data-visualization.html"><i class="fa fa-check"></i><b>7</b> Powerful data visualization</a><ul>
+<li class="chapter" data-level="7.1" data-path="powerful-data-visualization.html"><a href="powerful-data-visualization.html#the-fastest-way-to-make-a-plot"><i class="fa fa-check"></i><b>7.1</b> The fastest way to make a plot</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="powerful-statistical-methods-at-your-fingertips.html"><a href="powerful-statistical-methods-at-your-fingertips.html"><i class="fa fa-check"></i><b>8</b> Powerful statistical methods at your fingertips</a><ul>
+<li class="chapter" data-level="8.1" data-path="powerful-statistical-methods-at-your-fingertips.html"><a href="powerful-statistical-methods-at-your-fingertips.html#statistical-modeling"><i class="fa fa-check"></i><b>8.1</b> Statistical modeling</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="reproducibility.html"><a href="reproducibility.html"><i class="fa fa-check"></i><b>9</b> Reproducibility</a><ul>
+<li class="chapter" data-level="9.1" data-path="reproducibility.html"><a href="reproducibility.html#self-contained-projects-with-rstudio"><i class="fa fa-check"></i><b>9.1</b> Self-contained projects with RStudio</a></li>
+<li class="chapter" data-level="9.2" data-path="reproducibility.html"><a href="reproducibility.html#reproducible-reports-with-rmarkdown"><i class="fa fa-check"></i><b>9.2</b> Reproducible reports with RMarkdown</a></li>
+<li class="chapter" data-level="9.3" data-path="reproducibility.html"><a href="reproducibility.html#version-control-with-git"><i class="fa fa-check"></i><b>9.3</b> Version control with Git</a></li>
+<li class="chapter" data-level="9.4" data-path="reproducibility.html"><a href="reproducibility.html#snapshot-your-packages-with-renv"><i class="fa fa-check"></i><b>9.4</b> Snapshot your packages with {renv}</a></li>
+<li class="chapter" data-level="9.5" data-path="reproducibility.html"><a href="reproducibility.html#snapshot-everything-with-docker"><i class="fa fa-check"></i><b>9.5</b> Snapshot everything with Docker</a></li>
+<li class="chapter" data-level="9.6" data-path="reproducibility.html"><a href="reproducibility.html#more"><i class="fa fa-check"></i><b>9.6</b> More</a><ul>
+<li class="chapter" data-level="9.6.1" data-path="reproducibility.html"><a href="reproducibility.html#pipelines"><i class="fa fa-check"></i><b>9.6.1</b> Pipelines</a></li>
+<li class="chapter" data-level="9.6.2" data-path="reproducibility.html"><a href="reproducibility.html#test-driven-development"><i class="fa fa-check"></i><b>9.6.2</b> Test-driven development</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="an-awesome-community-1.html"><a href="an-awesome-community-1.html"><i class="fa fa-check"></i><b>10</b> An awesome community</a><ul>
+<li class="chapter" data-level="10.1" data-path="an-awesome-community-1.html"><a href="an-awesome-community-1.html#engage-with-the-community"><i class="fa fa-check"></i><b>10.1</b> Engage with the community</a></li>
+<li class="chapter" data-level="10.2" data-path="an-awesome-community-1.html"><a href="an-awesome-community-1.html#how-to-continue-learning"><i class="fa fa-check"></i><b>10.2</b> How to continue learning?</a></li>
+</ul></li>
+<li class="part"><span><b>Wrapping Up</b></span></li>
+<li class="chapter" data-level="" data-path="conclusions.html"><a href="conclusions.html"><i class="fa fa-check"></i>Conclusions</a></li>
+<li class="chapter" data-level="" data-path="acknowledgements.html"><a href="acknowledgements.html"><i class="fa fa-check"></i>Acknowledgements</a></li>
+<li class="appendix"><span><b>Appendix</b></span></li>
+<li class="chapter" data-level="" data-path="software-information.html"><a href="software-information.html"><i class="fa fa-check"></i>Software Information</a></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">10 Reasons to Learn R</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="header">
+<h1 class="title">10 Reasons to Learn R</h1>
+<p class="author"><em>Tobias Busch</em></p>
+<p class="date" style="margin-top: 1.5em;"><em>2021-07-25</em></p>
+</div>
+<div id="welcome-1" class="section level1 unnumbered">
+<h1>Welcome</h1>
+<p>This book is a short hands-on introduction to R. The goal is to provide a quick overview
+of things that are great about R so that you can decide whether diving deeper is worth
+your time. We will start with a brief introducing to R, followed by a discussion of good
+reasons <em>not</em> to learn R and some worthwile alternatives. Then we turn to the things that
+R has to offer: I will present ten things that I love about R and along with that, you
+will get some hands-on experience.</p>
+<p>The book uses modern R, with <em>RStudio, RMarkdown</em>, and the <em>Tidyverse</em>. It focuses on the
+parts that are most essential for reproducible data analysis and keeps the technical
+details to a minimum. After reading it, you will have a basic understanding of data
+analysis in R and should be able to decide whether you want to continue learning.</p>
+<div class="draftinfo">
+<p><strong>This is a draft!</strong> This book is a work in progress and nobody knows if and when it will
+ever be finished.</p>
+</div>
+<div id="who-is-this-for" class="section level2 unnumbered">
+<h2>Who is this for?</h2>
+<p>This book is written for someone who already has some experience with doing data analysis
+using other tools but now wants to learn more about R. Your motivation might be that…</p>
+<ul>
+<li><p>You are afraid of missing out and want to know what all the fuzz is about</p></li>
+<li><p>You feel that your current workflow isn’t reproducible or efficient enough, and you
+believe that R might help you with that</p></li>
+<li><p>There is a statistical method that you would like to use, that is not available in
+your preferred software but it is available in R</p></li>
+<li><p>You unsuccessfully tried to learn R before, but would like to try again</p></li>
+</ul>
+<p>I’m assuming you have no or very little programming experience<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a> and you are not
+particularly interested in computer programming. You don’t want to be bored with technical
+background knowledge. You are here, because you want to learn tools that can help you get
+things done, and you wonder if R might be one of them.</p>
+</div>
+<div id="the-origins-of-this-book" class="section level2 unnumbered">
+<h2>The origins of this book</h2>
+<p>This book started as my notes for a workshop I gave in April 2021 at a research group
+meeting at the University of Oslo’s Department of Special Needs Education. It was a 90
+minutes long hands-on introduction to R with the goal to provide an overview of R. After
+the workshop, I continued to expand on the material and eventually, it turned into a more
+comprehensive introduction to R.</p>
+<p>The book is a result of my passion for teaching R and my interest in the pedagogy of
+teaching tprogramming. The pedagogical style is heavily inspired by that of the
+Carpentries lesson material, which is presented excellently in Greg Wilson’s <a href="https://teachtogether.tech/"><em>Teaching
+Tech Together</em></a>. However, in contrast to a typical
+Carpentries lessons, this book progresses faster and its treatment of R is more
+superficial. It provides a broader overview of R at the expense of depth.</p>
+</div>
+<div id="about-the-author" class="section level2 unnumbered">
+<h2>About the author</h2>
+<p>I have worked with R and other languages in a research context for almost 10 years and I
+have made some humble contributions to the R ecosystem. I teach R as a certified
+instructor for <a href="https://www.ub.uio.no/english/writing-publishing/dsc/carpentry-uio/">The
+Carpentries</a>, and I
+help maintain the Carpentries lesson material for the lesson <em>Data Analysis and
+Visualization in R for Ecologists</em>. I really enjoy teaching researchers to code and I
+especially like showing them the marvelous world of R.</p>
+<p>If you have any feedback or suggestions I’d be happy to hear from you! Contact me on
+<a href="https://twitter.com/@tobilottii">Twitter</a>, via email, or by raising an issue on <a href="https://github.com/Teebusch/r-introduction">the
+book’s Github repository</a>.</p>
+
+</div>
+</div>
+<div class="footnotes">
+<hr />
+<ol start="1">
+<li id="fn1"><p>If you are a seasoned programmer, there are more efficient ways to catch up on
+R. I recommend the books <em>R for Data Science</em> and <a href="https://adv-r.hadley.nz/index.html"><em>Advanced
+R</em></a>. Both are available for free online.<a href="index.html#fnref1" class="footnote-back">↩︎</a></p></li>
+</ol>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+
+<a href="what-is-r.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": true,
+"facebook": false,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": false
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/Teebusch/r-introduction/edit/master/index.Rmd",
+"text": "Edit this page"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["https://github.com/Teebusch/r-introduction/raw/master/index.Rmd", "r-intro.epub", "r-intro.pdf"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

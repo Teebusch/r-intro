@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Why you should not learn R | 10 Reasons to Learn R</title>
+  <meta name="description" content="A short introduction to Contemporary R." />
+  <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Why you should not learn R | 10 Reasons to Learn R" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:image" content="/images/reasons.png" />
+  <meta property="og:description" content="A short introduction to Contemporary R." />
+  <meta name="github-repo" content="Teebusch/r-introduction" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Why you should not learn R | 10 Reasons to Learn R" />
+  
+  <meta name="twitter:description" content="A short introduction to Contemporary R." />
+  <meta name="twitter:image" content="/images/reasons.png" />
+
+<meta name="author" content="Tobias Busch" />
+
+
+<meta name="date" content="2021-07-25" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon" />
+<link rel="prev" href="what-is-r.html"/>
+<link rel="next" href="the-road-ahead.html"/>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+
+
+<style type="text/css">
+code.sourceCode > span { display: inline-block; line-height: 1.25; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+<link rel="stylesheet" href="assets/webfonts/webfonts.css" type="text/css" />
+<link rel="stylesheet" href="libs/sassc5af083135dab182e974360333bf37a3/style.min.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">10 Reasons To Learn R</a></li>
+
+<li class="divider"></li>
+<li class="part"><span><b>Introduction</b></span></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Welcome</a><ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#who-is-this-for"><i class="fa fa-check"></i>Who is this for?</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#the-origins-of-this-book"><i class="fa fa-check"></i>The origins of this book</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#about-the-author"><i class="fa fa-check"></i>About the author</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="what-is-r.html"><a href="what-is-r.html"><i class="fa fa-check"></i>What is R?</a></li>
+<li><a href="why-not-r.html#why-not-r">Why you should <em>not</em> learn R</a><ul>
+<li class="chapter" data-level="" data-path="why-not-r.html"><a href="why-not-r.html"><i class="fa fa-check"></i>Learning R is a considerable time investment</a></li>
+<li class="chapter" data-level="" data-path="why-not-r.html"><a href="why-not-r.html#free-point-and-click-alternatives"><i class="fa fa-check"></i>Free point and click alternatives</a></li>
+<li class="chapter" data-level="" data-path="why-not-r.html"><a href="why-not-r.html#commercial-software"><i class="fa fa-check"></i>Commercial software</a></li>
+<li class="chapter" data-level="" data-path="why-not-r.html"><a href="why-not-r.html#other-programming-languages"><i class="fa fa-check"></i>Other programming languages</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="the-road-ahead.html"><a href="the-road-ahead.html"><i class="fa fa-check"></i>The road ahead</a><ul>
+<li class="chapter" data-level="" data-path="the-road-ahead.html"><a href="the-road-ahead.html#overview"><i class="fa fa-check"></i>Overview</a></li>
+<li class="chapter" data-level="" data-path="the-road-ahead.html"><a href="the-road-ahead.html#conventions"><i class="fa fa-check"></i>Conventions</a></li>
+</ul></li>
+<li class="part"><span><b>Ten Reasons to Learn R</b></span></li>
+<li class="chapter" data-level="1" data-path="r-is-free-and-open-source.html"><a href="r-is-free-and-open-source.html"><i class="fa fa-check"></i><b>1</b> R is free and open source</a><ul>
+<li class="chapter" data-level="1.1" data-path="r-is-free-and-open-source.html"><a href="r-is-free-and-open-source.html#is-r-reliable"><i class="fa fa-check"></i><b>1.1</b> Is R reliable?</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="its-easy-to-get-started.html"><a href="its-easy-to-get-started.html"><i class="fa fa-check"></i><b>2</b> It’s easy to get started</a><ul>
+<li class="chapter" data-level="2.1" data-path="its-easy-to-get-started.html"><a href="its-easy-to-get-started.html#why-rstudio"><i class="fa fa-check"></i><b>2.1</b> Why RStudio?</a></li>
+<li class="chapter" data-level="2.2" data-path="its-easy-to-get-started.html"><a href="its-easy-to-get-started.html#create-a-new-rstudio-project"><i class="fa fa-check"></i><b>2.2</b> Create a new RStudio project</a></li>
+<li class="chapter" data-level="2.3" data-path="its-easy-to-get-started.html"><a href="its-easy-to-get-started.html#using-r-as-a-calculator"><i class="fa fa-check"></i><b>2.3</b> Using R as a calculator</a></li>
+<li class="chapter" data-level="2.4" data-path="its-easy-to-get-started.html"><a href="its-easy-to-get-started.html#create-a-script"><i class="fa fa-check"></i><b>2.4</b> Create a script</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="a-flexible-programming-language.html"><a href="a-flexible-programming-language.html"><i class="fa fa-check"></i><b>3</b> A flexible programming language</a><ul>
+<li class="chapter" data-level="3.1" data-path="a-flexible-programming-language.html"><a href="a-flexible-programming-language.html#data-types"><i class="fa fa-check"></i><b>3.1</b> Data Types</a></li>
+<li class="chapter" data-level="3.2" data-path="a-flexible-programming-language.html"><a href="a-flexible-programming-language.html#assignment"><i class="fa fa-check"></i><b>3.2</b> Assignment</a></li>
+<li class="chapter" data-level="3.3" data-path="a-flexible-programming-language.html"><a href="a-flexible-programming-language.html#comments"><i class="fa fa-check"></i><b>3.3</b> Comments</a></li>
+<li class="chapter" data-level="3.4" data-path="a-flexible-programming-language.html"><a href="a-flexible-programming-language.html#vectors"><i class="fa fa-check"></i><b>3.4</b> Vectors</a></li>
+<li class="chapter" data-level="3.5" data-path="a-flexible-programming-language.html"><a href="a-flexible-programming-language.html#data-frames"><i class="fa fa-check"></i><b>3.5</b> Data Frames</a></li>
+<li class="chapter" data-level="3.6" data-path="a-flexible-programming-language.html"><a href="a-flexible-programming-language.html#other-data-structures"><i class="fa fa-check"></i><b>3.6</b> Other Data Structures</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="fantastic-documentation.html"><a href="fantastic-documentation.html"><i class="fa fa-check"></i><b>4</b> Fantastic documentation</a><ul>
+<li class="chapter" data-level="4.1" data-path="fantastic-documentation.html"><a href="fantastic-documentation.html#accessing-function-documentation"><i class="fa fa-check"></i><b>4.1</b> Accessing function documentation</a></li>
+<li class="chapter" data-level="4.2" data-path="fantastic-documentation.html"><a href="fantastic-documentation.html#auto-completion"><i class="fa fa-check"></i><b>4.2</b> Auto-completion</a></li>
+<li class="chapter" data-level="4.3" data-path="fantastic-documentation.html"><a href="fantastic-documentation.html#cheat-sheets"><i class="fa fa-check"></i><b>4.3</b> Cheat sheets</a></li>
+<li class="chapter" data-level="4.4" data-path="fantastic-documentation.html"><a href="fantastic-documentation.html#finding-help-online"><i class="fa fa-check"></i><b>4.4</b> Finding help online</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="expandability.html"><a href="expandability.html"><i class="fa fa-check"></i><b>5</b> Expandability</a><ul>
+<li class="chapter" data-level="5.1" data-path="expandability.html"><a href="expandability.html#introducing-the-tidyverse"><i class="fa fa-check"></i><b>5.1</b> Introducing the Tidyverse</a></li>
+<li class="chapter" data-level="5.2" data-path="expandability.html"><a href="expandability.html#installing-packages"><i class="fa fa-check"></i><b>5.2</b> Installing packages</a></li>
+<li class="chapter" data-level="5.3" data-path="expandability.html"><a href="expandability.html#loading-data"><i class="fa fa-check"></i><b>5.3</b> Loading data</a></li>
+<li class="chapter" data-level="5.4" data-path="expandability.html"><a href="expandability.html#inspecting-the-data"><i class="fa fa-check"></i><b>5.4</b> Inspecting the data</a></li>
+<li class="chapter" data-level="5.5" data-path="expandability.html"><a href="expandability.html#saving-data-to-disk"><i class="fa fa-check"></i><b>5.5</b> Saving data to disk</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="data-wrangling-superpowers.html"><a href="data-wrangling-superpowers.html"><i class="fa fa-check"></i><b>6</b> Data wrangling superpowers</a><ul>
+<li class="chapter" data-level="6.1" data-path="data-wrangling-superpowers.html"><a href="data-wrangling-superpowers.html#filtering-and-counting-rows"><i class="fa fa-check"></i><b>6.1</b> Filtering and counting rows</a></li>
+<li class="chapter" data-level="6.2" data-path="data-wrangling-superpowers.html"><a href="data-wrangling-superpowers.html#the-pipe-operator"><i class="fa fa-check"></i><b>6.2</b> The pipe operator %&gt;%</a></li>
+<li class="chapter" data-level="6.3" data-path="data-wrangling-superpowers.html"><a href="data-wrangling-superpowers.html#create-new-columns-with-mutate"><i class="fa fa-check"></i><b>6.3</b> Create new columns with <code>mutate()</code></a></li>
+<li class="chapter" data-level="6.4" data-path="data-wrangling-superpowers.html"><a href="data-wrangling-superpowers.html#split-apply-combine-with-group_by-and-summarize"><i class="fa fa-check"></i><b>6.4</b> Split-apply-combine with <code>group_by()</code> and <code>summarize()</code></a></li>
+<li class="chapter" data-level="6.5" data-path="data-wrangling-superpowers.html"><a href="data-wrangling-superpowers.html#joining-data-frames-with-left_join"><i class="fa fa-check"></i><b>6.5</b> Joining data frames with <code>left_join()</code></a></li>
+<li class="chapter" data-level="6.6" data-path="data-wrangling-superpowers.html"><a href="data-wrangling-superpowers.html#other-useful-data-wrangling-functions"><i class="fa fa-check"></i><b>6.6</b> Other useful data wrangling functions</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="powerful-data-visualization.html"><a href="powerful-data-visualization.html"><i class="fa fa-check"></i><b>7</b> Powerful data visualization</a><ul>
+<li class="chapter" data-level="7.1" data-path="powerful-data-visualization.html"><a href="powerful-data-visualization.html#the-fastest-way-to-make-a-plot"><i class="fa fa-check"></i><b>7.1</b> The fastest way to make a plot</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="powerful-statistical-methods-at-your-fingertips.html"><a href="powerful-statistical-methods-at-your-fingertips.html"><i class="fa fa-check"></i><b>8</b> Powerful statistical methods at your fingertips</a><ul>
+<li class="chapter" data-level="8.1" data-path="powerful-statistical-methods-at-your-fingertips.html"><a href="powerful-statistical-methods-at-your-fingertips.html#statistical-modeling"><i class="fa fa-check"></i><b>8.1</b> Statistical modeling</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="reproducibility.html"><a href="reproducibility.html"><i class="fa fa-check"></i><b>9</b> Reproducibility</a><ul>
+<li class="chapter" data-level="9.1" data-path="reproducibility.html"><a href="reproducibility.html#self-contained-projects-with-rstudio"><i class="fa fa-check"></i><b>9.1</b> Self-contained projects with RStudio</a></li>
+<li class="chapter" data-level="9.2" data-path="reproducibility.html"><a href="reproducibility.html#reproducible-reports-with-rmarkdown"><i class="fa fa-check"></i><b>9.2</b> Reproducible reports with RMarkdown</a></li>
+<li class="chapter" data-level="9.3" data-path="reproducibility.html"><a href="reproducibility.html#version-control-with-git"><i class="fa fa-check"></i><b>9.3</b> Version control with Git</a></li>
+<li class="chapter" data-level="9.4" data-path="reproducibility.html"><a href="reproducibility.html#snapshot-your-packages-with-renv"><i class="fa fa-check"></i><b>9.4</b> Snapshot your packages with {renv}</a></li>
+<li class="chapter" data-level="9.5" data-path="reproducibility.html"><a href="reproducibility.html#snapshot-everything-with-docker"><i class="fa fa-check"></i><b>9.5</b> Snapshot everything with Docker</a></li>
+<li class="chapter" data-level="9.6" data-path="reproducibility.html"><a href="reproducibility.html#more"><i class="fa fa-check"></i><b>9.6</b> More</a><ul>
+<li class="chapter" data-level="9.6.1" data-path="reproducibility.html"><a href="reproducibility.html#pipelines"><i class="fa fa-check"></i><b>9.6.1</b> Pipelines</a></li>
+<li class="chapter" data-level="9.6.2" data-path="reproducibility.html"><a href="reproducibility.html#test-driven-development"><i class="fa fa-check"></i><b>9.6.2</b> Test-driven development</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="an-awesome-community-1.html"><a href="an-awesome-community-1.html"><i class="fa fa-check"></i><b>10</b> An awesome community</a><ul>
+<li class="chapter" data-level="10.1" data-path="an-awesome-community-1.html"><a href="an-awesome-community-1.html#engage-with-the-community"><i class="fa fa-check"></i><b>10.1</b> Engage with the community</a></li>
+<li class="chapter" data-level="10.2" data-path="an-awesome-community-1.html"><a href="an-awesome-community-1.html#how-to-continue-learning"><i class="fa fa-check"></i><b>10.2</b> How to continue learning?</a></li>
+</ul></li>
+<li class="part"><span><b>Wrapping Up</b></span></li>
+<li class="chapter" data-level="" data-path="conclusions.html"><a href="conclusions.html"><i class="fa fa-check"></i>Conclusions</a></li>
+<li class="chapter" data-level="" data-path="acknowledgements.html"><a href="acknowledgements.html"><i class="fa fa-check"></i>Acknowledgements</a></li>
+<li class="appendix"><span><b>Appendix</b></span></li>
+<li class="chapter" data-level="" data-path="software-information.html"><a href="software-information.html"><i class="fa fa-check"></i>Software Information</a></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">10 Reasons to Learn R</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="why-not-r" class="section level1 unnumbered">
+<h1>Why you should <em>not</em> learn R</h1>
+<p>Before we look at ten good reasons to learn R, we have to get something out of the way:
+there are very good reasons <em>not</em> to learn R! I do not want to discourage you from
+learning R — personally, I think R is one of the greatest tool a researcher or data
+analyst can have — but I also understand that it’s not for everyone and it is important
+to consider the cost of learning R and the possible alternatives.</p>
+<div class="figure"><span id="fig:unnamed-chunk-4"></span>
+<img src="images/have-you-tried-using-R.jpeg" alt="A picture of the Evergreen container ship stuck sideways in the Suez Canal"  />
+<p class="caption">
+Figure 0.1: Regardless of what R enthusiasts like me will tell you, R is not the solution to every problem.
+</p>
+</div>
+<div id="learning-r-is-a-considerable-time-investment" class="section level2 unnumbered">
+<h2>Learning R is a considerable time investment</h2>
+<p>First of all, R can be challenging to learn. Learning any programming language requires
+continuous practice, and depending on your previous experience and your ability to think
+like a computer, it will take months or years before you can work efficiently in
+R.<a href="#fn6" class="footnote-ref" id="fnref6"><sup>6</sup></a> Getting there can—at times—be frustrating. This investment of time and
+cognitive energy may never pay off if you only do a small analysis every once in a while
+or if your current workflow is already very efficient.</p>
+</div>
+<div id="free-point-and-click-alternatives" class="section level2 unnumbered">
+<h2>Free point and click alternatives</h2>
+<p>There are free alternatives to R that do not require coding. Some of them excel at a
+particular part of the data analysis workflow, for example,</p>
+<ul>
+<li><p><a href="https://openrefine.org/">OpenRefine</a> and
+<a href="http://vis.stanford.edu/wrangler/">DataWrangler</a> for data wrangling, and</p></li>
+<li><p><a href="https://rawgraphs.io/">RAWgraphs</a>, <a href="https://flourish.studio/">Flourish</a>,
+<a href="https://www.datawrapper.de/">DataWrapper</a>, and <a href="https://public.tableau.com/">Tableau
+Public</a> for data visualization.</p></li>
+</ul>
+<p>Others offer comprehensive functionality which rivals that of costly software like SPSS.
+<a href="https://www.jamovi.org/">Jamovi</a> and <a href="https://jasp-stats.org/">JASP</a>, for example, are
+graphical user interfaces that are built on top of R and allow you to utilize much of R’s
+power without writing any code.</p>
+<div class="figure"><span id="fig:unnamed-chunk-5"></span>
+<img src="images/jamovi.jpeg" alt="A screenshot of Jamovi's user interface"  />
+<p class="caption">
+Figure 0.2: There are plenty of fish in the open source sea and Jamovi is a particularly tasty one.
+</p>
+</div>
+</div>
+<div id="commercial-software" class="section level2 unnumbered">
+<h2>Commercial software</h2>
+<p>There are many well-rounded commercial software packages for data analysis, such as SPSS,
+SAS, Stata, MPlus, and MATLAB. Chances are, you are already familiar with at least one of
+them. Some commercial tools are the gold standard for certain types of analyses and the
+exact same methods may not be available in R.<a href="#fn7" class="footnote-ref" id="fnref7"><sup>7</sup></a></p>
+<p>Commercial software often does a better job than R at guiding you through the jungle of
+statistical tests and models, they provide customer support and there is normally a
+single, well-documented way to solve a certain type of problem. In contrast, R often
+offers a multitude of ways to reach the same goal. While this allows you to choose the
+tools that suit your needs, this choice can be difficult. Consequently, R requires a more
+thorough understanding of what your are trying to achieve.</p>
+<div class="figure"><span id="fig:unnamed-chunk-6"></span>
+<img src="images/blinking-console.gif" alt="A gif of the R console cursor blinking expectantly"  />
+<p class="caption">
+Figure 0.3: Welcome to R! Here’s how you quit…
+</p>
+</div>
+</div>
+<div id="other-programming-languages" class="section level2 unnumbered">
+<h2>Other programming languages</h2>
+<p>Point-and-click graphical user interface such as SPSS or Jamovi only work well if you stay
+within the limits that their developers had in mind. Programming gives you much more
+versatility and flexibility,<a href="#fn8" class="footnote-ref" id="fnref8"><sup>8</sup></a> which makes it a useful skill to have under your
+belt, even if you end up not using it much. However, R is by no means the only programming
+language you could choose to learn. For example,</p>
+<ul>
+<li><a href="https://www.python.org/">Python</a> is worth a look if you want to learn a language that
+is more universally useful than R while still being excellent for data analysis,</li>
+<li><a href="https://julialang.org/">Julia</a> is a great choice If you need a language that is as
+focused on interactive scientific computing as R, but more modern and a lot faster</li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">Javascript</a>, the language of
+the web, is great if you are interested in building interactive data visualizations,
+but it is also shaping up to become a serious contender in the data analysis
+space.<a href="#fn9" class="footnote-ref" id="fnref9"><sup>9</sup></a></li>
+</ul>
+
+</div>
+</div>
+<div class="footnotes">
+<hr />
+<ol start="6">
+<li id="fn6"><p>Even if you already know another programming language, R may be difficult to
+learn, because it can be a little weird. For examples of R’s weirdness, I recommend
+John Cook’s talk <a href="https://youtu.be/6S9r_YbqHy8"><em>The R Language The Good The Bad &amp; The
+Ugly</em></a> and Roger Peng’s talk <a href="https://youtu.be/5033jBHFiHE"><em>Teaching R to New Users:
+From tapply to Tidyverse</em></a><em>.</em><a href="why-not-r.html#fnref6" class="footnote-back">↩︎</a></p></li>
+<li id="fn7"><p>For example, handling missing data with Maximum Likelihood in MPlus is not
+possible in the equivalent R package, <code>{MClust}</code>.<a href="why-not-r.html#fnref7" class="footnote-back">↩︎</a></p></li>
+<li id="fn8"><p>In computer science this is referred to as the <a href="https://en.wikipedia.org/wiki/Expressive_power_(computer_science)"><em>expressive
+power</em></a> of a
+programming language<a href="why-not-r.html#fnref8" class="footnote-back">↩︎</a></p></li>
+<li id="fn9"><p>For example, see <a href="https://js4ds.org/" class="uri">https://js4ds.org/</a><a href="why-not-r.html#fnref9" class="footnote-back">↩︎</a></p></li>
+</ol>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="what-is-r.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="the-road-ahead.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": true,
+"facebook": false,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": false
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/Teebusch/r-introduction/edit/master/00.2-why-not.Rmd",
+"text": "Edit this page"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["https://github.com/Teebusch/r-introduction/raw/master/00.2-why-not.Rmd", "r-intro.epub", "r-intro.pdf"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
