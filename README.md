@@ -1,5 +1,8 @@
 # 10 Reasons to Learn R
 
+![Deploy book to Github
+Pages](https://github.com/Teebusch/R-introduction/actions/workflows/deploy_bookdown.yml/badge.svg)
+
 This book is a short hands-on introduction to R with the goal to help you decide whether
 you should or should not learn it.
 
