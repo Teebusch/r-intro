@@ -122,7 +122,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 
 <link rel="stylesheet" href="assets/webfonts/webfonts.css" type="text/css" />
-<link rel="stylesheet" href="libs/sass43db88e8155d87e82ca63f98ba5c0576/style.min.css" type="text/css" />
+<link rel="stylesheet" href="libs/sass770f3b4259771ec6779de44cf5828618/style.min.css" type="text/css" />
 </head>
 
 <body>
@@ -267,8 +267,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li>Count which countries the climbers came from</li>
 </ol>
 <p>We can use the <code>filter()</code> function to select only the rows (observations) we want. Then we can use the <code>count()</code> function to count how many rows there are for each kind of <code>first_ascent_country</code>:</p>
-<div class="sourceCode" id="cb58"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb58-1"><a href="data-wrangling-superpowers.html#cb58-1"></a>before80_7k &lt;-<span class="st"> </span><span class="kw">filter</span>(peaks, first_ascent_year <span class="op">&lt;</span><span class="st"> </span><span class="dv">1980</span>, height_metres <span class="op">&gt;</span><span class="st"> </span><span class="dv">7000</span>)</span>
-<span id="cb58-2"><a href="data-wrangling-superpowers.html#cb58-2"></a><span class="kw">count</span>(before80_7k, first_ascent_country)</span></code></pre></div>
+<div class="sourceCode" id="cb54"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb54-1"><a href="data-wrangling-superpowers.html#cb54-1"></a>before80_7k &lt;-<span class="st"> </span><span class="kw">filter</span>(peaks, first_ascent_year <span class="op">&lt;</span><span class="st"> </span><span class="dv">1980</span>, height_metres <span class="op">&gt;</span><span class="st"> </span><span class="dv">7000</span>)</span>
+<span id="cb54-2"><a href="data-wrangling-superpowers.html#cb54-2"></a><span class="kw">count</span>(before80_7k, first_ascent_country)</span></code></pre></div>
 <pre><code># A tibble: 28 x 2
    first_ascent_country     n
    &lt;chr&gt;                &lt;int&gt;
@@ -288,10 +288,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h2><span class="header-section-number">6.2</span> The pipe operator %&gt;%</h2>
 <p>Above, we stored the result of the first function in an intermediate variables and then gave it to the second. There’s another way to chain functions that is often more convenient and readable: Use the <strong>pipe operator <code>%&gt;%</code></strong> to pass data from one function to the next.</p>
 <p>You can read <code>%&gt;%</code> as <em>“…and then…”</em>. Use the keyboard shortcut <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>M</kbd> to make it.</p>
-<div class="sourceCode" id="cb60"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb60-1"><a href="data-wrangling-superpowers.html#cb60-1"></a>peaks <span class="op">%&gt;%</span></span>
-<span id="cb60-2"><a href="data-wrangling-superpowers.html#cb60-2"></a><span class="st">  </span><span class="kw">filter</span>(first_ascent_year <span class="op">&lt;</span><span class="st"> </span><span class="dv">1980</span>, height_metres <span class="op">&gt;</span><span class="st"> </span><span class="dv">7000</span>) <span class="op">%&gt;%</span><span class="st"> </span></span>
-<span id="cb60-3"><a href="data-wrangling-superpowers.html#cb60-3"></a><span class="st">  </span><span class="kw">count</span>(first_ascent_country, <span class="dt">sort =</span> <span class="ot">TRUE</span>) <span class="op">%&gt;%</span><span class="st"> </span></span>
-<span id="cb60-4"><a href="data-wrangling-superpowers.html#cb60-4"></a><span class="st">  </span><span class="kw">filter</span>(n <span class="op">&gt;</span><span class="st"> </span><span class="dv">3</span>) </span></code></pre></div>
+<div class="sourceCode" id="cb56"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb56-1"><a href="data-wrangling-superpowers.html#cb56-1"></a>peaks <span class="op">%&gt;%</span></span>
+<span id="cb56-2"><a href="data-wrangling-superpowers.html#cb56-2"></a><span class="st">  </span><span class="kw">filter</span>(first_ascent_year <span class="op">&lt;</span><span class="st"> </span><span class="dv">1980</span>, height_metres <span class="op">&gt;</span><span class="st"> </span><span class="dv">7000</span>) <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb56-3"><a href="data-wrangling-superpowers.html#cb56-3"></a><span class="st">  </span><span class="kw">count</span>(first_ascent_country, <span class="dt">sort =</span> <span class="ot">TRUE</span>) <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb56-4"><a href="data-wrangling-superpowers.html#cb56-4"></a><span class="st">  </span><span class="kw">filter</span>(n <span class="op">&gt;</span><span class="st"> </span><span class="dv">3</span>) </span></code></pre></div>
 <pre><code># A tibble: 4 x 2
   first_ascent_country     n
   &lt;chr&gt;                &lt;int&gt;
@@ -299,10 +299,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 2 Japan                    7
 3 Poland                   4
 4 UK, Nepal                4</code></pre>
-<div class="sourceCode" id="cb62"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb62-1"><a href="data-wrangling-superpowers.html#cb62-1"></a>  <span class="co"># ... the pipe can continue. Here, we filter all peaks that </span></span>
-<span id="cb62-2"><a href="data-wrangling-superpowers.html#cb62-2"></a>  <span class="co"># were climbed more than 3 times</span></span></code></pre></div>
+<div class="sourceCode" id="cb58"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb58-1"><a href="data-wrangling-superpowers.html#cb58-1"></a>  <span class="co"># ... the pipe can continue. Here, we filter all peaks that </span></span>
+<span id="cb58-2"><a href="data-wrangling-superpowers.html#cb58-2"></a>  <span class="co"># were climbed more than 3 times</span></span></code></pre></div>
 <p>Did you notice that the first argument of all functions (the data frame you want to operate on) has disappeared? The pipe operator fills that one in automatically.</p>
-<div class="figure"><span id="fig:unnamed-chunk-43"></span>
+<div class="figure"><span id="fig:unnamed-chunk-44"></span>
 <img src="images/data-with-pipe.jpeg" alt="An image of the Star Trek character Data, smoking a pipe"  />
 <p class="caption">
 Figure 6.1: Indubitably, sir!
@@ -311,9 +311,9 @@ Figure 6.1: Indubitably, sir!
 </div>
 <div id="create-new-columns-with-mutate" class="section level2">
 <h2><span class="header-section-number">6.3</span> Create new columns with <code>mutate()</code></h2>
-<div class="sourceCode" id="cb63"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb63-1"><a href="data-wrangling-superpowers.html#cb63-1"></a>peaks <span class="op">%&gt;%</span><span class="st"> </span></span>
-<span id="cb63-2"><a href="data-wrangling-superpowers.html#cb63-2"></a><span class="st">  </span><span class="kw">select</span>(peak_name, climbing_status, first_ascent_year, first_ascent_country) <span class="op">%&gt;%</span><span class="st"> </span></span>
-<span id="cb63-3"><a href="data-wrangling-superpowers.html#cb63-3"></a><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">climbed_before80 =</span> first_ascent_year <span class="op">&lt;</span><span class="st"> </span><span class="dv">1980</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb59"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb59-1"><a href="data-wrangling-superpowers.html#cb59-1"></a>peaks <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb59-2"><a href="data-wrangling-superpowers.html#cb59-2"></a><span class="st">  </span><span class="kw">select</span>(peak_name, climbing_status, first_ascent_year, first_ascent_country) <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb59-3"><a href="data-wrangling-superpowers.html#cb59-3"></a><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">climbed_before80 =</span> first_ascent_year <span class="op">&lt;</span><span class="st"> </span><span class="dv">1980</span>)</span></code></pre></div>
 <pre><code># A tibble: 468 x 5
    peak_name  climbing_status first_ascent_ye… first_ascent_co… climbed_before80
    &lt;chr&gt;      &lt;chr&gt;                      &lt;dbl&gt; &lt;chr&gt;            &lt;lgl&gt;           
@@ -332,11 +332,11 @@ Figure 6.1: Indubitably, sir!
 <div id="split-apply-combine-with-group_by-and-summarize" class="section level2">
 <h2><span class="header-section-number">6.4</span> Split-apply-combine with <code>group_by()</code> and <code>summarize()</code></h2>
 <p>Use <code>group_by()</code> and <code>summarize()</code> together for powerful <em>split-apply-combine</em> operations:</p>
-<div class="sourceCode" id="cb65"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb65-1"><a href="data-wrangling-superpowers.html#cb65-1"></a>peaks <span class="op">%&gt;%</span><span class="st"> </span></span>
-<span id="cb65-2"><a href="data-wrangling-superpowers.html#cb65-2"></a><span class="st">  </span><span class="kw">filter</span>(first_ascent_year <span class="op">&gt;</span><span class="st"> </span><span class="dv">201</span>) <span class="op">%&gt;%</span><span class="st"> </span></span>
-<span id="cb65-3"><a href="data-wrangling-superpowers.html#cb65-3"></a><span class="st">  </span><span class="kw">group_by</span>(first_ascent_country) <span class="op">%&gt;%</span><span class="st"> </span></span>
-<span id="cb65-4"><a href="data-wrangling-superpowers.html#cb65-4"></a><span class="st">  </span><span class="kw">summarize</span>(<span class="dt">min_ascent =</span> <span class="kw">min</span>(first_ascent_year, <span class="dt">na.rm =</span> <span class="ot">TRUE</span>)) <span class="op">%&gt;%</span><span class="st"> </span></span>
-<span id="cb65-5"><a href="data-wrangling-superpowers.html#cb65-5"></a><span class="st">  </span><span class="kw">arrange</span>(min_ascent)</span></code></pre></div>
+<div class="sourceCode" id="cb61"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb61-1"><a href="data-wrangling-superpowers.html#cb61-1"></a>peaks <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb61-2"><a href="data-wrangling-superpowers.html#cb61-2"></a><span class="st">  </span><span class="kw">filter</span>(first_ascent_year <span class="op">&gt;</span><span class="st"> </span><span class="dv">201</span>) <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb61-3"><a href="data-wrangling-superpowers.html#cb61-3"></a><span class="st">  </span><span class="kw">group_by</span>(first_ascent_country) <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb61-4"><a href="data-wrangling-superpowers.html#cb61-4"></a><span class="st">  </span><span class="kw">summarize</span>(<span class="dt">min_ascent =</span> <span class="kw">min</span>(first_ascent_year, <span class="dt">na.rm =</span> <span class="ot">TRUE</span>)) <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb61-5"><a href="data-wrangling-superpowers.html#cb61-5"></a><span class="st">  </span><span class="kw">arrange</span>(min_ascent)</span></code></pre></div>
 <pre><code># A tibble: 77 x 2
    first_ascent_country min_ascent
    &lt;chr&gt;                     &lt;dbl&gt;
@@ -359,12 +359,12 @@ Figure 6.1: Indubitably, sir!
 </div>
 <div id="joining-data-frames-with-left_join" class="section level2">
 <h2><span class="header-section-number">6.5</span> Joining data frames with <code>left_join()</code></h2>
-<div class="sourceCode" id="cb67"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb67-1"><a href="data-wrangling-superpowers.html#cb67-1"></a><span class="co">#...</span></span></code></pre></div>
+<div class="sourceCode" id="cb63"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb63-1"><a href="data-wrangling-superpowers.html#cb63-1"></a><span class="co">#...</span></span></code></pre></div>
 </div>
 <div id="other-useful-data-wrangling-functions" class="section level2">
 <h2><span class="header-section-number">6.6</span> Other useful data wrangling functions</h2>
 <p>There are many other useful functions in the Tidyverse.</p>
-<div class="sourceCode" id="cb68"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb68-1"><a href="data-wrangling-superpowers.html#cb68-1"></a><span class="co"># ...</span></span></code></pre></div>
+<div class="sourceCode" id="cb64"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb64-1"><a href="data-wrangling-superpowers.html#cb64-1"></a><span class="co"># ...</span></span></code></pre></div>
 
 </div>
 </div>

@@ -15,8 +15,8 @@ exr:unlabeled-div-8
 exr:unlabeled-div-9
 exr:unlabeled-div-10
 exr:unlabeled-div-11
-tab:unnamed-chunk-37
-fig:unnamed-chunk-43
+tab:unnamed-chunk-38
+fig:unnamed-chunk-44
 r-is-free-and-open-source
 is-r-reliable
 its-easy-to-get-started

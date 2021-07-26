@@ -122,7 +122,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 
 <link rel="stylesheet" href="assets/webfonts/webfonts.css" type="text/css" />
-<link rel="stylesheet" href="libs/sass43db88e8155d87e82ca63f98ba5c0576/style.min.css" type="text/css" />
+<link rel="stylesheet" href="libs/sass770f3b4259771ec6779de44cf5828618/style.min.css" type="text/css" />
 </head>
 
 <body>
@@ -319,8 +319,8 @@ finds it, copies it to a special library directory on your computer.</p>
 functions become available for you to use in your current R session. The next time you
 start RStudio, you will not have to reinstall the package (it is now on your computer),
 but you will have to load it again.</p>
-<div class="sourceCode" id="cb46"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb46-1"><a href="expandability.html#cb46-1"></a><span class="kw">install.packages</span>(<span class="st">&quot;tidyverse&quot;</span>)</span>
-<span id="cb46-2"><a href="expandability.html#cb46-2"></a><span class="kw">library</span>(tidyverse)</span></code></pre></div>
+<div class="sourceCode" id="cb42"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb42-1"><a href="expandability.html#cb42-1"></a><span class="kw">install.packages</span>(<span class="st">&quot;tidyverse&quot;</span>)</span>
+<span id="cb42-2"><a href="expandability.html#cb42-2"></a><span class="kw">library</span>(tidyverse)</span></code></pre></div>
 <div class="more">
 <p><strong>library vs. package</strong></p>
 <p>The distinction between <em>library</em> and <em>package</em> can be confusing. It might help to imagine
@@ -342,7 +342,7 @@ variable.</p>
 <p>Now that we have the <code>{tidyverse}</code> package installed and loaded, we can use the
 <code>read_csv()</code> function to load the data straight from the web into an R data frame in our R
 session.</p>
-<div class="sourceCode" id="cb47"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb47-1"><a href="expandability.html#cb47-1"></a>peaks &lt;-<span class="st"> </span><span class="kw">read_csv</span>(<span class="st">&quot;https://raw.githubusercontent.com/teebusch/r-introduction/master/data/peaks.csv&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb43"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb43-1"><a href="expandability.html#cb43-1"></a>peaks &lt;-<span class="st"> </span><span class="kw">read_csv</span>(<span class="st">&quot;https://raw.githubusercontent.com/teebusch/r-introduction/master/data/peaks.csv&quot;</span>)</span></code></pre></div>
 <pre><code>Rows: 468 Columns: 8</code></pre>
 <pre><code>── Column specification ────────────────────────────────────────────────────────
 Delimiter: &quot;,&quot;
@@ -356,7 +356,7 @@ dbl (2): height_metres, first_ascent_year</code></pre>
 <h2><span class="header-section-number">5.4</span> Inspecting the data</h2>
 <p>When we load the data, R shows us the names of the columns in the data set and the type of
 each column. We can also have a look at the first few rows with the <code>head()</code> function.</p>
-<div class="sourceCode" id="cb51"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb51-1"><a href="expandability.html#cb51-1"></a><span class="kw">head</span>(peaks)</span></code></pre></div>
+<div class="sourceCode" id="cb47"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb47-1"><a href="expandability.html#cb47-1"></a><span class="kw">head</span>(peaks)</span></code></pre></div>
 <pre><code># A tibble: 6 x 8
   peak_id peak_name     peak_alternative_name height_metres climbing_status
   &lt;chr&gt;   &lt;chr&gt;         &lt;chr&gt;                         &lt;dbl&gt; &lt;chr&gt;          
@@ -375,14 +375,14 @@ clicking its name in the Environment panel or running the command <code>view(pea
 <div class="exercise">
 <p><span id="exr:unlabeled-div-11" class="exercise"><strong>Exercise 5.1  </strong></span>Install and load the <code>{skimr}</code> package from CRAN.</p>
 <div class="answer">
-<div class="sourceCode" id="cb53"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb53-1"><a href="expandability.html#cb53-1"></a><span class="kw">install.packages</span>(<span class="st">&quot;skimr&quot;</span>)</span>
-<span id="cb53-2"><a href="expandability.html#cb53-2"></a><span class="kw">library</span>(skimr)</span></code></pre></div>
+<div class="sourceCode" id="cb49"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb49-1"><a href="expandability.html#cb49-1"></a><span class="kw">install.packages</span>(<span class="st">&quot;skimr&quot;</span>)</span>
+<span id="cb49-2"><a href="expandability.html#cb49-2"></a><span class="kw">library</span>(skimr)</span></code></pre></div>
 </div>
 </div>
 <p>Now we can “skim” our data:</p>
-<div class="sourceCode" id="cb54"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb54-1"><a href="expandability.html#cb54-1"></a><span class="kw">skim</span>(peaks)</span></code></pre></div>
+<div class="sourceCode" id="cb50"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb50-1"><a href="expandability.html#cb50-1"></a><span class="kw">skim</span>(peaks)</span></code></pre></div>
 <table>
-<caption><span id="tab:unnamed-chunk-37">Table 5.1: </span>Data summary</caption>
+<caption><span id="tab:unnamed-chunk-38">Table 5.1: </span>Data summary</caption>
 <tbody>
 <tr class="odd">
 <td align="left">Name</td>
@@ -554,10 +554,10 @@ peak that was successfully climbed in the year 201.</p>
 <p>We only use one function from the <code>{skimr}</code> package, and we only use it this one time. In
 a case like this, you might want to use the function without loading the entire package.
 To do so, you can put <code>::</code> between the package name and the function name. Thus,</p>
-<div class="sourceCode" id="cb55"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb55-1"><a href="expandability.html#cb55-1"></a>skimr<span class="op">::</span><span class="kw">skim</span>(peaks)</span></code></pre></div>
+<div class="sourceCode" id="cb51"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb51-1"><a href="expandability.html#cb51-1"></a>skimr<span class="op">::</span><span class="kw">skim</span>(peaks)</span></code></pre></div>
 <p>is equivalent to</p>
-<div class="sourceCode" id="cb56"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb56-1"><a href="expandability.html#cb56-1"></a><span class="kw">library</span>(skimr)</span>
-<span id="cb56-2"><a href="expandability.html#cb56-2"></a><span class="kw">skim</span>(peaks)</span></code></pre></div>
+<div class="sourceCode" id="cb52"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb52-1"><a href="expandability.html#cb52-1"></a><span class="kw">library</span>(skimr)</span>
+<span id="cb52-2"><a href="expandability.html#cb52-2"></a><span class="kw">skim</span>(peaks)</span></code></pre></div>
 <p>The <code>::</code> is also often used to clarify (either to R or to the person reading the code)
 which package a function is coming from. This is particularly useful when there are
 functions with the same name in different packages. Another approach to solving this
@@ -572,7 +572,7 @@ on the hard drive, we can use the <code>write_csv()</code> function. It takes th
 name.</p>
 <p>In more complex projects you should put your data files into a subfolder. Here, we will
 keep it simple and put everything in the top-level project folder.</p>
-<div class="sourceCode" id="cb57"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb57-1"><a href="expandability.html#cb57-1"></a><span class="kw">write_csv</span>(peaks, <span class="st">&quot;peaks.csv&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb53"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb53-1"><a href="expandability.html#cb53-1"></a><span class="kw">write_csv</span>(peaks, <span class="st">&quot;peaks.csv&quot;</span>)</span></code></pre></div>
 <div class="more">
 <p>R can connect to many different sorts of data sources, such as
 <a href="https://db.rstudio.com/getting-started/connect-to-database/">databases</a>,

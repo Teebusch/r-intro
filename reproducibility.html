@@ -122,7 +122,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 
 <link rel="stylesheet" href="assets/webfonts/webfonts.css" type="text/css" />
-<link rel="stylesheet" href="libs/sass43db88e8155d87e82ca63f98ba5c0576/style.min.css" type="text/css" />
+<link rel="stylesheet" href="libs/sass770f3b4259771ec6779de44cf5828618/style.min.css" type="text/css" />
 </head>
 
 <body>
@@ -310,7 +310,7 @@ until later in the process. For PDF in particular, you will also have to install
 code and click the button again — all the figures and stats update! No more copy and
 paste!</p>
 <p>So how do we do it?</p>
-<div class="sourceCode" id="cb72"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb72-1"><a href="reproducibility.html#cb72-1"></a><span class="co"># ...</span></span></code></pre></div>
+<div class="sourceCode" id="cb68"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb68-1"><a href="reproducibility.html#cb68-1"></a><span class="co"># ...</span></span></code></pre></div>
 <p>OK, but it still looks rather …. computerish. How do I make something that a normal
 person would want to read, or a journal would be willing to accept?</p>
 <p>As so often n R, there are packages that can help you with that. Packages to make pretty
@@ -359,9 +359,9 @@ document.</p></li>
 <p>In principle you could use Git in the terminal, but there are many graphical user
 interfaces for Git that make things easier, and RStudio has a Git interface built
 in.<a href="#fn16" class="footnote-ref" id="fnref16"><sup>16</sup></a></p>
-<div class="sourceCode" id="cb73"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb73-1"><a href="reproducibility.html#cb73-1"></a><span class="fu">git</span> init</span>
-<span id="cb73-2"><a href="reproducibility.html#cb73-2"></a><span class="fu">git</span> add . </span>
-<span id="cb73-3"><a href="reproducibility.html#cb73-3"></a><span class="fu">git</span> commit -m <span class="st">&quot;initial commit&quot;</span></span></code></pre></div>
+<div class="sourceCode" id="cb69"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb69-1"><a href="reproducibility.html#cb69-1"></a><span class="fu">git</span> init</span>
+<span id="cb69-2"><a href="reproducibility.html#cb69-2"></a><span class="fu">git</span> add . </span>
+<span id="cb69-3"><a href="reproducibility.html#cb69-3"></a><span class="fu">git</span> commit -m <span class="st">&quot;initial commit&quot;</span></span></code></pre></div>
 <p>Congratulations! You have made your first Git commit! Now you can rest assured, that you
 can always go back to the current state of the analysis, see the changes you have made
 since, figure out where things broke, and undo changes if necessary. Isn’t that
@@ -385,9 +385,9 @@ your package library with the <a href="https://rstudio.github.io/renv/"><code>{r
 <span class="citation">(Ushey <a href="references.html#ref-R-renv" role="doc-biblioref">2021</a>)</span>.</p>
 <p>Install the <code>{renv}</code> package, then – in your project initialize <code>{renv}</code> for your project
 and take a snapshot of the packages you use in your project:</p>
-<div class="sourceCode" id="cb74"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb74-1"><a href="reproducibility.html#cb74-1"></a><span class="kw">install.packages</span>(<span class="st">&quot;renv&quot;</span>)</span>
-<span id="cb74-2"><a href="reproducibility.html#cb74-2"></a>renv<span class="op">::</span><span class="kw">init</span>()</span>
-<span id="cb74-3"><a href="reproducibility.html#cb74-3"></a>renv<span class="op">::</span><span class="kw">snapshot</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb70"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb70-1"><a href="reproducibility.html#cb70-1"></a><span class="kw">install.packages</span>(<span class="st">&quot;renv&quot;</span>)</span>
+<span id="cb70-2"><a href="reproducibility.html#cb70-2"></a>renv<span class="op">::</span><span class="kw">init</span>()</span>
+<span id="cb70-3"><a href="reproducibility.html#cb70-3"></a>renv<span class="op">::</span><span class="kw">snapshot</span>()</span></code></pre></div>
 <p>This creates a private, per-project library, in which new packages will be installed. This
 library is isolated from other R libraries on your system. Later, you or your
 collaborators can recreate this library, with the exact package versions you used by

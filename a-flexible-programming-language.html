@@ -122,7 +122,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 
 <link rel="stylesheet" href="assets/webfonts/webfonts.css" type="text/css" />
-<link rel="stylesheet" href="libs/sass43db88e8155d87e82ca63f98ba5c0576/style.min.css" type="text/css" />
+<link rel="stylesheet" href="libs/sass770f3b4259771ec6779de44cf5828618/style.min.css" type="text/css" />
 </head>
 
 <body>
@@ -397,35 +397,37 @@ specific elements</p>
 <pre><code>   Popeye 
 &quot;Spinach&quot; </code></pre>
 <div class="more">
+<p><strong>Implicit Coercion</strong></p>
 <p>Vectors can only contain a <em>single</em> data type. If you are trying to mix data types, R will
-quietly (without throwing an error) <em>coerce</em> all data types to a data type that can
-represent all elements, following a certain hierarchy of coercion:</p>
+quietly (without throwing an error) <em>coerce</em> (that is, convert) all data types to a data
+type that can represent all elements. This coercion follows a certain hierarchy:</p>
 <ul>
-<li>logical becomes numerical (0 and 1)</li>
+<li>logical becomes numerical (<code>FALSE = 0</code> and <code>TRUE = 1</code>)</li>
 <li>numerical becomes character</li>
 </ul>
-<p>This coercion only goes in one direction. For example, character strings that happen to
-contain numbers will nevertheless be treated as characters. If you want R to treat a
-character representation of a number as numeric, you have to explicitly tell it to do so,
-for example with the <code>as.numeric()</code> function.</p>
-<p>Consider these examples:</p>
-<div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb26-1"><a href="a-flexible-programming-language.html#cb26-1"></a><span class="kw">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="st">&quot;3&quot;</span>)</span></code></pre></div>
-<pre><code>[1] &quot;1&quot; &quot;2&quot; &quot;3&quot;</code></pre>
-<div class="sourceCode" id="cb28"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb28-1"><a href="a-flexible-programming-language.html#cb28-1"></a><span class="kw">c</span>(<span class="ot">FALSE</span>, <span class="ot">TRUE</span>, <span class="dv">2</span>, <span class="dv">3</span>)</span></code></pre></div>
+<p>The coercion only goes in one direction. For example, character strings that happen to
+contain numbers will nevertheless be treated as characters. Consider these examples:</p>
+<div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb26-1"><a href="a-flexible-programming-language.html#cb26-1"></a><span class="kw">c</span>(<span class="ot">FALSE</span>, <span class="ot">TRUE</span>, <span class="dv">2</span>, <span class="dv">3</span>)   <span class="co"># logical becomes numerical</span></span></code></pre></div>
 <pre><code>[1] 0 1 2 3</code></pre>
+<div class="sourceCode" id="cb28"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb28-1"><a href="a-flexible-programming-language.html#cb28-1"></a><span class="kw">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="st">&quot;3&quot;</span>)           <span class="co"># numerical becomes character</span></span></code></pre></div>
+<pre><code>[1] &quot;1&quot; &quot;2&quot; &quot;3&quot;</code></pre>
+<p>This also happens if you update a vector after it has already been created.</p>
 <div class="sourceCode" id="cb30"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb30-1"><a href="a-flexible-programming-language.html#cb30-1"></a>x &lt;-<span class="st"> </span><span class="dv">1</span><span class="op">:</span><span class="dv">3</span> </span>
-<span id="cb30-2"><a href="a-flexible-programming-language.html#cb30-2"></a>x[<span class="dv">1</span>] &lt;-<span class="st"> </span><span class="ot">TRUE</span> </span>
+<span id="cb30-2"><a href="a-flexible-programming-language.html#cb30-2"></a>x[<span class="dv">1</span>] &lt;-<span class="st"> </span><span class="ot">TRUE</span>   <span class="co"># this logical will become numerical</span></span>
 <span id="cb30-3"><a href="a-flexible-programming-language.html#cb30-3"></a>x </span></code></pre></div>
 <pre><code>[1] 1 2 3</code></pre>
-<p>Vectors also cannot contain other vectors, so nested vectors automatically get unnested:</p>
-<div class="sourceCode" id="cb32"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb32-1"><a href="a-flexible-programming-language.html#cb32-1"></a><span class="kw">c</span>( <span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">2</span>), <span class="kw">c</span>(<span class="dv">3</span>,<span class="dv">4</span>) ) </span></code></pre></div>
-<pre><code>[1] 1 2 3 4</code></pre>
-<div class="sourceCode" id="cb34"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb34-1"><a href="a-flexible-programming-language.html#cb34-1"></a><span class="kw">c</span>( <span class="dv">1</span>, <span class="kw">c</span>(<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>) ) </span></code></pre></div>
-<pre><code>[1] 1 2 3 4</code></pre>
-<div class="sourceCode" id="cb36"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb36-1"><a href="a-flexible-programming-language.html#cb36-1"></a><span class="kw">c</span>( <span class="kw">c</span>(<span class="ot">TRUE</span>, <span class="dv">0</span>), <span class="kw">c</span>(<span class="ot">TRUE</span>, <span class="ot">FALSE</span>), <span class="kw">c</span>(<span class="ot">TRUE</span>, <span class="st">&quot;0&quot;</span>) )</span></code></pre></div>
-<pre><code>[1] &quot;1&quot;     &quot;0&quot;     &quot;TRUE&quot;  &quot;FALSE&quot; &quot;TRUE&quot;  &quot;0&quot;    </code></pre>
-<p>If you need to store a sequence of mixed data types, you will have to use another data
-structure called <em>list</em>.</p>
+<p>Vectors cannot contain other vectors, so nested vectors automatically get unnested, and as
+they get unnested, the elements will be coerced to a common data type:</p>
+<div class="sourceCode" id="cb32"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb32-1"><a href="a-flexible-programming-language.html#cb32-1"></a><span class="kw">c</span>(<span class="dv">1</span>, <span class="kw">c</span>(<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>)) </span>
+<span id="cb32-2"><a href="a-flexible-programming-language.html#cb32-2"></a><span class="kw">c</span>(<span class="kw">c</span>(<span class="ot">TRUE</span>, <span class="dv">0</span>), <span class="kw">c</span>(<span class="ot">TRUE</span>, <span class="st">&quot;0&quot;</span>)) <span class="co"># logical and numerical become character</span></span></code></pre></div>
+<pre><code>[1] 1 2 3 4
+[1] &quot;1&quot;    &quot;0&quot;    &quot;TRUE&quot; &quot;0&quot;   </code></pre>
+<p>This behavior can sometimes be used for good, but in general it’s best to avoid it. Make
+coercion explicit. For example, if you want to convert a character representation of a
+number to numeric, do so with the <code>as.numeric()</code> function. For more complex applications
+consider static typing with <a href="https://github.com/moodymudskipper/typed" class="uri">https://github.com/moodymudskipper/typed</a>. If you really need
+to store a sequence of mixed data types, you will have to use another data structure
+called <em>list</em>.</p>
 </div>
 </div>
 <div id="data-frames" class="section level2">
@@ -438,13 +440,13 @@ different variables.</p>
 of fashion, it is good practice to give the columns of your data frames names that are
 easy to remember and easy to type.</p>
 <p>You can make your own data frame by hand, by putting together vectors like this:</p>
-<div class="sourceCode" id="cb38"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb38-1"><a href="a-flexible-programming-language.html#cb38-1"></a>cool_numbers &lt;-<span class="st"> </span><span class="kw">data.frame</span>(</span>
-<span id="cb38-2"><a href="a-flexible-programming-language.html#cb38-2"></a>    <span class="st">&quot;number&quot;</span> =<span class="st"> </span><span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">13</span>,<span class="dv">23</span>,<span class="dv">42</span>),</span>
-<span id="cb38-3"><a href="a-flexible-programming-language.html#cb38-3"></a>    <span class="st">&quot;isPrime&quot;</span> =<span class="st"> </span><span class="kw">c</span>(<span class="ot">FALSE</span>, <span class="ot">TRUE</span>, <span class="ot">TRUE</span>, <span class="ot">FALSE</span>),</span>
-<span id="cb38-4"><a href="a-flexible-programming-language.html#cb38-4"></a>    <span class="st">&quot;oneTwo&quot;</span> =<span class="st"> </span><span class="kw">c</span>(<span class="dv">1</span>, <span class="dv">2</span>)</span>
-<span id="cb38-5"><a href="a-flexible-programming-language.html#cb38-5"></a>)</span>
-<span id="cb38-6"><a href="a-flexible-programming-language.html#cb38-6"></a></span>
-<span id="cb38-7"><a href="a-flexible-programming-language.html#cb38-7"></a>cool_numbers</span></code></pre></div>
+<div class="sourceCode" id="cb34"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb34-1"><a href="a-flexible-programming-language.html#cb34-1"></a>cool_numbers &lt;-<span class="st"> </span><span class="kw">data.frame</span>(</span>
+<span id="cb34-2"><a href="a-flexible-programming-language.html#cb34-2"></a>    <span class="st">&quot;number&quot;</span> =<span class="st"> </span><span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">13</span>,<span class="dv">23</span>,<span class="dv">42</span>),</span>
+<span id="cb34-3"><a href="a-flexible-programming-language.html#cb34-3"></a>    <span class="st">&quot;isPrime&quot;</span> =<span class="st"> </span><span class="kw">c</span>(<span class="ot">FALSE</span>, <span class="ot">TRUE</span>, <span class="ot">TRUE</span>, <span class="ot">FALSE</span>),</span>
+<span id="cb34-4"><a href="a-flexible-programming-language.html#cb34-4"></a>    <span class="st">&quot;oneTwo&quot;</span> =<span class="st"> </span><span class="kw">c</span>(<span class="dv">1</span>, <span class="dv">2</span>)</span>
+<span id="cb34-5"><a href="a-flexible-programming-language.html#cb34-5"></a>)</span>
+<span id="cb34-6"><a href="a-flexible-programming-language.html#cb34-6"></a></span>
+<span id="cb34-7"><a href="a-flexible-programming-language.html#cb34-7"></a>cool_numbers</span></code></pre></div>
 <pre><code>  number isPrime oneTwo
 1      1   FALSE      1
 2     13    TRUE      2
@@ -454,7 +456,7 @@ easy to remember and easy to type.</p>
 length of the other two columns. This works, as long as the total length is a multiple of
 the shorter vector’s length.</p>
 <p>A quick way to access a single column of a data frame is with the <code>$</code> operator.</p>
-<div class="sourceCode" id="cb40"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb40-1"><a href="a-flexible-programming-language.html#cb40-1"></a>cool_numbers<span class="op">$</span>number</span></code></pre></div>
+<div class="sourceCode" id="cb36"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb36-1"><a href="a-flexible-programming-language.html#cb36-1"></a>cool_numbers<span class="op">$</span>number</span></code></pre></div>
 <pre><code>[1]  1 13 23 42</code></pre>
 <p>Did you notice that columns in a data frame are vectors? This means that everything that
 can be done with a vector can be done with a data frame column!</p>
@@ -467,16 +469,16 @@ really powerful idea and the source of much of R’s strength!</p>
 <p><span id="exr:unlabeled-div-8" class="exercise"><strong>Exercise 3.2  </strong></span>Make a new data frame <code>my_cool_numbers</code> with a column <code>a</code> that contains all numbers from 1
 to 100 and column <code>b</code> that contains your favorite number 100 times.</p>
 <div class="answer">
-<div class="sourceCode" id="cb42"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb42-1"><a href="a-flexible-programming-language.html#cb42-1"></a>my_cool_numbers &lt;-<span class="st"> </span><span class="kw">data.frame</span>(</span>
-<span id="cb42-2"><a href="a-flexible-programming-language.html#cb42-2"></a>    <span class="st">&quot;a&quot;</span> =<span class="st"> </span><span class="dv">1</span><span class="op">:</span><span class="dv">100</span>,</span>
-<span id="cb42-3"><a href="a-flexible-programming-language.html#cb42-3"></a>    <span class="st">&quot;b&quot;</span> =<span class="st"> </span><span class="dv">42</span></span>
-<span id="cb42-4"><a href="a-flexible-programming-language.html#cb42-4"></a>)</span></code></pre></div>
+<div class="sourceCode" id="cb38"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb38-1"><a href="a-flexible-programming-language.html#cb38-1"></a>my_cool_numbers &lt;-<span class="st"> </span><span class="kw">data.frame</span>(</span>
+<span id="cb38-2"><a href="a-flexible-programming-language.html#cb38-2"></a>    <span class="st">&quot;a&quot;</span> =<span class="st"> </span><span class="dv">1</span><span class="op">:</span><span class="dv">100</span>,</span>
+<span id="cb38-3"><a href="a-flexible-programming-language.html#cb38-3"></a>    <span class="st">&quot;b&quot;</span> =<span class="st"> </span><span class="dv">42</span></span>
+<span id="cb38-4"><a href="a-flexible-programming-language.html#cb38-4"></a>)</span></code></pre></div>
 </div>
 <p>Since data frame columns are vectors, we can use the same operations on them. calculate
 the standard deviation of all numbers in column <code>a</code> in our <code>my_cool_numbers</code> data frame!
 Use the RStudio help to find the right function for it.</p>
 <div class="answer">
-<div class="sourceCode" id="cb43"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb43-1"><a href="a-flexible-programming-language.html#cb43-1"></a><span class="kw">sd</span>(my_cool_numbers<span class="op">$</span>a)</span></code></pre></div>
+<div class="sourceCode" id="cb39"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb39-1"><a href="a-flexible-programming-language.html#cb39-1"></a><span class="kw">sd</span>(my_cool_numbers<span class="op">$</span>a)</span></code></pre></div>
 </div>
 </div>
 <p>As for vectors, R comes out of the box with many more commands to create and modify data
