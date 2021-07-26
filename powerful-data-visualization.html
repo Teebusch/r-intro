@@ -53,6 +53,43 @@
 <script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
 <link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
 <script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<template id="solutionTemplate">
+	<details>
+		<summary>
+			<span class="summary-title">Solution</span>
+			<div class="summary-chevron">
+				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+					 viewBox="0 0 24 24" fill="none"
+					 stroke="currentColor" stroke-width="2" stroke-linecap="round"
+					 stroke-linejoin="round" class="feather">
+					<polyline points="6 9 12 15 18 9"></polyline>
+				</svg>
+			</div>
+		</summary>
+		<div class="content"></div>
+	</details>
+</template>
+
+
+
+<script>
+
+function obscureSolutions(selector = 'div.answer'){
+  var solutions = document.querySelectorAll(selector);
+  const template = document.getElementById("solutionTemplate");
+
+  solutions.forEach(e => {
+    let wrapped = template.content.cloneNode(true);
+    wrapped.querySelector(".content").appendChild(e.cloneNode(true));
+    e.replaceWith(wrapped);
+  })
+}
+
+window.addEventListener("load", function() {
+  obscureSolutions();
+});
+
+</script>
 
 
 <style type="text/css">
@@ -122,7 +159,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 
 <link rel="stylesheet" href="assets/webfonts/webfonts.css" type="text/css" />
-<link rel="stylesheet" href="libs/sassd432c475383213f73f48727b6684e053/style.min.css" type="text/css" />
+<link rel="stylesheet" href="libs/sass882513e1c98a9f2eaaad17220e1d06e7/style.min.css" type="text/css" />
 </head>
 
 <body>
@@ -332,7 +369,7 @@ gitbook.start({
 "link": null,
 "text": null
 },
-"download": ["https://github.com/Teebusch/r-introduction/raw/master/07-data-vis.Rmd", "r-intro.epub", "r-intro.pdf"],
+"download": ["https://github.com/Teebusch/r-introduction/raw/master/07-data-vis.Rmd", "r-intro.epub"],
 "toc": {
 "collapse": "subsection"
 }
