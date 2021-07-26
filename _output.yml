@@ -1,5 +1,7 @@
 bookdown::gitbook:
   highlight: pygments
+  includes:
+    in_header: header.html
   css:
    - assets/webfonts/webfonts.css
    - assets/style.scss
@@ -11,7 +13,7 @@ bookdown::gitbook:
     toc:
       before: |
         <li><a href="./">10 Reasons To Learn R</a></li>
-    download: ["rmd", "epub", "pdf"]
+    download: ["rmd", "epub"]
     sharing:
       github: yes
       facebook: no

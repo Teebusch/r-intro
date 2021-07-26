@@ -118,7 +118,7 @@ pre code {
   border-radius: 5px;
 }
 
-.more, .exercise, .goals, .answer, .warning {
+.more, .exercise, .goals, .warning {
   padding: 1.5rem 1.5rem 0.5rem 1.5rem;
   margin: 2rem 0;
   border: none;
@@ -163,53 +163,37 @@ div.exercise {
   border-left: 5px solid #F0D26F;
 }
 
-div.answer {
-  border-left: 5px solid #E3AC5A;
-  background: #F7F6F5;
-  box-shadow: -5px 6px 4px #29210921;
-}
-
-div.answer > * {
-  filter: blur(4px) saturate(0);
-  overflow: hidden;
-}
-
-div.answer:hover > * {
-  filter: none;
-}
-
 .csl-entry {
   margin-bottom: 2em;
 }
 
-// details
+// answers for challenges
+
+div.answer {
+}
 
 $details-padding: 1em;
 
 details {
-	margin: 7em auto;
-	box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
-		0 10px 10px -5px rgba(0, 0, 0, 0.04);
-	width: 100%;
-	background: #ffffff;
-	border-radius: 8px;
-	position: relative;
-	width: 500px;
+  border-radius: 3px 10px 10px 3px;
+  border-left: 5px solid #E3AC5A;
+  background: #F7F6F5;
+  box-shadow: -5px 6px 4px #29210921;
+	margin: 1em 0;
 
 	.summary-title {
 		user-select: none;
 		font-weight: bold;
-		font-size: 1rem;
 	}
 
 	&:hover {
 		cursor: pointer;
 	}
 
-	.summary-content {
+	.content {
 		border-top: 0;
 		cursor: default;
-		padding: $details-padding;
+		padding: 0.5em 1em;
 	}
 
 	summary {
@@ -223,14 +207,14 @@ details {
 		&:hover .summary-chevron svg {
 			color: #222;
 		}
+
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
 	}
 
 	.summary-chevron {
 		pointer-events: none;
-		position: absolute;
-		top: 0.75em;
-		right: $details-padding;
-		background: #ffffff;
 
 		svg {
 			transition: transform 300ms ease;
@@ -242,5 +226,13 @@ details {
 
 details[open] > summary .summary-chevron svg {
 	transform: rotate(180deg)
+}
+
+summary::marker {
+  display: none;
+}
+
+summary::-webkit-details-marker {
+  display: none;
 }
 

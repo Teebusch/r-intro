@@ -82,7 +82,7 @@ may not be essential but could help you to see the connections between concepts.
 :::
 
 ::: {.exercise}
-This is a challenge. Do these to deepen your understanding. To reveal the solution in the box below, hover over it (on a computer) or click it (on mobile).
+This is a challenge. Do these to deepen your understanding. To reveal the solution in the box below, click it.
 
 ::: {.answer}
 ```{r, eval=FALSE}
