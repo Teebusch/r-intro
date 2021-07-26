@@ -24,7 +24,7 @@
 <meta name="author" content="Tobias Busch" />
 
 
-<meta name="date" content="2021-07-25" />
+<meta name="date" content="2021-07-26" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -122,7 +122,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 
 <link rel="stylesheet" href="assets/webfonts/webfonts.css" type="text/css" />
-<link rel="stylesheet" href="libs/sass249d42dbb58fc1261540a3de073bfe3f/style.min.css" type="text/css" />
+<link rel="stylesheet" href="libs/sass43db88e8155d87e82ca63f98ba5c0576/style.min.css" type="text/css" />
 </head>
 
 <body>
@@ -204,15 +204,18 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="9.1" data-path="reproducibility.html"><a href="reproducibility.html#self-contained-projects-with-rstudio"><i class="fa fa-check"></i><b>9.1</b> Self-contained projects with RStudio</a></li>
 <li class="chapter" data-level="9.2" data-path="reproducibility.html"><a href="reproducibility.html#reproducible-reports-with-rmarkdown"><i class="fa fa-check"></i><b>9.2</b> Reproducible reports with RMarkdown</a></li>
 <li class="chapter" data-level="9.3" data-path="reproducibility.html"><a href="reproducibility.html#version-control-with-git"><i class="fa fa-check"></i><b>9.3</b> Version control with Git</a></li>
-<li class="chapter" data-level="9.4" data-path="reproducibility.html"><a href="reproducibility.html#snapshot-your-packages-with-renv"><i class="fa fa-check"></i><b>9.4</b> Snapshot your packages with {renv}</a></li>
-<li class="chapter" data-level="9.5" data-path="reproducibility.html"><a href="reproducibility.html#snapshot-everything-with-docker"><i class="fa fa-check"></i><b>9.5</b> Snapshot everything with Docker</a></li>
-<li class="chapter" data-level="9.6" data-path="reproducibility.html"><a href="reproducibility.html#more"><i class="fa fa-check"></i><b>9.6</b> More</a><ul>
-<li class="chapter" data-level="9.6.1" data-path="reproducibility.html"><a href="reproducibility.html#pipelines"><i class="fa fa-check"></i><b>9.6.1</b> Pipelines</a></li>
-<li class="chapter" data-level="9.6.2" data-path="reproducibility.html"><a href="reproducibility.html#test-driven-development"><i class="fa fa-check"></i><b>9.6.2</b> Test-driven development</a></li>
+<li class="chapter" data-level="9.4" data-path="reproducibility.html"><a href="reproducibility.html#make-your-development-environment-reproducible"><i class="fa fa-check"></i><b>9.4</b> Make your development environment reproducible</a><ul>
+<li class="chapter" data-level="9.4.1" data-path="reproducibility.html"><a href="reproducibility.html#snapshot-packages-with-renv"><i class="fa fa-check"></i><b>9.4.1</b> Snapshot packages with {renv}</a></li>
+<li class="chapter" data-level="9.4.2" data-path="reproducibility.html"><a href="reproducibility.html#switching-between-r-versions"><i class="fa fa-check"></i><b>9.4.2</b> Switching between R versions</a></li>
+<li class="chapter" data-level="9.4.3" data-path="reproducibility.html"><a href="reproducibility.html#snapshot-everything-with-docker"><i class="fa fa-check"></i><b>9.4.3</b> Snapshot everything with Docker</a></li>
+</ul></li>
+<li class="chapter" data-level="9.5" data-path="reproducibility.html"><a href="reproducibility.html#more"><i class="fa fa-check"></i><b>9.5</b> More</a><ul>
+<li class="chapter" data-level="9.5.1" data-path="reproducibility.html"><a href="reproducibility.html#pipelines"><i class="fa fa-check"></i><b>9.5.1</b> Pipelines</a></li>
+<li class="chapter" data-level="9.5.2" data-path="reproducibility.html"><a href="reproducibility.html#test-driven-development"><i class="fa fa-check"></i><b>9.5.2</b> Test-driven development</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="10" data-path="an-awesome-community-1.html"><a href="an-awesome-community-1.html"><i class="fa fa-check"></i><b>10</b> An awesome community</a><ul>
-<li class="chapter" data-level="10.1" data-path="an-awesome-community-1.html"><a href="an-awesome-community-1.html#engage-with-the-community"><i class="fa fa-check"></i><b>10.1</b> Engage with the community</a></li>
+<li class="chapter" data-level="10.1" data-path="an-awesome-community-1.html"><a href="an-awesome-community-1.html#get-involved-with-the-community"><i class="fa fa-check"></i><b>10.1</b> Get involved with the community</a></li>
 <li class="chapter" data-level="10.2" data-path="an-awesome-community-1.html"><a href="an-awesome-community-1.html#how-to-continue-learning"><i class="fa fa-check"></i><b>10.2</b> How to continue learning?</a></li>
 </ul></li>
 <li class="part"><span><b>Wrapping Up</b></span></li>
@@ -251,7 +254,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 <p>Workflows that are based on graphical user interfaces are difficult to reproduce! In
 contrast, when you code your analysis with R, all the steps are laid out in your script.
-Well-written code allows to retrace everything you have done and it allows someone else to
+Well-written code allows someone else to retrace everything you have done and to
 understand how you got from your data to your results.</p>
 <p>To ensure that your results are truly reproducible, you must take additional measures. You
 need to make sure that your code produces the same results on another computer and at a
@@ -259,7 +262,7 @@ later point in time. Moreover you should provide enough documentation to allow o
 understand the motivation behind your analysis.</p>
 <p>You may be thinking that nobody will care to reproduce your analysis. Even if this is
 true, it is quite possible that <em>you</em> will at some later point get back to it, and your
-future self will certainly thank you for making their job as easy as possible.</p>
+future self will certainly be grateful for making their job as easy as possible.</p>
 <div id="self-contained-projects-with-rstudio" class="section level2">
 <h2><span class="header-section-number">9.1</span> Self-contained projects with RStudio</h2>
 <p>You have already learned how to store your analysis as a self-contained <em>RStudio project</em>.
@@ -277,7 +280,7 @@ Scientific Computing</em> <span class="citation">(Wilson et al. <a href="referen
 <div id="reproducible-reports-with-rmarkdown" class="section level2">
 <h2><span class="header-section-number">9.2</span> Reproducible reports with RMarkdown</h2>
 <p>Another tool for reproducible analyses that we have already introduced is <em>RMarkdown</em>. As
-you know, an <em>RMarkdown</em> document lets you can mix text, R code, and the output of that R
+you know, an <em>RMarkdown</em> document lets you mix text, R code, and the output of that R
 code.</p>
 <p>Now here is something amazing about RMarkdown: With the click of a button, you can turn an
 RMarkdown document into something that you can share with others, even if they do not have
@@ -298,9 +301,9 @@ R! You can use this to make:</p>
 <a href="https://davidgohel.github.io/officer/"><code>{officeR}</code></a></p></li>
 </ul>
 <div class="more">
-<p>HTML is probably the most convenient and easy to use output format. If you wnat to use PDF
+<p>HTML is probably the most convenient and easy to use output format. If you want to use PDF
 or Word, you will have to worry about page sizes and page breaks. It’s best to avoid this
-until later in the process. For PDF in particular, wou will also have to install a
+until later in the process. For PDF in particular, you will also have to install a
 <span class="math inline">\(\LaTeX\)</span> distribution. I recommend <code>{tinytex}</code>.</p>
 </div>
 <p>And if the data changes or a journal reviewer asks you to exclude a subject? Update the
@@ -309,7 +312,7 @@ paste!</p>
 <p>So how do we do it?</p>
 <div class="sourceCode" id="cb72"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb72-1"><a href="reproducibility.html#cb72-1"></a><span class="co"># ...</span></span></code></pre></div>
 <p>OK, but it still looks rather …. computerish. How do I make something that a normal
-person would wnat to read, or a journal would be willing to accept?</p>
+person would want to read, or a journal would be willing to accept?</p>
 <p>As so often n R, there are packages that can help you with that. Packages to make pretty
 APA <a href="http://www.danieldsjoberg.com/gtsummary/index.html">tables for models</a>,
 <a href="https://cran.r-project.org/web/packages/table1/vignettes/table1-examples.html">summary</a>
@@ -332,7 +335,7 @@ at researchers</p>
 </div>
 <div id="version-control-with-git" class="section level2">
 <h2><span class="header-section-number">9.3</span> Version control with Git</h2>
-<p>Version control is an essential tool for any serious programming. It is like a time
+<p>Version control is an essential tool for any programming endeavour. It is like a time
 machine for your code. Among other things, version control allows you to</p>
 <ul>
 <li><p>store the state of your project and restore a previous state.</p></li>
@@ -342,9 +345,8 @@ back together</p></li>
 have made</p></li>
 </ul>
 <p>Using version control is very liberating because it gives you the freedom to experiment
-and make mistakes.</p>
-<p>A popular version control tool is <a href="https://git-scm.com/">Git</a>. To start using Git with
-your project you will need to do four things:</p>
+and make mistakes. A popular version control tool is <a href="https://git-scm.com/">Git</a>. To start
+using Git with your project you will need to do four things:</p>
 <ol style="list-style-type: decimal">
 <li><p><strong>Install Git</strong></p></li>
 <li><p><strong>initialize a new Git repository</strong> in your project directory.</p></li>
@@ -362,22 +364,25 @@ in.<a href="#fn16" class="footnote-ref" id="fnref16"><sup>16</sup></a></p>
 <span id="cb73-3"><a href="reproducibility.html#cb73-3"></a><span class="fu">git</span> commit -m <span class="st">&quot;initial commit&quot;</span></span></code></pre></div>
 <p>Congratulations! You have made your first Git commit! Now you can rest assured, that you
 can always go back to the current state of the analysis, see the changes you have made
-since, figure out where things broke, and undo changes if necessary. Isn’t that a
-comforting feeling?</p>
+since, figure out where things broke, and undo changes if necessary. Isn’t that
+comforting?</p>
 <p>To utilize the full power of Git, you will have to learn a few more things. This is
 outside of the scope of this book but you can find a good introduction to Git for R users
 in the book <em>Happy Git with R</em> (<a href="https://happygitwithr.com/" class="uri">https://happygitwithr.com/</a>). Learn to use Git and use it
 often!</p>
 </div>
-<div id="snapshot-your-packages-with-renv" class="section level2">
-<h2><span class="header-section-number">9.4</span> Snapshot your packages with {renv}</h2>
-<p>Unfortunately, using Git to track changes in your <em>own</em> code not enough, because the
-packages that you use may get updated too. Sometimes the developers decide to change the
-way a function works, and this can cause your code to break. It can be really frustrating
-to find that your analysis from a few months ago suddenly does not run anymore, or that it
-fails to run on your collaborators computer, who uses different package versions. You can
-save yourself the trouble by storing a snapshot of your package library using the
-<a href="https://rstudio.github.io/renv/"><code>{renv}</code></a> package <span class="citation">(Ushey <a href="references.html#ref-R-renv" role="doc-biblioref">2021</a>)</span>.</p>
+<div id="make-your-development-environment-reproducible" class="section level2">
+<h2><span class="header-section-number">9.4</span> Make your development environment reproducible</h2>
+<div id="snapshot-packages-with-renv" class="section level3">
+<h3><span class="header-section-number">9.4.1</span> Snapshot packages with {renv}</h3>
+<p>Unfortunately, using Git to track changes in your <em>own</em> code is not enough, because the
+packages that you use may get updated too and sometimes, the developers decide to change
+the way a function work. This can cause your code to break and it can be really
+frustrating to find that your analysis from a few months ago suddenly does not run
+anymore, or that it fails to run on your collaborators computer, who uses different
+versions of the same packages. You can avoid this frustration by storing a snapshot of
+your package library with the <a href="https://rstudio.github.io/renv/"><code>{renv}</code></a> package
+<span class="citation">(Ushey <a href="references.html#ref-R-renv" role="doc-biblioref">2021</a>)</span>.</p>
 <p>Install the <code>{renv}</code> package, then – in your project initialize <code>{renv}</code> for your project
 and take a snapshot of the packages you use in your project:</p>
 <div class="sourceCode" id="cb74"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb74-1"><a href="reproducibility.html#cb74-1"></a><span class="kw">install.packages</span>(<span class="st">&quot;renv&quot;</span>)</span>
@@ -388,25 +393,32 @@ library is isolated from other R libraries on your system. Later, you or your
 collaborators can recreate this library, with the exact package versions you used by
 running <code>renv::restore()</code>.</p>
 </div>
-<div id="snapshot-everything-with-docker" class="section level2">
-<h2><span class="header-section-number">9.5</span> Snapshot everything with Docker</h2>
+<div id="switching-between-r-versions" class="section level3">
+<h3><span class="header-section-number">9.4.2</span> Switching between R versions</h3>
 <p>R itself receives updates, too. While the updates are often minor and breaking changes are
-rare, it is not guaranteed that today’s code will work on a future version of R.</p>
-<p>It is possible to install multiple versions of R in parallel on the same computer and
-switch between them relatively easily in the RStudio interface.</p>
-<p>You can also take the idea of snapshotting your environment a step further by using
-<a href="https://www.rocker-project.org/">Docker Containers</a>. This is akin to creating an entire
-virtual computer just for your analysis. Instead of just your analysis files, you then
-track, store, and share that entire virtual computer. This is a lot more effort, but it
-may be the only way to guarantee that your analysis can be runreproduced out of the box.
+rare, it is not guaranteed that today’s code will work on a future version of R. It is
+possible to install multiple versions of R in parallel on the same computer and switch
+between them. On Windows you can do this in the RStudio interface,
+<code>Tools ▸ Global Options ▸ General ▸ Basic ▸ Use RStudio Version ...</code>. On MacOs, it is a
+little more complicated, but you can use a tool called <em>RSwitch</em>
+(<a href="https://rud.is/rswitch/" class="uri">https://rud.is/rswitch/</a>) that makes it a bit easier.</p>
+</div>
+<div id="snapshot-everything-with-docker" class="section level3">
+<h3><span class="header-section-number">9.4.3</span> Snapshot everything with Docker</h3>
+<p>Finally, you can also take the idea of snapshotting your environment a step further by
+using <a href="https://www.rocker-project.org/">Docker Containers</a>. This is akin to creating an
+entire virtual computer just for your analysis. Instead of just your analysis files, you
+then track, store, and share that entire virtual computer. This is a lot more effort, but
+it may be the only way to guarantee that your analysis can be reproduced out of the box.
 However, this is beyond the scope of this book.</p>
 </div>
+</div>
 <div id="more" class="section level2">
-<h2><span class="header-section-number">9.6</span> More</h2>
+<h2><span class="header-section-number">9.5</span> More</h2>
 <p>R has many more tools for improving reproducibility, and as always there’s more than one
 option.</p>
 <div id="pipelines" class="section level3">
-<h3><span class="header-section-number">9.6.1</span> Pipelines</h3>
+<h3><span class="header-section-number">9.5.1</span> Pipelines</h3>
 <p>Once your analysis becomes more complex it often contains many different outputs (models,
 figures, intermediate data sets). Some of them can take long to compute and it can be
 difficult to stay on top of the different steps of your analysis. There are packages that
@@ -420,7 +432,7 @@ reports are reproducible</li>
 </ul>
 </div>
 <div id="test-driven-development" class="section level3">
-<h3><span class="header-section-number">9.6.2</span> Test-driven development</h3>
+<h3><span class="header-section-number">9.5.2</span> Test-driven development</h3>
 <p>with <code>{testthat}, {tinytest}. {testrmd}</code></p>
 
 </div>

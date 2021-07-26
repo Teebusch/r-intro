@@ -57,11 +57,13 @@ reproducibility
 self-contained-projects-with-rstudio
 reproducible-reports-with-rmarkdown
 version-control-with-git
-snapshot-your-packages-with-renv
+make-your-development-environment-reproducible
+snapshot-packages-with-renv
+switching-between-r-versions
 snapshot-everything-with-docker
 more
 pipelines
 test-driven-development
 an-awesome-community-1
-engage-with-the-community
+get-involved-with-the-community
 how-to-continue-learning
