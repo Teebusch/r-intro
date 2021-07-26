@@ -181,3 +181,66 @@ div.answer:hover > * {
 .csl-entry {
   margin-bottom: 2em;
 }
+
+// details
+
+$details-padding: 1em;
+
+details {
+	margin: 7em auto;
+	box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+		0 10px 10px -5px rgba(0, 0, 0, 0.04);
+	width: 100%;
+	background: #ffffff;
+	border-radius: 8px;
+	position: relative;
+	width: 500px;
+
+	.summary-title {
+		user-select: none;
+		font-weight: bold;
+		font-size: 1rem;
+	}
+
+	&:hover {
+		cursor: pointer;
+	}
+
+	.summary-content {
+		border-top: 0;
+		cursor: default;
+		padding: $details-padding;
+	}
+
+	summary {
+		list-style: none;
+		padding: $details-padding;
+
+		&:focus {
+			outline: none;
+		}
+
+		&:hover .summary-chevron svg {
+			color: #222;
+		}
+	}
+
+	.summary-chevron {
+		pointer-events: none;
+		position: absolute;
+		top: 0.75em;
+		right: $details-padding;
+		background: #ffffff;
+
+		svg {
+			transition: transform 300ms ease;
+			display: block;
+			color: #ccc;
+		}
+	}
+}
+
+details[open] > summary .summary-chevron svg {
+	transform: rotate(180deg)
+}
+
