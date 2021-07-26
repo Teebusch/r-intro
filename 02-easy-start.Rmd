@@ -164,8 +164,8 @@ You can also run individual lines or sections of code by using
 script panel.
 
 ::: {.exercise}
-Replace the example code in the first *code chunk* so that it calculates the square of
-`2021` as well as the square root of `1764` and run the chunk.
+Add a new *code chunk* to your R Markdown Notebook in which you calculate the square of
+`2021` as well as the square root of `1764`. Then run the chunk.
 
 ::: {.answer}
 The code chunk in `analysis.Rmd` should look like this.

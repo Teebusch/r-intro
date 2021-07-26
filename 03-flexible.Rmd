@@ -203,39 +203,45 @@ fav_food["Popeye"]
 ```
 
 ::: {.more}
-Vectors can only contain a *single* data type. If you are trying to mix data types, R will
-quietly (without throwing an error) *coerce* all data types to a data type that can
-represent all elements, following a certain hierarchy of coercion:
+**Implicit Coercion**
 
--   logical becomes numerical (0 and 1)
+Vectors can only contain a *single* data type. If you are trying to mix data types, R will
+quietly (without throwing an error) *coerce* (that is, convert) all data types to a data
+type that can represent all elements. This coercion follows a certain hierarchy:
+
+-   logical becomes numerical (`FALSE = 0` and `TRUE = 1`)
 -   numerical becomes character
 
-This coercion only goes in one direction. For example, character strings that happen to
-contain numbers will nevertheless be treated as characters. If you want R to treat a
-character representation of a number as numeric, you have to explicitly tell it to do so,
-for example with the `as.numeric()` function.
-
-Consider these examples:
+The coercion only goes in one direction. For example, character strings that happen to
+contain numbers will nevertheless be treated as characters. Consider these examples:
 
 ```{r}
-c(1, 2, "3")
-c(FALSE, TRUE, 2, 3)
+c(FALSE, TRUE, 2, 3)   # logical becomes numerical
+c(1, 2, "3")           # numerical becomes character
+```
 
+This also happens if you update a vector after it has already been created.
+
+```{r}
 x <- 1:3 
-x[1] <- TRUE 
+x[1] <- TRUE   # this logical will become numerical
 x 
 ```
 
-Vectors also cannot contain other vectors, so nested vectors automatically get unnested:
+Vectors cannot contain other vectors, so nested vectors automatically get unnested, and as
+they get unnested, the elements will be coerced to a common data type:
 
-```{r}
-c( c(1,2), c(3,4) ) 
-c( 1, c(2,3,4) ) 
-c( c(TRUE, 0), c(TRUE, FALSE), c(TRUE, "0") )
+```{r, results='hold'}
+c(1, c(2,3,4)) 
+c(c(TRUE, 0), c(TRUE, "0")) # logical and numerical become character
 ```
 
-If you need to store a sequence of mixed data types, you will have to use another data
-structure called *list*.
+This behavior can sometimes be used for good, but in general it's best to avoid it. Make
+coercion explicit. For example, if you want to convert a character representation of a
+number to numeric, do so with the `as.numeric()` function. For more complex applications
+consider static typing with <https://github.com/moodymudskipper/typed>. If you really need
+to store a sequence of mixed data types, you will have to use another data structure
+called *list*.
 :::
 
 ## Data Frames
