@@ -10,7 +10,7 @@
 
 Workflows that are based on graphical user interfaces are difficult to reproduce! In
 contrast, when you code your analysis with R, all the steps are laid out in your script.
-Well-written code allows to retrace everything you have done and it allows someone else to
+Well-written code allows someone else to retrace everything you have done and to
 understand how you got from your data to your results.
 
 To ensure that your results are truly reproducible, you must take additional measures. You
@@ -20,7 +20,7 @@ understand the motivation behind your analysis.
 
 You may be thinking that nobody will care to reproduce your analysis. Even if this is
 true, it is quite possible that *you* will at some later point get back to it, and your
-future self will certainly thank you for making their job as easy as possible.
+future self will certainly be grateful for making their job as easy as possible.
 
 ## Self-contained projects with RStudio
 
@@ -39,7 +39,7 @@ Scientific Computing* [@wilsonGoodEnoughPractices2017]. A few of the key points 
 ## Reproducible reports with RMarkdown
 
 Another tool for reproducible analyses that we have already introduced is *RMarkdown*. As
-you know, an *RMarkdown* document lets you can mix text, R code, and the output of that R
+you know, an *RMarkdown* document lets you mix text, R code, and the output of that R
 code.
 
 Now here is something amazing about RMarkdown: With the click of a button, you can turn an
@@ -67,9 +67,9 @@ R! You can use this to make:
     [`{officeR}`](https://davidgohel.github.io/officer/)
 
 ::: {.more}
-HTML is probably the most convenient and easy to use output format. If you wnat to use PDF
+HTML is probably the most convenient and easy to use output format. If you want to use PDF
 or Word, you will have to worry about page sizes and page breaks. It's best to avoid this
-until later in the process. For PDF in particular, wou will also have to install a
+until later in the process. For PDF in particular, you will also have to install a
 $\LaTeX$ distribution. I recommend `{tinytex}`.
 :::
 
@@ -84,7 +84,7 @@ So how do we do it?
 ```
 
 OK, but it still looks rather .... computerish. How do I make something that a normal
-person would wnat to read, or a journal would be willing to accept?
+person would want to read, or a journal would be willing to accept?
 
 As so often n R, there are packages that can help you with that. Packages to make pretty
 APA [tables for models](http://www.danieldsjoberg.com/gtsummary/index.html),
@@ -113,7 +113,7 @@ at researchers
 
 ## Version control with Git
 
-Version control is an essential tool for any serious programming. It is like a time
+Version control is an essential tool for any programming endeavour. It is like a time
 machine for your code. Among other things, version control allows you to
 
 -   store the state of your project and restore a previous state.
@@ -125,10 +125,8 @@ machine for your code. Among other things, version control allows you to
     have made
 
 Using version control is very liberating because it gives you the freedom to experiment
-and make mistakes.
-
-A popular version control tool is [Git](https://git-scm.com/). To start using Git with
-your project you will need to do four things:
+and make mistakes. A popular version control tool is [Git](https://git-scm.com/). To start
+using Git with your project you will need to do four things:
 
 1.  **Install Git**
 
@@ -156,23 +154,26 @@ git commit -m "initial commit"
 
 Congratulations! You have made your first Git commit! Now you can rest assured, that you
 can always go back to the current state of the analysis, see the changes you have made
-since, figure out where things broke, and undo changes if necessary. Isn't that a
-comforting feeling?
+since, figure out where things broke, and undo changes if necessary. Isn't that
+comforting?
 
 To utilize the full power of Git, you will have to learn a few more things. This is
 outside of the scope of this book but you can find a good introduction to Git for R users
 in the book *Happy Git with R* (<https://happygitwithr.com/>). Learn to use Git and use it
 often!
 
-## Snapshot your packages with {renv}
+## Make your development environment reproducible
 
-Unfortunately, using Git to track changes in your *own* code not enough, because the
-packages that you use may get updated too. Sometimes the developers decide to change the
-way a function works, and this can cause your code to break. It can be really frustrating
-to find that your analysis from a few months ago suddenly does not run anymore, or that it
-fails to run on your collaborators computer, who uses different package versions. You can
-save yourself the trouble by storing a snapshot of your package library using the
-[`{renv}`](https://rstudio.github.io/renv/) package [@R-renv].
+### Snapshot packages with {renv}
+
+Unfortunately, using Git to track changes in your *own* code is not enough, because the
+packages that you use may get updated too and sometimes, the developers decide to change
+the way a function work. This can cause your code to break and it can be really
+frustrating to find that your analysis from a few months ago suddenly does not run
+anymore, or that it fails to run on your collaborators computer, who uses different
+versions of the same packages. You can avoid this frustration by storing a snapshot of
+your package library with the [`{renv}`](https://rstudio.github.io/renv/) package
+[@R-renv].
 
 Install the `{renv}` package, then -- in your project initialize `{renv}` for your project
 and take a snapshot of the packages you use in your project:
@@ -188,19 +189,23 @@ library is isolated from other R libraries on your system. Later, you or your
 collaborators can recreate this library, with the exact package versions you used by
 running `renv::restore()`.
 
-## Snapshot everything with Docker
+### Switching between R versions
 
 R itself receives updates, too. While the updates are often minor and breaking changes are
-rare, it is not guaranteed that today's code will work on a future version of R.
+rare, it is not guaranteed that today's code will work on a future version of R. It is
+possible to install multiple versions of R in parallel on the same computer and switch
+between them. On Windows you can do this in the RStudio interface,
+`Tools ▸ Global Options ▸ General ▸ Basic ▸ Use RStudio Version ...`. On MacOs, it is a
+little more complicated, but you can use a tool called *RSwitch*
+(<https://rud.is/rswitch/>) that makes it a bit easier.
 
-It is possible to install multiple versions of R in parallel on the same computer and
-switch between them relatively easily in the RStudio interface.
+### Snapshot everything with Docker
 
-You can also take the idea of snapshotting your environment a step further by using
-[Docker Containers](https://www.rocker-project.org/). This is akin to creating an entire
-virtual computer just for your analysis. Instead of just your analysis files, you then
-track, store, and share that entire virtual computer. This is a lot more effort, but it
-may be the only way to guarantee that your analysis can be runreproduced out of the box.
+Finally, you can also take the idea of snapshotting your environment a step further by
+using [Docker Containers](https://www.rocker-project.org/). This is akin to creating an
+entire virtual computer just for your analysis. Instead of just your analysis files, you
+then track, store, and share that entire virtual computer. This is a lot more effort, but
+it may be the only way to guarantee that your analysis can be reproduced out of the box.
 However, this is beyond the scope of this book.
 
 ## More

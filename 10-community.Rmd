@@ -10,7 +10,7 @@ surface of what R has to offer, but I hope, this has helped you figure out wheth
 for you and whether you want to learn more about it. If you do, I think the best way is to
 find other people to learn from.
 
-## Engage with the community
+## Get involved with the community
 
 R has an incredibly friendly, diverse, and welcoming community that is very open to
 beginners and loves to share knowledge, and because R is so widespread, there's always an
