@@ -51,6 +51,25 @@ knitr::write_bib(c(
 </template>
 ```
 
+```{js, include=FALSE}
+function obscureSolutions(selector = 'div.solution'){
+  var solutions = document.querySelectorAll(selector);
+  
+  const wrapper = document.createElement("details");
+  var summary = document.createElement("summary");
+  summary.textContent = "Solution";
+  wrapper.appendChild(summary);
+    
+  solutions.forEach(e => {
+    const wrapped = wrapper.cloneNode(true);
+    wrapped.appendChild(e.cloneNode(true));
+    e.replaceWith(wrapped);
+  }) 
+}
+
+obscureSolutions();
+```
+
 # (PART\*) Introduction {#welcome .unnumbered}
 
 # Welcome {.unnumbered}
