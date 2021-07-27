@@ -278,7 +278,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 
 <link rel="stylesheet" href="assets/webfonts/webfonts.css" type="text/css" />
-<link rel="stylesheet" href="libs/sass5db7a1a44a98c6505b9398a54d73daac/style.min.css" type="text/css" />
+<link rel="stylesheet" href="libs/sass1c36fbf75bc3ff40cac5d7c437d283d2/style.min.css" type="text/css" />
 </head>
 
 <body>
@@ -423,14 +423,13 @@ full power and flexibility.</p>
 <p>The <a href="https://en.wikipedia.org/wiki/Data_type">data type</a> of a piece of data determines
 what operations you can perform with it. The bread and butter of data types in R are
 <em>numeric</em>, <em>logical</em>, and <em>character</em>.</p>
-<div id="numerical" class="section level4 unnumbered">
-<h4>Numerical</h4>
-<p>Numerical data can be integer, decimal<a href="#fn12" class="footnote-ref" id="fnref12"><sup>12</sup></a>, or complex, but usually the
+<div id="numeric" class="section level4 unnumbered">
+<h4>Numeric</h4>
+<p>Numeric data can be integer, decimal<a href="#fn12" class="footnote-ref" id="fnref12"><sup>12</sup></a>, or complex, but usually the
 difference does not matter. Sometimes, R might unexpectedly hit you with a number in
 scientific notation, e.g., <code>1e+23</code>. To the uninitiated, these can look cryptic and a bit
 scary. But don’t worry! It’s just a very large or very small number that is written in a
-more compact form and you can <a href="https://statisticsglobe.com/disable-exponential-scientific-notation-in-r">change disable this if you
-like!</a></p>
+more compact form and if you want you can <a href="https://statisticsglobe.com/disable-exponential-scientific-notation-in-r">change this behavior.</a></p>
 <div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="a-flexible-programming-language.html#cb6-1"></a><span class="dv">23</span> <span class="op">+</span><span class="st"> </span><span class="fl">0.45</span> <span class="op">+</span><span class="st"> </span><span class="fl">1e2</span> <span class="op">+</span><span class="st"> </span>6i</span></code></pre></div>
 </div>
 <div id="logical" class="section level4 unnumbered">
@@ -466,8 +465,7 @@ you explicitly delete the variable or end the session, the data will be around f
 use it.</p>
 <p>There are some rules for variables names: They must start with a letter and contain only
 the letters of the English alphabet, numbers, underscores <code>_</code>, hyphens <code>-</code>, and dots
-<code>.</code>.<a href="#fn14" class="footnote-ref" id="fnref14"><sup>14</sup></a> For long variable names, <a href="https://style.tidyverse.org/syntax.html#object-names">it is recommended to use “snake
-case”</a>, which looks like this:
+<code>.</code>.<a href="#fn14" class="footnote-ref" id="fnref14"><sup>14</sup></a> For long variable names, <a href="https://style.tidyverse.org/syntax.html#object-names">it is recommended</a> to use <em>snake case</em>, which looks like this:
 <code>my_firssst_variable</code> 🐍. Also note that R is case-sensitive.</p>
 <div class="exercise">
 <p><span id="exr:unlabeled-div-7" class="exercise"><strong>Exercise 3.1  </strong></span>What would be the result of running the code below? Think about it first and then run it
@@ -679,14 +677,14 @@ about.</p></li>
 <div class="footnotes">
 <hr />
 <ol start="12">
-<li id="fn12"><p>Decimal numbers are also called floating point numbers or “float” for
+<li id="fn12"><p>Decimal numbers are also called floating point numbers or “floats” for
 short. Note that R uses periods <code>.</code> to designate the decimal places, not commas <code>,</code> as
-in some countries.<a href="a-flexible-programming-language.html#fnref12" class="footnote-back">↩︎</a></p></li>
+you might be used to, depending on where you are from.<a href="a-flexible-programming-language.html#fnref12" class="footnote-back">↩︎</a></p></li>
 <li id="fn13"><p>In official R lingo you are assigning values to <em>objects</em>, but people who
 have experience with other programming languages sometimes find this term confusing.
 Therefore, I will use the word <em>variable</em> in this book.<a href="a-flexible-programming-language.html#fnref13" class="footnote-back">↩︎</a></p></li>
 <li id="fn14"><p>Unlike in other programming languages, dots have no special function or
-meaning and can be used in variable names.<a href="a-flexible-programming-language.html#fnref14" class="footnote-back">↩︎</a></p></li>
+meaning in R and can be used in variable names.<a href="a-flexible-programming-language.html#fnref14" class="footnote-back">↩︎</a></p></li>
 </ol>
 </div>
             </section>
