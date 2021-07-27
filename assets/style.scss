@@ -1,9 +1,3 @@
-@font-face {
-    font-family: 'Londrina Solid';
-    src: url(webfonts/LondrinaSolid-Black.ttf) format('truetype');
-}
-
-
 :root {
   --main-color: #507b9c;
   --link-color: #E79D2E;
@@ -29,15 +23,15 @@
 }
 
 .title {
-  font-family: 'Londrina Solid', 'Junction', sans-serif;
+  font-family: 'LondrinaBlack-Regular', 'Junction', sans-serif;
   font-size: 7.5em !important;
   margin-top: 0.2em !important;
   line-height: normal;
-  font-weight: 900;
+  font-weight: normal;
   background-image: linear-gradient(0deg, var(--main-color), var(--title-color));
- -webkit-background-clip: text;
- -webkit-text-fill-color: transparent;
- }
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 
  .book .book-body .page-wrapper .page-inner section.normal #header em {
   font-style: normal;

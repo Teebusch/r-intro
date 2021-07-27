@@ -1,7 +1,7 @@
 # Acknowledgements {.unnumbered}
 
 The beautiful font used throughout most of this book is *Junction* by *The League of
-Movable Type* (<https://www.theleagueofmoveabletype.com/junction>). The title is set in *Londrina* by Marcelo Magalhães (<http://www.marcelomagalhaes.net/>).
+Movable Type* (<https://www.theleagueofmoveabletype.com/>). The title is set in *Londrina* by Marcelo Magalhães (<https://tipospereira.com/>)
 
 This book is made possible by the power of R [@R-base] and the amazing `{bookdown}`
 package [@bookdown2016].

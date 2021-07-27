@@ -44,5 +44,51 @@
          url('Prociono-Regular-Webfont.svg#prociono') format('svg');
     font-weight: normal;
     font-style: normal;
-
 }
+
+@font-face {
+    font-family: "LondrinaOutline-Regular";
+    src: url('LondrinaOutlineRegular/font.woff2') format('woff2'),
+         url('LondrinaOutlineRegular/font.woff') format('woff');
+}
+
+@font-face {
+    font-family: "LondrinaBook-Regular";
+    src: url('LondrinaBookRegular/font.woff2') format('woff2'),
+         url('LondrinaBookRegular/font.woff') format('woff');
+}
+
+@font-face {
+    font-family: "LondrinaBlack-Regular";
+    src: url('LondrinaBlackRegular/font.woff2') format('woff2'),
+         url('LondrinaBlackRegular/font.woff') format('woff'),
+         url('LondrinaBlackRegular/font.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: "LondrinaSolid-Regular";
+    src: url('LondrinaSolidRegular/font.woff2') format('woff2'),
+         url('LondrinaSolidRegular/font.woff') format('woff'),
+         url('LondrinaSolidRegular/font.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: "LondrinaThin-Regular";
+    src: url('LondrinaThinRegular/font.woff2') format('woff2'),
+         url('LondrinaThinRegular/font.woff') format('woff'),
+         url('LondrinaThinRegular/font.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: "LondrinaShadow-Regular";
+    src: url('LondrinaShadowRegular/font.woff2') format('woff2'),
+         url('LondrinaShadowRegular/font.woff') format('woff');
+}
+
+@font-face {
+    font-family: "LondrinaSketche-Regular";
+    src: url('LondrinaSketcheRegular/font.woff2') format('woff2'),
+         url('LondrinaSketcheRegular/font.woff') format('woff');
+}
+
+
