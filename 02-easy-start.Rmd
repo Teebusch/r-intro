@@ -8,28 +8,26 @@
 :::
 
 Getting R to run on your computer is usually a relatively smooth
-experience[^easy-start-1]:
+experience[^easy-start-1]: Download and install the latest version of R
+([https://r-project.org/](https://www.r-project.org/)) and *RStudio*
+([https://rstudio.com/products/rstudio](https://www.rstudio.com/products/rstudio/)) for
+your operating system. If you already have either program installed on your computer,
+there is no need to uninstall the old versions beforehand.
 
 [^easy-start-1]: It can get a little hairy if you are working on a machine with restricted
     permissions, for example a computer issued to you by your employer. If you are in a
-    situation like this, I will ask you to kindly contact your IT department to sort it
-    out.
+    situation like this, and you are experiencing problems with the installation, please
+    contact your IT department to sort it out.
 
--   Download and install the latest version of R
-    ([https://r-project.org/](https://www.r-project.org/)) and *RStudio*
-    ([https://rstudio.com/products/rstudio](https://www.rstudio.com/products/rstudio/))
-    for your operating system. If you already have either program installed on your
-    computer, there is no need to uninstall the old versions beforehand.
-
--   If you cannot or do not want to install anything on your machine, you can instead make
-    an account at *RStudio Cloud* (<https://rstudio.cloud/>) and use R and RStudio in the
-    browser. The free tier of RStudio Cloud only allows you to use it for a few hours per
-    month, but for the purpose of working through this book that should be fine.
+If you cannot or do not want to install anything on your machine, you can instead make an
+account at *RStudio Cloud* (<https://rstudio.cloud/>). This allows you to use R and
+RStudio in the browser. You can use RStudio Cloud for free for a few hours each month. For
+the purpose of working through this book that should be enough.
 
 That's it! Everything else you need can be set up from within RStudio.
 
 ::: {.more}
-**Well, actually...**
+**Additional Software**
 
 If you are using Windows, you might eventually also have to install *RTools*
 (<https://cran.r-project.org/bin/windows/Rtools/>). RTools provides additional tools, such
@@ -48,11 +46,11 @@ along for the rest of the book.
 ## Why RStudio?
 
 You might be wondering what RStudio is and why we need it. RStudio is a popular
-*all-in-one* user interface (Integrated Development Environment, *IDE*) for R. It provides
-many conveniences that make working with R a lot easier. To use an analogy: If R were a
-horse, RStudio would be a saddle to sit in. You don't need it, but it makes things more
-comfortable. There are some alternatives to RStudio, but R's own GUI is not really one of
-them:
+**Integrated Development Environment (IDE)** for R. It is an *all-in-one* user interface
+that provides many conveniences that make working with R a lot easier. To use an analogy:
+If R were a horse, RStudio would be a saddle to sit in. You don't need it, but it makes
+things more comfortable. There are some alternatives to RStudio, but R's own GUI is not
+really one of them:
 
 ```{r, echo=FALSE, fig.cap="R's own GUI --- The 90s called, they want their user interface back.", fig.alt="A screenshot of RGui"}
 knitr::include_graphics("images/r-gui.jpeg")
@@ -61,14 +59,13 @@ knitr::include_graphics("images/r-gui.jpeg")
 ## Create a new RStudio project
 
 Alright cowboy, let's saddle that horse! The first step you should do whenever you start a
-new data analysis project with RStudio is to create a new project folder. This is the
+new data analysis project with RStudio is to create a new **RStudio project**. This is the
 first step towards reproducibility: All of your project's data and files will be stored in
-this folder. If you ever move this folder to a new location or share it with someone else,
-all of the files will move along with it and nothing will break.
-
-Another benefit of using projects is that it helps you keep your work organized. It will
-be much easier for you to switch between projects or get back to a project you haven't
-touched in a while.
+the same folder. If you ever move this folder to a new location or share it with someone
+else, all of the files will move along with it, reducing the chance that things will
+break. Another benefit of using projects is that it helps you to keep your work organized.
+It will be much easier for you to switch between projects or get back to a project you
+haven't touched in a while.
 
 ::: {.exercise}
 Open RStudio, go to `File ▸ New Project...` and create a new RStudio project in an empty
@@ -87,13 +84,13 @@ knitr::include_graphics("images/rstudio-layout.gif")
 
 ## Using R as a calculator
 
-In the console you can type commands and when you press <kbd>Enter</kbd>, R will try to
-interpret them. You can use <kbd>↑</kbd> and <kbd>↓</kbd> to cycle through previous
+In the **console** you can type commands and when you press <kbd>Enter</kbd>, R will try
+to interpret them. You can use <kbd>↑</kbd> and <kbd>↓</kbd> to cycle through previous
 commands and <kbd>Ctrl</kbd>/<kbd>Cmd</kbd> + <kbd>↑</kbd> to search through previous
 commands.
 
-Let's get familiar with the console by trying some of R's mathematical operators. R has
-all the operators that you would expect to find in a pocket calculator:
+Let's get familiar with the console by trying some of R's mathematical **operators**. R
+has all the operators that you would expect to find in a pocket calculator:
 
 |                                      |                   |
 |--------------------------------------|-------------------|
@@ -103,9 +100,9 @@ all the operators that you would expect to find in a pocket calculator:
 | Logical                              | `&& || ! | &`     |
 | Parentheses for modifying precedence | `(1 + 2) * 10`    |
 
-It also has all the *functions* you would find in a calculator. Functions are written as
-the function name followed by the function's argument in parentheses. For example, for
-calculating the square root of 2, use `sqrt(2)`.
+It also has all the **functions** you would expect to find in a calculator. Functions are
+written as the function name followed by the function's argument in parentheses. For
+example, for calculating the square root of 2, use `sqrt(2)`.
 
 ::: {.exercise}
 In the *console*, try out some of R's operators and see what happens. For example,
@@ -135,17 +132,12 @@ knitr::include_graphics("images/operator-meme.jpeg")
 ## Create a script
 
 The console is useful for running quick throw-away commands, and sometimes that's all you
-need. However, code that you want to keep should be stored in a script file. R scripts
-allow a flexible console-like workflow because you can run individual sections or lines of
-code in any order.
-
-We will use a special type of script, called an *RMarkdown Notebook*. *RMarkdown* is a
-format that allows you to mix code and the output it generates with text. The text can be
-formatted with a special syntax to create headers, footnotes, links, and more. This allows
-you to keep your notes and your code together and is great for writing reproducible
-documents.[^easy-start-2]
-
-[^easy-start-2]: This entire book was written with *RMarkdown*.
+need. However, code that you want to keep should be stored in a **script**. We will use a
+special type of script, called an **RMarkdown Notebook**. This format allows you to mix
+code and the output it generates with text. The text can be formatted with a special
+syntax to create headings, footnotes, links, and more. This allows you to keep your notes
+and your code together and is great for writing reproducible documents. In fact, this
+entire book was written with *RMarkdown*.
 
 ::: {.exercise}
 Go to `File ▸ New File ▸ R Notebook` to create a new RMarkdown Notebook and save it in
@@ -154,14 +146,16 @@ RStudio's `Files` tab, which shows you all the files in your project folder.
 :::
 
 The new notebook already contains some example content. You can see that there is R code
-that is written inside special blocks, called *code chunks*. You can create new code
+that is written inside special blocks, called **code chunks**. You can create new code
 chunks with the green button on the top right of the script panel or with the keyboard
 shortcut <kbd>Ctrl</kbd>/<kbd>Cmd</kbd> + <kbd>Option</kbd>/<kbd>Alt</kbd> + <kbd>I</kbd>
 
-You can run an entire code chunk by clicking the green arrow on the right of the chunk.
-You can also run individual lines or sections of code by using
-<kbd>Ctrl</kbd>/<kbd>Cmd</kbd> + <kbd>Enter</kbd> or the buttons on the top right of the
-script panel.
+R scripts still allow a flexible console-like workflow because you can run individual
+sections or lines of code in any order. You can...
+
+-   **run an entire code chunk** by clicking the green arrow on the right of the chunk.
+-   **run individual lines or sections of code** by using <kbd>Ctrl</kbd>/<kbd>Cmd</kbd> +
+    <kbd>Enter</kbd> or the buttons on the top right of the script panel.
 
 ::: {.exercise}
 Add a new *code chunk* to your R Markdown Notebook in which you calculate the square of

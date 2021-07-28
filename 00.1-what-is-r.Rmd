@@ -1,68 +1,68 @@
 # What is R? {#what-is-r .unnumbered}
 
-You wouldn't be reading this if you didn't already have some idea what R is, but I think
-it will be useful to briefly discuss this anyways. R is a *statistical computing and data
-analysis environment* that is widely used in academia, industry, and the public
-sector.[^what-is-r-1] It is a free and open source implementation of the
-[**S**](https://en.wikipedia.org/wiki/S_(programming_language)) programming language,
-which was created in the 1970s with interactive data analysis in mind. Here's what that
-means:
-
-[^what-is-r-1]: In 2020, R even briefly climbed to the 8th place of the TIOBE index, which
-    ranks programming languages by how *in-demand* they are
-    (<https://www.tiobe.com/tiobe-index/r/>).
+R is a *statistical computing and data analysis environment.* It is a free and open source
+implementation of the [**S**](https://en.wikipedia.org/wiki/S_(programming_language))
+programming language, which was created in the 1970s with interactive data analysis in
+mind. Here's what that means:
 
 -   **R is free and open source** -- R is owned and developed by the community of its
     users. This has led to a rich and continually evolving ecosystem of freely available
     extensions (*packages*) for R that cover many fields and applications.
 
 -   **R is interactive** -- R works like a pocket calculator that allows you to do
-    calculations, explore data, and analyse data quickly and on the fly. You can execute
-    commands individually and in any order and store and retrieve data in R's memory as
-    you go. This allows for a very flexible, interactive workflow that is especially well
-    suited for data exploration and analysis.[^what-is-r-2]
+    calculations, explore data, and analyse data quickly and on the fly. It allows for a
+    very flexible, interactive workflow that is especially well suited for data
+    exploration and analysis.[^what-is-r-1]
 
 -   **R is focused on data analysis** -- Right out of the box, R gives you a powerful tool
     belt for data analysis. More than in many other programming languages, data and
     statistics are at the core of R and there are built-in data structures and functions
     that make data analysis easier.
 
-[^what-is-r-2]: This workflow is not unique to R. Python, for example, offers similar
+[^what-is-r-1]: This workflow is not unique to R. Python, for example, offers similar
     functionality via the *iPython* (interactive Python) project.
 
-## A tool for data analysis {.unnumbered}
-
-Although R is a proper programming language[^what-is-r-3], its main focus is undoubtedly
+Although R is a proper programming language[^what-is-r-2], its main focus is undoubtedly
 data analysis. So much so, that some people call R a [domain
 specific](https://en.wikipedia.org/wiki/Domain-specific_language) programming language.
 Others say that R is [an environment for interactive data analysis that *has* a
-programming language](https://youtu.be/6S9r_YbqHy8). In any case, R is a powerful
-*one-stop-shop* for the whole data analysis workflow:
+programming language](https://youtu.be/6S9r_YbqHy8).
 
-[^what-is-r-3]: Some people claim that you can use [R for
+[^what-is-r-2]: Some people claim that you can use [R for
     everything](https://youtu.be/m6nUdoP6894).
+
+## A tool for data analysis {.unnumbered}
+
+R is popular in academia, industry, and the public sector as a tool for data
+analysis,[^what-is-r-3] where it is used to support all parts of the data analysis
+workflow, and throughout this book we will get a glimpse of how R can help you with all of
+these steps:
+
+[^what-is-r-3]: In 2020, R even briefly climbed to the 8th place of the TIOBE index, which
+    ranks programming languages by how *in-demand* they are
+    (<https://www.tiobe.com/tiobe-index/r/>).
 
 ```{r, echo=FALSE, fig.alt="A sketch of the different steps in the data analysis workflow."}
 knitr::include_graphics("images/data-science-workflow.jpeg")
 ```
 
 -   **Data collection** --- This involves obtaining the data from its source, for example,
-    a database, the output of another software, or the logfiles of a measurement device.
+    a spreadsheet, a database, the output of another software, or the log files of a
+    measurement device.
 
--   **Data wrangling** --- This part of the data analysis workflow is also known as *data
-    munging*, or *80% of data science.* It involves cleaning and transforming the data,
-    dealing with odd data points, adding new variables.
+-   **Data wrangling** --- This includes tasks like cleaning, transforming, and
+    summarizing the data, merging data sources, dealing with odd data points, and
+    calculating new variables. This part of the data analysis workflow is also known as
+    *data munging*, or *"80% of data science".*
 
 -   **Data Visualization** --- This involves turning the data into visual representations,
     for exploration, explanation, or exhibition.
 
--   **Modeling** --- Applying models to your data, in order to understand it better (e.g.
-    clustering) and usually with the goal to make predictions. This includes relatively
-    common statistical models and tests (such as the general linear model) and more
-    advanced machine learning techniques like deep neural networks.
+-   **Modeling** --- This is all about applying models to your data in order to understand
+    it better (e.g. clustering) and often with the goal to make predictions. This includes
+    relatively common statistical models and tests (such as the general linear model) and
+    more advanced machine learning techniques like deep neural networks.
 
--   **Communication** --- Communicating the analysis in the form of a report, a
-    manuscript, a presentation or an email, and ding it in a way that is transparent and
-    reproducible.
-
-Throughout this book we will get a glimpse of how R can help you with all of these steps.
+-   **Communication** --- This is about communicating the analysis, for example in the
+    form of a report, a manuscript, a presentation, or a web interface, and doing it in a
+    way that is transparent and reproducible.

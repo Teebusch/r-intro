@@ -52,16 +52,15 @@ details to a minimum. After reading it, you will know the basics of data analysi
 should be able to decide whether you want to continue learning.
 
 ::: {.draftinfo}
-**This is a draft!** This book is a work in progress and nobody knows *if* and *when* it
-will ever be finished.
+**This is a draft!** This book is a work in progress and nobody knows when it will be
+finished.
 :::
 
 ## Who is this for? {.unnumbered}
 
-This book is written for someone who has some experience doing data analysis with other
-tools but now wants to learn more about R. You are here, because you want to learn tools
-that can help you get things done, and you wonder if R might be one of them. Your
-motivation might be that...
+The book is written for someone who has some experience doing data analysis with other
+tools but now wants to learn more about R. You are here, because you wonder if you should
+learn R. Your motivation might be that...
 
 -   You are afraid of missing out and want to know what all the fuzz is about
 
@@ -84,16 +83,15 @@ particularly interested in computer programming.[^index-1]
 ## The origins of this book {.unnumbered}
 
 This book started as the speaker notes for a workshop I gave in April 2021 at my research
-group meeting at the University of Oslo's Department of Special Needs Education. It was a
-90 minutes long hands-on introduction to R with the goal to provide an overview of R.
-After the workshop, I continued to expand on the material and eventually, it turned into a
-more comprehensive introduction to R.
+group meeting at the University of Oslo. It was a 90 minutes long hands-on introduction to
+R with the goal to provide an overview of R. After the workshop, I continued to expand on
+the material and eventually, it turned into a more comprehensive introduction to R.
 
 The book is a result of my passion for teaching R and my interest in the pedagogy of
 teaching programming. The pedagogical style is heavily inspired by that of the Carpentries
 lesson material, which is presented excellently in Greg Wilson's [*Teaching Tech
-Together*](https://teachtogether.tech/), but in contrast to a typical Carpentries lessons,
-the book progresses faster and skips over some of the fundamentals. It provides a broader
+Together*](https://teachtogether.tech/). In contrast to a typical Carpentries lessons, the
+book progresses faster and skips over some of the fundamentals. It provides a broader
 overview of R at the expense of depth.
 
 ## About the author {.unnumbered}
@@ -117,5 +115,5 @@ repository](https://github.com/Teebusch/r-introduction).
 ## License {.unnumbered}
 
 I am still considering which license is best for this. For the time being, the book is
-published with all rights reserved by the author, Tobias Busch, and may not be reproduced
-in whole or in part in any manner without the permission of the copyright owner.
+published with all rights reserved by me, Tobias Busch, and may not be reproduced in whole
+or in part in any manner without my permission.

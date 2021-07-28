@@ -7,23 +7,21 @@
 -   Is free and open source software reliable?
 :::
 
-A great reason for choosing R over commercial software packages is that it is is *free and
-open source software (FOSS)*. This means that nobody can ever own any exclusive rights to
-R. Anyone can obtain a copy of R for free and modify it however they like. The license
+A great reason for choosing R over commercial software packages is that it is is **free
+and open source software (FOSS)**. This means that nobody can own exclusive rights to R,
+and anyone can obtain a copy of R for free and modify it however they like. The license
 under which R is published guarantees that it will stay like that forever.
 
-Being **free** means that there are no software license fees or purchasing costs. This
-means lower cost and less bureaucracy! It means that you can use R everywhere, and you can
-use any version of it at any time. This is great for collaboration, sharing, and
-reproducibility.
+Being **free** means that there are no license fees or purchasing costs. This means lower
+cost and less bureaucracy! It means that you can use R everywhere, and you can use any
+version of it at any time. This is great for collaboration, sharing, and reproducibility.
+Finally, being free means that you can simply give R a spin and see if it's for you --- no
+strings attached!
 
 Being **open source** means that nobody can decide to stop the development of R. Moreover,
-if anything is missing, R users can create it themselves, and --- as we will see later ---
-they do! There are tens of thousands of extensions (*packages*) for R that were created by
-the R community and are free for everyone to use.
-
-Finally, being free an open source means that you can simply give R a spin and see if it's
-for you --- no strings attached!
+if any functionality is missing, R users can create it themselves, and --- as we will see
+later --- they do! There are tens of thousands of extensions (*packages*) for R that were
+created by the R community and are free for everyone to use.
 
 ## Is R reliable?
 
@@ -42,9 +40,21 @@ There are also peer-reviewed journals such as the [*Journal of Statistical
 Software*](https://www.jstatsoft.org/index) and the R project's own [*R
 Journal*](https://journal.r-project.org/archive/2020-2/), which academics can use to get
 credit for working on R-related things. It's also common to see papers in other journals
-introducing new statistical methods alongside an implementation in R.
+introducing statistical methods along with an implementation in R.
 
 ::: {.exercise}
-Can you think of any other free and open source software you are using, perhaps on a daily
-basis?
+Can you think of any other free and open source software you are using --- perhaps even on
+a daily basis?
+
+::: {.answer}
+-   Firefox is a FOSS project. Google's Chrome browser itself is not, but it is built on
+    top of a FOSS project, called Chromium.
+
+-   Linux is an operating system like Windows or MacOS, that powers many servers on the
+    internet. Even if you are not using Linux yourself, you have probably communicated
+    with a Linux computer today.
+
+-   Android is an open source operating system. Unless you are using an iPhone, you are
+    probably using it.
+:::
 :::

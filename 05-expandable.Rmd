@@ -2,7 +2,7 @@
 
 ::: {.goals}
 -   R packages are collections of R code written by others
--   The *Tidyverse* is a collection of packages that share a common user-centric design
+-   The *Tidyverse* is a collection of packages that share a common user-centered design
     philosophy
 -   How to install and load an R package?
 -   Loading data from a text file with `read_csv()`
@@ -11,35 +11,39 @@
 :::
 
 R is popular among data analysts, data scientists, researchers, and statisticians. As a
-result, R gives you access to a vast amount of amazing packages written by expert
-statisticians and programmers around the world. An R package is a collection of R code
-that has been bundled up so that it can be easily used by others. The full power of R
-unfolds when you tap into this vast ecosystem of packages. There are tens of thousands of
-packages to make your life easier! There's an R package for almost everything! See for
-yourself at [rdrr.io](https://rdrr.io/) or [Metacran](https://www.r-pkg.org/).
+result, it gives you access to a vast amount of amazing packages written by domain
+experts, statisticians and programmers from around the world. An **R package** is a
+collection of R code that has been bundled up so that it can be easily used by others. The
+full power of R unfolds when you tap into this vast ecosystem of packages.
 
-Packages on [CRAN](https://cran.r-project.org/),
-[BioConductor](https://www.bioconductor.org/), and
-[Neuroconductor](https://neuroconductor.org/) are peer-reviewed and often written by
-domain experts. Many more packages are available on
-[Github](https://github.com/topics/r?l=r). And if there's ever anything missing you can
-build it yourself -- together with others across the globe. [It's fun and you will learn a
+R has an official peer-reviewed **package repository** called
+[**CRAN**](https://cran.r-project.org/)as well as domain-specific repositories
+[**BioConductor**](https://www.bioconductor.org/), and
+[**Neuroconductor**](https://neuroconductor.org/). Many more packages are available on
+[Github](https://github.com/topics/r?l=r).
+
+There are tens of thousands of packages to make your life easier! There's an R package for
+almost everything! See for yourself at [rdrr.io](https://rdrr.io/) or
+[Metacran](https://www.r-pkg.org/). And if there's ever anything missing you can build it
+yourself -- together with others across the globe. [It's fun and you will learn a
 lot!](https://www.rstudio.com/resources/rstudioglobal-2021/make-a-package-make-some-friends/)
+The R Packages book provides a deep dive into writing and publishing R packages.
 
+::: {.more}
 By the way: R can also integrate with [Python](https://rstudio.github.io/reticulate/),
 [C](http://www.rcpp.org/), and other languages and interface with other software, such as
-[MPLUS](https://mclust-org.github.io/mclust/).
-
-You can also write your own R package. The R Packages book provides a deep dive into
-writing and publishing R packages.
+[MPLUS](https://mclust-org.github.io/mclust/), so you are not limited to what R has to
+offer.
+:::
 
 ## Introducing the Tidyverse
 
 [**The Tidyverse**](https://www.tidyverse.org/) [@tidyverse2019] is a set of R packages
 that share a common design philosophy. It aims to provide user-friendly functions for
-common data-tasks and tries to iron out some of the idiosyncrasies of *Base R*. The
-functions in the Tidyverse have a consistent interface and easy-to-remember names. The
-**Tidy Data** that gives the Tidyverse its name has tabular shape, with
+common data-tasks and tries to iron out some of the idiosyncrasies of **Base R,** that is,
+the way R works out of the box. The functions in the Tidyverse have a consistent interface
+and easy-to-remember names. The **Tidy Data** that gives the Tidyverse its name has
+tabular shape, with
 
 -   one observation per row
 -   one variable per column

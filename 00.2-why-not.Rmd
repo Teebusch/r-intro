@@ -1,10 +1,10 @@
 # Why you should *not* learn R {#why-not-r .unnumbered}
 
-Before we continue, we have to get something out of the way: there are very good reasons
-*not* to learn R! I do not want to discourage you from learning R --- personally, I think
-R is one of the greatest tool a researcher or data analyst can have --- but I also
-understand that it's not for everyone and it is important to consider the cost of learning
-R and the possible alternatives.
+Before we continue, we have to get something out of the way: there are good reasons *not*
+to learn R! I do not want to discourage you from learning R --- personally, I think R is
+one of the greatest tool a researcher or data analyst can have --- but I also understand
+that it's not for everyone and it is important to consider the cost of learning R and the
+possible alternatives.
 
 ```{r, echo=FALSE, fig.cap="Regardless of what R enthusiasts like me will tell you, R is not the solution to every problem.", fig.alt="A picture of the Evergreen container ship stuck sideways in the Suez Canal"}
 knitr::include_graphics("images/have-you-tried-using-R.jpeg")
@@ -13,13 +13,12 @@ knitr::include_graphics("images/have-you-tried-using-R.jpeg")
 ## Learning R is a considerable time investment {.unnumbered}
 
 First of all, R can be challenging to learn. Learning any programming language requires
-continuous practice, and depending on your previous experience and your ability to think
-like a computer, it will take months or years before you can work efficiently in R.
-Getting there can---at times---be frustrating. Even if you already know another
-programming language, R may be difficult to learn, because it can be a little
-weird.[^why-not-1] The invested time and cognitive energy may never pay off if you only do
-a small analysis every once in a while or if your current workflow is already very
-efficient.
+continuous practice, and depending on your previous experience and your ability to *"think
+like a computer"*, it will take months or years before you can work efficiently in R.
+Getting there can sometimes be frustrating. Even if you already know another programming
+language, R may be difficult to learn, because it can be a little weird.[^why-not-1] This
+investment of time and cognitive energy may never pay off if you only do a small analysis
+every once in a while or if your current workflow is already very efficient.
 
 [^why-not-1]: For examples of R's weirdness, I recommend John Cook's talk [*The R Language
     The Good The Bad & The Ugly*](https://youtu.be/6S9r_YbqHy8) and Roger Peng's talk
@@ -27,8 +26,8 @@ efficient.
 
 ## Free point and click alternatives {.unnumbered}
 
-There are free alternatives to R that do not require coding. Some of them excel at a
-particular part of the data analysis workflow, for example,
+There are free alternatives to R that do not require coding. Some of them specialize in
+particular parts of the data analysis workflow, for example,
 
 -   [OpenRefine](https://openrefine.org/) and
     [DataWrangler](http://vis.stanford.edu/wrangler/) for data wrangling, and
@@ -37,7 +36,7 @@ particular part of the data analysis workflow, for example,
     [DataWrapper](https://www.datawrapper.de/), and [Tableau
     Public](https://public.tableau.com/) for data visualization.
 
-Others offer comprehensive functionality which rivals that of costly software like SPSS.
+Others offer comprehensive functionality that rivals that of expensive software like SPSS.
 [Jamovi](https://www.jamovi.org/) and [JASP](https://jasp-stats.org/), for example, are
 graphical user interfaces that are built on top of R and allow you to utilize much of R's
 power without writing any code.
@@ -50,18 +49,17 @@ knitr::include_graphics("images/jamovi.jpeg")
 
 There are many well-rounded commercial software packages for data analysis, such as SPSS,
 SAS, Stata, MPlus, and MATLAB. Chances are, you are already familiar with at least one of
-them. Some commercial tools are the gold standard for certain types of analyses and the
-exact same methods may not be available in R.[^why-not-2]
+them. It's worth considering that some commercial tools are the gold standard for certain
+types of analyses and the exact same methods may not be available in R.[^why-not-2]
+Moreover, commercial software often does a better job than R at guiding you through the
+jungle of statistical tests and models, they provide customer support and there is
+normally a single, well-documented way to solve a certain type of problem. In contrast, R
+often offers a multitude of ways to reach the same goal. While this allows you to choose
+the tools that suit your needs, this choice can be difficult. Consequently, R requires a
+more thorough understanding of what your are trying to achieve.
 
 [^why-not-2]: For example, handling missing data with Maximum Likelihood in MPlus is not
     possible in the equivalent R package, `{MClust}`.
-
-Commercial software often does a better job than R at guiding you through the jungle of
-statistical tests and models, they provide customer support and there is normally a
-single, well-documented way to solve a certain type of problem. In contrast, R often
-offers a multitude of ways to reach the same goal. While this allows you to choose the
-tools that suit your needs, this choice can be difficult. Consequently, R requires a more
-thorough understanding of what your are trying to achieve.
 
 ```{r, echo=FALSE, fig.cap="Welcome to R! Here's how you quit...", fig.alt="A gif of the R console cursor blinking expectantly"}
 knitr::include_graphics("images/blinking-console.gif")

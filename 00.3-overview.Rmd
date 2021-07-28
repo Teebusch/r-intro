@@ -1,17 +1,17 @@
 # The road ahead {.unnumbered}
 
-Now that we know what R is and we have discussed some good alternatives, we will
-have a look at what speaks for learning R. There are many good reasons to learn R! In the next
-section of the book I will present ten of them, and we will also get hands-on with R. This
-is a very superficial introduction and we will skip over some of the details for the sake
-of showing you the whole spectrum of what R has to offer and providing you with knowledge
-that is practically useful in as little time as possible.
+Now that we know what R is and we have discussed some good alternatives, we will have a
+look at what speaks for learning R. There are many good reasons to learn R! In the next
+section of the book I will present ten of them, and we will also get hands-on with R. We
+will skip over some details for the sake of showing you the whole spectrum of what R has
+to offer and providing you with knowledge that is practically useful in as little time as
+possible.
 
-We will use modern R with *RStudio* and the *Tidyverse* (more about that later). This will
-help us to focus on data analysis quickly, without worrying to much about some of the more
-technical aspects of programming.
+We will use modern R with *RStudio*, *RMarkdown* the *Tidyverse* --- more about that
+later. This will help us to focus on data analysis quickly, without worrying to much about
+some of the more technical aspects of programming.
 
-## Overview {-}
+## Overview {.unnumbered}
 
 Here are the 10 things we will look at:
 
@@ -19,74 +19,77 @@ Here are the 10 things we will look at:
 knitr::include_graphics("images/reasons.png")
 ```
 
-#### 1.  Free and open source {-}
+#### 1. Free and open source {.unnumbered}
 
 We will learn about free and open source software and why it is great.
-    
-#### 2.  Easy to get started {-}
 
-We will install R and *RStudio*, setup an *RStudio project*, and start interacting with R in the console and by writing our first script.
-    
-#### 3.  A flexible language that grows with you {-} 
+#### 2. Easy to get started {.unnumbered}
+
+We will install R and *RStudio*, setup an *RStudio project*, and start interacting with R
+in the console and by writing our first script.
+
+#### 3. A language made for data analysis {.unnumbered}
 
 We will get to know the fundamental data types and data structures of R.
-    
-#### 4.  Well-documented {-}
+
+#### 4. Well-documented {.unnumbered}
 
 We will learn how to get help in R.
 
-#### 5.  Expandable {-}
+#### 5. Expandable {.unnumbered}
 
-We will learn how to add additional functions to R by installing packages and we will learn how to load data into R.
-    
-#### 6.  Powerful data wrangling functions {-}
+We will learn how to add additional functions to R by installing packages and we will
+learn how to load data into R.
+
+#### 6. Powerful data wrangling functions {.unnumbered}
 
 We will see how to transform data to prepare it for data analysis, join data.
 
-#### 7.  Powerful data visualization functions {-}
+#### 7. Powerful data visualization functions {.unnumbered}
 
-We will make a complex statistical graph with just one line of code.
-    
-#### 8.  Powerful statistical methods {-}
+We will make a complex statistical graph.
 
-We will run a statistical model with just one line of code.
-    
-#### 9.  Encourages reproducible research {-}
+#### 8. Powerful statistical methods {.unnumbered}
+
+We will run a statistical model.
+
+#### 9. Encourages reproducible research {.unnumbered}
 
 We will make our analysis reproducible.
 
-#### 10. An awesome community {-}
+#### 10. An awesome community {.unnumbered}
 
 We will talk about where to find other R users and how to continue learning.
 
-
 ## Conventions {.unnumbered}
 
-### Code formatting  {-}
+### Code formatting {.unnumbered}
 
-In the text, names of R packages will look like this: `{tidyverse}`. R code will appear inline like this `print("Hello R!")` or in a box, followed by its output like this:
+In the text, names of R packages will look like this: `{tidyverse}`. R code will appear
+inline like this `print("Hello R!")` or in a box, followed by its output like this:
 
 ```{r}
 print("Hello R!")
 ```
 
-### Callout Boxes  {-}
+### Callout Boxes {.unnumbered}
 
 There are three different types of callout boxes:
 
 ::: {.goals}
-*   At the beginning of each chapter, I will list the things we are going to do and learn. 
-*   You can use these to check your prior knowledge 
-*   Feel free to skip chapters that won't provide any new insights for you.
+At the beginning of each chapter, I will list the things we are going to do and learn. You
+can use these to check your prior knowledge. Feel free to skip chapters that won't provide
+any new insights for you.
 :::
 
 ::: {.more}
-This is an info box. It expands on a learning point and gives you details that
-may not be essential but could help you to see the connections between concepts. It is ok to skip these entirely if they are not helping.
+This is an info box. It expands on a previous point with more details. It is not essential
+to read these, but it could help you to see the connections between concepts.
 :::
 
 ::: {.exercise}
-This is a challenge. Do these to deepen your understanding. To reveal the solution in the box below, click it.
+This is an exercise. Do these to deepen your understanding. Can you figure out how to
+reveal the solution in the box below?
 
 ::: {.answer}
 ```{r, eval=FALSE}
@@ -95,6 +98,8 @@ print("This is the solution")
 :::
 :::
 
-### Data is singular {-}
+### Data is singular {.unnumbered}
 
-A final point: The word *"data"* will be used as a singular mass noun, as in *"the data looks wonderful"*. I apologize to those whose grammatical intuition this offends. I just can't help it.
+The word *"data"* will be used as a singular mass noun, as in *"The data looks
+wonderful!"*. I apologize to those whose grammatical intuition this offends. I just cannot
+help it!

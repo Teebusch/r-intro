@@ -139,6 +139,13 @@ div.goals {
   border-left: 5px solid #437A7C;
 }
 
+div.goals::before {
+  display: block;
+  margin-bottom: 1rem;
+  font-weight: bold;
+  content: "Learning Goals";
+}
+
 div.more {
   background: #DEF0D3;
   border-left: 5px solid #7E9D6A;
