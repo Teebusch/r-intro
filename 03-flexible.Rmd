@@ -25,18 +25,17 @@ The [data type](https://en.wikipedia.org/wiki/Data_type) of a piece of data dete
 what operations you can perform with it. The bread and butter of data types in R are
 *numeric*, *logical*, and *character*.
 
-#### Numerical {.unnumbered}
+#### Numeric {.unnumbered}
 
-Numerical data can be integer, decimal[^flexible-1], or complex, but usually the
+Numeric data can be integer, decimal[^flexible-1], or complex, but usually the
 difference does not matter. Sometimes, R might unexpectedly hit you with a number in
 scientific notation, e.g., `1e+23`. To the uninitiated, these can look cryptic and a bit
 scary. But don't worry! It's just a very large or very small number that is written in a
-more compact form and you can [change disable this if you
-like!](https://statisticsglobe.com/disable-exponential-scientific-notation-in-r)
+more compact form and if you want you can [change this behavior.](https://statisticsglobe.com/disable-exponential-scientific-notation-in-r)
 
-[^flexible-1]: Decimal numbers are also called floating point numbers or "float" for
+[^flexible-1]: Decimal numbers are also called floating point numbers or "floats" for
     short. Note that R uses periods `.` to designate the decimal places, not commas `,` as
-    in some countries.
+    you might be used to, depending on where you are from.
 
 ```{r, eval=FALSE}
 23 + 0.45 + 1e2 + 6i
@@ -88,12 +87,11 @@ use it.
 
 There are some rules for variables names: They must start with a letter and contain only
 the letters of the English alphabet, numbers, underscores `_`, hyphens `-`, and dots
-`.`.[^flexible-3] For long variable names, [it is recommended to use "snake
-case"](https://style.tidyverse.org/syntax.html#object-names), which looks like this:
+`.`.[^flexible-3] For long variable names, [it is recommended](https://style.tidyverse.org/syntax.html#object-names) to use *snake case*, which looks like this:
 `my_firssst_variable` 🐍. Also note that R is case-sensitive.
 
 [^flexible-3]: Unlike in other programming languages, dots have no special function or
-    meaning and can be used in variable names.
+    meaning in R and can be used in variable names.
 
 ::: {.exercise}
 What would be the result of running the code below? Think about it first and then run it
