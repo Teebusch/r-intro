@@ -4,9 +4,7 @@
 Pages](https://github.com/Teebusch/R-introduction/actions/workflows/deploy_bookdown.yml/badge.svg)
 
 This book is a short hands-on introduction to R with the goal to help you decide whether
-you should or should not learn it.
-
-**View it online at <https://teebusch.github.io/R-introduction/>**
+you should or should not learn it. **View it online at <https://teebusch.github.io/R-introduction/>**
 
 ![](https://i.imgur.com/QThpLod.png)
 
