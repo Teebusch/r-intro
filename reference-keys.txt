@@ -16,8 +16,8 @@ exr:unlabeled-div-9
 exr:unlabeled-div-10
 exr:unlabeled-div-11
 exr:unlabeled-div-12
-tab:unnamed-chunk-38
-fig:unnamed-chunk-44
+tab:unnamed-chunk-40
+fig:unnamed-chunk-46
 exr:unlabeled-div-13
 r-is-free-and-open-source
 is-r-reliable
@@ -26,8 +26,8 @@ why-rstudio
 create-a-new-rstudio-project
 using-r-as-a-calculator
 create-a-script
-a-flexible-programming-language
-data-types
+a-language-made-for-data-analysis-1
+basic-data-types
 assignment
 comments
 vectors
