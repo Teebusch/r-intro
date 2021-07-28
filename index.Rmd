@@ -40,27 +40,28 @@ knitr::write_bib(c(
 knitr::include_graphics("images/reasons.png")
 ```
 
-This book is a short hands-on introduction to R. The goal is to provide a quick overview
-of things that are great about R so that you can decide whether diving deeper is worth
-your time. We will start with a brief introducing to R, followed by a discussion of good
-reasons *not* to learn R and some worthwile alternatives. Then we turn to the things that
-R has to offer: I will present ten things that I love about R and along with that, you
-will get some hands-on experience.
+This book is a fast-paced hands-on introduction to R. Its goal is to give you an idea of
+what R has to offer, so that you can decide whether diving deeper is worth your time. The
+book starts with a brief introducing to R, followed by a discussion of good reasons *not*
+to learn R and some worthwhile alternatives. Then we present ten reasons to learn R and
+along with that, you will get some hands-on experience.
 
-The book uses modern R, with *RStudio, RMarkdown*, and the *Tidyverse*. It focuses on the
-parts that are most essential for reproducible data analysis and keeps the technical
-details to a minimum. After reading it, you will have a basic understanding of data
-analysis in R and should be able to decide whether you want to continue learning.
+The book presents modern R, with *RStudio, RMarkdown*, and the *Tidyverse*. It focuses on
+the parts that are most essential for reproducible data analysis and keeps the technical
+details to a minimum. After reading it, you will know the basics of data analysis in R and
+should be able to decide whether you want to continue learning.
 
 ::: {.draftinfo}
-**This is a draft!** This book is a work in progress and nobody knows if and when it will
-ever be finished.
+**This is a draft!** This book is a work in progress and nobody knows *if* and *when* it
+will ever be finished.
 :::
 
 ## Who is this for? {.unnumbered}
 
-This book is written for someone who already has some experience with doing data analysis
-using other tools but now wants to learn more about R. Your motivation might be that...
+This book is written for someone who has some experience doing data analysis with other
+tools but now wants to learn more about R. You are here, because you want to learn tools
+that can help you get things done, and you wonder if R might be one of them. Your
+motivation might be that...
 
 -   You are afraid of missing out and want to know what all the fuzz is about
 
@@ -73,28 +74,27 @@ using other tools but now wants to learn more about R. Your motivation might be 
 -   You unsuccessfully tried to learn R before, but would like to try again
 
 I'm assuming you have no or very little programming experience and you are not
-particularly interested in computer programming.[^index-1] You don't want to be bored with
-technical background knowledge. You are here, because you want to learn tools that can
-help you get things done, and you wonder if R might be one of them.
+particularly interested in computer programming.[^index-1]
 
 [^index-1]: If you are a seasoned programmer, there may be more efficient ways to catch up
-    on R than this book. I recommend the books *R for Data Science* and [*Advanced
+    on R than this book. I recommend the books [*R for Data
+    Science*](https://r4ds.had.co.nz/) and [*Advanced
     R*](https://adv-r.hadley.nz/index.html). Both are available for free online.
 
 ## The origins of this book {.unnumbered}
 
-This book started as my notes for a workshop I gave in April 2021 at a research group
-meeting at the University of Oslo's Department of Special Needs Education. It was a 90
-minutes long hands-on introduction to R with the goal to provide an overview of R. After
-the workshop, I continued to expand on the material and eventually, it turned into a more
-comprehensive introduction to R.
+This book started as the speaker notes for a workshop I gave in April 2021 at my research
+group meeting at the University of Oslo's Department of Special Needs Education. It was a
+90 minutes long hands-on introduction to R with the goal to provide an overview of R.
+After the workshop, I continued to expand on the material and eventually, it turned into a
+more comprehensive introduction to R.
 
 The book is a result of my passion for teaching R and my interest in the pedagogy of
 teaching programming. The pedagogical style is heavily inspired by that of the Carpentries
 lesson material, which is presented excellently in Greg Wilson's [*Teaching Tech
-Together*](https://teachtogether.tech/). However, in contrast to a typical Carpentries
-lessons, this book progresses faster and its treatment of R is more superficial. It
-provides a broader overview of R at the expense of depth.
+Together*](https://teachtogether.tech/), but in contrast to a typical Carpentries lessons,
+the book progresses faster and skips over some of the fundamentals. It provides a broader
+overview of R at the expense of depth.
 
 ## About the author {.unnumbered}
 
@@ -106,6 +106,16 @@ help maintain the Carpentries lesson material for the lesson *Data Analysis and
 Visualization in R for Ecologists*. I really enjoy teaching researchers to code and I
 especially like showing them the marvelous world of R.
 
+## Contribute {.unnumbered}
+
 If you have any feedback or suggestions I'd be happy to hear from you! Contact me on
-[Twitter](https://twitter.com/@tobilottii), via email, or by raising an issue on [the
-book's Github repository](https://github.com/Teebusch/r-introduction).
+[Twitter](https://twitter.com/@tobilottii) or via email. Did you find a typo or have
+another idea for an improvement? Contributions are very welcome! Please raise an issue or
+submit a pull request on [the book's Github
+repository](https://github.com/Teebusch/r-introduction).
+
+## License {.unnumbered}
+
+I am still considering which license is best for this. For the time being, the book is
+published with all rights reserved by the author, Tobias Busch, and may not be reproduced
+in whole or in part in any manner without the permission of the copyright owner.

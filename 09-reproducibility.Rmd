@@ -44,14 +44,37 @@ code.
 
 Now here is something amazing about RMarkdown: With the click of a button, you can turn an
 RMarkdown document into something that you can share with others, even if they do not have
-R! You can use this to make:
+R! Let's try this with our file `analysis.Rmd`
 
--   reports
+::: {.exercise}
+Click the knit button.
+:::
 
--   papers with [`{papaja}`](https://github.com/crsh/papaja),
-    [`{rticles}`](https://github.com/rstudio/rticles)
+OK, but it still looks rather .... computerish. How do I make something that a normal
+person would want to read, or a journal would be willing to accept? As so often n R, there
+are packages that can help you with that. Packages to make pretty APA [tables for
+models](http://www.danieldsjoberg.com/gtsummary/index.html),
+[summary](https://cran.r-project.org/web/packages/table1/vignettes/table1-examples.html)
+[stats](https://cran.r-project.org/web/packages/sjPlot/vignettes/tab_model_estimates.html),
+...
 
--   books with [`{bookdown}`](https://bookdown.org/) (such as this one)
+Note that RStudio has a visual markdown editor that makes authoring longer documents more
+convenient. You can activate it with the button on the top right of the script panel.
+
+And if the data changes or a journal reviewer asks you to exclude a subject? Update the
+code and click the button again --- all the figures and stats update! No more copy and
+paste!
+
+### Other output formats
+
+You can use RMarkdown to make a wide range of documents:
+
+-   Manuscripts. The [`{rticles}`](https://github.com/rstudio/rticles) package has
+    templates for many popular journals and publishers. The
+    [`{papaja}`](https://github.com/crsh/papaja) package lets you create manuscript in the
+    style of the American Psychological Association (APA).
+
+-   Books with [`{bookdown}`](https://bookdown.org/) (such as this one)
 
 -   websites, blogs with [`{blogdown}`](https://github.com/rstudio/blogdown),
     [`{hugodown}`](https://hugodown.r-lib.org/),
@@ -72,28 +95,6 @@ or Word, you will have to worry about page sizes and page breaks. It's best to a
 until later in the process. For PDF in particular, you will also have to install a
 $\LaTeX$ distribution. I recommend `{tinytex}`.
 :::
-
-And if the data changes or a journal reviewer asks you to exclude a subject? Update the
-code and click the button again --- all the figures and stats update! No more copy and
-paste!
-
-So how do we do it?
-
-``` {.r}
-# ...
-```
-
-OK, but it still looks rather .... computerish. How do I make something that a normal
-person would want to read, or a journal would be willing to accept?
-
-As so often n R, there are packages that can help you with that. Packages to make pretty
-APA [tables for models](http://www.danieldsjoberg.com/gtsummary/index.html),
-[summary](https://cran.r-project.org/web/packages/table1/vignettes/table1-examples.html)
-[stats](https://cran.r-project.org/web/packages/sjPlot/vignettes/tab_model_estimates.html),
-...
-
-Note that RStudio has a visual markdown editor that makes authoring longer documents more
-convenient.
 
 We will leave it at this short teaser for RMarkdown. There's much more that RMarkdown can
 do, for example:

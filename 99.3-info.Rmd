@@ -2,6 +2,8 @@
 
 # Software Information {-}
 
+Below you can find a list of the specific software versions that were used to make this book. ALl source code is available on Github. 
+
 ```{r}
 sessionInfo()
 ```

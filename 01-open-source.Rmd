@@ -43,3 +43,8 @@ Software*](https://www.jstatsoft.org/index) and the R project's own [*R
 Journal*](https://journal.r-project.org/archive/2020-2/), which academics can use to get
 credit for working on R-related things. It's also common to see papers in other journals
 introducing new statistical methods alongside an implementation in R.
+
+::: {.exercise}
+Can you think of any other free and open source software you are using, perhaps on a daily
+basis?
+:::

@@ -24,3 +24,15 @@ you should or should not learn it.
 -   Is R for you?
 -   Basic data wrangling, modeling, visualization, and reproducible reporting
 -   How to learn more?
+
+### Instructions for building locally
+
+-  Clone this repository, 
+-  open it in RStudio
+-  In R, run:
+
+```r
+if (!require("renv")) install.packages("renv")
+renv::restore()
+bookdown::gitbook()  # Or Cmd + Shift + B
+```

@@ -45,3 +45,15 @@ In a short intro like this, there is not enough time to dive deeply into `{ggplo
 ``` {.r}
 # ...
 ```
+
+## Build a plot with the grammar of graphics
+
+```{r}
+# ...
+```
+
+## Make an interactive plot
+
+```{r}
+# ...
+```

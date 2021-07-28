@@ -62,18 +62,22 @@ We will talk about where to find other R users and how to continue learning.
 
 ## Conventions {.unnumbered}
 
-In the text, names of R packages will look like this: `{r tidyverse}`. R code will appear inline like this `print("Hello R!")` or in a box, followed by its output like this:
+### Code formatting  {-}
+
+In the text, names of R packages will look like this: `{tidyverse}`. R code will appear inline like this `print("Hello R!")` or in a box, followed by its output like this:
 
 ```{r}
 print("Hello R!")
 ```
 
+### Callout Boxes  {-}
+
 There are three different types of callout boxes:
 
 ::: {.goals}
-At the beginning of each chapter, I will list the things we are going to do and learn. You
-can use these to check your prior knowledge and decide to skip chapters that won't provide
-any new insights for you.
+*   At the beginning of each chapter, I will list the things we are going to do and learn. 
+*   You can use these to check your prior knowledge 
+*   Feel free to skip chapters that won't provide any new insights for you.
 :::
 
 ::: {.more}
@@ -90,3 +94,7 @@ print("This is the solution")
 ```
 :::
 :::
+
+### Data is singular {-}
+
+A final point: The word *"data"* will be used as a singular mass noun, as in *"the data looks wonderful"*. I apologize to those whose grammatical intuition this offends. I just can't help it.
