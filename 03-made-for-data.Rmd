@@ -24,7 +24,7 @@ The [**data type**](https://en.wikipedia.org/wiki/Data_type) of a piece of data 
 what operations you can perform with it. The bread and butter of data types in R are
 *numeric*, *logical*, and *character*.
 
-### Numeric {.unnumbered}
+#### Numeric {.unnumbered}
 
 Numeric data can be integer, decimal[^made-for-data-1], or complex, but usually the
 difference does not matter. Sometimes, R might display a number in scientific notation,
@@ -41,7 +41,7 @@ behavior.](https://statisticsglobe.com/disable-exponential-scientific-notation-i
 23 + 0.45 + 1e2 + 6i
 ```
 
-### Logical {.unnumbered}
+#### Logical {.unnumbered}
 
 Logical data (also known as Boolean data) can take only two values, `TRUE` or `FALSE` (or
 their shorthands, `T` and `F`). These are often used to represent binary categorical
@@ -52,7 +52,7 @@ data.
 (TRUE || FALSE) != (F == T)
 ```
 
-### Character {.unnumbered}
+#### Character {.unnumbered}
 
 Also known as *strings*. Almost anything you type becomes a character string if you
 surround it with `""` or `''`.
@@ -109,6 +109,8 @@ C        # Why is this not working?
 :::
 
 ::: {.more}
+**What's with the arrow, though?**
+
 Many other programming languages use `=` to assign values to variables. You can, for the
 most part, also use `=` for assignment in R --- just be aware that it will let everyone
 now that [you are not a true believer](https://en.wikipedia.org/wiki/Shibboleth).
@@ -206,7 +208,7 @@ x[2:3] <- c(7,8)   # replace 2nd and 3rd element with 7 and 8, respectively
 ```
 
 Values in a vector can be named. This comes in handy, for example, if you need a simple
-[key-value store:](https://en.wikipedia.org/wiki/Key%E2%80%93value_database)
+[**key-value store**:](https://en.wikipedia.org/wiki/Key%E2%80%93value_database)
 
 ```{r}
 fav_food <- c(
@@ -260,18 +262,23 @@ to store a sequence of mixed data types, you will have to use another data struc
 called *list*.
 :::
 
-## Data Frames
+## Data Frames & Tibbles
 
 Usually, your research data will be more complex than just a single sequence of values.
 For this, R has data frames. Data frames are two-dimensional like a spreadsheet -- with
 *rows* usually containing different observations and *columns* usually containing
 different variables.
 
-Rows and columns of a data frame can be named, and while row names have fallen out of
-fashion, it is good practice to give the columns of your data frames names that are easy
-to remember and easy to type.
+You may see the word [**Tibble**](https://tibble.tidyverse.org/) pop up occasionally in
+the examples in this book. A Tibble is a modern implementation of data frames. Tibbles are
+backwards-compatible with data frames and for the most part interchangeable. Throughout
+this book, we will use the word *data frame* to mean both of them.
 
-You can make your own data frame by hand, by putting together vectors like this:
+### Build a data frame by hand
+
+Often you will get a data frame by reading in a tabular data file like a spreadsheet but
+you can also make a data frame yourself, by combining vectors with the `data.frame()`
+function:
 
 ```{r}
 cool_numbers <- data.frame(
@@ -283,9 +290,16 @@ cool_numbers <- data.frame(
 cool_numbers
 ```
 
-Note how the vector `c(1,2)` in the `oneTwo` column will get *recycled* to match the
+You don't have to name the columns in your data frame at all, but it is good practice to
+give them names that are easy to remember and easy to type. Rows of a data frame can be
+named, too, but row names can be complicated to work with so it's better to include them
+as an additional column.
+
+Note how the vector `c(1,2)` in the `oneTwo` column did get **recycled** to match the
 length of the other two columns. This works, as long as the total length is a multiple of
 the shorter vector's length.
+
+### Data frame operations
 
 A quick way to access a single column of a data frame is with the `$` operator.
 
@@ -293,10 +307,12 @@ A quick way to access a single column of a data frame is with the `$` operator.
 cool_numbers$number
 ```
 
-Did you notice that columns in a data frame are vectors? This means that everything that
-can be done with a vector can be done with a data frame column!
+Because columns in a data frame are vectors, everything that can be done with a vector can
+be done with a data frame column!
 
 ::: {.more}
+**Everything is a vector**
+
 In fact, all "atomic" data types in R (numeric, characters, logical) are *always* stored
 as vectors -- even a single number is actually a numerical vector of length one! This is a
 really powerful idea and the source of much of R's strength!
@@ -337,11 +353,6 @@ R has a couple of other data structures that you will eventually encounter. I do
 to dwell on them for too long, because they will not play a role in the rest this book. If
 you are interested you can read more [here](http://adv-r.had.co.nz/). Additional R data
 structures include ...
-
--   [**Tibble**](https://tibble.tidyverse.org/) -- You may see the word *Tibble* pop up
-    occasionally in the examples in this book. A Tibble is a data structure is a modern
-    implementation of data frames. Tibbles are backwards-compatible with data frames and
-    for the purpose of this book you can think of them as interchangeable.
 
 -   **Factor** -- Factors are numerical vectors that can take a fixed set of values
     (levels), whereby each level can be assigned a label. The levels may be ordered or
