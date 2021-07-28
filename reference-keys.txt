@@ -31,7 +31,9 @@ basic-data-types
 assignment
 comments
 vectors
-data-frames
+data-frames-tibbles
+build-a-data-frame-by-hand
+data-frame-operations
 other-data-structures
 fantastic-documentation
 accessing-function-documentation
