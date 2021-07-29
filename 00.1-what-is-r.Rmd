@@ -20,7 +20,8 @@ mind. Here's what that means:
     that make data analysis easier.
 
 [^what-is-r-1]: This workflow is not unique to R. Python, for example, offers similar
-    functionality via the *iPython* (interactive Python) project.
+    functionality via the *iPython* (interactive Python) project. However, R was early to
+    the game.
 
 Although R is a proper programming language[^what-is-r-2], its main focus is undoubtedly
 data analysis. So much so, that some people call R a [domain

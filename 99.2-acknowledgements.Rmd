@@ -4,4 +4,5 @@ The beautiful font used throughout most of this book is *Junction* by *The Leagu
 Movable Type* (<https://www.theleagueofmoveabletype.com/>). The title is set in *Londrina* by Marcelo Magalhães (<https://tipospereira.com/>)
 
 This book is made possible by the power of R [@R-base] and the amazing `{bookdown}`
-package [@bookdown2016].
+package [@bookdown2016] and it wouldn't exist without the amazing R community who is so incredibly generous in sharing their knowledge and time to help others succeed!
+

@@ -11,16 +11,17 @@ use them? Fear not! R and RStudio have a number of ways to make your life easier
 
 ## Accessing function documentation
 
-The `Help` panel in RStudio gives you direct access to the help files of all R functions
-that you have installed. You can search in the search box there, or type
+The **Help panel** in RStudio gives you direct access to the **help files** of all R
+functions that you have installed. You can search in the search box there, or type
 `?mysterious_function` in the console. However, my favorite way to assess the help is to
-put the cursor on the function name and press <kbd>F1</kbd> (similarly, you can use
-<kbd>F2</kbd> to access the source code for anything -- It is open source, after all!).
+put the cursor on the function name and press <kbd>F1</kbd>.[^documentation-1]
 
-Having documentation easily available right in RStudio helps to learn the basics quickly
-and stay in the flow while you code. It's also worth mentioning that R's Function
-documentation, package vignettes and package websites are usually well-written and
-comprehensive.
+[^documentation-1]: Similarly, you can use <kbd>F2</kbd> to access the source code for
+    anything -- It is open source, after all!
+
+R's function documentation, package vignettes and package websites are usually
+well-written and comprehensive. Having the documentation easily available in RStudio helps
+to learn the basics quickly and stay in the flow while you code.
 
 ::: {.exercise}
 Look at the help file for the `mean()` function, see what other arguments the function
@@ -40,13 +41,13 @@ mean(c(-1000, 2, 2, 2, 2, 2, 2, 2, 2, 20, 1000), trim = .1)
 ## Auto-completion
 
 If you can't quite remember the function name, RStudio will try to assist you with its
-excellent fuzzy auto-completion that suggests functions while you type. Use <kbd>↑</kbd>,
-<kbd>↓</kbd>, and <kbd>↹</kbd> to select one of the choices.
+excellent fuzzy **auto-completion** that suggests functions while you type. Use
+<kbd>↑</kbd>, <kbd>↓</kbd>, and <kbd>↹</kbd> to select one of the choices.
 
 ## Cheat sheets
 
-There are excellent [cheatsheets](https://www.rstudio.com/resources/cheatsheets/) for
-popular packages available in the RStudio menu (`Help > Cheatsheets > ...`)
+There are a lot of handy **cheat sheets** for popular R packages. You can find them in the
+RStudio menu, if you go to `Help ▸ Cheat Sheets`.
 
 ::: {.exercise}
 Have a look at the cheat sheet for the RStudio IDE and find out how to search and replace
@@ -55,8 +56,27 @@ code in RStudio.
 
 ## Finding help online
 
-If you ever run into a problem or an error message that you can't figure out yourself Google your problem. SOmeone else probably ran into a similar thing before.  
-You can find also lots of blogs with tutorials written by other R users. [R Bloggers](https://www.r-bloggers.com/) aggregates many of them. Also check out the searchable database of ["R Posts you might have missed"](https://alastairrushworth.github.io/searchable/searchable.html)
+If you run into a problem or an error message that you can't figure out yourself, try to
+Google the problem. Someone else has probably run into a similar problem before. [Stack
+Overflow](https://stackoverflow.com/questions/tagged/r), [RStudio
+Community](https://community.rstudio.com/), or the R mailing list are full of people
+asking and answering questions about R. You can also find many blogs with tutorials
+written by other R users that explain how to do certain things in R. [R
+Bloggers](https://www.r-bloggers.com/) aggregates many of these blogs. Also check out the
+searchable database of ["R Posts you might have
+missed"](https://alastairrushworth.github.io/searchable/searchable.html)
 
-[Stack Overflow](https://stackoverflow.com/questions/tagged/r), [RStudio
-Community](https://community.rstudio.com/), or the R mailing are full of people asking and answering questions about R, and you are welcome to ask your questions there. 
+If you can't find an answer, you are welcome to ask your questions to the R community.
+Remember that you are asking people to volunteer their time to help you. Thus, make it as
+easy as possible for them to answer you.
+
+::: {.more}
+**Reproducible examples**
+
+A good way to increase your chances for getting help online is to make a reproducible
+example. Provide an example of the code that produces the problem and make it easy for
+others to run and understand it. Try to narrow down the problem to its core. Strip away
+everything that is not relevant.
+
+Quite often, when trying to do that you will stumble across the solution yourself.
+:::

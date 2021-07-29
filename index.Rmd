@@ -43,13 +43,13 @@ knitr::include_graphics("images/reasons.png")
 This book is a fast-paced hands-on introduction to R. Its goal is to give you an idea of
 what R has to offer, so that you can decide whether diving deeper is worth your time. The
 book starts with a brief introducing to R, followed by a discussion of good reasons *not*
-to learn R and some worthwhile alternatives. Then we present ten reasons to learn R and
-along with that, you will get some hands-on experience.
+to learn R and some worthwhile alternatives. Then we present ten good reasons to learn R
+and get some hands-on experience.
 
 The book presents modern R, with *RStudio, RMarkdown*, and the *Tidyverse*. It focuses on
-the parts that are most essential for reproducible data analysis and keeps the technical
+the parts that are essential for reproducible data analysis and keeps the technical
 details to a minimum. After reading it, you will know the basics of data analysis in R and
-should be able to decide whether you want to continue learning.
+should be able to decide whether you should continue learning.
 
 ::: {.draftinfo}
 **This is a draft!** This book is a work in progress and nobody knows when it will be
@@ -59,13 +59,12 @@ finished.
 ## Who is this for? {.unnumbered}
 
 The book is written for someone who has some experience doing data analysis with other
-tools but now wants to learn more about R. You are here, because you wonder if you should
-learn R. Your motivation might be that...
+tools and wants to learn more about R. Your motivation might be that...
 
 -   You are afraid of missing out and want to know what all the fuzz is about
 
 -   You feel that your current workflow isn't reproducible or efficient enough, and you
-    believe that R might help you with that
+    wonder if R could help you with that
 
 -   There is a statistical method that you would like to use, that is not available in
     your preferred software but it is available in R
@@ -91,8 +90,7 @@ The book is a result of my passion for teaching R and my interest in the pedagog
 teaching programming. The pedagogical style is heavily inspired by that of the Carpentries
 lesson material, which is presented excellently in Greg Wilson's [*Teaching Tech
 Together*](https://teachtogether.tech/). In contrast to a typical Carpentries lessons, the
-book progresses faster and skips over some of the fundamentals. It provides a broader
-overview of R at the expense of depth.
+book skips over some of the details in order to provide a broader overview.
 
 ## About the author {.unnumbered}
 

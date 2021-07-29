@@ -2,7 +2,7 @@
 
 # Software Information {-}
 
-Below you can find a list of the specific software versions that were used to make this book. All source code is available on Github. 
+Below you can find a list of the specific software and package versions that were used to make this book. All source code for this book is available on Github. 
 
 ```{r}
 sessionInfo()
