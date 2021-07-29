@@ -24,7 +24,7 @@
 <meta name="author" content="Tobias Busch" />
 
 
-<meta name="date" content="2021-07-28" />
+<meta name="date" content="2021-07-29" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -278,7 +278,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 
 <link rel="stylesheet" href="assets/webfonts/webfonts.css" type="text/css" />
-<link rel="stylesheet" href="libs/sass2f7c2c8472c5d5c7be5e3bc3199dc78d/style.min.css" type="text/css" />
+<link rel="stylesheet" href="libs/sassd5fcda25eaef53dd1eb951b52a7fc32b/style.min.css" type="text/css" />
 </head>
 
 <body>
@@ -331,11 +331,18 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="3" data-path="a-language-made-for-data-analysis-1.html"><a href="a-language-made-for-data-analysis-1.html"><i class="fa fa-check"></i><b>3</b> A language made for data analysis</a><ul>
 <li class="chapter" data-level="3.1" data-path="a-language-made-for-data-analysis-1.html"><a href="a-language-made-for-data-analysis-1.html#basic-data-types"><i class="fa fa-check"></i><b>3.1</b> Basic Data Types</a></li>
-<li class="chapter" data-level="3.2" data-path="a-language-made-for-data-analysis-1.html"><a href="a-language-made-for-data-analysis-1.html#assignment"><i class="fa fa-check"></i><b>3.2</b> Assignment</a></li>
+<li class="chapter" data-level="3.2" data-path="a-language-made-for-data-analysis-1.html"><a href="a-language-made-for-data-analysis-1.html#assignment"><i class="fa fa-check"></i><b>3.2</b> Assignment</a><ul>
+<li class="chapter" data-level="3.2.1" data-path="a-language-made-for-data-analysis-1.html"><a href="a-language-made-for-data-analysis-1.html#variable-names"><i class="fa fa-check"></i><b>3.2.1</b> Variable Names</a></li>
+</ul></li>
 <li class="chapter" data-level="3.3" data-path="a-language-made-for-data-analysis-1.html"><a href="a-language-made-for-data-analysis-1.html#comments"><i class="fa fa-check"></i><b>3.3</b> Comments</a></li>
-<li class="chapter" data-level="3.4" data-path="a-language-made-for-data-analysis-1.html"><a href="a-language-made-for-data-analysis-1.html#vectors"><i class="fa fa-check"></i><b>3.4</b> Vectors</a></li>
+<li class="chapter" data-level="3.4" data-path="a-language-made-for-data-analysis-1.html"><a href="a-language-made-for-data-analysis-1.html#vectors"><i class="fa fa-check"></i><b>3.4</b> Vectors</a><ul>
+<li class="chapter" data-level="3.4.1" data-path="a-language-made-for-data-analysis-1.html"><a href="a-language-made-for-data-analysis-1.html#creating-vectors"><i class="fa fa-check"></i><b>3.4.1</b> Creating vectors</a></li>
+<li class="chapter" data-level="3.4.2" data-path="a-language-made-for-data-analysis-1.html"><a href="a-language-made-for-data-analysis-1.html#working-with-vectors"><i class="fa fa-check"></i><b>3.4.2</b> Working with vectors</a></li>
+<li class="chapter" data-level="3.4.3" data-path="a-language-made-for-data-analysis-1.html"><a href="a-language-made-for-data-analysis-1.html#accessing-elements-of-a-vector"><i class="fa fa-check"></i><b>3.4.3</b> Accessing elements of a vector</a></li>
+<li class="chapter" data-level="3.4.4" data-path="a-language-made-for-data-analysis-1.html"><a href="a-language-made-for-data-analysis-1.html#named-vectors"><i class="fa fa-check"></i><b>3.4.4</b> Named vectors</a></li>
+</ul></li>
 <li class="chapter" data-level="3.5" data-path="a-language-made-for-data-analysis-1.html"><a href="a-language-made-for-data-analysis-1.html#data-frames-tibbles"><i class="fa fa-check"></i><b>3.5</b> Data Frames &amp; Tibbles</a><ul>
-<li class="chapter" data-level="3.5.1" data-path="a-language-made-for-data-analysis-1.html"><a href="a-language-made-for-data-analysis-1.html#build-a-data-frame-by-hand"><i class="fa fa-check"></i><b>3.5.1</b> Build a data frame by hand</a></li>
+<li class="chapter" data-level="3.5.1" data-path="a-language-made-for-data-analysis-1.html"><a href="a-language-made-for-data-analysis-1.html#creating-data-frames"><i class="fa fa-check"></i><b>3.5.1</b> Creating data frames</a></li>
 <li class="chapter" data-level="3.5.2" data-path="a-language-made-for-data-analysis-1.html"><a href="a-language-made-for-data-analysis-1.html#data-frame-operations"><i class="fa fa-check"></i><b>3.5.2</b> Data frame operations</a></li>
 </ul></li>
 <li class="chapter" data-level="3.6" data-path="a-language-made-for-data-analysis-1.html"><a href="a-language-made-for-data-analysis-1.html#other-data-structures"><i class="fa fa-check"></i><b>3.6</b> Other Data Structures</a></li>
@@ -416,22 +423,28 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h1><span class="header-section-number">Reason 3</span> A language made for data analysis</h1>
 <div class="goals">
 <ul>
-<li>The core data types are numerical, logical, and character</li>
-<li>To assign data to variables use <code>&lt;-</code></li>
-<li>Write comments with <code>#</code></li>
-<li>The most important data structures are vectors and data frames</li>
-<li>Vectors store a multitude of the same data type in a particular order</li>
-<li>Data frames are tables with data organized in rows and columns</li>
+<li>What are the most important data types and data structures in R?</li>
+<li>How can you assign data to variables?</li>
+<li>How to write comments in R?</li>
+<li>What are the important properties of vectors?</li>
+<li>How can you access specific elements of a vector?</li>
+<li>What are data frames shaped like?</li>
 </ul>
 </div>
-<p>R is a powerful and complex programming language that supports many different programming
-paradigms. However, to get started with data analysis, its enough to understand R’s basic
-data types — numeric, logical, and character — and two data structures, vectors and
-data frames. These are made for data manipulation and analysis, and along with the many
-convenience functions that R provides, they allow you to do data analysis without worrying
-much about things like loops and conditionals, that are fundamental in other programming
-languages. As you become more familiar with R, you can add those to your repertoire, too,
-and utilize R’s full power and flexibility.</p>
+<p>R is a programming language that supports many different programming paradigms but to get
+started with data analysis, its enough to understand R’s basic data types — numeric,
+logical, and character — and two data structures, vectors and data frames. These are
+made for data manipulation and analysis, and along with the many convenience functions
+that R provides, they allow you to do data analysis without worrying much about things
+that are fundamental in other programming languages, like loops and conditionals. As you
+become more familiar with R, you can add those to your repertoire, too, and utilize R’s
+full power and flexibility.</p>
+<div class="more">
+<p>If you are a seasoned programmer, I recommend to skip this chapter and instead read
+<em>Advanced R,</em> chapters 2-4
+(<a href="https://adv-r.hadley.nz/vectors-chap.html">&lt;https://adv-r.hadley.nz/vectors-chap.html&gt;</a>).
+These provide a much more thorough overview of R’s data types and data structures.</p>
+</div>
 <div id="basic-data-types" class="section level2">
 <h2><span class="header-section-number">3.1</span> Basic Data Types</h2>
 <p>The <a href="https://en.wikipedia.org/wiki/Data_type"><strong>data type</strong></a> of a piece of data determines
@@ -445,7 +458,7 @@ e.g., <code>1e+23</code>. To the uninitiated, these can look cryptic and a bit s
 worry! It’s just a very large or very small number that is written in a more compact form
 and if you want you can <a href="https://statisticsglobe.com/disable-exponential-scientific-notation-in-r">change this
 behavior.</a></p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="a-language-made-for-data-analysis-1.html#cb6-1"></a><span class="dv">23</span> <span class="op">+</span><span class="st"> </span><span class="fl">0.45</span> <span class="op">+</span><span class="st"> </span><span class="fl">1e2</span> <span class="op">+</span><span class="st"> </span>6i</span></code></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="a-language-made-for-data-analysis-1.html#cb6-1"></a><span class="fl">1e3</span> <span class="op">+</span><span class="st"> </span><span class="dv">230</span> <span class="op">+</span><span class="st"> </span>4L <span class="op">+</span><span class="st"> </span><span class="fl">0.5</span> <span class="op">+</span><span class="st"> </span><span class="fl">.06</span> <span class="op">+</span><span class="st"> </span>7i</span></code></pre></div>
 </div>
 <div id="logical" class="section level4 unnumbered">
 <h4>Logical</h4>
@@ -457,18 +470,18 @@ data.</p>
 </div>
 <div id="character" class="section level4 unnumbered">
 <h4>Character</h4>
-<p>Also known as <em>strings</em>. Almost anything you type becomes a character string if you
-surround it with <code>""</code> or <code>''</code>.</p>
+<p>Also known as <em>strings</em>. Characters are the most flexible data type. Almost anything you
+type becomes a character string if you surround it with <code>""</code> or <code>''</code>.</p>
 <div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="a-language-made-for-data-analysis-1.html#cb8-1"></a><span class="st">&quot;Hello World!&quot;</span></span></code></pre></div>
 </div>
 </div>
 <div id="assignment" class="section level2">
 <h2><span class="header-section-number">3.2</span> Assignment</h2>
-<p>Often, you want to store some data for later use. For this, you can assign it to a
-<strong>variable</strong><a href="#fn11" class="footnote-ref" id="fnref11"><sup>11</sup></a>. This is done with the <strong>assignment operator</strong> <code>&lt;-</code>. Use
-the keyboard shortcut <kbd>Alt/Option</kbd>+<kbd>-</kbd> to save yourself some hand
-gymnastics. Once assigned, you can use a variable’s name to represent its content in other
-operations. Typing a variable name by itself will print the variable’s content.</p>
+<p>If you want to store data for later use you can assign it to a
+<strong>variable</strong><a href="#fn11" class="footnote-ref" id="fnref11"><sup>11</sup></a> with the <strong>assignment operator</strong> <code>&lt;-</code> (use the keyboard
+shortcut <kbd>Alt/Option</kbd>+<kbd>-</kbd> to save yourself some hand gymnastics). Once
+assigned, you can use the variable’s name to represent its content in other operations.
+Typing a variable name by itself will print the variable’s content.</p>
 <div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="a-language-made-for-data-analysis-1.html#cb9-1"></a>a &lt;-<span class="st"> </span><span class="dv">1</span></span>
 <span id="cb9-2"><a href="a-language-made-for-data-analysis-1.html#cb9-2"></a>b &lt;-<span class="st"> </span><span class="dv">9</span></span>
 <span id="cb9-3"><a href="a-language-made-for-data-analysis-1.html#cb9-3"></a>c &lt;-<span class="st"> </span>a <span class="op">+</span><span class="st"> </span>b</span>
@@ -480,6 +493,8 @@ are working with R, you are working in a <strong>session</strong><em>.</em> The 
 <strong>environment</strong> in which data is stored, and the variable name allows you to retrieve the
 data again. Until you explicitly delete the variable or end the session, the data will be
 around for you to use it.</p>
+<div id="variable-names" class="section level3">
+<h3><span class="header-section-number">3.2.1</span> Variable Names</h3>
 <p>There are some rules for variables names: They must start with a letter and contain only
 the letters of the English alphabet, numbers, underscores <code>_</code>, hyphens <code>-</code>, and dots
 <code>.</code>.<a href="#fn12" class="footnote-ref" id="fnref12"><sup>12</sup></a> For long variable names, <a href="https://style.tidyverse.org/syntax.html#object-names">it is
@@ -495,9 +510,9 @@ to check your answer.</p>
 </div>
 <div class="more">
 <p><strong>What’s with the arrow, though?</strong></p>
-<p>Many other programming languages use <code>=</code> to assign values to variables. You can, for the
-most part, also use <code>=</code> for assignment in R — just be aware that it will let everyone
-now that <a href="https://en.wikipedia.org/wiki/Shibboleth">you are not a true believer</a>.</p>
+<p>Many other programming languages use <code>=</code> as the assignment operator. You can, for the most
+part, also use <code>=</code> for assignment in R — just be aware that it will let everyone now
+that <a href="https://en.wikipedia.org/wiki/Shibboleth">you are not a true believer</a>.</p>
 <p>You can also use <code>-&gt;</code> to assign from left to right. This can it come in handy when you are
 messing around in the console, but it may not be a good idea to use it too much in your
 scrips, because it can make your code harder to read:</p>
@@ -510,16 +525,17 @@ encounter a <code>&lt;&lt;-</code> in the wild.</p>
 <a href="https://colinfay.me/r-assignment/">here</a>.</p>
 </div>
 </div>
+</div>
 <div id="comments" class="section level2">
 <h2><span class="header-section-number">3.3</span> Comments</h2>
 <p>As you can see in the example above, you can use <code>#</code> to leave <strong>comments</strong> in your script.
 Everything on the right side of the <code>#</code> will be ignored by R. You can quickly “comment
-out” multiple lines by going to <code>Code ▸ Comment/Uncomment Lines</code> or pressing
-<kbd>Ctrl</kbd>/<kbd>Cmd</kbd> + <kbd>Shift</kbd> + <kbd>C</kbd>. Learn to write good
-commentsand write comments gratuitously – your collaborators and future self will thank
-you for it! Sarah Drasner’s presentation <a href="https://www.youtube.com/watch?v=yhF7OmuIILc"><em>The Art of Code
+out” multiple lines at the same time by going to <code>Code ▸ Comment/Uncomment Lines</code> or
+pressing <kbd>Ctrl</kbd>/<kbd>Cmd</kbd> + <kbd>Shift</kbd> + <kbd>C</kbd>. Learn to write
+good comments and write comments gratuitously – your collaborators and future self will
+thank you for it! Sarah Drasner’s presentation <a href="https://www.youtube.com/watch?v=yhF7OmuIILc"><em>The Art of Code
 Comments</em></a>is a very entertaining introduction
-to good comment-writing.</p>
+to good comment writing.</p>
 </div>
 <div id="vectors" class="section level2">
 <h2><span class="header-section-number">3.4</span> Vectors</h2>
@@ -527,8 +543,10 @@ to good comment-writing.</p>
 structures</strong></a> are a way to organize and
 process particular types of data efficiently. When working with data in R, you will
 encounter two important data structures: <em>vectors</em> and <em>data frames</em>. Vectors are made for
-storing values of the same data type (numerical, character, logical, …) in a particular
-order.</p>
+storing values <em>of the same data type</em> (numerical, character, logical, …) in a
+particular order.</p>
+<div id="creating-vectors" class="section level3">
+<h3><span class="header-section-number">3.4.1</span> Creating vectors</h3>
 <p>To create a vector, you can use the “combine” function, <code>c()</code>. There are also the <code>:</code> and
 <code>seq()</code> functions, that can help you create a vector that contains a sequence of numbers:</p>
 <div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="a-language-made-for-data-analysis-1.html#cb13-1"></a><span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>)      <span class="co"># create a vector manually</span></span>
@@ -539,6 +557,9 @@ order.</p>
 [1] 0 1 2 3 4
 [1] 4 3 2 1 0
 [1] 0.0 0.5 1.0 1.5 2.0</code></pre>
+</div>
+<div id="working-with-vectors" class="section level3">
+<h3><span class="header-section-number">3.4.2</span> Working with vectors</h3>
 <p>R is really good at working with vectors! See how easy it is to multiply all numbers by a
 scalar, get the mean, or sum all elements — all without using a loop or a temporary
 variable:</p>
@@ -549,6 +570,9 @@ variable:</p>
 <pre><code>[1] 10 20 30 40
 [1] 2.5
 [1] 10</code></pre>
+</div>
+<div id="accessing-elements-of-a-vector" class="section level3">
+<h3><span class="header-section-number">3.4.3</span> Accessing elements of a vector</h3>
 <p>You can access specific positions of a vector using square brackets. In R, indices start
 at 1, that is, index 1 will return the first element of the vector.</p>
 <div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb17-1"><a href="a-language-made-for-data-analysis-1.html#cb17-1"></a>x[<span class="dv">1</span>]</span></code></pre></div>
@@ -567,6 +591,9 @@ specific elements</p>
 <p>You can also use the bracket syntax to replace individual elements:</p>
 <div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb25-1"><a href="a-language-made-for-data-analysis-1.html#cb25-1"></a>x[<span class="dv">2</span><span class="op">:</span><span class="dv">3</span>] &lt;-<span class="st"> </span><span class="dv">0</span>   <span class="co"># replace 2nd and 3rd element with 0</span></span>
 <span id="cb25-2"><a href="a-language-made-for-data-analysis-1.html#cb25-2"></a>x[<span class="dv">2</span><span class="op">:</span><span class="dv">3</span>] &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">7</span>,<span class="dv">8</span>)   <span class="co"># replace 2nd and 3rd element with 7 and 8, respectively</span></span></code></pre></div>
+</div>
+<div id="named-vectors" class="section level3">
+<h3><span class="header-section-number">3.4.4</span> Named vectors</h3>
 <p>Values in a vector can be named. This comes in handy, for example, if you need a simple
 <a href="https://en.wikipedia.org/wiki/Key%E2%80%93value_database"><strong>key-value store</strong>:</a></p>
 <div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb26-1"><a href="a-language-made-for-data-analysis-1.html#cb26-1"></a>fav_food &lt;-<span class="st"> </span><span class="kw">c</span>(</span>
@@ -612,6 +639,7 @@ to store a sequence of mixed data types, you will have to use another data struc
 called <em>list</em>.</p>
 </div>
 </div>
+</div>
 <div id="data-frames-tibbles" class="section level2">
 <h2><span class="header-section-number">3.5</span> Data Frames &amp; Tibbles</h2>
 <p>Usually, your research data will be more complex than just a single sequence of values.
@@ -622,11 +650,11 @@ different variables.</p>
 the examples in this book. A Tibble is a modern implementation of data frames. Tibbles are
 backwards-compatible with data frames and for the most part interchangeable. Throughout
 this book, we will use the word <em>data frame</em> to mean both of them.</p>
-<div id="build-a-data-frame-by-hand" class="section level3">
-<h3><span class="header-section-number">3.5.1</span> Build a data frame by hand</h3>
-<p>Often you will get a data frame by reading in a tabular data file like a spreadsheet but
-you can also make a data frame yourself, by combining vectors with the <code>data.frame()</code>
-function:</p>
+<div id="creating-data-frames" class="section level3">
+<h3><span class="header-section-number">3.5.1</span> Creating data frames</h3>
+<p>You will often get a data frame by reading data from a tabular data file like a
+spreadsheet but you can also make one yourself, by combining vectors with the
+<code>data.frame()</code> function:</p>
 <div class="sourceCode" id="cb36"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb36-1"><a href="a-language-made-for-data-analysis-1.html#cb36-1"></a>cool_numbers &lt;-<span class="st"> </span><span class="kw">data.frame</span>(</span>
 <span id="cb36-2"><a href="a-language-made-for-data-analysis-1.html#cb36-2"></a>    <span class="st">&quot;number&quot;</span> =<span class="st"> </span><span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">13</span>,<span class="dv">23</span>,<span class="dv">42</span>),</span>
 <span id="cb36-3"><a href="a-language-made-for-data-analysis-1.html#cb36-3"></a>    <span class="st">&quot;isPrime&quot;</span> =<span class="st"> </span><span class="kw">c</span>(<span class="ot">FALSE</span>, <span class="ot">TRUE</span>, <span class="ot">TRUE</span>, <span class="ot">FALSE</span>),</span>
@@ -645,7 +673,7 @@ named, too, but row names can be complicated to work with so it’s better to in
 as an additional column.</p>
 <p>Note how the vector <code>c(1,2)</code> in the <code>oneTwo</code> column did get <strong>recycled</strong> to match the
 length of the other two columns. This works, as long as the total length is a multiple of
-the shorter vector’s length.</p>
+the shorter vector’s length. Otherwise, R will produce an error.</p>
 </div>
 <div id="data-frame-operations" class="section level3">
 <h3><span class="header-section-number">3.5.2</span> Data frame operations</h3>
@@ -689,19 +717,20 @@ to dwell on them for too long, because they will not play a role in the rest thi
 you are interested you can read more <a href="http://adv-r.had.co.nz/">here</a>. Additional R data
 structures include …</p>
 <ul>
-<li><p><strong>Factor</strong> – Factors are numerical vectors that can take a fixed set of values
+<li><p><strong>Factor</strong> – Factors are numerical vectors with a fixed set of possible values
 (levels), whereby each level can be assigned a label. The levels may be ordered or
-unordered. If this reminds you of categorical and ordinal variables you are absolutely
-right – that’s where they are used most often. While factors can be quite useful,
-they are also a point of confusion for many R novices.</p></li>
+unordered. They are most useful as a data structure for ordinal and categorical
+variables in statistical models. Unfortunately, they are often also a point of
+confusion for R novices.</p></li>
 <li><p><strong>List</strong> – Lists are similar to vectors, but they can contain a mix of data types and
 data structures, including other lists.</p></li>
+<li><p><strong>Matrix</strong> – Matrices are multidimensional vectors. Like data frames, they have rows
+and columns. Unlike data frames, all elements in a matrix must be of the same data
+type. Unless you are implementing statistical methods yourself and want to use R’s
+matrix algebra functions you probably won’t have to work with matrices directly.</p></li>
 <li><p><strong>Object</strong> – Objects can be used to organize functionality. For instance, a
 statistical model may be an object that has various attributes and associated
 functions. R even has three types of objects: R6, S3, and S4.</p></li>
-<li><p><strong>Matrix</strong> – Not to be confused with data frames. If you are implementing statistical
-methods yourself, you may want to make use of R’s matrix algebra functions. Otherwise,
-you likely won’t often have to work with matrices directly.</p></li>
 <li><p><a href="https://adv-r.hadley.nz/environments.html"><strong>Environment</strong></a> – Do you remember when I
 said that your R session provides an environment in which data is stored? It turns out
 that environments are yet another data structure in R. An environment is a data

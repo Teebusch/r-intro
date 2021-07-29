@@ -29,10 +29,15 @@ create-a-script
 a-language-made-for-data-analysis-1
 basic-data-types
 assignment
+variable-names
 comments
 vectors
+creating-vectors
+working-with-vectors
+accessing-elements-of-a-vector
+named-vectors
 data-frames-tibbles
-build-a-data-frame-by-hand
+creating-data-frames
 data-frame-operations
 other-data-structures
 fantastic-documentation

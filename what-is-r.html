@@ -24,7 +24,7 @@
 <meta name="author" content="Tobias Busch" />
 
 
-<meta name="date" content="2021-07-28" />
+<meta name="date" content="2021-07-29" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -278,7 +278,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 
 <link rel="stylesheet" href="assets/webfonts/webfonts.css" type="text/css" />
-<link rel="stylesheet" href="libs/sass2f7c2c8472c5d5c7be5e3bc3199dc78d/style.min.css" type="text/css" />
+<link rel="stylesheet" href="libs/sassd5fcda25eaef53dd1eb951b52a7fc32b/style.min.css" type="text/css" />
 </head>
 
 <body>
@@ -331,11 +331,18 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="3" data-path="a-language-made-for-data-analysis-1.html"><a href="a-language-made-for-data-analysis-1.html"><i class="fa fa-check"></i><b>3</b> A language made for data analysis</a><ul>
 <li class="chapter" data-level="3.1" data-path="a-language-made-for-data-analysis-1.html"><a href="a-language-made-for-data-analysis-1.html#basic-data-types"><i class="fa fa-check"></i><b>3.1</b> Basic Data Types</a></li>
-<li class="chapter" data-level="3.2" data-path="a-language-made-for-data-analysis-1.html"><a href="a-language-made-for-data-analysis-1.html#assignment"><i class="fa fa-check"></i><b>3.2</b> Assignment</a></li>
+<li class="chapter" data-level="3.2" data-path="a-language-made-for-data-analysis-1.html"><a href="a-language-made-for-data-analysis-1.html#assignment"><i class="fa fa-check"></i><b>3.2</b> Assignment</a><ul>
+<li class="chapter" data-level="3.2.1" data-path="a-language-made-for-data-analysis-1.html"><a href="a-language-made-for-data-analysis-1.html#variable-names"><i class="fa fa-check"></i><b>3.2.1</b> Variable Names</a></li>
+</ul></li>
 <li class="chapter" data-level="3.3" data-path="a-language-made-for-data-analysis-1.html"><a href="a-language-made-for-data-analysis-1.html#comments"><i class="fa fa-check"></i><b>3.3</b> Comments</a></li>
-<li class="chapter" data-level="3.4" data-path="a-language-made-for-data-analysis-1.html"><a href="a-language-made-for-data-analysis-1.html#vectors"><i class="fa fa-check"></i><b>3.4</b> Vectors</a></li>
+<li class="chapter" data-level="3.4" data-path="a-language-made-for-data-analysis-1.html"><a href="a-language-made-for-data-analysis-1.html#vectors"><i class="fa fa-check"></i><b>3.4</b> Vectors</a><ul>
+<li class="chapter" data-level="3.4.1" data-path="a-language-made-for-data-analysis-1.html"><a href="a-language-made-for-data-analysis-1.html#creating-vectors"><i class="fa fa-check"></i><b>3.4.1</b> Creating vectors</a></li>
+<li class="chapter" data-level="3.4.2" data-path="a-language-made-for-data-analysis-1.html"><a href="a-language-made-for-data-analysis-1.html#working-with-vectors"><i class="fa fa-check"></i><b>3.4.2</b> Working with vectors</a></li>
+<li class="chapter" data-level="3.4.3" data-path="a-language-made-for-data-analysis-1.html"><a href="a-language-made-for-data-analysis-1.html#accessing-elements-of-a-vector"><i class="fa fa-check"></i><b>3.4.3</b> Accessing elements of a vector</a></li>
+<li class="chapter" data-level="3.4.4" data-path="a-language-made-for-data-analysis-1.html"><a href="a-language-made-for-data-analysis-1.html#named-vectors"><i class="fa fa-check"></i><b>3.4.4</b> Named vectors</a></li>
+</ul></li>
 <li class="chapter" data-level="3.5" data-path="a-language-made-for-data-analysis-1.html"><a href="a-language-made-for-data-analysis-1.html#data-frames-tibbles"><i class="fa fa-check"></i><b>3.5</b> Data Frames &amp; Tibbles</a><ul>
-<li class="chapter" data-level="3.5.1" data-path="a-language-made-for-data-analysis-1.html"><a href="a-language-made-for-data-analysis-1.html#build-a-data-frame-by-hand"><i class="fa fa-check"></i><b>3.5.1</b> Build a data frame by hand</a></li>
+<li class="chapter" data-level="3.5.1" data-path="a-language-made-for-data-analysis-1.html"><a href="a-language-made-for-data-analysis-1.html#creating-data-frames"><i class="fa fa-check"></i><b>3.5.1</b> Creating data frames</a></li>
 <li class="chapter" data-level="3.5.2" data-path="a-language-made-for-data-analysis-1.html"><a href="a-language-made-for-data-analysis-1.html#data-frame-operations"><i class="fa fa-check"></i><b>3.5.2</b> Data frame operations</a></li>
 </ul></li>
 <li class="chapter" data-level="3.6" data-path="a-language-made-for-data-analysis-1.html"><a href="a-language-made-for-data-analysis-1.html#other-data-structures"><i class="fa fa-check"></i><b>3.6</b> Other Data Structures</a></li>
@@ -468,7 +475,8 @@ way that is transparent and reproducible.</p></li>
 <hr />
 <ol start="2">
 <li id="fn2"><p>This workflow is not unique to R. Python, for example, offers similar
-functionality via the <em>iPython</em> (interactive Python) project.<a href="what-is-r.html#fnref2" class="footnote-back">↩︎</a></p></li>
+functionality via the <em>iPython</em> (interactive Python) project. However, R was early to
+the game.<a href="what-is-r.html#fnref2" class="footnote-back">↩︎</a></p></li>
 <li id="fn3"><p>Some people claim that you can use <a href="https://youtu.be/m6nUdoP6894">R for
 everything</a>.<a href="what-is-r.html#fnref3" class="footnote-back">↩︎</a></p></li>
 <li id="fn4"><p>In 2020, R even briefly climbed to the 8th place of the TIOBE index, which

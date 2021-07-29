@@ -24,7 +24,7 @@
 <meta name="author" content="Tobias Busch" />
 
 
-<meta name="date" content="2021-07-28" />
+<meta name="date" content="2021-07-29" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -278,7 +278,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 
 <link rel="stylesheet" href="assets/webfonts/webfonts.css" type="text/css" />
-<link rel="stylesheet" href="libs/sass2f7c2c8472c5d5c7be5e3bc3199dc78d/style.min.css" type="text/css" />
+<link rel="stylesheet" href="libs/sassd5fcda25eaef53dd1eb951b52a7fc32b/style.min.css" type="text/css" />
 </head>
 
 <body>
@@ -331,11 +331,18 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="3" data-path="a-language-made-for-data-analysis-1.html"><a href="a-language-made-for-data-analysis-1.html"><i class="fa fa-check"></i><b>3</b> A language made for data analysis</a><ul>
 <li class="chapter" data-level="3.1" data-path="a-language-made-for-data-analysis-1.html"><a href="a-language-made-for-data-analysis-1.html#basic-data-types"><i class="fa fa-check"></i><b>3.1</b> Basic Data Types</a></li>
-<li class="chapter" data-level="3.2" data-path="a-language-made-for-data-analysis-1.html"><a href="a-language-made-for-data-analysis-1.html#assignment"><i class="fa fa-check"></i><b>3.2</b> Assignment</a></li>
+<li class="chapter" data-level="3.2" data-path="a-language-made-for-data-analysis-1.html"><a href="a-language-made-for-data-analysis-1.html#assignment"><i class="fa fa-check"></i><b>3.2</b> Assignment</a><ul>
+<li class="chapter" data-level="3.2.1" data-path="a-language-made-for-data-analysis-1.html"><a href="a-language-made-for-data-analysis-1.html#variable-names"><i class="fa fa-check"></i><b>3.2.1</b> Variable Names</a></li>
+</ul></li>
 <li class="chapter" data-level="3.3" data-path="a-language-made-for-data-analysis-1.html"><a href="a-language-made-for-data-analysis-1.html#comments"><i class="fa fa-check"></i><b>3.3</b> Comments</a></li>
-<li class="chapter" data-level="3.4" data-path="a-language-made-for-data-analysis-1.html"><a href="a-language-made-for-data-analysis-1.html#vectors"><i class="fa fa-check"></i><b>3.4</b> Vectors</a></li>
+<li class="chapter" data-level="3.4" data-path="a-language-made-for-data-analysis-1.html"><a href="a-language-made-for-data-analysis-1.html#vectors"><i class="fa fa-check"></i><b>3.4</b> Vectors</a><ul>
+<li class="chapter" data-level="3.4.1" data-path="a-language-made-for-data-analysis-1.html"><a href="a-language-made-for-data-analysis-1.html#creating-vectors"><i class="fa fa-check"></i><b>3.4.1</b> Creating vectors</a></li>
+<li class="chapter" data-level="3.4.2" data-path="a-language-made-for-data-analysis-1.html"><a href="a-language-made-for-data-analysis-1.html#working-with-vectors"><i class="fa fa-check"></i><b>3.4.2</b> Working with vectors</a></li>
+<li class="chapter" data-level="3.4.3" data-path="a-language-made-for-data-analysis-1.html"><a href="a-language-made-for-data-analysis-1.html#accessing-elements-of-a-vector"><i class="fa fa-check"></i><b>3.4.3</b> Accessing elements of a vector</a></li>
+<li class="chapter" data-level="3.4.4" data-path="a-language-made-for-data-analysis-1.html"><a href="a-language-made-for-data-analysis-1.html#named-vectors"><i class="fa fa-check"></i><b>3.4.4</b> Named vectors</a></li>
+</ul></li>
 <li class="chapter" data-level="3.5" data-path="a-language-made-for-data-analysis-1.html"><a href="a-language-made-for-data-analysis-1.html#data-frames-tibbles"><i class="fa fa-check"></i><b>3.5</b> Data Frames &amp; Tibbles</a><ul>
-<li class="chapter" data-level="3.5.1" data-path="a-language-made-for-data-analysis-1.html"><a href="a-language-made-for-data-analysis-1.html#build-a-data-frame-by-hand"><i class="fa fa-check"></i><b>3.5.1</b> Build a data frame by hand</a></li>
+<li class="chapter" data-level="3.5.1" data-path="a-language-made-for-data-analysis-1.html"><a href="a-language-made-for-data-analysis-1.html#creating-data-frames"><i class="fa fa-check"></i><b>3.5.1</b> Creating data frames</a></li>
 <li class="chapter" data-level="3.5.2" data-path="a-language-made-for-data-analysis-1.html"><a href="a-language-made-for-data-analysis-1.html#data-frame-operations"><i class="fa fa-check"></i><b>3.5.2</b> Data frame operations</a></li>
 </ul></li>
 <li class="chapter" data-level="3.6" data-path="a-language-made-for-data-analysis-1.html"><a href="a-language-made-for-data-analysis-1.html#other-data-structures"><i class="fa fa-check"></i><b>3.6</b> Other Data Structures</a></li>
@@ -425,15 +432,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 use them? Fear not! R and RStudio have a number of ways to make your life easier.</p>
 <div id="accessing-function-documentation" class="section level2">
 <h2><span class="header-section-number">4.1</span> Accessing function documentation</h2>
-<p>The <code>Help</code> panel in RStudio gives you direct access to the help files of all R functions
-that you have installed. You can search in the search box there, or type
+<p>The <strong>Help panel</strong> in RStudio gives you direct access to the <strong>help files</strong> of all R
+functions that you have installed. You can search in the search box there, or type
 <code>?mysterious_function</code> in the console. However, my favorite way to assess the help is to
-put the cursor on the function name and press <kbd>F1</kbd> (similarly, you can use
-<kbd>F2</kbd> to access the source code for anything – It is open source, after all!).</p>
-<p>Having documentation easily available right in RStudio helps to learn the basics quickly
-and stay in the flow while you code. It’s also worth mentioning that R’s Function
-documentation, package vignettes and package websites are usually well-written and
-comprehensive.</p>
+put the cursor on the function name and press <kbd>F1</kbd>.<a href="#fn13" class="footnote-ref" id="fnref13"><sup>13</sup></a></p>
+<p>R’s function documentation, package vignettes and package websites are usually
+well-written and comprehensive. Having the documentation easily available in RStudio helps
+to learn the basics quickly and stay in the flow while you code.</p>
 <div class="exercise">
 <p><span id="exr:unlabeled-div-10" class="exercise"><strong>Exercise 4.1  </strong></span>Look at the help file for the <code>mean()</code> function, see what other arguments the function
 accepts. How would you calculate a trimmed mean?</p>
@@ -449,13 +454,13 @@ calculating the mean. For example:</p>
 <div id="auto-completion" class="section level2">
 <h2><span class="header-section-number">4.2</span> Auto-completion</h2>
 <p>If you can’t quite remember the function name, RStudio will try to assist you with its
-excellent fuzzy auto-completion that suggests functions while you type. Use <kbd>↑</kbd>,
-<kbd>↓</kbd>, and <kbd>↹</kbd> to select one of the choices.</p>
+excellent fuzzy <strong>auto-completion</strong> that suggests functions while you type. Use
+<kbd>↑</kbd>, <kbd>↓</kbd>, and <kbd>↹</kbd> to select one of the choices.</p>
 </div>
 <div id="cheat-sheets" class="section level2">
 <h2><span class="header-section-number">4.3</span> Cheat sheets</h2>
-<p>There are excellent <a href="https://www.rstudio.com/resources/cheatsheets/">cheatsheets</a> for
-popular packages available in the RStudio menu (<code>Help &gt; Cheatsheets &gt; ...</code>)</p>
+<p>There are a lot of handy <strong>cheat sheets</strong> for popular R packages. You can find them in the
+RStudio menu, if you go to <code>Help ▸ Cheat Sheets</code>.</p>
 <div class="exercise">
 <p><span id="exr:unlabeled-div-11" class="exercise"><strong>Exercise 4.2  </strong></span>Have a look at the cheat sheet for the RStudio IDE and find out how to search and replace
 code in RStudio.</p>
@@ -463,12 +468,35 @@ code in RStudio.</p>
 </div>
 <div id="finding-help-online" class="section level2">
 <h2><span class="header-section-number">4.4</span> Finding help online</h2>
-<p>If you ever run into a problem or an error message that you can’t figure out yourself Google your problem. SOmeone else probably ran into a similar thing before.<br />
-You can find also lots of blogs with tutorials written by other R users. <a href="https://www.r-bloggers.com/">R Bloggers</a> aggregates many of them. Also check out the searchable database of <a href="https://alastairrushworth.github.io/searchable/searchable.html">“R Posts you might have missed”</a></p>
-<p><a href="https://stackoverflow.com/questions/tagged/r">Stack Overflow</a>, <a href="https://community.rstudio.com/">RStudio
-Community</a>, or the R mailing are full of people asking and answering questions about R, and you are welcome to ask your questions there.</p>
+<p>If you run into a problem or an error message that you can’t figure out yourself, try to
+Google the problem. Someone else has probably run into a similar problem before. <a href="https://stackoverflow.com/questions/tagged/r">Stack
+Overflow</a>, <a href="https://community.rstudio.com/">RStudio
+Community</a>, or the R mailing list are full of people
+asking and answering questions about R. You can also find many blogs with tutorials
+written by other R users that explain how to do certain things in R. <a href="https://www.r-bloggers.com/">R
+Bloggers</a> aggregates many of these blogs. Also check out the
+searchable database of <a href="https://alastairrushworth.github.io/searchable/searchable.html">“R Posts you might have
+missed”</a></p>
+<p>If you can’t find an answer, you are welcome to ask your questions to the R community.
+Remember that you are asking people to volunteer their time to help you. Thus, make it as
+easy as possible for them to answer you.</p>
+<div class="more">
+<p><strong>Reproducible examples</strong></p>
+<p>A good way to increase your chances for getting help online is to make a reproducible
+example. Provide an example of the code that produces the problem and make it easy for
+others to run and understand it. Try to narrow down the problem to its core. Strip away
+everything that is not relevant.</p>
+<p>Quite often, when trying to do that you will stumble across the solution yourself.</p>
+</div>
 
 </div>
+</div>
+<div class="footnotes">
+<hr />
+<ol start="13">
+<li id="fn13"><p>Similarly, you can use <kbd>F2</kbd> to access the source code for
+anything – It is open source, after all!<a href="fantastic-documentation.html#fnref13" class="footnote-back">↩︎</a></p></li>
+</ol>
 </div>
             </section>
 

@@ -24,7 +24,7 @@
 <meta name="author" content="Tobias Busch" />
 
 
-<meta name="date" content="2021-07-28" />
+<meta name="date" content="2021-07-29" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -278,7 +278,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 
 <link rel="stylesheet" href="assets/webfonts/webfonts.css" type="text/css" />
-<link rel="stylesheet" href="libs/sass2f7c2c8472c5d5c7be5e3bc3199dc78d/style.min.css" type="text/css" />
+<link rel="stylesheet" href="libs/sassd5fcda25eaef53dd1eb951b52a7fc32b/style.min.css" type="text/css" />
 </head>
 
 <body>
@@ -331,11 +331,18 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="3" data-path="a-language-made-for-data-analysis-1.html"><a href="a-language-made-for-data-analysis-1.html"><i class="fa fa-check"></i><b>3</b> A language made for data analysis</a><ul>
 <li class="chapter" data-level="3.1" data-path="a-language-made-for-data-analysis-1.html"><a href="a-language-made-for-data-analysis-1.html#basic-data-types"><i class="fa fa-check"></i><b>3.1</b> Basic Data Types</a></li>
-<li class="chapter" data-level="3.2" data-path="a-language-made-for-data-analysis-1.html"><a href="a-language-made-for-data-analysis-1.html#assignment"><i class="fa fa-check"></i><b>3.2</b> Assignment</a></li>
+<li class="chapter" data-level="3.2" data-path="a-language-made-for-data-analysis-1.html"><a href="a-language-made-for-data-analysis-1.html#assignment"><i class="fa fa-check"></i><b>3.2</b> Assignment</a><ul>
+<li class="chapter" data-level="3.2.1" data-path="a-language-made-for-data-analysis-1.html"><a href="a-language-made-for-data-analysis-1.html#variable-names"><i class="fa fa-check"></i><b>3.2.1</b> Variable Names</a></li>
+</ul></li>
 <li class="chapter" data-level="3.3" data-path="a-language-made-for-data-analysis-1.html"><a href="a-language-made-for-data-analysis-1.html#comments"><i class="fa fa-check"></i><b>3.3</b> Comments</a></li>
-<li class="chapter" data-level="3.4" data-path="a-language-made-for-data-analysis-1.html"><a href="a-language-made-for-data-analysis-1.html#vectors"><i class="fa fa-check"></i><b>3.4</b> Vectors</a></li>
+<li class="chapter" data-level="3.4" data-path="a-language-made-for-data-analysis-1.html"><a href="a-language-made-for-data-analysis-1.html#vectors"><i class="fa fa-check"></i><b>3.4</b> Vectors</a><ul>
+<li class="chapter" data-level="3.4.1" data-path="a-language-made-for-data-analysis-1.html"><a href="a-language-made-for-data-analysis-1.html#creating-vectors"><i class="fa fa-check"></i><b>3.4.1</b> Creating vectors</a></li>
+<li class="chapter" data-level="3.4.2" data-path="a-language-made-for-data-analysis-1.html"><a href="a-language-made-for-data-analysis-1.html#working-with-vectors"><i class="fa fa-check"></i><b>3.4.2</b> Working with vectors</a></li>
+<li class="chapter" data-level="3.4.3" data-path="a-language-made-for-data-analysis-1.html"><a href="a-language-made-for-data-analysis-1.html#accessing-elements-of-a-vector"><i class="fa fa-check"></i><b>3.4.3</b> Accessing elements of a vector</a></li>
+<li class="chapter" data-level="3.4.4" data-path="a-language-made-for-data-analysis-1.html"><a href="a-language-made-for-data-analysis-1.html#named-vectors"><i class="fa fa-check"></i><b>3.4.4</b> Named vectors</a></li>
+</ul></li>
 <li class="chapter" data-level="3.5" data-path="a-language-made-for-data-analysis-1.html"><a href="a-language-made-for-data-analysis-1.html#data-frames-tibbles"><i class="fa fa-check"></i><b>3.5</b> Data Frames &amp; Tibbles</a><ul>
-<li class="chapter" data-level="3.5.1" data-path="a-language-made-for-data-analysis-1.html"><a href="a-language-made-for-data-analysis-1.html#build-a-data-frame-by-hand"><i class="fa fa-check"></i><b>3.5.1</b> Build a data frame by hand</a></li>
+<li class="chapter" data-level="3.5.1" data-path="a-language-made-for-data-analysis-1.html"><a href="a-language-made-for-data-analysis-1.html#creating-data-frames"><i class="fa fa-check"></i><b>3.5.1</b> Creating data frames</a></li>
 <li class="chapter" data-level="3.5.2" data-path="a-language-made-for-data-analysis-1.html"><a href="a-language-made-for-data-analysis-1.html#data-frame-operations"><i class="fa fa-check"></i><b>3.5.2</b> Data frame operations</a></li>
 </ul></li>
 <li class="chapter" data-level="3.6" data-path="a-language-made-for-data-analysis-1.html"><a href="a-language-made-for-data-analysis-1.html#other-data-structures"><i class="fa fa-check"></i><b>3.6</b> Other Data Structures</a></li>
@@ -535,7 +542,7 @@ document.</p></li>
 </ol>
 <p>In principle you could use Git in the terminal, but there are many graphical user
 interfaces for Git that make things easier, and RStudio has a Git interface built
-in.<a href="#fn14" class="footnote-ref" id="fnref14"><sup>14</sup></a></p>
+in.<a href="#fn15" class="footnote-ref" id="fnref15"><sup>15</sup></a></p>
 <div class="sourceCode" id="cb72"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb72-1"><a href="reproducibility.html#cb72-1"></a><span class="fu">git</span> init</span>
 <span id="cb72-2"><a href="reproducibility.html#cb72-2"></a><span class="fu">git</span> add . </span>
 <span id="cb72-3"><a href="reproducibility.html#cb72-3"></a><span class="fu">git</span> commit -m <span class="st">&quot;initial commit&quot;</span></span></code></pre></div>
@@ -617,9 +624,9 @@ reports are reproducible</li>
 </div>
 <div class="footnotes">
 <hr />
-<ol start="14">
-<li id="fn14"><p>Personally, I prefer Github Desktop (<a href="https://desktop.github.com/" class="uri">https://desktop.github.com/</a>)
-because it is prettier, snappier, and arguably more user friendly.<a href="reproducibility.html#fnref14" class="footnote-back">↩︎</a></p></li>
+<ol start="15">
+<li id="fn15"><p>Personally, I prefer Github Desktop (<a href="https://desktop.github.com/" class="uri">https://desktop.github.com/</a>)
+because it is prettier, snappier, and arguably more user friendly.<a href="reproducibility.html#fnref15" class="footnote-back">↩︎</a></p></li>
 </ol>
 </div>
             </section>
