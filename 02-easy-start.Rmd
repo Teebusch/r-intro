@@ -1,26 +1,27 @@
 # It's easy to get started
 
 ::: {.goals}
--   How to install R an RStudio
--   Creating a project in RStudio
+-   How to install R and RStudio
+-   Creating a new project in RStudio
 -   Running commands in the R console and from a script file
 -   R's basic operators
+-   How to use functions
 :::
 
 Getting R to run on your computer is usually a relatively smooth
-experience[^easy-start-1]: Download and install the latest version of R
-([https://r-project.org/](https://www.r-project.org/)) and *RStudio*
+experience[^easy-start-1]: Download and install the latest version of **R**
+([https://r-project.org/](https://www.r-project.org/)) and **RStudio**
 ([https://rstudio.com/products/rstudio](https://www.rstudio.com/products/rstudio/)) for
 your operating system. If you already have either program installed on your computer,
 there is no need to uninstall the old versions beforehand.
 
-[^easy-start-1]: It can get a little hairy if you are working on a machine with restricted
+[^easy-start-1]: It can be more complicated if you are working on a machine with restricted
     permissions, for example a computer issued to you by your employer. If you are in a
     situation like this, and you are experiencing problems with the installation, please
     contact your IT department to sort it out.
 
 If you cannot or do not want to install anything on your machine, you can instead make an
-account at *RStudio Cloud* (<https://rstudio.cloud/>). This allows you to use R and
+account at **RStudio Cloud** (<https://rstudio.cloud/>). This lets you to use R and
 RStudio in the browser. You can use RStudio Cloud for free for a few hours each month. For
 the purpose of working through this book that should be enough.
 
@@ -29,18 +30,18 @@ That's it! Everything else you need can be set up from within RStudio.
 ::: {.more}
 **Additional Software**
 
-If you are using Windows, you might eventually also have to install *RTools*
-(<https://cran.r-project.org/bin/windows/Rtools/>). RTools provides additional tools, such
+If you are using Windows, you might eventually also have to install **RTools**
+(<https://cran.r-project.org/bin/windows/Rtools/>). This includes additional tools, such
 as a C/C++ compiler, that you will need for things like Bayesian statistics.
 
-For reproducible research, you should also install *Git* (<https://git-scm.com/>), a
+For reproducible research, you should also install **Git** (<https://git-scm.com/>), a
 version control system which we will briefly talk about later. For now, you do not have to
 worry about these things, because you can always do them later.
 :::
 
-::: {.exercise}
-Use one of the methods suggested above to get access to R and RStudio so you can follow
-along for the rest of the book.
+::: {.exercise .required}
+Use one of the methods suggested above to get access to R and RStudio so you are ready to
+follow along for the rest of the book.
 :::
 
 ## Why RStudio?
@@ -49,7 +50,7 @@ You might be wondering what RStudio is and why we need it. RStudio is a popular
 **Integrated Development Environment (IDE)** for R. It is an *all-in-one* user interface
 that provides many conveniences that make working with R a lot easier. To use an analogy:
 If R were a horse, RStudio would be a saddle to sit in. You don't need it, but it makes
-things more comfortable. There are some alternatives to RStudio, but R's own GUI is not
+things more comfortable. There are good alternatives to RStudio, but R's own GUI is not
 really one of them:
 
 ```{r, echo=FALSE, fig.cap="R's own GUI --- The 90s called, they want their user interface back.", fig.alt="A screenshot of RGui"}
@@ -58,14 +59,16 @@ knitr::include_graphics("images/r-gui.jpeg")
 
 ## Create a new RStudio project
 
-Alright cowboy, let's saddle that horse! The first step you should do whenever you start a
-new data analysis project with RStudio is to create a new **RStudio project**. This is the
-first step towards reproducibility: All of your project's data and files will be stored in
-the same folder. If you ever move this folder to a new location or share it with someone
-else, all of the files will move along with it, reducing the chance that things will
-break. Another benefit of using projects is that it helps you to keep your work organized.
-It will be much easier for you to switch between projects or get back to a project you
-haven't touched in a while.
+Alright cowboy, let's saddle that horse! 🤠
+
+The first step you should do whenever you start a
+new data analysis project with RStudio is to create an **RStudio project** in a new folder. 
+This is the first step towards reproducibility: All of your project's data and files will 
+be stored in this folder. If you ever move the project folder to a new location or share 
+it with someone else, all of the files will move along with it, reducing the chance that 
+things will break. Another benefit of using projects is that it helps you to keep your work 
+organized. It will be much easier for you to switch between projects or get back to a project 
+you haven't touched in a while.
 
 ::: {.exercise}
 Open RStudio, go to `File ▸ New Project...` and create a new RStudio project in an empty
@@ -75,8 +78,8 @@ to those later.
 
 Now that we have our project set up, let's have a look around RStudio. The many panels and
 tabs in RStudio may be overwhelming at first, but I promise this gets better over time,
-and most of them are actually really helpful. The console, for example, allows you to
-directly interact with R.
+and most of them are actually quite helpful. The console, for example, allows you to
+interact with R directly.
 
 ```{r, echo=FALSE, fig.cap="RStudio's user interface with the four panels", fig.alt="A screen capture of the RStudio user interface"}
 knitr::include_graphics("images/rstudio-layout.gif")
@@ -102,7 +105,8 @@ has all the operators that you would expect to find in a pocket calculator:
 
 It also has all the **functions** you would expect to find in a calculator. Functions are
 written as the function name followed by the function's argument in parentheses. For
-example, for calculating the square root of 2, use `sqrt(2)`.
+example, for calculating the square root of 2, use `sqrt(2)`. If a function has multiple
+arguments they will be divided by commas, as in `log(2, 10)`. 
 
 ::: {.exercise}
 In the *console*, try out some of R's operators and see what happens. For example,
@@ -142,7 +146,7 @@ entire book was written with *RMarkdown*.
 ::: {.exercise}
 Go to `File ▸ New File ▸ R Notebook` to create a new RMarkdown Notebook and save it in
 your project's working directory as `analysis.Rmd`. Note that the file has appeared in
-RStudio's `Files` tab, which shows you all the files in your project folder.
+RStudio's `Files` tab, which shows you the content of your project folder.
 :::
 
 The new notebook already contains some example content. You can see that there is R code
