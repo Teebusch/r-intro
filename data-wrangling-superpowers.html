@@ -278,7 +278,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 
 <link rel="stylesheet" href="assets/webfonts/webfonts.css" type="text/css" />
-<link rel="stylesheet" href="libs/sassc656afb5bf7d9c0315e58572dbdf6844/style.min.css" type="text/css" />
+<link rel="stylesheet" href="libs/sass38d3242972ea4ed2bc0455a745319b9a/style.min.css" type="text/css" />
 </head>
 
 <body>
@@ -427,24 +427,66 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li>…</li>
 </ul>
 </div>
-<p>The <a href="https://www.tidyverse.org/">Tidyverse</a> offers many convenience functions for common data manipulation tasks like splitting and merging columns, renaming, counting, sorting, and much more. At its core, are a handful of workhorse functions from the <code>{dplyr}</code> package for manipulating data frames:</p>
-<ul>
-<li><code>filter()</code> – select rows (observations)</li>
-<li><code>select()</code> – select variables (columns)</li>
-<li><code>mutate()</code> – create new variables (columns) or change existing ones</li>
-<li><code>summarize()</code> – aggregate rows, e.g, to calculate a column’s mean</li>
-<li><code>group_by()</code> – split the data frame</li>
-<li><code>pivot_wider()</code> and <code>pivot_longer()</code> – reshape the data</li>
-</ul>
+<p>The <a href="https://www.tidyverse.org/">Tidyverse</a> offers many convenience functions for common
+data manipulation tasks. At its core, are a handful of workhorse functions from the
+<code>{dplyr}</code> package for manipulating data frames:</p>
+<table>
+<caption>The Tidyverse’s most important data wrangling functions</caption>
+<colgroup>
+<col width="29%" />
+<col width="70%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><code>filter()</code></td>
+<td>Select observations (data frame rows)</td>
+</tr>
+<tr class="even">
+<td><code>select()</code></td>
+<td>Select variables (data frame columns)</td>
+</tr>
+<tr class="odd">
+<td><code>mutate()</code></td>
+<td>Create new variables (columns) or change existing ones</td>
+</tr>
+<tr class="even">
+<td><code>summarize()</code></td>
+<td>Aggregate rows, e.g, to calculate a column’s mean</td>
+</tr>
+<tr class="odd">
+<td><code>group_by()</code></td>
+<td>Split the data frame</td>
+</tr>
+<tr class="even">
+<td><code>pivot_wider()</code> and
+<code>pivot_longer()</code></td>
+<td>Reshape the data between long and wide format</td>
+</tr>
+<tr class="odd">
+<td><code>left_join()</code>,
+<code>right_join()</code>,
+<code>inner_join()</code>,
+<code>full_join()</code></td>
+<td>Join observations from multiple data frames</td>
+</tr>
+<tr class="even">
+<td><code>bind_cols()</code>,
+<code>bind_rows()</code></td>
+<td>Combining multiple data frames into one, either by adding
+additional columns or additional rows</td>
+</tr>
+</tbody>
+</table>
 <div id="filtering-and-counting-rows" class="section level2">
 <h2><span class="header-section-number">6.1</span> Filtering and counting rows</h2>
 <p>Let’s do a simple data wrangling task using functions from the Tidyverse:</p>
 <ol style="list-style-type: decimal">
-<li>Find all peaks that are higher than 7,000 meters and were climbed before 1980<br />
-</li>
+<li>Find all peaks that are higher than 7,000 meters and were climbed before 1980</li>
 <li>Count which countries the climbers came from</li>
 </ol>
-<p>We can use the <code>filter()</code> function to select only the rows (observations) we want. Then we can use the <code>count()</code> function to count how many rows there are for each kind of <code>first_ascent_country</code>:</p>
+<p>We can use the <code>filter()</code> function to select only the rows (observations) we want. Then we
+can use the <code>count()</code> function to count how many rows there are for each kind of
+<code>first_ascent_country</code>:</p>
 <div class="sourceCode" id="cb56"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb56-1"><a href="data-wrangling-superpowers.html#cb56-1"></a>before80_7k &lt;-<span class="st"> </span><span class="kw">filter</span>(peaks, first_ascent_year <span class="op">&lt;</span><span class="st"> </span><span class="dv">1980</span>, height_metres <span class="op">&gt;</span><span class="st"> </span><span class="dv">7000</span>)</span>
 <span id="cb56-2"><a href="data-wrangling-superpowers.html#cb56-2"></a><span class="kw">count</span>(before80_7k, first_ascent_country)</span></code></pre></div>
 <pre><code># A tibble: 28 x 2
@@ -464,8 +506,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 <div id="the-pipe-operator" class="section level2">
 <h2><span class="header-section-number">6.2</span> The pipe operator %&gt;%</h2>
-<p>Above, we stored the result of the first function in an intermediate variables and then gave it to the second. There’s another way to chain functions that is often more convenient and readable: Use the <strong>pipe operator <code>%&gt;%</code></strong> to pass data from one function to the next.</p>
-<p>You can read <code>%&gt;%</code> as <em>“…and then…”</em>. Use the keyboard shortcut <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>M</kbd> to make it.</p>
+<p>Above, we stored the result of the first function in an intermediate variables and then
+gave it to the second. There’s another way to chain functions that is often more
+convenient and readable: Use the <strong>pipe operator <code>%&gt;%</code></strong> to pass data from one function to
+the next.</p>
+<p>You can read <code>%&gt;%</code> as <em>“…and then…”</em>. Use the keyboard shortcut <kbd>Ctrl</kbd> +
+<kbd>Shift</kbd> + <kbd>M</kbd> to make it.</p>
 <div class="sourceCode" id="cb58"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb58-1"><a href="data-wrangling-superpowers.html#cb58-1"></a>peaks <span class="op">%&gt;%</span></span>
 <span id="cb58-2"><a href="data-wrangling-superpowers.html#cb58-2"></a><span class="st">  </span><span class="kw">filter</span>(first_ascent_year <span class="op">&lt;</span><span class="st"> </span><span class="dv">1980</span>, height_metres <span class="op">&gt;</span><span class="st"> </span><span class="dv">7000</span>) <span class="op">%&gt;%</span><span class="st"> </span></span>
 <span id="cb58-3"><a href="data-wrangling-superpowers.html#cb58-3"></a><span class="st">  </span><span class="kw">count</span>(first_ascent_country, <span class="dt">sort =</span> <span class="ot">TRUE</span>) <span class="op">%&gt;%</span><span class="st"> </span></span>
@@ -479,7 +525,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 4 UK, Nepal                4</code></pre>
 <div class="sourceCode" id="cb60"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb60-1"><a href="data-wrangling-superpowers.html#cb60-1"></a>  <span class="co"># ... the pipe can continue. Here, we filter all peaks that </span></span>
 <span id="cb60-2"><a href="data-wrangling-superpowers.html#cb60-2"></a>  <span class="co"># were climbed more than 3 times</span></span></code></pre></div>
-<p>Did you notice that the first argument of all functions (the data frame you want to operate on) has disappeared? The pipe operator fills that one in automatically.</p>
+<p>Did you notice that the first argument of all functions (the data frame you want to
+operate on) has disappeared? The pipe operator fills that one in automatically.</p>
 <div class="figure"><span id="fig:unnamed-chunk-46"></span>
 <img src="images/data-with-pipe.jpeg" alt="An image of the Star Trek character Data, smoking a pipe"  />
 <p class="caption">
@@ -531,8 +578,15 @@ Figure 6.1: Indubitably, sir!
 # … with 67 more rows</code></pre>
 <div class="more">
 <p><strong>Dealing with <code>NA</code> (missing values)</strong></p>
-<p>In R, there is a special <em>value</em> for missing data, <code>NA</code>. This is <em>not</em> a data type. That is, a value can be, e.g., numeric <em>and</em> missing (<code>NA</code>) at the same time, and a numeric vector can contain a mix of numbers and <code>NA</code>.</p>
-<p>Functions that operate on vectors, like <code>mean()</code> or <code>min()</code> do not like to make assumptions about missing values, so when the input contains an <code>NA</code>, the result will automatically also be <code>NA</code>. This makes sense, because the unknown number may well be a value would totally change the mean or the minimum. It is possible (and often necessary) to circumvent this “safety measure” by setting the function argument <code>na.rm = TRUE</code>. This will treat the vector as if the missing values did not exist.</p>
+<p>In R, there is a special <em>value</em> for missing data, <code>NA</code>. This is <em>not</em> a data type. That
+is, a value can be, e.g., numeric <em>and</em> missing (<code>NA</code>) at the same time, and a numeric
+vector can contain a mix of numbers and <code>NA</code>.</p>
+<p>Functions that operate on vectors, like <code>mean()</code> or <code>min()</code> do not like to make
+assumptions about missing values, so when the input contains an <code>NA</code>, the result will
+automatically also be <code>NA</code>. This makes sense, because the unknown number may well be a
+value would totally change the mean or the minimum. It is possible (and often necessary)
+to circumvent this “safety measure” by setting the function argument <code>na.rm = TRUE</code>. This
+will treat the vector as if the missing values did not exist.</p>
 </div>
 </div>
 <div id="joining-data-frames-with-left_join" class="section level2">
@@ -541,8 +595,8 @@ Figure 6.1: Indubitably, sir!
 </div>
 <div id="other-useful-data-wrangling-functions" class="section level2">
 <h2><span class="header-section-number">6.6</span> Other useful data wrangling functions</h2>
-<p>There are many other useful functions in the Tidyverse.</p>
-<div class="sourceCode" id="cb66"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb66-1"><a href="data-wrangling-superpowers.html#cb66-1"></a><span class="co"># ...</span></span></code></pre></div>
+<p>There are many other useful functions that can assist you with all sorts of data cleaning
+and transformation.</p>
 
 </div>
 </div>
