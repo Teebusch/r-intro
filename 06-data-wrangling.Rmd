@@ -1,39 +1,64 @@
 # Data wrangling superpowers
 
-:::{ .goals }
-* ...
-* ...
+::: {.goals}
+-   ...
+-   ...
 :::
 
-The [Tidyverse](https://www.tidyverse.org/) offers many convenience functions for common data manipulation tasks like splitting and merging columns, renaming, counting, sorting, and much more. At its core, are a handful of workhorse functions from the `{dplyr}` package for manipulating data frames: 
+The [Tidyverse](https://www.tidyverse.org/) offers many convenience functions for common
+data manipulation tasks. At its core, are a handful of workhorse functions from the
+`{dplyr}` package for manipulating data frames:
 
-- `filter()`  -- select rows (observations)
-- `select()` -- select variables (columns)
-- `mutate()` -- create new variables (columns) or change existing ones 
-- `summarize()` -- aggregate rows, e.g, to calculate a column's mean
-- `group_by()` -- split the data frame
-- `pivot_wider()` and `pivot_longer()` -- reshape the data 
++-------------------------+--------------------------------------------------------------+
+| `filter()`              | Select observations (data frame rows)                        |
++-------------------------+--------------------------------------------------------------+
+| `select()`              | Select variables (data frame columns)                        |
++-------------------------+--------------------------------------------------------------+
+| `mutate()`              | Create new variables (columns) or change existing ones       |
++-------------------------+--------------------------------------------------------------+
+| `summarize()`           | Aggregate rows, e.g, to calculate a column's mean            |
++-------------------------+--------------------------------------------------------------+
+| `group_by()`            | Split the data frame                                         |
++-------------------------+--------------------------------------------------------------+
+| `pivot_wider()` and     | Reshape the data between long and wide format                |
+| `pivot_longer()`        |                                                              |
++-------------------------+--------------------------------------------------------------+
+| `left_join()`,          | Join observations from multiple data frames                  |
+| `right_join()`,         |                                                              |
+| `inner_join()`,         |                                                              |
+| `full_join()`           |                                                              |
++-------------------------+--------------------------------------------------------------+
+| `bind_cols()`,          | Combining multiple data frames into one, either by adding    |
+| `bind_rows()`           | additional columns or additional rows                        |
++-------------------------+--------------------------------------------------------------+
 
+: The Tidyverse's most important data wrangling functions
 
 ## Filtering and counting rows
 
-Let's do a simple data wrangling task using functions from the Tidyverse: 
+Let's do a simple data wrangling task using functions from the Tidyverse:
 
-1. Find all peaks that are higher than 7,000 meters and were climbed before 1980  
-2. Count which countries the climbers came from
+1.  Find all peaks that are higher than 7,000 meters and were climbed before 1980
+2.  Count which countries the climbers came from
 
-We can use the `filter()` function to select only the rows (observations) we want. Then we can use the `count()` function to count how many rows there are for each kind of `first_ascent_country`:
+We can use the `filter()` function to select only the rows (observations) we want. Then we
+can use the `count()` function to count how many rows there are for each kind of
+`first_ascent_country`:
 
 ```{r}
 before80_7k <- filter(peaks, first_ascent_year < 1980, height_metres > 7000)
 count(before80_7k, first_ascent_country)
 ```
 
-## The pipe operator %>%
+## The pipe operator %\>%
 
-Above, we stored the result of the first function in an intermediate variables and then gave it to the second. There's another way to chain functions that is often more convenient and readable: Use the **pipe operator `%>%`** to pass data from one function to the next. 
+Above, we stored the result of the first function in an intermediate variables and then
+gave it to the second. There's another way to chain functions that is often more
+convenient and readable: Use the **pipe operator `%>%`** to pass data from one function to
+the next.
 
-You can read `%>%` as *"...and then..."*. Use the keyboard shortcut <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>M</kbd> to make it.
+You can read `%>%` as *"...and then..."*. Use the keyboard shortcut <kbd>Ctrl</kbd> +
+<kbd>Shift</kbd> + <kbd>M</kbd> to make it.
 
 ```{r}
 peaks %>%
@@ -44,7 +69,8 @@ peaks %>%
   # were climbed more than 3 times
 ```
 
-Did you notice that the first argument of all functions (the data frame you want to operate on) has disappeared? The pipe operator fills that one in automatically.
+Did you notice that the first argument of all functions (the data frame you want to
+operate on) has disappeared? The pipe operator fills that one in automatically.
 
 ```{r, echo=FALSE, fig.cap="Indubitably, sir!", fig.alt="An image of the Star Trek character Data, smoking a pipe"}
 knitr::include_graphics("images/data-with-pipe.jpeg")
@@ -70,12 +96,19 @@ peaks %>%
   arrange(min_ascent)
 ```
 
-:::{.more}
-**Dealing with `NA` (missing values)** 
+::: {.more}
+**Dealing with `NA` (missing values)**
 
-In R, there is a special *value* for missing data, `NA`. This is *not* a data type. That is, a value can be, e.g., numeric *and* missing (`NA`) at the same time, and a numeric vector can contain a mix of numbers and `NA`. 
+In R, there is a special *value* for missing data, `NA`. This is *not* a data type. That
+is, a value can be, e.g., numeric *and* missing (`NA`) at the same time, and a numeric
+vector can contain a mix of numbers and `NA`.
 
-Functions that operate on vectors, like `mean()` or `min()` do not like to make assumptions about missing values, so when the input contains an `NA`, the result will automatically also be `NA`. This makes sense, because the unknown number may well be a value would totally change the mean or the minimum. It is possible (and often necessary) to circumvent this "safety measure" by setting the function argument `na.rm = TRUE`. This will treat the vector as if the missing values did not exist.
+Functions that operate on vectors, like `mean()` or `min()` do not like to make
+assumptions about missing values, so when the input contains an `NA`, the result will
+automatically also be `NA`. This makes sense, because the unknown number may well be a
+value would totally change the mean or the minimum. It is possible (and often necessary)
+to circumvent this "safety measure" by setting the function argument `na.rm = TRUE`. This
+will treat the vector as if the missing values did not exist.
 :::
 
 ## Joining data frames with `left_join()`
@@ -84,11 +117,7 @@ Functions that operate on vectors, like `mean()` or `min()` do not like to make 
 #...
 ```
 
-
 ## Other useful data wrangling functions
 
-There are many other useful functions in the Tidyverse.
-
-```r
-# ...
-```
+There are many other useful functions that can assist you with all sorts of data cleaning
+and transformation.

@@ -112,6 +112,6 @@ repository](https://github.com/Teebusch/r-introduction).
 
 ## License {.unnumbered}
 
-I am still considering which license is best for this. For the time being, the book is
+I am still pondering which license is best for this. For the time being, the book is
 published with all rights reserved by me, Tobias Busch, and may not be reproduced in whole
-or in part in any manner without my permission.
+or in part in any manner without my explicit written permission.

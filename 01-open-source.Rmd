@@ -30,10 +30,10 @@ stable, and there is a core team of computer scientists and statisticians guidin
 development. While a lot of the improvements to R are contributed by volunteers, the
 project does receive financial support
 
--   *directly* from companies such as [RStudio](https://www.rstudio.com/) and
+-   **directly** from companies such as [RStudio](https://www.rstudio.com/) and
     [rOpenSci](https://ropensci.org/), who employ developers to improve R, and
 
--   *indirectly* through people who contribute to the R project as part of their jobs
+-   **indirectly** through people who contribute to the R project as part of their jobs
     (e.g., research software engineers, statisticians, data scientists).
 
 There are also peer-reviewed journals such as the [*Journal of Statistical

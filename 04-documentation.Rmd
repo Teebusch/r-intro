@@ -2,8 +2,8 @@
 
 ::: {.goals}
 -   Accessing the function documentation in RStudio
--   Finding help in cheat sheets and by searching online
--   Utilizing auto completion while writing code
+-   Using auto completion while writing code
+-   Finding help in cheat sheets and online
 :::
 
 Are you wondering how you should ever remember all of the different R commands and how to
