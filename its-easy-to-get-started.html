@@ -24,7 +24,7 @@
 <meta name="author" content="Tobias Busch" />
 
 
-<meta name="date" content="2021-07-29" />
+<meta name="date" content="2021-08-04" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -278,7 +278,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 
 <link rel="stylesheet" href="assets/webfonts/webfonts.css" type="text/css" />
-<link rel="stylesheet" href="libs/sassd5fcda25eaef53dd1eb951b52a7fc32b/style.min.css" type="text/css" />
+<link rel="stylesheet" href="libs/sassc656afb5bf7d9c0315e58572dbdf6844/style.min.css" type="text/css" />
 </head>
 
 <body>
@@ -423,35 +423,36 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h1><span class="header-section-number">Reason 2</span> It’s easy to get started</h1>
 <div class="goals">
 <ul>
-<li>How to install R an RStudio</li>
-<li>Creating a project in RStudio</li>
+<li>How to install R and RStudio</li>
+<li>Creating a new project in RStudio</li>
 <li>Running commands in the R console and from a script file</li>
 <li>R’s basic operators</li>
+<li>How to use functions</li>
 </ul>
 </div>
 <p>Getting R to run on your computer is usually a relatively smooth
-experience<a href="#fn9" class="footnote-ref" id="fnref9"><sup>9</sup></a>: Download and install the latest version of R
-(<a href="https://www.r-project.org/">https://r-project.org/</a>) and <em>RStudio</em>
+experience<a href="#fn9" class="footnote-ref" id="fnref9"><sup>9</sup></a>: Download and install the latest version of <strong>R</strong>
+(<a href="https://www.r-project.org/">https://r-project.org/</a>) and <strong>RStudio</strong>
 (<a href="https://www.rstudio.com/products/rstudio/">https://rstudio.com/products/rstudio</a>) for
 your operating system. If you already have either program installed on your computer,
 there is no need to uninstall the old versions beforehand.</p>
 <p>If you cannot or do not want to install anything on your machine, you can instead make an
-account at <em>RStudio Cloud</em> (<a href="https://rstudio.cloud/" class="uri">https://rstudio.cloud/</a>). This allows you to use R and
+account at <strong>RStudio Cloud</strong> (<a href="https://rstudio.cloud/" class="uri">https://rstudio.cloud/</a>). This lets you to use R and
 RStudio in the browser. You can use RStudio Cloud for free for a few hours each month. For
 the purpose of working through this book that should be enough.</p>
 <p>That’s it! Everything else you need can be set up from within RStudio.</p>
 <div class="more">
 <p><strong>Additional Software</strong></p>
-<p>If you are using Windows, you might eventually also have to install <em>RTools</em>
-(<a href="https://cran.r-project.org/bin/windows/Rtools/" class="uri">https://cran.r-project.org/bin/windows/Rtools/</a>). RTools provides additional tools, such
+<p>If you are using Windows, you might eventually also have to install <strong>RTools</strong>
+(<a href="https://cran.r-project.org/bin/windows/Rtools/" class="uri">https://cran.r-project.org/bin/windows/Rtools/</a>). This includes additional tools, such
 as a C/C++ compiler, that you will need for things like Bayesian statistics.</p>
-<p>For reproducible research, you should also install <em>Git</em> (<a href="https://git-scm.com/" class="uri">https://git-scm.com/</a>), a
+<p>For reproducible research, you should also install <strong>Git</strong> (<a href="https://git-scm.com/" class="uri">https://git-scm.com/</a>), a
 version control system which we will briefly talk about later. For now, you do not have to
 worry about these things, because you can always do them later.</p>
 </div>
-<div class="exercise">
-<p><span id="exr:unlabeled-div-3" class="exercise"><strong>Exercise 2.1  </strong></span>Use one of the methods suggested above to get access to R and RStudio so you can follow
-along for the rest of the book.</p>
+<div class="exercise required">
+<p><span id="exr:unlabeled-div-3" class="exercise"><strong>Exercise 2.1  </strong></span>Use one of the methods suggested above to get access to R and RStudio so you are ready to
+follow along for the rest of the book.</p>
 </div>
 <div id="why-rstudio" class="section level2">
 <h2><span class="header-section-number">2.1</span> Why RStudio?</h2>
@@ -459,7 +460,7 @@ along for the rest of the book.</p>
 <strong>Integrated Development Environment (IDE)</strong> for R. It is an <em>all-in-one</em> user interface
 that provides many conveniences that make working with R a lot easier. To use an analogy:
 If R were a horse, RStudio would be a saddle to sit in. You don’t need it, but it makes
-things more comfortable. There are some alternatives to RStudio, but R’s own GUI is not
+things more comfortable. There are good alternatives to RStudio, but R’s own GUI is not
 really one of them:</p>
 <div class="figure"><span id="fig:unnamed-chunk-11"></span>
 <img src="images/r-gui.jpeg" alt="A screenshot of RGui"  />
@@ -470,14 +471,15 @@ Figure 2.1: R’s own GUI — The 90s called, they want their user interface bac
 </div>
 <div id="create-a-new-rstudio-project" class="section level2">
 <h2><span class="header-section-number">2.2</span> Create a new RStudio project</h2>
-<p>Alright cowboy, let’s saddle that horse! The first step you should do whenever you start a
-new data analysis project with RStudio is to create a new <strong>RStudio project</strong>. This is the
-first step towards reproducibility: All of your project’s data and files will be stored in
-the same folder. If you ever move this folder to a new location or share it with someone
-else, all of the files will move along with it, reducing the chance that things will
-break. Another benefit of using projects is that it helps you to keep your work organized.
-It will be much easier for you to switch between projects or get back to a project you
-haven’t touched in a while.</p>
+<p>Alright cowboy, let’s saddle that horse! 🤠</p>
+<p>The first step you should do whenever you start a
+new data analysis project with RStudio is to create an <strong>RStudio project</strong> in a new folder.
+This is the first step towards reproducibility: All of your project’s data and files will
+be stored in this folder. If you ever move the project folder to a new location or share
+it with someone else, all of the files will move along with it, reducing the chance that
+things will break. Another benefit of using projects is that it helps you to keep your work
+organized. It will be much easier for you to switch between projects or get back to a project
+you haven’t touched in a while.</p>
 <div class="exercise">
 <p><span id="exr:unlabeled-div-4" class="exercise"><strong>Exercise 2.2  </strong></span>Open RStudio, go to <code>File ▸ New Project...</code> and create a new RStudio project in an empty
 folder. Leave <em>Use version control</em> and <em>Use renv</em> unchecked for now — we will get back
@@ -485,8 +487,8 @@ to those later.</p>
 </div>
 <p>Now that we have our project set up, let’s have a look around RStudio. The many panels and
 tabs in RStudio may be overwhelming at first, but I promise this gets better over time,
-and most of them are actually really helpful. The console, for example, allows you to
-directly interact with R.</p>
+and most of them are actually quite helpful. The console, for example, allows you to
+interact with R directly.</p>
 <div class="figure"><span id="fig:unnamed-chunk-12"></span>
 <img src="images/rstudio-layout.gif" alt="A screen capture of the RStudio user interface"  />
 <p class="caption">
@@ -528,7 +530,8 @@ has all the operators that you would expect to find in a pocket calculator:</p>
 </table>
 <p>It also has all the <strong>functions</strong> you would expect to find in a calculator. Functions are
 written as the function name followed by the function’s argument in parentheses. For
-example, for calculating the square root of 2, use <code>sqrt(2)</code>.</p>
+example, for calculating the square root of 2, use <code>sqrt(2)</code>. If a function has multiple
+arguments they will be divided by commas, as in <code>log(2, 10)</code>.</p>
 <div class="exercise">
 <p><span id="exr:unlabeled-div-5" class="exercise"><strong>Exercise 2.3  </strong></span>In the <em>console</em>, try out some of R’s operators and see what happens. For example,</p>
 <ol style="list-style-type: decimal">
@@ -566,7 +569,7 @@ entire book was written with <em>RMarkdown</em>.</p>
 <div class="exercise">
 <p><span id="exr:unlabeled-div-6" class="exercise"><strong>Exercise 2.4  </strong></span>Go to <code>File ▸ New File ▸ R Notebook</code> to create a new RMarkdown Notebook and save it in
 your project’s working directory as <code>analysis.Rmd</code>. Note that the file has appeared in
-RStudio’s <code>Files</code> tab, which shows you all the files in your project folder.</p>
+RStudio’s <code>Files</code> tab, which shows you the content of your project folder.</p>
 </div>
 <p>The new notebook already contains some example content. You can see that there is R code
 that is written inside special blocks, called <strong>code chunks</strong>. You can create new code
@@ -599,7 +602,7 @@ sqrt(1764)
 <div class="footnotes">
 <hr />
 <ol start="9">
-<li id="fn9"><p>It can get a little hairy if you are working on a machine with restricted
+<li id="fn9"><p>It can be more complicated if you are working on a machine with restricted
 permissions, for example a computer issued to you by your employer. If you are in a
 situation like this, and you are experiencing problems with the installation, please
 contact your IT department to sort it out.<a href="its-easy-to-get-started.html#fnref9" class="footnote-back">↩︎</a></p></li>
