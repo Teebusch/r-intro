@@ -1,12 +1,11 @@
 # A language made for data analysis
 
 ::: {.goals}
--   What are the most important data types and data structures in R?
--   How can you assign data to variables?
--   How to write comments in R?
--   What are the important properties of vectors?
--   How can you access specific elements of a vector?
--   What are data frames shaped like?
+-   The most important data types and data structures
+-   Assigning data to variables
+-   Writing comments
+-   Working with vectors
+-   Creating data frames
 :::
 
 R is a programming language that supports many different programming paradigms but to get
@@ -20,9 +19,8 @@ full power and flexibility.
 
 ::: {.more}
 If you are a seasoned programmer, I recommend to skip this chapter and instead read
-*Advanced R,* chapters 2-4
-([\<https://adv-r.hadley.nz/vectors-chap.html\>](https://adv-r.hadley.nz/vectors-chap.html)).
-These provide a much more thorough overview of R's data types and data structures.
+*Advanced R,* chapters 2-4 (<https://adv-r.hadley.nz/vectors-chap.html>). These provide a
+much more thorough overview of R's data types and data structures.
 :::
 
 ## Basic Data Types

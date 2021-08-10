@@ -1,11 +1,11 @@
 # It's easy to get started
 
 ::: {.goals}
--   How to install R and RStudio
+-   Installing R and RStudio
 -   Creating a new project in RStudio
 -   Running commands in the R console and from a script file
 -   R's basic operators
--   How to use functions
+-   Using functions
 :::
 
 Getting R to run on your computer is usually a relatively smooth
@@ -15,10 +15,10 @@ experience[^easy-start-1]: Download and install the latest version of **R**
 your operating system. If you already have either program installed on your computer,
 there is no need to uninstall the old versions beforehand.
 
-[^easy-start-1]: It can be more complicated if you are working on a machine with restricted
-    permissions, for example a computer issued to you by your employer. If you are in a
-    situation like this, and you are experiencing problems with the installation, please
-    contact your IT department to sort it out.
+[^easy-start-1]: It can be more complicated if you are working on a machine with
+    restricted permissions, for example a computer issued to you by your employer. If you
+    are in a situation like this, and you are experiencing problems with the installation,
+    please contact your IT department to sort it out.
 
 If you cannot or do not want to install anything on your machine, you can instead make an
 account at **RStudio Cloud** (<https://rstudio.cloud/>). This lets you to use R and
@@ -61,14 +61,14 @@ knitr::include_graphics("images/r-gui.jpeg")
 
 Alright cowboy, let's saddle that horse! 🤠
 
-The first step you should do whenever you start a
-new data analysis project with RStudio is to create an **RStudio project** in a new folder. 
-This is the first step towards reproducibility: All of your project's data and files will 
-be stored in this folder. If you ever move the project folder to a new location or share 
-it with someone else, all of the files will move along with it, reducing the chance that 
-things will break. Another benefit of using projects is that it helps you to keep your work 
-organized. It will be much easier for you to switch between projects or get back to a project 
-you haven't touched in a while.
+The first step you should do whenever you start a new data analysis project with RStudio
+is to create an **RStudio project** in a new folder. This is the first step towards
+reproducibility: All of your project's data and files will be stored in this folder. If
+you ever move the project folder to a new location or share it with someone else, all of
+the files will move along with it, reducing the chance that things will break. Another
+benefit of using projects is that it helps you to keep your work organized. It will be
+much easier for you to switch between projects or get back to a project you haven't
+touched in a while.
 
 ::: {.exercise}
 Open RStudio, go to `File ▸ New Project...` and create a new RStudio project in an empty
@@ -87,10 +87,13 @@ knitr::include_graphics("images/rstudio-layout.gif")
 
 ## Using R as a calculator
 
-In the **console** you can type commands and when you press <kbd>Enter</kbd>, R will try
-to interpret them. You can use <kbd>↑</kbd> and <kbd>↓</kbd> to cycle through previous
-commands and <kbd>Ctrl</kbd>/<kbd>Cmd</kbd> + <kbd>↑</kbd> to search through previous
-commands.
+The **console** is the panel on the bottom left, the one with the expectantly blinking
+cursor. In the console you can type commands and when you press <kbd>Enter</kbd>, R will
+try to interpret them. You can also use <kbd>↑</kbd> and <kbd>↓</kbd> to cycle through
+previous commands and <kbd>Ctrl</kbd>/<kbd>Cmd</kbd> + <kbd>↑</kbd> to search through
+previous commands.
+
+#### Using operators {.unnumbered}
 
 Let's get familiar with the console by trying some of R's mathematical **operators**. R
 has all the operators that you would expect to find in a pocket calculator:
@@ -103,10 +106,21 @@ has all the operators that you would expect to find in a pocket calculator:
 | Logical                              | `&& || ! | &`     |
 | Parentheses for modifying precedence | `(1 + 2) * 10`    |
 
+#### Using functions {.unnumbered}
+
 It also has all the **functions** you would expect to find in a calculator. Functions are
 written as the function name followed by the function's argument in parentheses. For
-example, for calculating the square root of 2, use `sqrt(2)`. If a function has multiple
-arguments they will be divided by commas, as in `log(2, 10)`. 
+example, for calculating the square root of 2, use `sqrt(2)`.
+
+If a function has multiple **arguments** they will be divided by commas, as in
+`log(2, base = 10)`, which will give you the logarithm of 2 to the base of 10. Note, that
+we supply the base as a **named argument**. Functions expect arguments in a certain order.
+By using named arguments you can override this order, and you can supply individual
+arguments while using the **default value** for other arguments (e.g., the default for
+`base` in the `log()` function is Euler's number $e$). This is common for functions with
+multiple arguments. In our example, using the named argument isn't really necessary,
+because we are providing the arguments in the expected order, but it may still help to
+make your code more readable.
 
 ::: {.exercise}
 In the *console*, try out some of R's operators and see what happens. For example,
@@ -137,8 +151,11 @@ knitr::include_graphics("images/operator-meme.jpeg")
 
 The console is useful for running quick throw-away commands, and sometimes that's all you
 need. However, code that you want to keep should be stored in a **script**. We will use a
-special type of script, called an **RMarkdown Notebook**. This format allows you to mix
-code and the output it generates with text. The text can be formatted with a special
+special type of script, called an **RMarkdown Notebook**.
+
+**RMarkdown** allows you to do [literate
+programming](https://en.wikipedia.org/wiki/Literate_programming). That is, it lets you mix
+code and the output the code generates with text. The text can be formatted with a special
 syntax to create headings, footnotes, links, and more. This allows you to keep your notes
 and your code together and is great for writing reproducible documents. In fact, this
 entire book was written with *RMarkdown*.

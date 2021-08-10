@@ -8,20 +8,25 @@
 :::
 
 A great reason for choosing R over commercial software packages is that it is is **free
-and open source software (FOSS)**. This means that nobody can own exclusive rights to R,
-and anyone can obtain a copy of R for free and modify it however they like. The license
-under which R is published guarantees that it will stay like that forever.
+and open source software (FOSS)**, and the license under which R is published guarantees
+that it will stay like that forever. But what does that mean?
 
-Being **free** means that there are no license fees or purchasing costs. This means lower
-cost and less bureaucracy! It means that you can use R everywhere, and you can use any
-version of it at any time. This is great for collaboration, sharing, and reproducibility.
+#### Free {.unnumbered}
+
+This means that nobody owns exclusive rights to R, and anyone can obtain a copy of R for
+free and modify it however they like. It means that you can use R everywhere, and you can
+use any version of it at any time. No license fees or purchasing costs means also means
+less bureaucracy! This is great for collaboration, sharing, and reproducibility.
+
 Finally, being free means that you can simply give R a spin and see if it's for you --- no
 strings attached!
 
-Being **open source** means that nobody can decide to stop the development of R. Moreover,
-if any functionality is missing, R users can create it themselves, and --- as we will see
-later --- they do! There are tens of thousands of extensions (*packages*) for R that were
-created by the R community and are free for everyone to use.
+#### Open Source {.unnumbered}
+
+This means that nobody really controls the development of R. If any functionality is
+missing, R users can create it themselves, and --- as we will see later --- they do! There
+are tens of thousands of extensions (*packages*) for R that were created by the R
+community and are free for everyone to use.
 
 ## Is R reliable?
 

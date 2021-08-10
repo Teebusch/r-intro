@@ -9,28 +9,16 @@ The [Tidyverse](https://www.tidyverse.org/) offers many convenience functions fo
 data manipulation tasks. At its core, are a handful of workhorse functions from the
 `{dplyr}` package for manipulating data frames:
 
-+-------------------------+--------------------------------------------------------------+
-| `filter()`              | Select observations (data frame rows)                        |
-+-------------------------+--------------------------------------------------------------+
-| `select()`              | Select variables (data frame columns)                        |
-+-------------------------+--------------------------------------------------------------+
-| `mutate()`              | Create new variables (columns) or change existing ones       |
-+-------------------------+--------------------------------------------------------------+
-| `summarize()`           | Aggregate rows, e.g, to calculate a column's mean            |
-+-------------------------+--------------------------------------------------------------+
-| `group_by()`            | Split the data frame                                         |
-+-------------------------+--------------------------------------------------------------+
-| `pivot_wider()` and     | Reshape the data between long and wide format                |
-| `pivot_longer()`        |                                                              |
-+-------------------------+--------------------------------------------------------------+
-| `left_join()`,          | Join observations from multiple data frames                  |
-| `right_join()`,         |                                                              |
-| `inner_join()`,         |                                                              |
-| `full_join()`           |                                                              |
-+-------------------------+--------------------------------------------------------------+
-| `bind_cols()`,          | Combining multiple data frames into one, either by adding    |
-| `bind_rows()`           | additional columns or additional rows                        |
-+-------------------------+--------------------------------------------------------------+
+|                                                              |                                                                                                 |
+|--------------------------------------------------------------|-------------------------------------------------------------------------------------------------|
+| `filter()`                                                   | Select observations (data frame rows)                                                           |
+| `select()`                                                   | Select variables (data frame columns)                                                           |
+| `mutate()`                                                   | Create new variables (columns) or change existing ones                                          |
+| `summarize()`                                                | Aggregate rows, e.g, to calculate a column's mean                                               |
+| `group_by()`                                                 | Split the data frame                                                                            |
+| `pivot_wider()` and `pivot_longer()`                         | Reshape the data between long and wide format                                                   |
+| `left_join()`, `right_join()`, `inner_join()`, `full_join()` | Join observations from multiple data frames                                                     |
+| `bind_cols()`, `bind_rows()`                                 | Combining multiple data frames into one, either by adding additional columns or additional rows |
 
 : The Tidyverse's most important data wrangling functions
 
@@ -55,10 +43,8 @@ count(before80_7k, first_ascent_country)
 Above, we stored the result of the first function in an intermediate variables and then
 gave it to the second. There's another way to chain functions that is often more
 convenient and readable: Use the **pipe operator `%>%`** to pass data from one function to
-the next.
-
-You can read `%>%` as *"...and then..."*. Use the keyboard shortcut <kbd>Ctrl</kbd> +
-<kbd>Shift</kbd> + <kbd>M</kbd> to make it.
+the next. You can read `%>%` as *"...and then..."*. Use the keyboard shortcut
+<kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>M</kbd> to make it.
 
 ```{r}
 peaks %>%

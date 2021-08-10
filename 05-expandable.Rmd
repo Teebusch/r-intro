@@ -1,13 +1,12 @@
 # Expandability
 
 ::: {.goals}
--   R packages are collections of R code written by others
--   The *Tidyverse* is a collection of packages that share a common user-centered design
-    philosophy
--   How to install and load an R package?
+-   What are R packages
+-   What is the Tidyverse
+-   Installing and loading R packages
 -   Loading data from a text file with `read_csv()`
 -   Saving a data frame to the disk with `write_csv()`
--   Getting a high-level overview of a data frame with `head()`, `view()` and `{skimr}`
+-   Exploring a data frame
 :::
 
 R is popular among data analysts, data scientists, researchers, and statisticians. As a
