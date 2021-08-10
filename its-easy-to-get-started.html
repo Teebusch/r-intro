@@ -24,7 +24,7 @@
 <meta name="author" content="Tobias Busch" />
 
 
-<meta name="date" content="2021-08-04" />
+<meta name="date" content="2021-08-10" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -278,7 +278,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 
 <link rel="stylesheet" href="assets/webfonts/webfonts.css" type="text/css" />
-<link rel="stylesheet" href="libs/sass38d3242972ea4ed2bc0455a745319b9a/style.min.css" type="text/css" />
+<link rel="stylesheet" href="libs/sassaea075381025693e5986f633c3ed2e33/style.min.css" type="text/css" />
 </head>
 
 <body>
@@ -423,11 +423,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h1><span class="header-section-number">Reason 2</span> It’s easy to get started</h1>
 <div class="goals">
 <ul>
-<li>How to install R and RStudio</li>
+<li>Installing R and RStudio</li>
 <li>Creating a new project in RStudio</li>
 <li>Running commands in the R console and from a script file</li>
 <li>R’s basic operators</li>
-<li>How to use functions</li>
+<li>Using functions</li>
 </ul>
 </div>
 <p>Getting R to run on your computer is usually a relatively smooth
@@ -472,14 +472,14 @@ Figure 2.1: R’s own GUI — The 90s called, they want their user interface bac
 <div id="create-a-new-rstudio-project" class="section level2">
 <h2><span class="header-section-number">2.2</span> Create a new RStudio project</h2>
 <p>Alright cowboy, let’s saddle that horse! 🤠</p>
-<p>The first step you should do whenever you start a
-new data analysis project with RStudio is to create an <strong>RStudio project</strong> in a new folder.
-This is the first step towards reproducibility: All of your project’s data and files will
-be stored in this folder. If you ever move the project folder to a new location or share
-it with someone else, all of the files will move along with it, reducing the chance that
-things will break. Another benefit of using projects is that it helps you to keep your work
-organized. It will be much easier for you to switch between projects or get back to a project
-you haven’t touched in a while.</p>
+<p>The first step you should do whenever you start a new data analysis project with RStudio
+is to create an <strong>RStudio project</strong> in a new folder. This is the first step towards
+reproducibility: All of your project’s data and files will be stored in this folder. If
+you ever move the project folder to a new location or share it with someone else, all of
+the files will move along with it, reducing the chance that things will break. Another
+benefit of using projects is that it helps you to keep your work organized. It will be
+much easier for you to switch between projects or get back to a project you haven’t
+touched in a while.</p>
 <div class="exercise">
 <p><span id="exr:unlabeled-div-4" class="exercise"><strong>Exercise 2.2  </strong></span>Open RStudio, go to <code>File ▸ New Project...</code> and create a new RStudio project in an empty
 folder. Leave <em>Use version control</em> and <em>Use renv</em> unchecked for now — we will get back
@@ -498,10 +498,13 @@ Figure 2.2: RStudio’s user interface with the four panels
 </div>
 <div id="using-r-as-a-calculator" class="section level2">
 <h2><span class="header-section-number">2.3</span> Using R as a calculator</h2>
-<p>In the <strong>console</strong> you can type commands and when you press <kbd>Enter</kbd>, R will try
-to interpret them. You can use <kbd>↑</kbd> and <kbd>↓</kbd> to cycle through previous
-commands and <kbd>Ctrl</kbd>/<kbd>Cmd</kbd> + <kbd>↑</kbd> to search through previous
-commands.</p>
+<p>The <strong>console</strong> is the panel on the bottom left, the one with the expectantly blinking
+cursor. In the console you can type commands and when you press <kbd>Enter</kbd>, R will
+try to interpret them. You can also use <kbd>↑</kbd> and <kbd>↓</kbd> to cycle through
+previous commands and <kbd>Ctrl</kbd>/<kbd>Cmd</kbd> + <kbd>↑</kbd> to search through
+previous commands.</p>
+<div id="using-operators" class="section level4 unnumbered">
+<h4>Using operators</h4>
 <p>Let’s get familiar with the console by trying some of R’s mathematical <strong>operators</strong>. R
 has all the operators that you would expect to find in a pocket calculator:</p>
 <table>
@@ -528,10 +531,21 @@ has all the operators that you would expect to find in a pocket calculator:</p>
 </tr>
 </tbody>
 </table>
+</div>
+<div id="using-functions" class="section level4 unnumbered">
+<h4>Using functions</h4>
 <p>It also has all the <strong>functions</strong> you would expect to find in a calculator. Functions are
 written as the function name followed by the function’s argument in parentheses. For
-example, for calculating the square root of 2, use <code>sqrt(2)</code>. If a function has multiple
-arguments they will be divided by commas, as in <code>log(2, 10)</code>.</p>
+example, for calculating the square root of 2, use <code>sqrt(2)</code>.</p>
+<p>If a function has multiple <strong>arguments</strong> they will be divided by commas, as in
+<code>log(2, base = 10)</code>, which will give you the logarithm of 2 to the base of 10. Note, that
+we supply the base as a <strong>named argument</strong>. Functions expect arguments in a certain order.
+By using named arguments you can override this order, and you can supply individual
+arguments while using the <strong>default value</strong> for other arguments (e.g., the default for
+<code>base</code> in the <code>log()</code> function is Euler’s number <span class="math inline">\(e\)</span>). This is common for functions with
+multiple arguments. In our example, using the named argument isn’t really necessary,
+because we are providing the arguments in the expected order, but it may still help to
+make your code more readable.</p>
 <div class="exercise">
 <p><span id="exr:unlabeled-div-5" class="exercise"><strong>Exercise 2.3  </strong></span>In the <em>console</em>, try out some of R’s operators and see what happens. For example,</p>
 <ol style="list-style-type: decimal">
@@ -557,12 +571,15 @@ Figure 2.3: Don’t worry – you can’t hurt R, it has been through this befor
 </p>
 </div>
 </div>
+</div>
 <div id="create-a-script" class="section level2">
 <h2><span class="header-section-number">2.4</span> Create a script</h2>
 <p>The console is useful for running quick throw-away commands, and sometimes that’s all you
 need. However, code that you want to keep should be stored in a <strong>script</strong>. We will use a
-special type of script, called an <strong>RMarkdown Notebook</strong>. This format allows you to mix
-code and the output it generates with text. The text can be formatted with a special
+special type of script, called an <strong>RMarkdown Notebook</strong>.</p>
+<p><strong>RMarkdown</strong> allows you to do <a href="https://en.wikipedia.org/wiki/Literate_programming">literate
+programming</a>. That is, it lets you mix
+code and the output the code generates with text. The text can be formatted with a special
 syntax to create headings, footnotes, links, and more. This allows you to keep your notes
 and your code together and is great for writing reproducible documents. In fact, this
 entire book was written with <em>RMarkdown</em>.</p>
@@ -602,10 +619,10 @@ sqrt(1764)
 <div class="footnotes">
 <hr />
 <ol start="9">
-<li id="fn9"><p>It can be more complicated if you are working on a machine with restricted
-permissions, for example a computer issued to you by your employer. If you are in a
-situation like this, and you are experiencing problems with the installation, please
-contact your IT department to sort it out.<a href="its-easy-to-get-started.html#fnref9" class="footnote-back">↩︎</a></p></li>
+<li id="fn9"><p>It can be more complicated if you are working on a machine with
+restricted permissions, for example a computer issued to you by your employer. If you
+are in a situation like this, and you are experiencing problems with the installation,
+please contact your IT department to sort it out.<a href="its-easy-to-get-started.html#fnref9" class="footnote-back">↩︎</a></p></li>
 </ol>
 </div>
             </section>

@@ -24,7 +24,7 @@
 <meta name="author" content="Tobias Busch" />
 
 
-<meta name="date" content="2021-08-04" />
+<meta name="date" content="2021-08-10" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -278,7 +278,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 
 <link rel="stylesheet" href="assets/webfonts/webfonts.css" type="text/css" />
-<link rel="stylesheet" href="libs/sass38d3242972ea4ed2bc0455a745319b9a/style.min.css" type="text/css" />
+<link rel="stylesheet" href="libs/sassaea075381025693e5986f633c3ed2e33/style.min.css" type="text/css" />
 </head>
 
 <body>
@@ -423,13 +423,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h1><span class="header-section-number">Reason 5</span> Expandability</h1>
 <div class="goals">
 <ul>
-<li>R packages are collections of R code written by others</li>
-<li>The <em>Tidyverse</em> is a collection of packages that share a common user-centered design
-philosophy</li>
-<li>How to install and load an R package?</li>
+<li>What are R packages</li>
+<li>What is the Tidyverse</li>
+<li>Installing and loading R packages</li>
 <li>Loading data from a text file with <code>read_csv()</code></li>
 <li>Saving a data frame to the disk with <code>write_csv()</code></li>
-<li>Getting a high-level overview of a data frame with <code>head()</code>, <code>view()</code> and <code>{skimr}</code></li>
+<li>Exploring a data frame</li>
 </ul>
 </div>
 <p>R is popular among data analysts, data scientists, researchers, and statisticians. As a
@@ -539,7 +538,7 @@ dbl (2): height_metres, first_ascent_year</code></pre>
 <p>When we load the data, R shows us the names of the columns in the data set and the type of
 each column. We can also have a look at the first few rows with the <code>head()</code> function.</p>
 <div class="sourceCode" id="cb49"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb49-1"><a href="expandability.html#cb49-1"></a><span class="kw">head</span>(peaks)</span></code></pre></div>
-<pre><code># A tibble: 6 x 8
+<pre><code># A tibble: 6 × 8
   peak_id peak_name     peak_alternative_name height_metres climbing_status
   &lt;chr&gt;   &lt;chr&gt;         &lt;chr&gt;                         &lt;dbl&gt; &lt;chr&gt;          
 1 AMAD    Ama Dablam    Amai Dablang                   6814 Climbed        

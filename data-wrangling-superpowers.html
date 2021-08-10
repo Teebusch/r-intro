@@ -24,7 +24,7 @@
 <meta name="author" content="Tobias Busch" />
 
 
-<meta name="date" content="2021-08-04" />
+<meta name="date" content="2021-08-10" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -278,7 +278,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 
 <link rel="stylesheet" href="assets/webfonts/webfonts.css" type="text/css" />
-<link rel="stylesheet" href="libs/sass38d3242972ea4ed2bc0455a745319b9a/style.min.css" type="text/css" />
+<link rel="stylesheet" href="libs/sassaea075381025693e5986f633c3ed2e33/style.min.css" type="text/css" />
 </head>
 
 <body>
@@ -433,8 +433,8 @@ data manipulation tasks. At its core, are a handful of workhorse functions from 
 <table>
 <caption>The Tidyverse’s most important data wrangling functions</caption>
 <colgroup>
-<col width="29%" />
-<col width="70%" />
+<col width="38%" />
+<col width="61%" />
 </colgroup>
 <tbody>
 <tr class="odd">
@@ -458,22 +458,16 @@ data manipulation tasks. At its core, are a handful of workhorse functions from 
 <td>Split the data frame</td>
 </tr>
 <tr class="even">
-<td><code>pivot_wider()</code> and
-<code>pivot_longer()</code></td>
+<td><code>pivot_wider()</code> and <code>pivot_longer()</code></td>
 <td>Reshape the data between long and wide format</td>
 </tr>
 <tr class="odd">
-<td><code>left_join()</code>,
-<code>right_join()</code>,
-<code>inner_join()</code>,
-<code>full_join()</code></td>
+<td><code>left_join()</code>, <code>right_join()</code>, <code>inner_join()</code>, <code>full_join()</code></td>
 <td>Join observations from multiple data frames</td>
 </tr>
 <tr class="even">
-<td><code>bind_cols()</code>,
-<code>bind_rows()</code></td>
-<td>Combining multiple data frames into one, either by adding
-additional columns or additional rows</td>
+<td><code>bind_cols()</code>, <code>bind_rows()</code></td>
+<td>Combining multiple data frames into one, either by adding additional columns or additional rows</td>
 </tr>
 </tbody>
 </table>
@@ -489,7 +483,7 @@ can use the <code>count()</code> function to count how many rows there are for e
 <code>first_ascent_country</code>:</p>
 <div class="sourceCode" id="cb56"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb56-1"><a href="data-wrangling-superpowers.html#cb56-1"></a>before80_7k &lt;-<span class="st"> </span><span class="kw">filter</span>(peaks, first_ascent_year <span class="op">&lt;</span><span class="st"> </span><span class="dv">1980</span>, height_metres <span class="op">&gt;</span><span class="st"> </span><span class="dv">7000</span>)</span>
 <span id="cb56-2"><a href="data-wrangling-superpowers.html#cb56-2"></a><span class="kw">count</span>(before80_7k, first_ascent_country)</span></code></pre></div>
-<pre><code># A tibble: 28 x 2
+<pre><code># A tibble: 28 × 2
    first_ascent_country     n
    &lt;chr&gt;                &lt;int&gt;
  1 Austria                  2
@@ -509,14 +503,13 @@ can use the <code>count()</code> function to count how many rows there are for e
 <p>Above, we stored the result of the first function in an intermediate variables and then
 gave it to the second. There’s another way to chain functions that is often more
 convenient and readable: Use the <strong>pipe operator <code>%&gt;%</code></strong> to pass data from one function to
-the next.</p>
-<p>You can read <code>%&gt;%</code> as <em>“…and then…”</em>. Use the keyboard shortcut <kbd>Ctrl</kbd> +
-<kbd>Shift</kbd> + <kbd>M</kbd> to make it.</p>
+the next. You can read <code>%&gt;%</code> as <em>“…and then…”</em>. Use the keyboard shortcut
+<kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>M</kbd> to make it.</p>
 <div class="sourceCode" id="cb58"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb58-1"><a href="data-wrangling-superpowers.html#cb58-1"></a>peaks <span class="op">%&gt;%</span></span>
 <span id="cb58-2"><a href="data-wrangling-superpowers.html#cb58-2"></a><span class="st">  </span><span class="kw">filter</span>(first_ascent_year <span class="op">&lt;</span><span class="st"> </span><span class="dv">1980</span>, height_metres <span class="op">&gt;</span><span class="st"> </span><span class="dv">7000</span>) <span class="op">%&gt;%</span><span class="st"> </span></span>
 <span id="cb58-3"><a href="data-wrangling-superpowers.html#cb58-3"></a><span class="st">  </span><span class="kw">count</span>(first_ascent_country, <span class="dt">sort =</span> <span class="ot">TRUE</span>) <span class="op">%&gt;%</span><span class="st"> </span></span>
 <span id="cb58-4"><a href="data-wrangling-superpowers.html#cb58-4"></a><span class="st">  </span><span class="kw">filter</span>(n <span class="op">&gt;</span><span class="st"> </span><span class="dv">3</span>) </span></code></pre></div>
-<pre><code># A tibble: 4 x 2
+<pre><code># A tibble: 4 × 2
   first_ascent_country     n
   &lt;chr&gt;                &lt;int&gt;
 1 Japan, Nepal            14
@@ -539,7 +532,7 @@ Figure 6.1: Indubitably, sir!
 <div class="sourceCode" id="cb61"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb61-1"><a href="data-wrangling-superpowers.html#cb61-1"></a>peaks <span class="op">%&gt;%</span><span class="st"> </span></span>
 <span id="cb61-2"><a href="data-wrangling-superpowers.html#cb61-2"></a><span class="st">  </span><span class="kw">select</span>(peak_name, climbing_status, first_ascent_year, first_ascent_country) <span class="op">%&gt;%</span><span class="st"> </span></span>
 <span id="cb61-3"><a href="data-wrangling-superpowers.html#cb61-3"></a><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">climbed_before80 =</span> first_ascent_year <span class="op">&lt;</span><span class="st"> </span><span class="dv">1980</span>)</span></code></pre></div>
-<pre><code># A tibble: 468 x 5
+<pre><code># A tibble: 468 × 5
    peak_name  climbing_status first_ascent_ye… first_ascent_co… climbed_before80
    &lt;chr&gt;      &lt;chr&gt;                      &lt;dbl&gt; &lt;chr&gt;            &lt;lgl&gt;           
  1 Ama Dablam Climbed                     1961 New Zealand, US… TRUE            
@@ -562,7 +555,7 @@ Figure 6.1: Indubitably, sir!
 <span id="cb63-3"><a href="data-wrangling-superpowers.html#cb63-3"></a><span class="st">  </span><span class="kw">group_by</span>(first_ascent_country) <span class="op">%&gt;%</span><span class="st"> </span></span>
 <span id="cb63-4"><a href="data-wrangling-superpowers.html#cb63-4"></a><span class="st">  </span><span class="kw">summarize</span>(<span class="dt">min_ascent =</span> <span class="kw">min</span>(first_ascent_year, <span class="dt">na.rm =</span> <span class="ot">TRUE</span>)) <span class="op">%&gt;%</span><span class="st"> </span></span>
 <span id="cb63-5"><a href="data-wrangling-superpowers.html#cb63-5"></a><span class="st">  </span><span class="kw">arrange</span>(min_ascent)</span></code></pre></div>
-<pre><code># A tibble: 77 x 2
+<pre><code># A tibble: 77 × 2
    first_ascent_country min_ascent
    &lt;chr&gt;                     &lt;dbl&gt;
  1 UK                         1909
